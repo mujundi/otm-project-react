@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{59:function(e,t,n){"use strict";n.r(t);var a=n(0),c=n.n(a);t.default=function(){return c.a.createElement("div",{style:{textAlign:"center"}},c.a.createElement("h1",{className:"test"},"Get Started"))}}}]);
