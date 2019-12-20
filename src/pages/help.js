@@ -5,12 +5,14 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
 export default () => {
-  if (location.hash === "#help") {
-    setTimeout(() => {
-      document.getElementById("help").scrollIntoView(true);
-    }, 150);
-  } else {
-    scrollTo(0, 0);
+  if (process.browser) {
+    if (location.hash === "#help") {
+      setTimeout(() => {
+        document.getElementById("help").scrollIntoView(true);
+      }, 150);
+    } else {
+      scrollTo(0, 0);
+    }
   }
 
   return (

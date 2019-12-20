@@ -8,8 +8,6 @@ import Footer from "components/Footer";
 import "./app.css";
 import scrollIntoView from "scroll-into-view-if-needed";
 
-let onDashPage = location.pathname.indexOf("dashboard") !== -1;
-
 const App = () => {
   return (
     <Root>

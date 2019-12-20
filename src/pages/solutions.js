@@ -29,12 +29,14 @@ const Solutions = () => {
     });
   }, []);
 
-  if (location.hash === "#carriers") {
-    setTimeout(() => {
-      document.getElementById("carriers").scrollIntoView(true);
-    }, 150);
-  } else {
-    scrollTo(0, 0);
+  if (process.browser) {
+    if (location.hash === "#carriers") {
+      setTimeout(() => {
+        document.getElementById("carriers").scrollIntoView(true);
+      }, 150);
+    } else {
+      scrollTo(0, 0);
+    }
   }
 
   return (

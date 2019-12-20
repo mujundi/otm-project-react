@@ -18,12 +18,14 @@ const Company = () => {
   const [servicesDescriptions, setServicesDescriptions] = useState([]);
   const [imageURL, setImageURL] = useState([]);
 
-  if (location.hash === "#services") {
-    setTimeout(() => {
-      document.getElementById("services").scrollIntoView(true);
-    }, 150);
-  } else {
-    scrollTo(0, 0);
+  if (process.browser) {
+    if (location.hash === "#services") {
+      setTimeout(() => {
+        document.getElementById("services").scrollIntoView(true);
+      }, 150);
+    } else {
+      scrollTo(0, 0);
+    }
   }
 
   useEffect(() => {

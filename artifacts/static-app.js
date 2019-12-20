@@ -869,7 +869,6 @@ var external_scroll_into_view_if_needed_ = __webpack_require__(11);
 
 
 
-var onDashPage = location.pathname.indexOf("dashboard") !== -1;
 
 var App_App = function App() {
   return external_react_default.a.createElement(external_react_static_["Root"], null, external_react_default.a.createElement("div", {
@@ -1971,12 +1970,14 @@ var Footer = __webpack_require__(6);
 
 
 /* harmony default export */ var help = __webpack_exports__["default"] = (function () {
-  if (location.hash === "#help") {
-    setTimeout(function () {
-      document.getElementById("help").scrollIntoView(true);
-    }, 150);
-  } else {
-    scrollTo(0, 0);
+  if (process.browser) {
+    if (location.hash === "#help") {
+      setTimeout(function () {
+        document.getElementById("help").scrollIntoView(true);
+      }, 150);
+    } else {
+      scrollTo(0, 0);
+    }
   }
 
   return external_react_default.a.createElement("div", null, external_react_default.a.createElement(NavBar["a" /* default */], null), external_react_default.a.createElement("div", {
@@ -2074,12 +2075,14 @@ var company_Company = function Company() {
       imageURL = _useState12[0],
       setImageURL = _useState12[1];
 
-  if (location.hash === "#services") {
-    setTimeout(function () {
-      document.getElementById("services").scrollIntoView(true);
-    }, 150);
-  } else {
-    scrollTo(0, 0);
+  if (process.browser) {
+    if (location.hash === "#services") {
+      setTimeout(function () {
+        document.getElementById("services").scrollIntoView(true);
+      }, 150);
+    } else {
+      scrollTo(0, 0);
+    }
   }
 
   Object(external_react_["useEffect"])(function () {
@@ -2234,12 +2237,14 @@ var solutions_Solutions = function Solutions() {
     });
   }, []);
 
-  if (location.hash === "#carriers") {
-    setTimeout(function () {
-      document.getElementById("carriers").scrollIntoView(true);
-    }, 150);
-  } else {
-    scrollTo(0, 0);
+  if (process.browser) {
+    if (location.hash === "#carriers") {
+      setTimeout(function () {
+        document.getElementById("carriers").scrollIntoView(true);
+      }, 150);
+    } else {
+      scrollTo(0, 0);
+    }
   }
 
   return external_react_default.a.createElement("div", null, external_react_default.a.createElement(NavBar["a" /* default */], null), external_react_default.a.createElement("div", {
