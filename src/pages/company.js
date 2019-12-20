@@ -1,69 +1,101 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Service from "../components/Service";
+import scrollIntoView from "scroll-into-view-if-needed";
+import axios from "axios";
+import Async from "react-async";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
-export default () => (
-  <div>
-    <div id="about">
-      <div className="jumbotron jumbotron-fluid pb-4">
+const API_URL = "https://otm-dispatch-strapi.herokuapp.com";
+
+const url = `${API_URL}/company-pages`;
+
+const Company = () => {
+  const [data, setData] = useState([]);
+  const [aboutUsHeader, setAboutUsHeader] = useState([]);
+  const [aboutUsDescriptions, setAboutUsDescriptions] = useState([]);
+  const [servicesHeader, setServicesHeader] = useState([]);
+  const [servicesDescriptions, setServicesDescriptions] = useState([]);
+  const [imageURL, setImageURL] = useState([]);
+
+  if (location.hash === "#services") {
+    setTimeout(() => {
+      document.getElementById("services").scrollIntoView(true);
+    }, 150);
+  } else {
+    scrollTo(0, 0);
+  }
+
+  useEffect(() => {
+    axios.get(url).then((res) => {
+      setData(res.data[0]);
+      setAboutUsHeader(res.data[0].AboutUsHeader);
+      setAboutUsDescriptions(res.data[0].AboutDescriptions);
+      setServicesHeader(res.data[0].ServicesHeader);
+      setServicesDescriptions(res.data[0].ServicesDescriptions);
+      setImageURL(`${API_URL + res.data[0].BannerImage.url}`);
+    });
+  }, []);
+
+  return (
+    <div>
+      <NavBar />
+      <div id="about">
+        <div
+          className="jumbotron jumbotron-fluid pb-4 text-light"
+          style={{
+            backgroundImage: `url(${imageURL})`,
+            backgroundSize: `cover`
+          }}
+        >
+          <div className="container">
+            <div className="mx-auto my-auto text-center">
+              <h1>{aboutUsHeader.BannerHeader}</h1>
+              <p className="mx-auto w-50">{aboutUsHeader.Motto}</p>
+            </div>
+          </div>
+        </div>
+        <div className="container mt-5 mb-5">
+          {aboutUsDescriptions.map((description, index) => (
+            <div key={index}>
+              <h3>{description.Header}</h3>
+              <p>{description.Paragraph}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div id="services">
+        <div
+          className="jumbotron jumbotron-fluid pb-4 text-light"
+          style={{
+            backgroundImage: `url(${imageURL})`,
+            backgroundSize: `cover`
+          }}
+        >
+          <div className="container">
+            <div className="mx-auto my-auto text-center">
+              <h1>{servicesHeader.BannerHeader}</h1>
+              <p className="mx-auto w-50">{servicesHeader.BannerSubheader}</p>
+            </div>
+          </div>
+        </div>
         <div className="container">
-          <div className="mx-auto my-auto text-center">
-            <h1>About us</h1>
-            <p className="mx-auto w-50">Placeholder motto or phrase here.</p>
+          <div className="row mt-5 mb-5">
+            {servicesDescriptions.map((service, index) => (
+              <div key={index} className="col-sm-6 mt-3 text-center">
+                <Service
+                  id={service._id}
+                  header={service.Header}
+                  description={service.Paragraph}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
-      <div className="container mt-5 mb-5">
-        <h3>Our Beginnings</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <h3>Our Team</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <h3>Our Priorities</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
+      <Footer />
     </div>
-    <div id="services">
-      <div className="jumbotron jumbotron-fluid pb-4">
-        <div className="container">
-          <div className="mx-auto my-auto text-center">
-            <h1>Services</h1>
-            <p className="mx-auto w-50">Based out of Orlando, FL.</p>
-          </div>
-        </div>
-      </div>
-      <div className="container">
-        <div className="row mt-5 mb-5">
-          <Service />
-          <Service />
-        </div>
-        <div className="row mt-5 mb-5">
-          <Service />
-          <Service />
-        </div>
-      </div>
-    </div>
-  </div>
-);
+  );
+};
+
+export default Company;

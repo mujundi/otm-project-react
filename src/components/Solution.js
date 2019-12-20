@@ -1,11 +1,8 @@
 import React from "react";
 
-export default () => (
-  <div className="col-sm">
-    <h4>Solution Header</h4>
-    <p>
-      Odio eu feugiat pretium nibh. Elit at imperdiet dui accumsan sit amet
-      nulla.
-    </p>
+export default (props) => (
+  <div>
+    <h4>{props.header}</h4>
+    <p>{props.description}</p>
   </div>
 );
