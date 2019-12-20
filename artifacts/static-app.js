@@ -145,6 +145,12 @@ module.exports = require("@reach/router");
 
 /***/ }),
 /* 5 */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
+
+/***/ }),
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -154,7 +160,7 @@ module.exports = require("@reach/router");
 /* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_reach_router__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_async__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9);
 /* harmony import */ var react_async__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_async__WEBPACK_IMPORTED_MODULE_4__);
@@ -282,7 +288,7 @@ var NavBar = function NavBar() {
 /* harmony default export */ __webpack_exports__["a"] = (NavBar);
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -296,12 +302,6 @@ var NavBar = function NavBar() {
     className: "my-1"
   }, "Placeholder footer text"));
 });
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports) {
-
-module.exports = require("axios");
 
 /***/ }),
 /* 8 */
@@ -849,10 +849,10 @@ var router_ = __webpack_require__(4);
 // CONCATENATED MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/Router.js
 
 // EXTERNAL MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/NavBar.js
-var NavBar = __webpack_require__(5);
+var NavBar = __webpack_require__(6);
 
 // EXTERNAL MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/Footer.js
-var Footer = __webpack_require__(6);
+var Footer = __webpack_require__(7);
 
 // EXTERNAL MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/app.css
 var app = __webpack_require__(51);
@@ -1476,12 +1476,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_async__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9);
 /* harmony import */ var react_async__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_async__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_NavBar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
+/* harmony import */ var _components_NavBar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
+/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
 
 
 
@@ -1620,12 +1620,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_async__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9);
 /* harmony import */ var react_async__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_async__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_NavBar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
+/* harmony import */ var _components_NavBar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
+/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
 
 
 
@@ -1838,8 +1838,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_NavBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
+/* harmony import */ var _components_NavBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
+/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
 
 
 
@@ -1907,7 +1907,7 @@ var slicedToArray_default = /*#__PURE__*/__webpack_require__.n(slicedToArray_);
   }, external_react_default.a.createElement("p", null, props.answer))));
 });
 // EXTERNAL MODULE: external "axios"
-var external_axios_ = __webpack_require__(7);
+var external_axios_ = __webpack_require__(5);
 var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_);
 
 // EXTERNAL MODULE: external "react-async"
@@ -1958,10 +1958,10 @@ function QuestionList() {
 var external_scroll_into_view_if_needed_ = __webpack_require__(11);
 
 // EXTERNAL MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/NavBar.js
-var NavBar = __webpack_require__(5);
+var NavBar = __webpack_require__(6);
 
 // EXTERNAL MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/Footer.js
-var Footer = __webpack_require__(6);
+var Footer = __webpack_require__(7);
 
 // CONCATENATED MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js
 
@@ -2020,17 +2020,17 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
 var external_scroll_into_view_if_needed_ = __webpack_require__(11);
 
 // EXTERNAL MODULE: external "axios"
-var external_axios_ = __webpack_require__(7);
+var external_axios_ = __webpack_require__(5);
 var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_);
 
 // EXTERNAL MODULE: external "react-async"
 var external_react_async_ = __webpack_require__(9);
 
 // EXTERNAL MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/NavBar.js
-var NavBar = __webpack_require__(5);
+var NavBar = __webpack_require__(6);
 
 // EXTERNAL MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/Footer.js
-var Footer = __webpack_require__(6);
+var Footer = __webpack_require__(7);
 
 // CONCATENATED MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js
 
@@ -2042,7 +2042,10 @@ var Footer = __webpack_require__(6);
 
 
 var API_URL = "https://otm-dispatch-strapi.herokuapp.com";
-var url = "".concat(API_URL, "/company-pages");
+var url = "/company-pages";
+var axiosInstance = external_axios_default.a.create({
+  baseURL: "".concat(API_URL)
+});
 
 var company_Company = function Company() {
   var _useState = Object(external_react_["useState"])([]),
@@ -2171,17 +2174,17 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
 var external_scroll_into_view_if_needed_ = __webpack_require__(11);
 
 // EXTERNAL MODULE: external "axios"
-var external_axios_ = __webpack_require__(7);
+var external_axios_ = __webpack_require__(5);
 var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_);
 
 // EXTERNAL MODULE: external "react-async"
 var external_react_async_ = __webpack_require__(9);
 
 // EXTERNAL MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/NavBar.js
-var NavBar = __webpack_require__(5);
+var NavBar = __webpack_require__(6);
 
 // EXTERNAL MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/Footer.js
-var Footer = __webpack_require__(6);
+var Footer = __webpack_require__(7);
 
 // CONCATENATED MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js
 

@@ -8,7 +8,11 @@ import Footer from "../components/Footer";
 
 const API_URL = "https://otm-dispatch-strapi.herokuapp.com";
 
-const url = `${API_URL}/company-pages`;
+const url = `/company-pages`;
+
+const axiosInstance = axios.create({
+  baseURL: `${API_URL}`
+});
 
 const Company = () => {
   const [data, setData] = useState([]);

@@ -2,16 +2,16 @@
   "errors": [],
   "warnings": [],
   "version": "4.41.2",
-  "hash": "d616508795b72acb6beb",
-  "time": 2442,
-  "builtAt": 1576845917185,
+  "hash": "9800da068792a783efd3",
+  "time": 7071,
+  "builtAt": 1576851267328,
   "publicPath": "/",
   "outputPath": "/mnt/d/workspace/work/otm-dispatch/static-site/dist",
   "assetsByChunkName": {
-    "main": "main.d6165087.js",
+    "main": "main.9800da06.js",
     "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/404": "templates/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/404.abf5e420.js",
     "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/careers": "templates/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/careers.70cf576c.js",
-    "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company": "templates/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.bc484103.js",
+    "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company": "templates/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.d4fb6c4e.js",
     "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/contact": "templates/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/contact.07c58d39.js",
     "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/dashboard": "templates/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/dashboard.9da4237d.js",
     "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help": "templates/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.b95dd775.js",
@@ -19,14 +19,14 @@
     "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/login": "templates/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/login.289a6905.js",
     "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions": "templates/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.4773a11c.js",
     "styles": [
-      "styles.2d11d284.css",
-      "templates/styles.2d11d284.js"
+      "styles.c41c02e3.css",
+      "templates/styles.c41c02e3.js"
     ],
     "vendors~main": "templates/vendors~main.6ef3c2fb.js"
   },
   "assets": [
     {
-      "name": "main.d6165087.js",
+      "name": "main.9800da06.js",
       "size": 13515,
       "chunks": [
         0
@@ -40,7 +40,7 @@
       "emitted": true
     },
     {
-      "name": "styles.2d11d284.css",
+      "name": "styles.c41c02e3.css",
       "size": 217,
       "chunks": [
         10
@@ -82,8 +82,8 @@
       "emitted": true
     },
     {
-      "name": "templates/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.bc484103.js",
-      "size": 2588,
+      "name": "templates/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.d4fb6c4e.js",
+      "size": 2606,
       "chunks": [
         3
       ],
@@ -180,7 +180,7 @@
       "emitted": true
     },
     {
-      "name": "templates/styles.2d11d284.js",
+      "name": "templates/styles.c41c02e3.js",
       "size": 83,
       "chunks": [
         10
@@ -217,10 +217,10 @@
         0
       ],
       "assets": [
-        "styles.2d11d284.css",
-        "templates/styles.2d11d284.js",
+        "styles.c41c02e3.css",
+        "templates/styles.c41c02e3.js",
         "templates/vendors~main.6ef3c2fb.js",
-        "main.d6165087.js"
+        "main.9800da06.js"
       ],
       "children": {},
       "childAssets": {}
@@ -234,10 +234,10 @@
         0
       ],
       "assets": [
-        "styles.2d11d284.css",
-        "templates/styles.2d11d284.js",
+        "styles.c41c02e3.css",
+        "templates/styles.c41c02e3.js",
         "templates/vendors~main.6ef3c2fb.js",
-        "main.d6165087.js"
+        "main.9800da06.js"
       ],
       "children": {},
       "childAssets": {}
@@ -267,7 +267,7 @@
         3
       ],
       "assets": [
-        "templates/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.bc484103.js"
+        "templates/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.d4fb6c4e.js"
       ],
       "children": {},
       "childAssets": {}
@@ -344,9 +344,9 @@
         "main"
       ],
       "files": [
-        "main.d6165087.js"
+        "main.9800da06.js"
       ],
-      "hash": "f7385fbffe76d7af4603",
+      "hash": "993e165b46f0ff933b98",
       "siblings": [
         10,
         11
@@ -432,8 +432,8 @@
             "default"
           ],
           "optimizationBailout": [
-            "ModuleConcatenation bailout: Cannot concat with /mnt/d/workspace/work/otm-dispatch/static-site/src/components/Footer.js because of /mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
-            "ModuleConcatenation bailout: Cannot concat with /mnt/d/workspace/work/otm-dispatch/static-site/src/components/NavBar.js because of /mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
+            "ModuleConcatenation bailout: Cannot concat with /mnt/d/workspace/work/otm-dispatch/static-site/src/components/Footer.js because of /mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+            "ModuleConcatenation bailout: Cannot concat with /mnt/d/workspace/work/otm-dispatch/static-site/src/components/NavBar.js because of /mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
             "ModuleConcatenation bailout: Cannot concat with /mnt/d/workspace/work/otm-dispatch/static-site/node_modules/@reach/router/es/index.js (<- Module is referenced from these modules with unsupported syntax: /mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-static-plugin-reach-router/browser.api.js (referenced with cjs require))",
             "ModuleConcatenation bailout: Cannot concat with ../lib/index.js (<- Module is not an ECMAScript module)",
             "ModuleConcatenation bailout: Cannot concat with /mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react/index.js (<- Module is not an ECMAScript module)",
@@ -742,9 +742,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
-          "issuerId": 58,
-          "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
+          "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "issuerId": 55,
+          "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "issuerPath": [
             {
               "id": 62,
@@ -762,9 +762,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 58,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             }
           ],
           "failed": false,
@@ -815,7 +815,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "../components/NavBar",
-              "loc": "1:1810-1816"
+              "loc": "1:1852-1858"
             },
             {
               "moduleId": 56,
@@ -914,9 +914,9 @@
           "chunks": [
             0
           ],
-          "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
-          "issuerId": 58,
-          "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
+          "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "issuerId": 55,
+          "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "issuerPath": [
             {
               "id": 62,
@@ -934,9 +934,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 58,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             }
           ],
           "failed": false,
@@ -987,7 +987,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "../components/Footer",
-              "loc": "1:3358-3364"
+              "loc": "1:3400-3406"
             },
             {
               "moduleId": 56,
@@ -1459,14 +1459,14 @@
       "rendered": true,
       "initial": false,
       "entry": false,
-      "size": 3587,
+      "size": 3629,
       "names": [
         "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company"
       ],
       "files": [
-        "templates/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.bc484103.js"
+        "templates/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.d4fb6c4e.js"
       ],
-      "hash": "bc484103ea038f4c37a5",
+      "hash": "d4fb6c4e192a76c7920d",
       "siblings": [],
       "parents": [
         0,
@@ -1482,7 +1482,7 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "index": 136,
           "index2": 137,
-          "size": 3397,
+          "size": 3439,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -1542,7 +1542,7 @@
             "ModuleConcatenation bailout: Module uses injected variables (process)"
           ],
           "depth": 3,
-          "source": "import _slicedToArray from\"@babel/runtime/helpers/slicedToArray\";import React,{useEffect,useState}from\"react\";import Service from\"../components/Service\";import scrollIntoView from\"scroll-into-view-if-needed\";import axios from\"axios\";import Async from\"react-async\";import NavBar from\"../components/NavBar\";import Footer from\"../components/Footer\";var API_URL=\"https://otm-dispatch-strapi.herokuapp.com\";var url=\"\".concat(API_URL,\"/company-pages\");var Company=function Company(){var _useState=useState([]),_useState2=_slicedToArray(_useState,2),data=_useState2[0],setData=_useState2[1];var _useState3=useState([]),_useState4=_slicedToArray(_useState3,2),aboutUsHeader=_useState4[0],setAboutUsHeader=_useState4[1];var _useState5=useState([]),_useState6=_slicedToArray(_useState5,2),aboutUsDescriptions=_useState6[0],setAboutUsDescriptions=_useState6[1];var _useState7=useState([]),_useState8=_slicedToArray(_useState7,2),servicesHeader=_useState8[0],setServicesHeader=_useState8[1];var _useState9=useState([]),_useState10=_slicedToArray(_useState9,2),servicesDescriptions=_useState10[0],setServicesDescriptions=_useState10[1];var _useState11=useState([]),_useState12=_slicedToArray(_useState11,2),imageURL=_useState12[0],setImageURL=_useState12[1];if(process.browser){if(location.hash===\"#services\"){setTimeout(function(){document.getElementById(\"services\").scrollIntoView(true);},150);}else{scrollTo(0,0);}}useEffect(function(){axios.get(url).then(function(res){setData(res.data[0]);setAboutUsHeader(res.data[0].AboutUsHeader);setAboutUsDescriptions(res.data[0].AboutDescriptions);setServicesHeader(res.data[0].ServicesHeader);setServicesDescriptions(res.data[0].ServicesDescriptions);setImageURL(\"\".concat(API_URL+res.data[0].BannerImage.url));});},[]);return React.createElement(\"div\",null,React.createElement(NavBar,null),React.createElement(\"div\",{id:\"about\"},React.createElement(\"div\",{className:\"jumbotron jumbotron-fluid pb-4 text-light\",style:{backgroundImage:\"url(\".concat(imageURL,\")\"),backgroundSize:\"cover\"}},React.createElement(\"div\",{className:\"container\"},React.createElement(\"div\",{className:\"mx-auto my-auto text-center\"},React.createElement(\"h1\",null,aboutUsHeader.BannerHeader),React.createElement(\"p\",{className:\"mx-auto w-50\"},aboutUsHeader.Motto)))),React.createElement(\"div\",{className:\"container mt-5 mb-5\"},aboutUsDescriptions.map(function(description,index){return React.createElement(\"div\",{key:index},React.createElement(\"h3\",null,description.Header),React.createElement(\"p\",null,description.Paragraph));}))),React.createElement(\"div\",{id:\"services\"},React.createElement(\"div\",{className:\"jumbotron jumbotron-fluid pb-4 text-light\",style:{backgroundImage:\"url(\".concat(imageURL,\")\"),backgroundSize:\"cover\"}},React.createElement(\"div\",{className:\"container\"},React.createElement(\"div\",{className:\"mx-auto my-auto text-center\"},React.createElement(\"h1\",null,servicesHeader.BannerHeader),React.createElement(\"p\",{className:\"mx-auto w-50\"},servicesHeader.BannerSubheader)))),React.createElement(\"div\",{className:\"container\"},React.createElement(\"div\",{className:\"row mt-5 mb-5\"},servicesDescriptions.map(function(service,index){return React.createElement(\"div\",{key:index,className:\"col-sm-6 mt-3 text-center\"},React.createElement(Service,{id:service._id,header:service.Header,description:service.Paragraph}));})))),React.createElement(Footer,null));};export default Company;"
+          "source": "import _slicedToArray from\"@babel/runtime/helpers/slicedToArray\";import React,{useEffect,useState}from\"react\";import Service from\"../components/Service\";import scrollIntoView from\"scroll-into-view-if-needed\";import axios from\"axios\";import Async from\"react-async\";import NavBar from\"../components/NavBar\";import Footer from\"../components/Footer\";var API_URL=\"https://otm-dispatch-strapi.herokuapp.com\";var url=\"/company-pages\";var axiosInstance=axios.create({baseURL:\"\".concat(API_URL)});var Company=function Company(){var _useState=useState([]),_useState2=_slicedToArray(_useState,2),data=_useState2[0],setData=_useState2[1];var _useState3=useState([]),_useState4=_slicedToArray(_useState3,2),aboutUsHeader=_useState4[0],setAboutUsHeader=_useState4[1];var _useState5=useState([]),_useState6=_slicedToArray(_useState5,2),aboutUsDescriptions=_useState6[0],setAboutUsDescriptions=_useState6[1];var _useState7=useState([]),_useState8=_slicedToArray(_useState7,2),servicesHeader=_useState8[0],setServicesHeader=_useState8[1];var _useState9=useState([]),_useState10=_slicedToArray(_useState9,2),servicesDescriptions=_useState10[0],setServicesDescriptions=_useState10[1];var _useState11=useState([]),_useState12=_slicedToArray(_useState11,2),imageURL=_useState12[0],setImageURL=_useState12[1];if(process.browser){if(location.hash===\"#services\"){setTimeout(function(){document.getElementById(\"services\").scrollIntoView(true);},150);}else{scrollTo(0,0);}}useEffect(function(){axios.get(url).then(function(res){setData(res.data[0]);setAboutUsHeader(res.data[0].AboutUsHeader);setAboutUsDescriptions(res.data[0].AboutDescriptions);setServicesHeader(res.data[0].ServicesHeader);setServicesDescriptions(res.data[0].ServicesDescriptions);setImageURL(\"\".concat(API_URL+res.data[0].BannerImage.url));});},[]);return React.createElement(\"div\",null,React.createElement(NavBar,null),React.createElement(\"div\",{id:\"about\"},React.createElement(\"div\",{className:\"jumbotron jumbotron-fluid pb-4 text-light\",style:{backgroundImage:\"url(\".concat(imageURL,\")\"),backgroundSize:\"cover\"}},React.createElement(\"div\",{className:\"container\"},React.createElement(\"div\",{className:\"mx-auto my-auto text-center\"},React.createElement(\"h1\",null,aboutUsHeader.BannerHeader),React.createElement(\"p\",{className:\"mx-auto w-50\"},aboutUsHeader.Motto)))),React.createElement(\"div\",{className:\"container mt-5 mb-5\"},aboutUsDescriptions.map(function(description,index){return React.createElement(\"div\",{key:index},React.createElement(\"h3\",null,description.Header),React.createElement(\"p\",null,description.Paragraph));}))),React.createElement(\"div\",{id:\"services\"},React.createElement(\"div\",{className:\"jumbotron jumbotron-fluid pb-4 text-light\",style:{backgroundImage:\"url(\".concat(imageURL,\")\"),backgroundSize:\"cover\"}},React.createElement(\"div\",{className:\"container\"},React.createElement(\"div\",{className:\"mx-auto my-auto text-center\"},React.createElement(\"h1\",null,servicesHeader.BannerHeader),React.createElement(\"p\",{className:\"mx-auto w-50\"},servicesHeader.BannerSubheader)))),React.createElement(\"div\",{className:\"container\"},React.createElement(\"div\",{className:\"row mt-5 mb-5\"},servicesDescriptions.map(function(service,index){return React.createElement(\"div\",{key:index,className:\"col-sm-6 mt-3 text-center\"},React.createElement(Service,{id:service._id,header:service.Header,description:service.Paragraph}));})))),React.createElement(Footer,null));};export default Company;"
         },
         {
           "id": 137,
@@ -1604,7 +1604,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "../components/Service",
-              "loc": "1:3253-3260"
+              "loc": "1:3295-3302"
             }
           ],
           "usedExports": [
@@ -2553,10 +2553,10 @@
         "styles"
       ],
       "files": [
-        "styles.2d11d284.css",
-        "templates/styles.2d11d284.js"
+        "styles.c41c02e3.css",
+        "templates/styles.c41c02e3.js"
       ],
-      "hash": "2d11d28495f6ae33373b",
+      "hash": "c41c02e303efc1924ec0",
       "siblings": [
         0,
         11
@@ -2635,7 +2635,7 @@
             "ModuleConcatenation bailout: Module is not an ECMAScript module"
           ],
           "depth": 4,
-          "source": "// extracted by extract-css-chunks-webpack-plugin\n    if(module.hot) {\n      // 1576845916150\n      var cssReload = require(\"/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/extract-css-chunks-webpack-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"hot\":true,\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  "
+          "source": "// extracted by extract-css-chunks-webpack-plugin\n    if(module.hot) {\n      // 1576851262560\n      var cssReload = require(\"/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/extract-css-chunks-webpack-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"hot\":true,\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  "
         },
         {
           "id": "",
@@ -3981,7 +3981,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:491-499"
+              "loc": "1:533-541"
             },
             {
               "moduleId": 55,
@@ -3990,7 +3990,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:599-607"
+              "loc": "1:641-649"
             },
             {
               "moduleId": 55,
@@ -3999,7 +3999,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:726-734"
+              "loc": "1:768-776"
             },
             {
               "moduleId": 55,
@@ -4008,7 +4008,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:865-873"
+              "loc": "1:907-915"
             },
             {
               "moduleId": 55,
@@ -4017,7 +4017,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:994-1002"
+              "loc": "1:1036-1044"
             },
             {
               "moduleId": 55,
@@ -4026,7 +4026,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:1139-1147"
+              "loc": "1:1181-1189"
             },
             {
               "moduleId": 55,
@@ -4035,7 +4035,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:1405-1414"
+              "loc": "1:1447-1456"
             },
             {
               "moduleId": 55,
@@ -4044,7 +4044,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:1759-1764"
+              "loc": "1:1801-1806"
             },
             {
               "moduleId": 55,
@@ -4053,7 +4053,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:1790-1795"
+              "loc": "1:1832-1837"
             },
             {
               "moduleId": 55,
@@ -4062,7 +4062,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:1823-1828"
+              "loc": "1:1865-1870"
             },
             {
               "moduleId": 55,
@@ -4071,7 +4071,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:1862-1867"
+              "loc": "1:1904-1909"
             },
             {
               "moduleId": 55,
@@ -4080,7 +4080,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:2019-2024"
+              "loc": "1:2061-2066"
             },
             {
               "moduleId": 55,
@@ -4089,7 +4089,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:2069-2074"
+              "loc": "1:2111-2116"
             },
             {
               "moduleId": 55,
@@ -4098,7 +4098,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:2137-2142"
+              "loc": "1:2179-2184"
             },
             {
               "moduleId": 55,
@@ -4107,7 +4107,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:2195-2200"
+              "loc": "1:2237-2242"
             },
             {
               "moduleId": 55,
@@ -4116,7 +4116,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:2270-2275"
+              "loc": "1:2312-2317"
             },
             {
               "moduleId": 55,
@@ -4125,7 +4125,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:2389-2394"
+              "loc": "1:2431-2436"
             },
             {
               "moduleId": 55,
@@ -4134,7 +4134,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:2427-2432"
+              "loc": "1:2469-2474"
             },
             {
               "moduleId": 55,
@@ -4143,16 +4143,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:2477-2482"
-            },
-            {
-              "moduleId": 55,
-              "moduleIdentifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
-              "module": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
-              "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
-              "type": "harmony import specifier",
-              "userRequest": "react",
-              "loc": "1:2535-2540"
+              "loc": "1:2519-2524"
             },
             {
               "moduleId": 55,
@@ -4170,7 +4161,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:2734-2739"
+              "loc": "1:2619-2624"
             },
             {
               "moduleId": 55,
@@ -4179,7 +4170,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:2784-2789"
+              "loc": "1:2776-2781"
             },
             {
               "moduleId": 55,
@@ -4188,7 +4179,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:2852-2857"
+              "loc": "1:2826-2831"
             },
             {
               "moduleId": 55,
@@ -4197,7 +4188,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:2911-2916"
+              "loc": "1:2894-2899"
             },
             {
               "moduleId": 55,
@@ -4206,7 +4197,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:2997-3002"
+              "loc": "1:2953-2958"
             },
             {
               "moduleId": 55,
@@ -4215,7 +4206,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:3047-3052"
+              "loc": "1:3039-3044"
             },
             {
               "moduleId": 55,
@@ -4224,7 +4215,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:3157-3162"
+              "loc": "1:3089-3094"
             },
             {
               "moduleId": 55,
@@ -4233,7 +4224,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:3233-3238"
+              "loc": "1:3199-3204"
             },
             {
               "moduleId": 55,
@@ -4242,7 +4233,16 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "1:3338-3343"
+              "loc": "1:3275-3280"
+            },
+            {
+              "moduleId": 55,
+              "moduleIdentifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "module": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "type": "harmony import specifier",
+              "userRequest": "react",
+              "loc": "1:3380-3385"
             },
             {
               "moduleId": 56,
@@ -7955,9 +7955,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -8115,9 +8115,9 @@
           "chunks": [
             11
           ],
-          "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "issuerId": 61,
-          "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
+          "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "issuerId": 55,
+          "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "issuerPath": [
             {
               "id": 62,
@@ -8135,9 +8135,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             }
           ],
           "failed": false,
@@ -8242,7 +8242,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "@babel/runtime/helpers/slicedToArray",
-              "loc": "1:515-529"
+              "loc": "1:557-571"
             },
             {
               "moduleId": 55,
@@ -8251,7 +8251,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "@babel/runtime/helpers/slicedToArray",
-              "loc": "1:623-637"
+              "loc": "1:665-679"
             },
             {
               "moduleId": 55,
@@ -8260,7 +8260,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "@babel/runtime/helpers/slicedToArray",
-              "loc": "1:750-764"
+              "loc": "1:792-806"
             },
             {
               "moduleId": 55,
@@ -8269,7 +8269,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "@babel/runtime/helpers/slicedToArray",
-              "loc": "1:889-903"
+              "loc": "1:931-945"
             },
             {
               "moduleId": 55,
@@ -8278,7 +8278,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "@babel/runtime/helpers/slicedToArray",
-              "loc": "1:1019-1033"
+              "loc": "1:1061-1075"
             },
             {
               "moduleId": 55,
@@ -8287,7 +8287,7 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "@babel/runtime/helpers/slicedToArray",
-              "loc": "1:1164-1178"
+              "loc": "1:1206-1220"
             },
             {
               "moduleId": 56,
@@ -9105,9 +9105,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 136,
@@ -9358,9 +9358,9 @@
           "chunks": [
             11
           ],
-          "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "issuerId": 61,
-          "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
+          "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "issuerId": 55,
+          "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "issuerPath": [
             {
               "id": 62,
@@ -9378,9 +9378,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             }
           ],
           "failed": false,
@@ -9458,7 +9458,16 @@
               "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "type": "harmony import specifier",
               "userRequest": "axios",
-              "loc": "1:1426-1431"
+              "loc": "1:445-450"
+            },
+            {
+              "moduleId": 55,
+              "moduleIdentifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "module": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "type": "harmony import specifier",
+              "userRequest": "axios",
+              "loc": "1:1468-1473"
             },
             {
               "moduleId": 56,
@@ -10115,9 +10124,9 @@
           "chunks": [
             11
           ],
-          "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
-          "issuerId": 58,
-          "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
+          "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "issuerId": 55,
+          "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "issuerPath": [
             {
               "id": 62,
@@ -10135,9 +10144,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 58,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             }
           ],
           "failed": false,
@@ -10233,9 +10242,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 136,
@@ -10602,9 +10611,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -10683,9 +10692,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -10769,9 +10778,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -10850,9 +10859,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -10931,9 +10940,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -11017,9 +11026,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -11108,9 +11117,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -11189,9 +11198,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -11881,9 +11890,9 @@
               "optional": false,
               "prefetched": false,
               "chunks": [],
-              "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
-              "issuerId": 58,
-              "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
+              "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "issuerId": 55,
+              "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
               "issuerPath": [
                 {
                   "id": 62,
@@ -11901,9 +11910,9 @@
                   "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
                 },
                 {
-                  "id": 58,
-                  "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
-                  "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js"
+                  "id": 55,
+                  "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+                  "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
                 }
               ],
               "failed": false,
@@ -11988,9 +11997,9 @@
                   "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
                 },
                 {
-                  "id": 58,
-                  "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
-                  "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js"
+                  "id": 55,
+                  "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+                  "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
                 },
                 {
                   "id": null,
@@ -13262,9 +13271,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 8,
@@ -13329,9 +13338,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 8,
@@ -13396,9 +13405,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 8,
@@ -13706,9 +13715,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -13773,9 +13782,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -13850,9 +13859,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -13922,9 +13931,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -13999,9 +14008,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -14076,9 +14085,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -14158,9 +14167,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -14235,9 +14244,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -14317,9 +14326,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -14404,9 +14413,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -14486,9 +14495,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -14568,9 +14577,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -14650,9 +14659,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -14732,9 +14741,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -14814,9 +14823,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -14886,9 +14895,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 61,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": 17,
@@ -18052,7 +18061,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:491-499"
+          "loc": "1:533-541"
         },
         {
           "moduleId": 55,
@@ -18061,7 +18070,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:599-607"
+          "loc": "1:641-649"
         },
         {
           "moduleId": 55,
@@ -18070,7 +18079,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:726-734"
+          "loc": "1:768-776"
         },
         {
           "moduleId": 55,
@@ -18079,7 +18088,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:865-873"
+          "loc": "1:907-915"
         },
         {
           "moduleId": 55,
@@ -18088,7 +18097,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:994-1002"
+          "loc": "1:1036-1044"
         },
         {
           "moduleId": 55,
@@ -18097,7 +18106,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:1139-1147"
+          "loc": "1:1181-1189"
         },
         {
           "moduleId": 55,
@@ -18106,7 +18115,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:1405-1414"
+          "loc": "1:1447-1456"
         },
         {
           "moduleId": 55,
@@ -18115,7 +18124,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:1759-1764"
+          "loc": "1:1801-1806"
         },
         {
           "moduleId": 55,
@@ -18124,7 +18133,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:1790-1795"
+          "loc": "1:1832-1837"
         },
         {
           "moduleId": 55,
@@ -18133,7 +18142,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:1823-1828"
+          "loc": "1:1865-1870"
         },
         {
           "moduleId": 55,
@@ -18142,7 +18151,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:1862-1867"
+          "loc": "1:1904-1909"
         },
         {
           "moduleId": 55,
@@ -18151,7 +18160,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:2019-2024"
+          "loc": "1:2061-2066"
         },
         {
           "moduleId": 55,
@@ -18160,7 +18169,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:2069-2074"
+          "loc": "1:2111-2116"
         },
         {
           "moduleId": 55,
@@ -18169,7 +18178,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:2137-2142"
+          "loc": "1:2179-2184"
         },
         {
           "moduleId": 55,
@@ -18178,7 +18187,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:2195-2200"
+          "loc": "1:2237-2242"
         },
         {
           "moduleId": 55,
@@ -18187,7 +18196,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:2270-2275"
+          "loc": "1:2312-2317"
         },
         {
           "moduleId": 55,
@@ -18196,7 +18205,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:2389-2394"
+          "loc": "1:2431-2436"
         },
         {
           "moduleId": 55,
@@ -18205,7 +18214,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:2427-2432"
+          "loc": "1:2469-2474"
         },
         {
           "moduleId": 55,
@@ -18214,16 +18223,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:2477-2482"
-        },
-        {
-          "moduleId": 55,
-          "moduleIdentifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
-          "module": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
-          "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
-          "type": "harmony import specifier",
-          "userRequest": "react",
-          "loc": "1:2535-2540"
+          "loc": "1:2519-2524"
         },
         {
           "moduleId": 55,
@@ -18241,7 +18241,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:2734-2739"
+          "loc": "1:2619-2624"
         },
         {
           "moduleId": 55,
@@ -18250,7 +18250,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:2784-2789"
+          "loc": "1:2776-2781"
         },
         {
           "moduleId": 55,
@@ -18259,7 +18259,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:2852-2857"
+          "loc": "1:2826-2831"
         },
         {
           "moduleId": 55,
@@ -18268,7 +18268,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:2911-2916"
+          "loc": "1:2894-2899"
         },
         {
           "moduleId": 55,
@@ -18277,7 +18277,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:2997-3002"
+          "loc": "1:2953-2958"
         },
         {
           "moduleId": 55,
@@ -18286,7 +18286,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:3047-3052"
+          "loc": "1:3039-3044"
         },
         {
           "moduleId": 55,
@@ -18295,7 +18295,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:3157-3162"
+          "loc": "1:3089-3094"
         },
         {
           "moduleId": 55,
@@ -18304,7 +18304,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:3233-3238"
+          "loc": "1:3199-3204"
         },
         {
           "moduleId": 55,
@@ -18313,7 +18313,16 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "1:3338-3343"
+          "loc": "1:3275-3280"
+        },
+        {
+          "moduleId": 55,
+          "moduleIdentifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "module": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "type": "harmony import specifier",
+          "userRequest": "react",
+          "loc": "1:3380-3385"
         },
         {
           "moduleId": 56,
@@ -22026,9 +22035,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -22186,9 +22195,9 @@
       "chunks": [
         11
       ],
-      "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-      "issuerId": 61,
-      "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
+      "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+      "issuerId": 55,
+      "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
       "issuerPath": [
         {
           "id": 62,
@@ -22206,9 +22215,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         }
       ],
       "failed": false,
@@ -22313,7 +22322,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "@babel/runtime/helpers/slicedToArray",
-          "loc": "1:515-529"
+          "loc": "1:557-571"
         },
         {
           "moduleId": 55,
@@ -22322,7 +22331,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "@babel/runtime/helpers/slicedToArray",
-          "loc": "1:623-637"
+          "loc": "1:665-679"
         },
         {
           "moduleId": 55,
@@ -22331,7 +22340,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "@babel/runtime/helpers/slicedToArray",
-          "loc": "1:750-764"
+          "loc": "1:792-806"
         },
         {
           "moduleId": 55,
@@ -22340,7 +22349,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "@babel/runtime/helpers/slicedToArray",
-          "loc": "1:889-903"
+          "loc": "1:931-945"
         },
         {
           "moduleId": 55,
@@ -22349,7 +22358,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "@babel/runtime/helpers/slicedToArray",
-          "loc": "1:1019-1033"
+          "loc": "1:1061-1075"
         },
         {
           "moduleId": 55,
@@ -22358,7 +22367,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "@babel/runtime/helpers/slicedToArray",
-          "loc": "1:1164-1178"
+          "loc": "1:1206-1220"
         },
         {
           "moduleId": 56,
@@ -23176,9 +23185,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -23429,9 +23438,9 @@
       "chunks": [
         11
       ],
-      "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-      "issuerId": 61,
-      "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
+      "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+      "issuerId": 55,
+      "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
       "issuerPath": [
         {
           "id": 62,
@@ -23449,9 +23458,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         }
       ],
       "failed": false,
@@ -23529,7 +23538,16 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "axios",
-          "loc": "1:1426-1431"
+          "loc": "1:445-450"
+        },
+        {
+          "moduleId": 55,
+          "moduleIdentifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "module": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "type": "harmony import specifier",
+          "userRequest": "axios",
+          "loc": "1:1468-1473"
         },
         {
           "moduleId": 56,
@@ -23917,8 +23935,8 @@
         "default"
       ],
       "optimizationBailout": [
-        "ModuleConcatenation bailout: Cannot concat with /mnt/d/workspace/work/otm-dispatch/static-site/src/components/Footer.js because of /mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
-        "ModuleConcatenation bailout: Cannot concat with /mnt/d/workspace/work/otm-dispatch/static-site/src/components/NavBar.js because of /mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
+        "ModuleConcatenation bailout: Cannot concat with /mnt/d/workspace/work/otm-dispatch/static-site/src/components/Footer.js because of /mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+        "ModuleConcatenation bailout: Cannot concat with /mnt/d/workspace/work/otm-dispatch/static-site/src/components/NavBar.js because of /mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
         "ModuleConcatenation bailout: Cannot concat with /mnt/d/workspace/work/otm-dispatch/static-site/node_modules/@reach/router/es/index.js (<- Module is referenced from these modules with unsupported syntax: /mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-static-plugin-reach-router/browser.api.js (referenced with cjs require))",
         "ModuleConcatenation bailout: Cannot concat with ../lib/index.js (<- Module is not an ECMAScript module)",
         "ModuleConcatenation bailout: Cannot concat with /mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react/index.js (<- Module is not an ECMAScript module)",
@@ -24422,9 +24440,9 @@
       "chunks": [
         11
       ],
-      "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
-      "issuerId": 58,
-      "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
+      "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+      "issuerId": 55,
+      "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
       "issuerPath": [
         {
           "id": 62,
@@ -24442,9 +24460,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 58,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         }
       ],
       "failed": false,
@@ -24603,9 +24621,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -24972,9 +24990,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -25053,9 +25071,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -25139,9 +25157,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -25220,9 +25238,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -25301,9 +25319,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -25387,9 +25405,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -25478,9 +25496,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -25559,9 +25577,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -26248,9 +26266,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
-      "issuerId": 58,
-      "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
+      "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+      "issuerId": 55,
+      "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
       "issuerPath": [
         {
           "id": 62,
@@ -26268,9 +26286,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 58,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         }
       ],
       "failed": false,
@@ -26321,7 +26339,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "../components/NavBar",
-          "loc": "1:1810-1816"
+          "loc": "1:1852-1858"
         },
         {
           "moduleId": 56,
@@ -26420,9 +26438,9 @@
       "chunks": [
         0
       ],
-      "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
-      "issuerId": 58,
-      "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
+      "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+      "issuerId": 55,
+      "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
       "issuerPath": [
         {
           "id": 62,
@@ -26440,9 +26458,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 58,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         }
       ],
       "failed": false,
@@ -26493,7 +26511,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "../components/Footer",
-          "loc": "1:3358-3364"
+          "loc": "1:3400-3406"
         },
         {
           "moduleId": 56,
@@ -26659,9 +26677,9 @@
           "optional": false,
           "prefetched": false,
           "chunks": [],
-          "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
-          "issuerId": 58,
-          "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
+          "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "issuerId": 55,
+          "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "issuerPath": [
             {
               "id": 62,
@@ -26679,9 +26697,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 58,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             }
           ],
           "failed": false,
@@ -26766,9 +26784,9 @@
               "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
             },
             {
-              "id": 58,
-              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
-              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js"
+              "id": 55,
+              "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+              "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
             },
             {
               "id": null,
@@ -26964,7 +26982,7 @@
       "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
       "index": 136,
       "index2": 137,
-      "size": 3397,
+      "size": 3439,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -27024,7 +27042,7 @@
         "ModuleConcatenation bailout: Module uses injected variables (process)"
       ],
       "depth": 3,
-      "source": "import _slicedToArray from\"@babel/runtime/helpers/slicedToArray\";import React,{useEffect,useState}from\"react\";import Service from\"../components/Service\";import scrollIntoView from\"scroll-into-view-if-needed\";import axios from\"axios\";import Async from\"react-async\";import NavBar from\"../components/NavBar\";import Footer from\"../components/Footer\";var API_URL=\"https://otm-dispatch-strapi.herokuapp.com\";var url=\"\".concat(API_URL,\"/company-pages\");var Company=function Company(){var _useState=useState([]),_useState2=_slicedToArray(_useState,2),data=_useState2[0],setData=_useState2[1];var _useState3=useState([]),_useState4=_slicedToArray(_useState3,2),aboutUsHeader=_useState4[0],setAboutUsHeader=_useState4[1];var _useState5=useState([]),_useState6=_slicedToArray(_useState5,2),aboutUsDescriptions=_useState6[0],setAboutUsDescriptions=_useState6[1];var _useState7=useState([]),_useState8=_slicedToArray(_useState7,2),servicesHeader=_useState8[0],setServicesHeader=_useState8[1];var _useState9=useState([]),_useState10=_slicedToArray(_useState9,2),servicesDescriptions=_useState10[0],setServicesDescriptions=_useState10[1];var _useState11=useState([]),_useState12=_slicedToArray(_useState11,2),imageURL=_useState12[0],setImageURL=_useState12[1];if(process.browser){if(location.hash===\"#services\"){setTimeout(function(){document.getElementById(\"services\").scrollIntoView(true);},150);}else{scrollTo(0,0);}}useEffect(function(){axios.get(url).then(function(res){setData(res.data[0]);setAboutUsHeader(res.data[0].AboutUsHeader);setAboutUsDescriptions(res.data[0].AboutDescriptions);setServicesHeader(res.data[0].ServicesHeader);setServicesDescriptions(res.data[0].ServicesDescriptions);setImageURL(\"\".concat(API_URL+res.data[0].BannerImage.url));});},[]);return React.createElement(\"div\",null,React.createElement(NavBar,null),React.createElement(\"div\",{id:\"about\"},React.createElement(\"div\",{className:\"jumbotron jumbotron-fluid pb-4 text-light\",style:{backgroundImage:\"url(\".concat(imageURL,\")\"),backgroundSize:\"cover\"}},React.createElement(\"div\",{className:\"container\"},React.createElement(\"div\",{className:\"mx-auto my-auto text-center\"},React.createElement(\"h1\",null,aboutUsHeader.BannerHeader),React.createElement(\"p\",{className:\"mx-auto w-50\"},aboutUsHeader.Motto)))),React.createElement(\"div\",{className:\"container mt-5 mb-5\"},aboutUsDescriptions.map(function(description,index){return React.createElement(\"div\",{key:index},React.createElement(\"h3\",null,description.Header),React.createElement(\"p\",null,description.Paragraph));}))),React.createElement(\"div\",{id:\"services\"},React.createElement(\"div\",{className:\"jumbotron jumbotron-fluid pb-4 text-light\",style:{backgroundImage:\"url(\".concat(imageURL,\")\"),backgroundSize:\"cover\"}},React.createElement(\"div\",{className:\"container\"},React.createElement(\"div\",{className:\"mx-auto my-auto text-center\"},React.createElement(\"h1\",null,servicesHeader.BannerHeader),React.createElement(\"p\",{className:\"mx-auto w-50\"},servicesHeader.BannerSubheader)))),React.createElement(\"div\",{className:\"container\"},React.createElement(\"div\",{className:\"row mt-5 mb-5\"},servicesDescriptions.map(function(service,index){return React.createElement(\"div\",{key:index,className:\"col-sm-6 mt-3 text-center\"},React.createElement(Service,{id:service._id,header:service.Header,description:service.Paragraph}));})))),React.createElement(Footer,null));};export default Company;"
+      "source": "import _slicedToArray from\"@babel/runtime/helpers/slicedToArray\";import React,{useEffect,useState}from\"react\";import Service from\"../components/Service\";import scrollIntoView from\"scroll-into-view-if-needed\";import axios from\"axios\";import Async from\"react-async\";import NavBar from\"../components/NavBar\";import Footer from\"../components/Footer\";var API_URL=\"https://otm-dispatch-strapi.herokuapp.com\";var url=\"/company-pages\";var axiosInstance=axios.create({baseURL:\"\".concat(API_URL)});var Company=function Company(){var _useState=useState([]),_useState2=_slicedToArray(_useState,2),data=_useState2[0],setData=_useState2[1];var _useState3=useState([]),_useState4=_slicedToArray(_useState3,2),aboutUsHeader=_useState4[0],setAboutUsHeader=_useState4[1];var _useState5=useState([]),_useState6=_slicedToArray(_useState5,2),aboutUsDescriptions=_useState6[0],setAboutUsDescriptions=_useState6[1];var _useState7=useState([]),_useState8=_slicedToArray(_useState7,2),servicesHeader=_useState8[0],setServicesHeader=_useState8[1];var _useState9=useState([]),_useState10=_slicedToArray(_useState9,2),servicesDescriptions=_useState10[0],setServicesDescriptions=_useState10[1];var _useState11=useState([]),_useState12=_slicedToArray(_useState11,2),imageURL=_useState12[0],setImageURL=_useState12[1];if(process.browser){if(location.hash===\"#services\"){setTimeout(function(){document.getElementById(\"services\").scrollIntoView(true);},150);}else{scrollTo(0,0);}}useEffect(function(){axios.get(url).then(function(res){setData(res.data[0]);setAboutUsHeader(res.data[0].AboutUsHeader);setAboutUsDescriptions(res.data[0].AboutDescriptions);setServicesHeader(res.data[0].ServicesHeader);setServicesDescriptions(res.data[0].ServicesDescriptions);setImageURL(\"\".concat(API_URL+res.data[0].BannerImage.url));});},[]);return React.createElement(\"div\",null,React.createElement(NavBar,null),React.createElement(\"div\",{id:\"about\"},React.createElement(\"div\",{className:\"jumbotron jumbotron-fluid pb-4 text-light\",style:{backgroundImage:\"url(\".concat(imageURL,\")\"),backgroundSize:\"cover\"}},React.createElement(\"div\",{className:\"container\"},React.createElement(\"div\",{className:\"mx-auto my-auto text-center\"},React.createElement(\"h1\",null,aboutUsHeader.BannerHeader),React.createElement(\"p\",{className:\"mx-auto w-50\"},aboutUsHeader.Motto)))),React.createElement(\"div\",{className:\"container mt-5 mb-5\"},aboutUsDescriptions.map(function(description,index){return React.createElement(\"div\",{key:index},React.createElement(\"h3\",null,description.Header),React.createElement(\"p\",null,description.Paragraph));}))),React.createElement(\"div\",{id:\"services\"},React.createElement(\"div\",{className:\"jumbotron jumbotron-fluid pb-4 text-light\",style:{backgroundImage:\"url(\".concat(imageURL,\")\"),backgroundSize:\"cover\"}},React.createElement(\"div\",{className:\"container\"},React.createElement(\"div\",{className:\"mx-auto my-auto text-center\"},React.createElement(\"h1\",null,servicesHeader.BannerHeader),React.createElement(\"p\",{className:\"mx-auto w-50\"},servicesHeader.BannerSubheader)))),React.createElement(\"div\",{className:\"container\"},React.createElement(\"div\",{className:\"row mt-5 mb-5\"},servicesDescriptions.map(function(service,index){return React.createElement(\"div\",{key:index,className:\"col-sm-6 mt-3 text-center\"},React.createElement(Service,{id:service._id,header:service.Header,description:service.Paragraph}));})))),React.createElement(Footer,null));};export default Company;"
     },
     {
       "id": 56,
@@ -28689,9 +28707,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 8,
@@ -28756,9 +28774,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 8,
@@ -28823,9 +28841,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 8,
@@ -29133,9 +29151,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -29200,9 +29218,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -29277,9 +29295,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -29349,9 +29367,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -29426,9 +29444,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -29503,9 +29521,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -29585,9 +29603,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -29662,9 +29680,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -29744,9 +29762,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -29831,9 +29849,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -29913,9 +29931,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -29995,9 +30013,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -30077,9 +30095,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -30159,9 +30177,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -30241,9 +30259,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -30313,9 +30331,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 17,
@@ -32411,7 +32429,7 @@
         "ModuleConcatenation bailout: Module is not an ECMAScript module"
       ],
       "depth": 4,
-      "source": "// extracted by extract-css-chunks-webpack-plugin\n    if(module.hot) {\n      // 1576845916150\n      var cssReload = require(\"/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/extract-css-chunks-webpack-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"hot\":true,\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  "
+      "source": "// extracted by extract-css-chunks-webpack-plugin\n    if(module.hot) {\n      // 1576851262560\n      var cssReload = require(\"/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/extract-css-chunks-webpack-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"hot\":true,\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  "
     },
     {
       "id": 135,
@@ -32487,9 +32505,9 @@
       "optional": false,
       "prefetched": false,
       "chunks": [],
-      "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-      "issuerId": 61,
-      "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
+      "issuer": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+      "issuerId": 55,
+      "issuerName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
       "issuerPath": [
         {
           "id": 62,
@@ -32507,9 +32525,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         }
       ],
       "failed": false,
@@ -32659,7 +32677,7 @@
           "moduleName": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
           "type": "harmony import specifier",
           "userRequest": "../components/Service",
-          "loc": "1:3253-3260"
+          "loc": "1:3295-3302"
         }
       ],
       "usedExports": [
@@ -32991,9 +33009,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -33072,9 +33090,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -33153,9 +33171,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -33319,9 +33337,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -33422,9 +33440,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -33503,9 +33521,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -33579,9 +33597,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -33664,9 +33682,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -33776,9 +33794,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -33870,9 +33888,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -33951,9 +33969,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -34032,9 +34050,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -34113,9 +34131,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -34194,9 +34212,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -34275,9 +34293,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -34369,9 +34387,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -34450,9 +34468,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -34544,9 +34562,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -34661,9 +34679,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -34746,9 +34764,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
@@ -34831,9 +34849,9 @@
           "name": "/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js"
         },
         {
-          "id": 61,
-          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
-          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js"
+          "id": 55,
+          "identifier": "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/babel-loader/lib/index.js??ref--4-oneOf-0-0!/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-hot-loader/webpack.js!/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
+          "name": "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js"
         },
         {
           "id": 136,
