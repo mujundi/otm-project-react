@@ -13,9 +13,19 @@ const App = () => {
     <Root>
       <div className="content">
         <React.Suspense fallback={null}>
+          <NavBar />
           <Router>
-            <Routes path="*" />
+            <Routes path="/contact" />
+            <Routes path="/company" />
+            <Routes path="/solutions" />
+            <Routes path="/help" />
+            <Routes path="/legal" />
+            <Routes path="/privacy" />
+            <Routes path="/careers" />
+            <Routes path="/" />
+            <Routes path="/*" />
           </Router>
+          <Footer />
         </React.Suspense>
       </div>
     </Root>

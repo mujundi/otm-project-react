@@ -3,15 +3,41 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Async from "react-async";
 
-const API_URL = "https://otm-dispatch-strapi.herokuapp.com";
+const API_URL = "http://167.114.153.121:1337";
 
-const url = `${API_URL}/logos`;
+const logoUrl = `${API_URL}/logos/5dff4f59a21c443501c3241a`;
+const careersUrl = `${API_URL}/pages/5dff3ba2aecfad34d76ee5a0`;
+const companyUrl = `${API_URL}/pages/5dff3787aecfad34d76ee579`;
+const contactUrl = `${API_URL}/pages/5dff3d19aecfad34d76ee5b6`;
+const solutionsUrl = `${API_URL}/pages/5dff3f78aecfad34d76ee5c5`;
+const helpUrl = `${API_URL}/pages/5dff3bdaaecfad34d76ee5a5`;
 
 const NavBar = () => {
   const [imageURL, setImageURL] = useState([]);
+  const [companyLinkText, setCompanyLinkText] = useState([]);
+  const [solutionsLinkText, setSolutionsLinkText] = useState([]);
+  const [helpLinkText, setHelpLinkText] = useState([]);
+  const [contactLinkText, setContactLinkText] = useState([]);
+  const [careersLinkText, setCareersLinkText] = useState([]);
+
   useEffect(() => {
-    axios.get(url).then((res) => {
-      setImageURL(`${API_URL + res.data[0].NavBarLogo.url}`);
+    axios.get(logoUrl).then((res) => {
+      setImageURL(`${API_URL + res.data.navigation_bar_logo.url}`);
+    });
+    axios.get(careersUrl).then((res) => {
+      setCareersLinkText(res.data.page_name);
+    });
+    axios.get(companyUrl).then((res) => {
+      setCompanyLinkText(res.data.page_name);
+    });
+    axios.get(contactUrl).then((res) => {
+      setContactLinkText(res.data.page_name);
+    });
+    axios.get(solutionsUrl).then((res) => {
+      setSolutionsLinkText(res.data.page_name);
+    });
+    axios.get(helpUrl).then((res) => {
+      setHelpLinkText(res.data.page_name);
     });
   }, []);
 
@@ -44,7 +70,7 @@ const NavBar = () => {
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Company
+              {companyLinkText}
             </a>
             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
               <Link to="/company#about" className="dropdown-item">
@@ -65,14 +91,14 @@ const NavBar = () => {
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Solutions
+              {solutionsLinkText}
             </Link>
             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <Link to="/solutions#shippers" className="dropdown-item">
-                For Shippers
-              </Link>
               <Link to="/solutions#carriers" className="dropdown-item">
                 For Carriers
+              </Link>
+              <Link to="/solutions#shippers" className="dropdown-item">
+                For Shippers
               </Link>
             </div>
           </li>
@@ -87,7 +113,7 @@ const NavBar = () => {
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Help
+              {helpLinkText}
             </Link>
             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
               <Link to="/help#faqs" className="dropdown-item">
@@ -100,12 +126,12 @@ const NavBar = () => {
           </li>
           <li className="nav-item">
             <Link to="/contact" className="nav-link">
-              Contact
+              {contactLinkText}
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/careers" className="nav-link">
-              Careers
+              {careersLinkText}
             </Link>
           </li>
         </ul>

@@ -17,7 +17,7 @@ export default () => {
 
   return (
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       <div className="container mt-5" id="faqs">
         <h2 className="text-center">Frequently Asked Questions:</h2>
         <QuestionList />
@@ -30,7 +30,7 @@ export default () => {
           Get Help
         </button>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

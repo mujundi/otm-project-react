@@ -1,8 +1,17 @@
 import path from "path";
 import axios from "axios";
 import React from "react";
+import { getSiteData } from "react-static/node";
 
 export default {
+  getSiteData: async () => {
+    const data = axios.get("http://167.114.153.121:1337/pages").then((res) => {
+      return res.data;
+    });
+    {
+      test: data;
+    }
+  },
   plugins: [
     [
       require.resolve("react-static-plugin-source-filesystem"),

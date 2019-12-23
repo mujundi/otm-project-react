@@ -6,17 +6,20 @@ import Async from "react-async";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
-const API_URL = "https://otm-dispatch-strapi.herokuapp.com";
+const API_URL = "http://167.114.153.121:1337";
 
-const url = `${API_URL}/company-pages`;
+const url = `${API_URL}/pages/5dff3787aecfad34d76ee579`;
 
 const Company = () => {
   const [data, setData] = useState([]);
   const [aboutUsHeader, setAboutUsHeader] = useState([]);
+  const [aboutUsSubheader, setAboutUsSubheader] = useState([]);
   const [aboutUsDescriptions, setAboutUsDescriptions] = useState([]);
   const [servicesHeader, setServicesHeader] = useState([]);
+  const [servicesSubheader, setServicesSubheader] = useState([]);
   const [servicesDescriptions, setServicesDescriptions] = useState([]);
-  const [imageURL, setImageURL] = useState([]);
+  const [aboutUsBannerImage, setAboutUsBannerImage] = useState([]);
+  const [servicesBannerImage, setServicesBannerImage] = useState([]);
 
   if (process.browser) {
     if (location.hash === "#services") {
@@ -30,38 +33,40 @@ const Company = () => {
 
   useEffect(() => {
     axios.get(url).then((res) => {
-      setData(res.data[0]);
-      setAboutUsHeader(res.data[0].AboutUsHeader);
-      setAboutUsDescriptions(res.data[0].AboutDescriptions);
-      setServicesHeader(res.data[0].ServicesHeader);
-      setServicesDescriptions(res.data[0].ServicesDescriptions);
-      setImageURL(`${API_URL + res.data[0].BannerImage.url}`);
+      setData(res.data);
+      setAboutUsHeader(res.data.fields[0].header);
+      setAboutUsSubheader(res.data.fields[0].subheader);
+      setAboutUsBannerImage(`${API_URL + res.data.fields[0].background.url}`);
+      setAboutUsDescriptions(res.data.fields[1].paragraph);
+      setServicesHeader(res.data.fields[2].header);
+      setServicesSubheader(res.data.fields[2].subheader);
+      setServicesBannerImage(`${API_URL + res.data.fields[2].background.url}`);
+      setServicesDescriptions(res.data.fields[3].paragraph);
     });
   }, []);
 
   return (
     <div>
-      <NavBar />
       <div id="about">
         <div
           className="jumbotron jumbotron-fluid pb-4 text-light"
           style={{
-            backgroundImage: `url(${imageURL})`,
+            backgroundImage: `url(${aboutUsBannerImage})`,
             backgroundSize: `cover`
           }}
         >
           <div className="container">
             <div className="mx-auto my-auto text-center">
-              <h1>{aboutUsHeader.BannerHeader}</h1>
-              <p className="mx-auto w-50">{aboutUsHeader.Motto}</p>
+              <h1>{aboutUsHeader}</h1>
+              <p className="mx-auto w-50">{aboutUsSubheader}</p>
             </div>
           </div>
         </div>
         <div className="container mt-5 mb-5">
           {aboutUsDescriptions.map((description, index) => (
             <div key={index}>
-              <h3>{description.Header}</h3>
-              <p>{description.Paragraph}</p>
+              <h3>{description.header}</h3>
+              <p>{description.body}</p>
             </div>
           ))}
         </div>
@@ -70,14 +75,14 @@ const Company = () => {
         <div
           className="jumbotron jumbotron-fluid pb-4 text-light"
           style={{
-            backgroundImage: `url(${imageURL})`,
+            backgroundImage: `url(${servicesBannerImage})`,
             backgroundSize: `cover`
           }}
         >
           <div className="container">
             <div className="mx-auto my-auto text-center">
-              <h1>{servicesHeader.BannerHeader}</h1>
-              <p className="mx-auto w-50">{servicesHeader.BannerSubheader}</p>
+              <h1>{servicesHeader}</h1>
+              <p className="mx-auto w-50">{servicesSubheader}</p>
             </div>
           </div>
         </div>
@@ -87,15 +92,14 @@ const Company = () => {
               <div key={index} className="col-sm-6 mt-3 text-center">
                 <Service
                   id={service._id}
-                  header={service.Header}
-                  description={service.Paragraph}
+                  header={service.header}
+                  description={service.body}
                 />
               </div>
             ))}
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

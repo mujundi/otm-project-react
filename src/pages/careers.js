@@ -4,24 +4,25 @@ import Async from "react-async";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
-const API_URL = "https://otm-dispatch-strapi.herokuapp.com";
+const API_URL = "http://167.114.153.121:1337";
 
-const url = `${API_URL}/careers-pages`;
+const url = `${API_URL}/pages/5dff3ba2aecfad34d76ee5a0`;
 
 const Careers = () => {
-  const [careersBanner, setCareersBanner] = useState([]);
+  const [bannerHeader, setBannerHeader] = useState([]);
+  const [bannerSubheader, setBannerSubheader] = useState([]);
   const [imageURL, setImageURL] = useState([]);
 
   useEffect(() => {
     axios.get(url).then((res) => {
-      setCareersBanner(res.data[0].Banner);
-      setImageURL(`${API_URL + res.data[0].BannerImage.url}`);
+      setBannerHeader(res.data.fields[0].header);
+      setBannerSubheader(res.data.fields[0].subheader);
+      setImageURL(`${API_URL + res.data.fields[0].background.url}`);
     });
   }, []);
 
   return (
     <div>
-      <NavBar />
       <div
         className="jumbotron jumbotron-fluid pb-4 text-light"
         style={{
@@ -31,8 +32,8 @@ const Careers = () => {
       >
         <div className="container">
           <div className="mx-auto text-center">
-            <h1>{careersBanner.BannerHeader}</h1>
-            <p>{careersBanner.BannerDescription}</p>
+            <h1>{bannerHeader}</h1>
+            <p>{bannerSubheader}</p>
           </div>
         </div>
       </div>
@@ -117,7 +118,6 @@ const Careers = () => {
           </div>
         </form>
       </div>
-      <Footer />
     </div>
   );
 };

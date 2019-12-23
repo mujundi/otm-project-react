@@ -164,7 +164,7 @@ module.exports = require("@reach/router");
 
 
 var API_URL = "https://otm-dispatch-strapi.herokuapp.com";
-var url = "".concat(API_URL, "/logos");
+var url = "".concat(API_URL, "/logos/5dff4f59a21c443501c3241a");
 
 var NavBar = function NavBar() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])([]),
@@ -174,7 +174,7 @@ var NavBar = function NavBar() {
 
   Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
     axios__WEBPACK_IMPORTED_MODULE_3___default.a.get(url).then(function (res) {
-      setImageURL("".concat(API_URL + res.data[0].NavBarLogo.url));
+      setImageURL("".concat(API_URL + res.data[0].navigation_bar_logo.url));
     });
   }, []);
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("nav", {
@@ -2192,8 +2192,8 @@ var Footer = __webpack_require__(6);
 
 
 
-var API_URL = "https://otm-dispatch-strapi.herokuapp.com";
-var url = "".concat(API_URL, "/solutions-pages");
+var API_URL = "http://167.114.153.121:1337";
+var solutionsPageUrl = "".concat(API_URL, "/pages/5dff3f78aecfad34d76ee5c5");
 
 var solutions_Solutions = function Solutions() {
   var _useState = Object(external_react_["useState"])([]),
@@ -2221,26 +2221,21 @@ var solutions_Solutions = function Solutions() {
       carrierBanner = _useState10[0],
       setCarrierBanner = _useState10[1];
 
-  var _useState11 = Object(external_react_["useState"])([]),
-      _useState12 = slicedToArray_default()(_useState11, 2),
-      imageURL = _useState12[0],
-      setImageURL = _useState12[1];
-
   Object(external_react_["useEffect"])(function () {
-    external_axios_default.a.get(url).then(function (res) {
+    external_axios_default.a.get(solutionsPageUrl).then(function (res) {
       setData(res.data[0]);
-      setShipperSolutions(res.data[0].ShipperSolutions);
-      setCarrierSolutions(res.data[0].CarrierSolutions);
-      setShipperBanner(res.data[0].ShipperBannerHeader);
-      setCarrierBanner(res.data[0].CarrierBannerHeader);
-      setImageURL("".concat(API_URL + res.data[0].BannerImage.BannerImage.url));
+      setShipperSolutions(res.data[0].fields[3].paragraph);
+      setCarrierSolutions(res.data[0].fields[1].paragraph);
+      setShipperBanner(res.data[0].fields[2]);
+      setCarrierBanner(res.data[0].fields[0]);
+      console.log(res);
     });
   }, []);
 
   if (process.browser) {
-    if (location.hash === "#carriers") {
+    if (location.hash === "#shippers") {
       setTimeout(function () {
-        document.getElementById("carriers").scrollIntoView(true);
+        document.getElementById("shippers").scrollIntoView(true);
       }, 150);
     } else {
       scrollTo(0, 0);
@@ -2248,48 +2243,20 @@ var solutions_Solutions = function Solutions() {
   }
 
   return external_react_default.a.createElement("div", null, external_react_default.a.createElement(NavBar["a" /* default */], null), external_react_default.a.createElement("div", {
-    id: "shippers"
+    id: "carriers"
   }, external_react_default.a.createElement("div", {
     className: "jumbotron jumbotron-fluid pb-4 text-light",
     style: {
-      backgroundImage: "url(".concat(imageURL, ")"),
+      backgroundImage: "url(".concat(API_URL + carrierBanner.background.url, ")"),
       backgroundSize: "cover"
     }
   }, external_react_default.a.createElement("div", {
     className: "container"
   }, external_react_default.a.createElement("div", {
     className: "mx-auto my-auto text-center"
-  }, external_react_default.a.createElement("h1", null, shipperBanner.Header), external_react_default.a.createElement("p", {
+  }, external_react_default.a.createElement("h1", null, carrierBanner.header), external_react_default.a.createElement("p", {
     className: "mx-auto w-50"
-  }, shipperBanner.Subheader)))), external_react_default.a.createElement("div", {
-    className: "container"
-  }, external_react_default.a.createElement("div", {
-    className: "row mt-5 mb-5 mx-auto justify-content-center"
-  }, shipperSolutions.map(function (solution, index) {
-    return external_react_default.a.createElement("div", {
-      key: index,
-      className: "col-sm-6 mt-3 text-center"
-    }, external_react_default.a.createElement(Solution, {
-      id: solution._id,
-      header: solution.SolutionHeader,
-      description: solution.SolutionDescription
-    }));
-  }))), external_react_default.a.createElement("div", {
-    id: "carriers",
-    className: "py-5"
-  }, external_react_default.a.createElement("div", {
-    className: "jumbotron jumbotron-fluid pb-4 text-light",
-    style: {
-      backgroundImage: "url(".concat(imageURL, ")"),
-      backgroundSize: "cover"
-    }
-  }, external_react_default.a.createElement("div", {
-    className: "container"
-  }, external_react_default.a.createElement("div", {
-    className: "mx-auto my-auto text-center"
-  }, external_react_default.a.createElement("h1", null, carrierBanner.Header), external_react_default.a.createElement("p", {
-    className: "mx-auto w-50"
-  }, carrierBanner.Subheader)))), external_react_default.a.createElement("div", {
+  }, carrierBanner.subheader)))), external_react_default.a.createElement("div", {
     className: "container"
   }, external_react_default.a.createElement("div", {
     className: "row mt-5 mb-5 mx-auto justify-content-center"
@@ -2299,8 +2266,36 @@ var solutions_Solutions = function Solutions() {
       className: "col-sm-6 mt-3 text-center"
     }, external_react_default.a.createElement(Solution, {
       id: solution._id,
-      header: solution.SolutionHeader,
-      description: solution.SolutionDescription
+      header: solution.header,
+      description: solution.body
+    }));
+  }))), external_react_default.a.createElement("div", {
+    id: "shippers",
+    className: "py-5"
+  }, external_react_default.a.createElement("div", {
+    className: "jumbotron jumbotron-fluid pb-4 text-light",
+    style: {
+      backgroundImage: "url(".concat(API_URL + shipperBanner.background.url, ")"),
+      backgroundSize: "cover"
+    }
+  }, external_react_default.a.createElement("div", {
+    className: "container"
+  }, external_react_default.a.createElement("div", {
+    className: "mx-auto my-auto text-center"
+  }, external_react_default.a.createElement("h1", null, shipperBanner.header), external_react_default.a.createElement("p", {
+    className: "mx-auto w-50"
+  }, shipperBanner.subheader)))), external_react_default.a.createElement("div", {
+    className: "container"
+  }, external_react_default.a.createElement("div", {
+    className: "row mt-5 mb-5 mx-auto justify-content-center"
+  }, shipperSolutions.map(function (solution, index) {
+    return external_react_default.a.createElement("div", {
+      key: index,
+      className: "col-sm-6 mt-3 text-center"
+    }, external_react_default.a.createElement(Solution, {
+      id: solution._id,
+      header: solution.header,
+      description: solution.body
     }));
   }))))), external_react_default.a.createElement(Footer["a" /* default */], null));
 };

@@ -3,15 +3,15 @@ import Question from "./Question";
 import axios from "axios";
 import Async from "react-async";
 
-const API_URL = "https://otm-dispatch-strapi.herokuapp.com";
+const API_URL = "http://167.114.153.121:1337";
 
-const url = `${API_URL}/help-pages`;
+const url = `${API_URL}/pages/5dff3bdaaecfad34d76ee5a5`;
 
 export default function QuestionList() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get(url).then((res) => setData(res.data[0].FAQs));
+    axios.get(url).then((res) => setData(res.data.fields[0].question));
   }, []);
 
   return (
@@ -31,8 +31,8 @@ export default function QuestionList() {
               <li key={index}>
                 <Question
                   id={question._id}
-                  question={question.Question}
-                  answer={question.Answer}
+                  question={question.question}
+                  answer={question.answer}
                 />
               </li>
             ))}

@@ -3,23 +3,26 @@ import axios from "axios";
 import Async from "react-async";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import { useSiteData } from "react-static";
 
-const API_URL = "https://otm-dispatch-strapi.herokuapp.com";
+const API_URL = "http://167.114.153.121:1337";
 
-const url = `${API_URL}/contact-pages`;
+const url = `${API_URL}/pages/5dff3d19aecfad34d76ee5b6`;
 
-const Contact = () => {
+const Contact = (props) => {
   const [data, setData] = useState([]);
   const [contactHeader, setContactHeader] = useState([]);
+  const [contactSubheader, setContactSubheader] = useState([]);
   const [needs, setNeeds] = useState([]);
   const [imageURL, setImageURL] = useState([]);
 
   useEffect(() => {
     axios.get(url).then((res) => {
-      setData(res.data[0]);
-      setContactHeader(res.data[0].ContactHeader);
-      setNeeds(res.data[0].Needs);
-      setImageURL(`${API_URL + res.data[0].BannerImage.url}`);
+      setData(res.data);
+      setContactHeader(res.data.fields[0].header);
+      setContactSubheader(res.data.fields[0].subheader);
+      setImageURL(`${API_URL + res.data.fields[0].background.url}`);
+      setNeeds(res.data.fields[1].option);
     });
   }, []);
 
@@ -30,27 +33,27 @@ const Contact = () => {
     const email = e.target.email.value;
     const reason = e.target.need.value;
     const message = e.target.message.value;
-
-    axios
-      .post(`${API_URL}/info-requests`, {
-        FirstName: firstName,
-        LastName: lastName,
-        Email: email,
-        Message: message,
-        Reason: reason
-      })
-      .then((res) => {
-        const alert = document.getElementById("thank-you-alert");
-        alert.style.display = "block";
-        setTimeout(() => {
-          alert.style.display = "none";
-        }, 4000);
-      });
+    if (firstName) {
+      axios
+        .post(`${API_URL}/contact-requests`, {
+          first_name: firstName,
+          last_name: lastName,
+          email: email,
+          message: message,
+          reason_for_inquiry: reason
+        })
+        .then((res) => {
+          const alert = document.getElementById("thank-you-alert");
+          alert.style.display = "block";
+          setTimeout(() => {
+            alert.style.display = "none";
+          }, 4000);
+        });
+    }
   };
 
   return (
     <div>
-      <NavBar />
       <div
         className="jumbotron jumbotron-fluid pb-4 text-light"
         style={{
@@ -60,8 +63,8 @@ const Contact = () => {
       >
         <div className="container">
           <div className="mx-auto text-center">
-            <h1>{contactHeader.BannerHeader}</h1>
-            <p>{contactHeader.BannerSubheader}</p>
+            <h1>{contactHeader}</h1>
+            <p>{contactSubheader}</p>
           </div>
         </div>
       </div>
@@ -138,8 +141,8 @@ const Contact = () => {
                     data-error="Please specify your need."
                   >
                     {needs.map((need, index) => (
-                      <option key={index} value={need.Needs}>
-                        {need.Needs}
+                      <option key={index} value={need.option}>
+                        {need.option}
                       </option>
                     ))}
                   </select>
@@ -175,7 +178,6 @@ const Contact = () => {
           </div>
         </form>
       </div>
-      <Footer />
     </div>
   );
 };

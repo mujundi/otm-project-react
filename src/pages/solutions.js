@@ -6,9 +6,9 @@ import Async from "react-async";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
-const API_URL = "https://otm-dispatch-strapi.herokuapp.com";
+const API_URL = "http://167.114.153.121:1337";
 
-const url = `${API_URL}/solutions-pages`;
+const solutionsPageUrl = `${API_URL}/pages/5dff3f78aecfad34d76ee5c5`;
 
 const Solutions = () => {
   const [data, setData] = useState([]);
@@ -16,23 +16,25 @@ const Solutions = () => {
   const [carrierSolutions, setCarrierSolutions] = useState([]);
   const [shipperBanner, setShipperBanner] = useState([]);
   const [carrierBanner, setCarrierBanner] = useState([]);
-  const [imageURL, setImageURL] = useState([]);
+  const [shipperBannerImage, setShipperBannerImage] = useState([]);
+  const [carrierBannerImage, setCarrierBannerImage] = useState([]);
 
   useEffect(() => {
-    axios.get(url).then((res) => {
-      setData(res.data[0]);
-      setShipperSolutions(res.data[0].ShipperSolutions);
-      setCarrierSolutions(res.data[0].CarrierSolutions);
-      setShipperBanner(res.data[0].ShipperBannerHeader);
-      setCarrierBanner(res.data[0].CarrierBannerHeader);
-      setImageURL(`${API_URL + res.data[0].BannerImage.BannerImage.url}`);
+    axios.get(solutionsPageUrl).then((res) => {
+      setData(res.data);
+      setCarrierBanner(res.data.fields[0]);
+      setCarrierBannerImage(API_URL + res.data.fields[0].background.url);
+      setCarrierSolutions(res.data.fields[1].paragraph);
+      setShipperBanner(res.data.fields[2]);
+      setShipperBannerImage(API_URL + res.data.fields[2].background.url);
+      setShipperSolutions(res.data.fields[3].paragraph);
     });
   }, []);
 
   if (process.browser) {
-    if (location.hash === "#carriers") {
+    if (location.hash === "#shippers") {
       setTimeout(() => {
-        document.getElementById("carriers").scrollIntoView(true);
+        document.getElementById("shippers").scrollIntoView(true);
       }, 150);
     } else {
       scrollTo(0, 0);
@@ -41,59 +43,58 @@ const Solutions = () => {
 
   return (
     <div>
-      <NavBar />
-      <div id="shippers">
+      <div id="carriers">
         <div
           className="jumbotron jumbotron-fluid pb-4 text-light"
           style={{
-            backgroundImage: `url(${imageURL})`,
+            backgroundImage: `url(${carrierBannerImage})`,
             backgroundSize: `cover`
           }}
         >
           <div className="container">
             <div className="mx-auto my-auto text-center">
-              <h1>{shipperBanner.Header}</h1>
-              <p className="mx-auto w-50">{shipperBanner.Subheader}</p>
+              <h1>{carrierBanner.header}</h1>
+              <p className="mx-auto w-50">{carrierBanner.subheader}</p>
             </div>
           </div>
         </div>
         <div className="container">
           <div className="row mt-5 mb-5 mx-auto justify-content-center">
-            {shipperSolutions.map((solution, index) => (
+            {carrierSolutions.map((solution, index) => (
               <div key={index} className="col-sm-6 mt-3 text-center">
                 <Solution
                   id={solution._id}
-                  header={solution.SolutionHeader}
-                  description={solution.SolutionDescription}
+                  header={solution.header}
+                  description={solution.body}
                 />
               </div>
             ))}
           </div>
         </div>
 
-        <div id="carriers" className="py-5">
+        <div id="shippers" className="py-5">
           <div
             className="jumbotron jumbotron-fluid pb-4 text-light"
             style={{
-              backgroundImage: `url(${imageURL})`,
+              backgroundImage: `url(${shipperBannerImage})`,
               backgroundSize: `cover`
             }}
           >
             <div className="container">
               <div className="mx-auto my-auto text-center">
-                <h1>{carrierBanner.Header}</h1>
-                <p className="mx-auto w-50">{carrierBanner.Subheader}</p>
+                <h1>{shipperBanner.header}</h1>
+                <p className="mx-auto w-50">{shipperBanner.subheader}</p>
               </div>
             </div>
           </div>
           <div className="container">
             <div className="row mt-5 mb-5 mx-auto justify-content-center">
-              {carrierSolutions.map((solution, index) => (
+              {shipperSolutions.map((solution, index) => (
                 <div key={index} className="col-sm-6 mt-3 text-center">
                   <Solution
                     id={solution._id}
-                    header={solution.SolutionHeader}
-                    description={solution.SolutionDescription}
+                    header={solution.header}
+                    description={solution.body}
                   />
                 </div>
               ))}
@@ -101,7 +102,6 @@ const Solutions = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
