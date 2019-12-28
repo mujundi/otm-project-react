@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Solution from "../components/Solution";
-import scrollIntoView from "scroll-into-view-if-needed";
 import axios from "axios";
-import Async from "react-async";
 import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
 
 const API_URL = "http://167.114.153.121:1337";
 
@@ -42,7 +39,12 @@ const Solutions = () => {
   }
 
   return (
-    <div>
+    <div className="sticky-menu">
+      <section className="otm-hero-light">
+        <div className="container">
+          <NavBar />
+        </div>
+      </section>
       <div id="carriers">
         <div
           className="jumbotron jumbotron-fluid pb-4 text-light"

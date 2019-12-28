@@ -1,9 +1,13 @@
 import React from "react";
 import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
 
 export default () => (
-  <div>
-    <h1>Privacy</h1>
+  <div className="sticky-menu">
+    <section className="otm-hero-light">
+      <div className="container">
+        <NavBar />
+      </div>
+    </section>
+    <h1 className="text-center">Privacy</h1>
   </div>
 );

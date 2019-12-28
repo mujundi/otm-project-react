@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Async from "react-async";
 import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
 
 const API_URL = "http://167.114.153.121:1337";
 
@@ -22,7 +20,12 @@ const Careers = () => {
   }, []);
 
   return (
-    <div>
+    <div className="sticky-menu">
+      <section className="otm-hero-light">
+        <div className="container">
+          <NavBar />
+        </div>
+      </section>
       <div
         className="jumbotron jumbotron-fluid pb-4 text-light"
         style={{
@@ -52,7 +55,7 @@ const Careers = () => {
                     name="name"
                     className="form-control"
                     placeholder="Please enter your first name *"
-                    required="required"
+                    required
                     data-error="First name is required."
                   />
                   <div className="help-block with-errors"></div>
@@ -67,7 +70,7 @@ const Careers = () => {
                     name="surname"
                     className="form-control"
                     placeholder="Please enter your last name *"
-                    required="required"
+                    required
                     data-error="Last name is required."
                   />
                   <div className="help-block with-errors"></div>
@@ -84,7 +87,7 @@ const Careers = () => {
                     name="email"
                     className="form-control"
                     placeholder="Please enter your email *"
-                    required="required"
+                    required
                     data-error="Valid email is required."
                   />
                   <div className="help-block with-errors"></div>
@@ -100,8 +103,8 @@ const Careers = () => {
                     name="message"
                     className="form-control"
                     placeholder="Message for us *"
-                    rows="4"
-                    required="required"
+                    rows={4}
+                    required
                     data-error="Please, leave us a message."
                   ></textarea>
                   <div className="help-block with-errors"></div>

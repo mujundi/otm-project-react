@@ -1,0 +1,68 @@
+.contact-us-main{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.custom-form-group{
+    margin-bottom: 30px;
+}
+.custom-form-group .form-control{
+    border: 1px solid #dbdbdb;
+}
+.otm-action-btn{
+    background-color: #19144D;
+    color: #ffffff;
+}
+.contact-form-title h3{
+    color: #004D86;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 20px;
+    font-size: 40px;
+}
+.contact-form-title h3:after{
+    content: '';
+    width: 107px;
+    height: 5px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: #d8d8d8;
+}
+.contact-form-title{
+    margin-bottom: 30px;
+}
+.contact-info-logo{
+    width: 250px;
+    max-width: 100%;
+    margin-top: 30px;
+}
+.chat-time{
+    border-bottom: 1px solid #979797;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.chat-time p{font-size: 12px;font-weight: 600;}
+.chat-time h4{
+    font-size: 16px;
+}
+.contact-point{text-align: center;}
+.contact-point p{text-align: left;}
+.contact-point p a{color: #000000;}
+.contact-point p a:hover{text-decoration: none;}
+@media only screen and (max-width: 991px){
+    .contact-form-title h3{
+        font-size: 36px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .contact-form-title h3{
+        font-size: 32px;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .contact-form-title h3{
+        font-size: 32px;
+    }
+}

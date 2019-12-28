@@ -1,8 +1,6 @@
 import React from "react";
 import QuestionList from "../components/QuestionList";
-import scrollIntoView from "scroll-into-view-if-needed";
 import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
 
 export default () => {
   if (process.browser) {
@@ -16,8 +14,12 @@ export default () => {
   }
 
   return (
-    <div>
-      {/* <NavBar /> */}
+    <div className="sticky-menu">
+      <section className="otm-hero-light">
+        <div className="container">
+          <NavBar />
+        </div>
+      </section>
       <div className="container mt-5" id="faqs">
         <h2 className="text-center">Frequently Asked Questions:</h2>
         <QuestionList />
@@ -30,7 +32,6 @@ export default () => {
           Get Help
         </button>
       </div>
-      {/* <Footer /> */}
     </div>
   );
 };
