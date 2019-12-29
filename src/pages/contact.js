@@ -4,7 +4,7 @@ import "../styles/contact.css";
 
 import NavBar from "components/NavBar";
 
-import OTMDispatchLogo from '../images/logo/otm-trademark.svg';
+import OTMDispatchLogo from "../images/logo/otm-trademark.svg";
 
 const API_URL = "http://167.114.153.121:1337";
 
@@ -25,6 +25,7 @@ const Contact = (props) => {
     //   setImageURL(`${API_URL + res.data.fields[0].background.url}`);
     //   setNeeds(res.data.fields[1].option);
     // });
+    if (process.browser) scrollTo(0, 0);
   }, []);
 
   const handleEmail = (e) => {
@@ -273,11 +274,13 @@ const Contact = (props) => {
                       <input
                         type="text"
                         className="form-control form-control-lg"
-                        placeholder={'12345'}
+                        placeholder={"12345"}
                       />
                     </div>
                     <div className="form-group custom-form-group col-12 text-right">
-                      <button className="btn btn-lg otm-action-btn">Submit</button>
+                      <button className="btn btn-lg otm-action-btn">
+                        Submit
+                      </button>
                     </div>
                   </div>
                 </form>
@@ -297,7 +300,9 @@ const Contact = (props) => {
                     <a href="tel:+18001231234">+1 (800) 123-1234</a>
                   </p>
                   <p>
-                    <a href="mailto:INFO@OTMDISPATCH.COM">INFO@OTMDISPATCH.COM</a>
+                    <a href="mailto:INFO@OTMDISPATCH.COM">
+                      INFO@OTMDISPATCH.COM
+                    </a>
                   </p>
                   <p>9500 SATELLITE BLVD SUITE 170, ORLANDO, 32837</p>
                   <img

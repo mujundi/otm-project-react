@@ -9,29 +9,31 @@ const solutionsPageUrl = `${API_URL}/pages/5dff3f78aecfad34d76ee5c5`;
 
 const Solutions = () => {
   const [data, setData] = useState([]);
-  const [shipperSolutions, setShipperSolutions] = useState([]);
-  const [carrierSolutions, setCarrierSolutions] = useState([]);
-  const [shipperBanner, setShipperBanner] = useState([]);
-  const [carrierBanner, setCarrierBanner] = useState([]);
-  const [shipperBannerImage, setShipperBannerImage] = useState([]);
-  const [carrierBannerImage, setCarrierBannerImage] = useState([]);
+  const [banner, setBanner] = useState([]);
+  const [bannerImage, setBannerImage] = useState([]);
+  const [solutionsIntro, setSolutionsIntro] = useState([]);
+  const [solutionsIntroImage, setSolutionsIntroImage] = useState([]);
+  const [solutions, setSolutions] = useState([]);
 
   useEffect(() => {
     axios.get(solutionsPageUrl).then((res) => {
       setData(res.data);
-      setCarrierBanner(res.data.fields[0]);
-      setCarrierBannerImage(API_URL + res.data.fields[0].background.url);
-      setCarrierSolutions(res.data.fields[1].paragraph);
-      setShipperBanner(res.data.fields[2]);
-      setShipperBannerImage(API_URL + res.data.fields[2].background.url);
-      setShipperSolutions(res.data.fields[3].paragraph);
+      setBanner(res.data.fields[0]);
+      setBannerImage(API_URL + res.data.fields[0].background.url);
+      setSolutionsIntro(res.data.fields[1].content[0]);
+      setSolutionsIntroImage(API_URL + res.data.fields[1].content[0].icon.url);
+      setSolutions(res.data.fields[2].content);
     });
   }, []);
 
   if (process.browser) {
-    if (location.hash === "#shippers") {
+    if (location.hash === "#plans") {
       setTimeout(() => {
-        document.getElementById("shippers").scrollIntoView(true);
+        document.getElementById("plans").scrollIntoView(true);
+      }, 150);
+    } else if (location.hash === "#solutions") {
+      setTimeout(() => {
+        document.getElementById("solutions").scrollIntoView(true);
       }, 150);
     } else {
       scrollTo(0, 0);
@@ -45,62 +47,48 @@ const Solutions = () => {
           <NavBar />
         </div>
       </section>
-      <div id="carriers">
+      <div id="intro">
         <div
           className="jumbotron jumbotron-fluid pb-4 text-light"
           style={{
-            backgroundImage: `url(${carrierBannerImage})`,
+            backgroundImage: `url(${bannerImage})`,
             backgroundSize: `cover`
           }}
         >
           <div className="container">
             <div className="mx-auto my-auto text-center">
-              <h1>{carrierBanner.header}</h1>
-              <p className="mx-auto w-50">{carrierBanner.subheader}</p>
+              <h1>{banner.header}</h1>
+              <p className="mx-auto w-50">{banner.subheader}</p>
             </div>
           </div>
         </div>
         <div className="container">
-          <div className="row mt-5 mb-5 mx-auto justify-content-center">
-            {carrierSolutions.map((solution, index) => (
-              <div key={index} className="col-sm-6 mt-3 text-center">
-                <Solution
-                  id={solution._id}
-                  header={solution.header}
-                  description={solution.body}
-                />
-              </div>
-            ))}
+          <Solution
+            id={solutionsIntro._id}
+            header={solutionsIntro.header}
+            description={solutionsIntro.body}
+            image={solutionsIntroImage}
+            count={1}
+          />
+        </div>
+        {/* Added 100px padding to the div holding the anchors for scrolling, to compensate for the height of the sticky navbar */}
+        <div id="plans" style={{ paddingTop: "100px" }}>
+          <div className="mx-auto py-5 font-weight-bold font-color text-center text-light bg-primary">
+            THE PLANS GO HERE
           </div>
         </div>
-
-        <div id="shippers" className="py-5">
-          <div
-            className="jumbotron jumbotron-fluid pb-4 text-light"
-            style={{
-              backgroundImage: `url(${shipperBannerImage})`,
-              backgroundSize: `cover`
-            }}
-          >
-            <div className="container">
-              <div className="mx-auto my-auto text-center">
-                <h1>{shipperBanner.header}</h1>
-                <p className="mx-auto w-50">{shipperBanner.subheader}</p>
-              </div>
-            </div>
-          </div>
-          <div className="container">
-            <div className="row mt-5 mb-5 mx-auto justify-content-center">
-              {shipperSolutions.map((solution, index) => (
-                <div key={index} className="col-sm-6 mt-3 text-center">
-                  <Solution
-                    id={solution._id}
-                    header={solution.header}
-                    description={solution.body}
-                  />
-                </div>
-              ))}
-            </div>
+        <div id="solutions" style={{ paddingTop: "100px" }}>
+          <div className="container py-5">
+            {solutions.map((solution, index) => (
+              <Solution
+                key={index}
+                id={solution._id}
+                header={solution.header}
+                description={solution.body}
+                image={API_URL + solution.icon.url}
+                count={index}
+              />
+            ))}
           </div>
         </div>
       </div>

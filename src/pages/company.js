@@ -73,7 +73,7 @@ const Company = () => {
           ))}
         </div>
       </div>
-      <div id="services">
+      <div id="services" style={{ paddingTop: "100px" }}>
         <div
           className="jumbotron jumbotron-fluid pb-4 text-light"
           style={{

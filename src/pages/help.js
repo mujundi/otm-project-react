@@ -26,7 +26,11 @@ export default () => {
       </div>
       <br></br>
       <hr></hr>
-      <div className="container my-5 text-center" id="help">
+      <div
+        className="container my-5 text-center"
+        id="help"
+        style={{ paddingTop: "100px" }}
+      >
         <h2 className="mb-5">Have more questions?</h2>
         <button type="button" className="btn btn-primary btn-lg mb-5">
           Get Help
