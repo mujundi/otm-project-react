@@ -12,8 +12,8 @@ body {
 }
 
 .otm-hero-light .otm-nav {
-    padding-top: 22px;
-    padding-bottom: 22px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .otm-nav.navbar-expand-lg .navbar-nav .nav-link {
@@ -21,6 +21,36 @@ body {
     padding: 15px;
     text-transform: uppercase;
     font-size: 10px;
+}
+
+.otm-nav.navbar-expand-lg .navbar-nav .nav-item .nav-link:not(.nav-cta):before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    max-width: 90%;
+    height: 7px;
+    background-color: #0476B8;
+    transform: translate(-50%, 0%);
+    opacity: 0;
+    width: 100%;
+}
+
+.otm-nav.navbar-expand-lg .navbar-nav .nav-item.show .nav-link:not(.nav-cta):before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    max-width: 90%;
+    height: 7px;
+    background-color: #0476B8;
+    transform: translate(-50%, 0%);
+    opacity: 1;
+    width: 100%;
+}
+
+.dropdown-toggle::after {
+    display: none;
 }
 
 .otm-nav.navbar-light .navbar-nav .active>.nav-link,
@@ -34,6 +64,8 @@ body {
 .otm-nav.navbar-light .navbar-nav .nav-link {
     padding-left: 30px;
     padding-right: 30px;
+    padding-top: 41.5px;
+    padding-bottom: 41.5px;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     letter-spacing: 0.83px;
@@ -43,6 +75,9 @@ body {
     position: relative;
     padding-left: 30px;
     padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 25px;
 }
 
 .otm-nav.navbar-light .navbar-nav .nav-link.nav-cta:after {
@@ -79,6 +114,19 @@ body {
     border-width: 2px;
 }
 
+.btn-otm-dark {
+    background-color: #191919;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 0px;
+}
+
+.btn-otm-dark:hover,
+.btn-otm-dark:focus {
+    color: #ffffff;
+}
+
 .navbar-light .navbar-toggler {
     color: rgba(0, 0, 0, .5);
     border-color: rgba(255, 255, 255, .9);
@@ -86,6 +134,19 @@ body {
 
 .navbar-light .navbar-toggler-icon {
     background-image: url('../images/toggle-bar.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.otm-hero-light .navbar-light .navbar-toggler-icon {
+    background-image: url('../images/toggle-bar-dark.svg');
+    ;
+}
+
+.otm-hero-light .navbar-light .navbar-toggler {
+    color: rgba(0, 0, 0, .5);
+    border-color: rgba(0, 0, 0, .9);
 }
 
 .home-cta {
@@ -226,6 +287,27 @@ body {
     background-color: #ffffff;
 }
 
+.menu-background {
+    position: fixed;
+    top: 98px;
+    width: 100%;
+    height: 50vh;
+    background-color: #ffffff;
+    box-shadow: 0px -10px 25px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: 1;
+    display: none;
+}
+
+.menu-background.show {
+    opacity: 1;
+    display: block;
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
 .otm-breadcrumb {
     background: linear-gradient(270deg, #ffffff, #F4F5F7);
 }
@@ -242,14 +324,61 @@ body {
     font-size: 13px;
 }
 
+.dropdown-menu {
+    background-color: transparent;
+    border: 0px;
+}
+
+.dropdown-menu .dropdown-item:first-child {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.dropdown-menu .dropdown-item {
+    font-size: 20px;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    background-color: transparent;
+}
+
 @media only screen and (max-width: 991px) {
     .home-cta h4 {
         font-size: 24px;
+    }
+    .otm-nav.navbar-light .navbar-nav .nav-link {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-right: 0px;
+    }
+    .otm-hero-light .otm-nav {
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+    .navbar-nav .dropdown-menu {
+        text-align: right;
+    }
+    .dropdown-menu .dropdown-item:first-child {
+        font-size: 18px;
+    }
+    .dropdown-menu .dropdown-item {
+        font-size: 16px;
+        padding-right: 0px;
     }
 }
 
 @media only screen and (max-width: 768px) {
     .follow-menu {
         text-align: left;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .navbar-brand img {
+        width: 180px;
+    }
+    .sticky-menu {
+        padding-top: 90px;
     }
 }

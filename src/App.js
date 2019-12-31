@@ -23,6 +23,7 @@ const App = () => {
             <Routes path="/*" />
           </Router>
           <Footer />
+          <div className="menu-background" id="menuBackground"></div>
         </React.Suspense>
       </div>
     </Root>

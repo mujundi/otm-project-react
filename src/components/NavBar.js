@@ -2,6 +2,7 @@ import { Link } from "@reach/router";
 import React, { useEffect, useState } from "react";
 import OTMDispatchLogoLight from "../images/logo/Logo-Light.svg";
 import OTMDispatchLogoDark from "../images/logo/Logo-Dark.svg";
+import DropDownArrow from "../images/down-arrow.svg"
 
 // import axios from "axios";
 // import Async from "react-async";
@@ -22,6 +23,14 @@ const NavBar = (props) => {
   // const [helpLinkText, setHelpLinkText] = useState([]);
   // const [contactLinkText, setContactLinkText] = useState([]);
   // const [careersLinkText, setCareersLinkText] = useState([]);
+
+  const mouseEnterHandler = () => {
+    document.getElementById("menuBackground").classList.add("show");
+  }
+
+  const mouseLeaveHandler = () => {
+    document.getElementById("menuBackground").classList.remove("show");
+  }
 
   useEffect(() => {
     // axios.get(logoUrl).then((res) => {
@@ -164,21 +173,85 @@ const NavBar = (props) => {
       </button>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ml-auto">
-          <li className="nav-item">
-            <Link to="/company" className="nav-link">
+
+          <li className="nav-item dropdown" onMouseEnter={mouseEnterHandler}
+            onMouseLeave={mouseLeaveHandler}>
+            <a
+              href="#"
+              className="nav-link dropdown-toggle"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false">
               Company
+              <img src={DropDownArrow} alt="Dropdown" className="dropdown-menu-icon" />
+            </a>
+            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+              <Link to="/company" className="dropdown-item">
+                Company
                 </Link>
+              <Link to="/company" className="dropdown-item">
+                About Us
+              </Link>
+              <Link to="/company" className="dropdown-item">
+                Service
+              </Link>
+            </div>
           </li>
-          <li className="nav-item">
-            <Link to="/solutions" className="nav-link">
+
+          <li className="nav-item dropdown" onMouseEnter={mouseEnterHandler}
+            onMouseLeave={mouseLeaveHandler}>
+            <a
+              href="#"
+              className="nav-link dropdown-toggle"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false">
               Solutions
-                </Link>
+              <img src={DropDownArrow} alt="Dropdown" className="dropdown-menu-icon" />
+            </a>
+            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+              <Link to="/solutions" className="dropdown-item">
+                Solution
+              </Link>
+              <Link to="/solutions" className="dropdown-item">
+                Professional Dispatching
+              </Link>
+              <Link to="/solutions" className="dropdown-item">
+                Truck Permits
+              </Link>
+              <Link to="/solutions" className="dropdown-item">
+                Tax Planning and Preparation
+              </Link>
+              <Link to="/solutions" className="dropdown-item">
+                Accounting and Bookkeeping
+              </Link>
+            </div>
           </li>
-          <li className="nav-item">
-            <Link to="/help" className="nav-link">
+
+          <li className="nav-item dropdown" onMouseEnter={mouseEnterHandler}
+            onMouseLeave={mouseLeaveHandler}>
+            <a
+              href="#"
+              className="nav-link dropdown-toggle"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false">
               Help
-                </Link>
+              <img src={DropDownArrow} alt="Dropdown" className="dropdown-menu-icon" />
+            </a>
+            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+              <Link to="/help" className="dropdown-item">
+                Help
+              </Link>
+              <Link to="/help" className="dropdown-item">
+                FAQs
+              </Link>
+              <Link to="/help" className="dropdown-item">
+                Get Help
+              </Link>
+            </div>
           </li>
+
           <li className="nav-item">
             <Link to="/contact" className="nav-link">
               Contact <span className="sr-only">(current)</span>

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "@reach/router";
+
 import "../styles/contact.css";
 
 import NavBar from "components/NavBar";
@@ -193,7 +195,7 @@ const Contact = (props) => {
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb">
                 <li className="breadcrumb-item">
-                  <a href="#">Home</a>
+                  <Link to="/">Home</Link>
                 </li>
                 <li className="breadcrumb-item" aria-current="page">
                   Contact Us
@@ -314,6 +316,11 @@ const Contact = (props) => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="gmap-wrapper">
+        <div className="gmap-inner text-center">
+          <button className="btn btn-lg btn-otm-dark">Get Direction</button>
         </div>
       </section>
     </div>

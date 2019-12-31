@@ -1,0 +1,375 @@
+.solution-hero{
+    background-image: url(../images/about-hero-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.solution-hero .row{
+    height: 500px;
+    max-height: 100%;
+}
+.hero-title{
+    color: #ffffff;
+}
+.hero-title h2{
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+.hero-title h4{
+    font-size: 40px;
+    margin-top: 0px;
+}
+.solution-main{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+}
+.section-title{
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    color: #004D86;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+.section-title:after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100px;
+    height: 5px;
+    background-color: #D8D8D8;
+}
+.section-desc{
+    font-size: 20px;
+    color: #191919;
+    margin-bottom: 15px;
+}
+.about-main-img-right{
+    position: absolute;
+    right: 0px;
+    top: 50px;
+    bottom: 0px;
+    max-width: 650px;
+}
+
+.about-main-img-right-logo{
+    position: absolute;
+    right: 0px;
+    top: 50px;
+    bottom: 0px;
+    max-width: 510px;
+}
+
+.btn-blue{
+    background-color: #023B7D;
+    color: #ffffff;
+    margin-top: 30px;
+    -webkit-box-shadow: -7px 8px 0px 0px rgba(216,216,216,1);
+    -moz-box-shadow: -7px 8px 0px 0px rgba(216,216,216,1);
+    box-shadow: -7px 8px 0px 0px rgba(216,216,216,1);
+    border-radius: 0px;
+    font-size: 20px;
+    padding: 10px 35px;
+}
+
+.otm-plans{
+    background-color: #F6F8F9;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.plan-main-title{
+    text-align: center;
+}
+.plan-main-title small{
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #7E8085;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.plan-main-title h4{
+    font-size: 34px;
+    color: #2C2E30;
+    line-height: 46px;
+}
+.plan-inner{
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+.plan-icon-wrapper{
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background-color: #F4F4F4;
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+}
+.plan-icon-wrapper img{
+    margin: 0 auto;
+}
+.plan-name{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    color: #302F2C;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.plan-desc{
+    font-size: 24px;
+    color: #2C2E30;
+    margin-bottom: 20px;
+}
+.plan-desc span{
+    color: #2F5BEA;
+}
+.plan-price{
+    font-size: 40px;
+    line-height: 34px;
+    color: #2C2E30;
+}
+.price-small-desc{
+    display: inline-block;
+    width: 100%;
+    font-size: 13px;
+    color: #91959E;
+}
+.plan-cta{
+    display: inline-block;
+    margin-top: 40px;
+    font-size: 18px;
+    color: #2C2E30;
+    position: relative;
+}
+.plan-cta img{
+    margin-left: 10px;
+}
+.plan-cta:after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #2F5BEA;
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    opacity: 0;
+}
+.plan-cta:hover:after{
+    opacity: 1;
+}
+.plan-cta:hover{text-decoration: none;color: #2C2E30;}
+.plan-footer{text-align: center;margin-top: 40px;}
+.plan-footer p{
+    color: #7E8085;
+    font-size: 16px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+.plan-footer h4{
+    font-size: 34px;
+    color: #2C2E30;
+    line-height: 46px;
+    margin-top: 0px;
+}
+.truck-permit{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+}
+.solution-truck{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 45px;
+    max-width: 550px;
+}
+.section-divider{
+    position: absolute;
+    top: 0;
+    transform: translate(0%, -50%);
+}
+.section-divider-top{
+    left: 0px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 100px 0 100px 50vw;
+    border-color: transparent transparent transparent #007CC7;
+}
+.section-divider-bottom{
+    width: 0;
+    height: 0;
+    right: 0px;
+    border-style: solid;
+    border-width: 100px 50vw 100px 0;
+    border-color: transparent #007CC7 transparent transparent;
+}
+.solution-accounting{
+    position: absolute;
+    left: 0px;
+    top: 100px;
+    bottom: 0px;
+    max-width: 575px;
+}
+.accounting-otm{
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #f7f7f7;
+}
+.accounting-otm .section-desc{font-size: 20px;}
+.accounting-otm .btn-blue{margin-top: 10px;}
+.bussiness-consulting{
+    position: relative;
+    padding-bottom: 30px;
+    padding-top: 100px;
+}
+.consulting-right-img{
+    position: absolute;
+    top: 80px;
+    right: 0px;
+    bottom: 0px;
+}
+.tax-debt-resolution{
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.solution-tax-logo{
+    position: absolute;
+    left: 50px;
+    width: 100%;
+    top: 50%;
+    transform: translate(0, -50%);
+    max-width: 525px;
+}
+
+@media only screen and (min-width: 1700px){
+    .solution-accounting{
+        max-width: 675px;
+    }
+}
+@media only screen and (min-width: 1900px){
+    .consulting-right-img{
+        width: 100%;
+        max-width: 650px;
+    }
+    .solution-tax-logo{
+        max-width: 625px;
+    }
+    .solution-truck{
+        max-width: 600px;
+    }
+}
+@media only screen and (min-width: 2500px){
+    .consulting-right-img{
+        top: 0px;
+        max-width: 750px;
+    }
+    .solution-tax-logo{
+        left: 250px;
+        max-width: 700px;
+    }
+    .solution-accounting {
+        max-width: 875px;
+    }
+    .solution-truck {
+        max-width: 650px;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .about-main-img-right{
+        top: auto;
+        max-width: 550px;
+    }
+    .solution-truck{
+        max-width: 450px;
+    }
+    .about-main-img-right-logo{
+        max-width: 450px;
+    }
+    .solution-accounting{
+        max-width: 530px;
+    }
+    .consulting-right-img{
+        max-width: 500px;
+        top: 0px;
+    }
+    .solution-tax-logo{
+        max-width: 425px;
+    }
+}
+@media only screen and (max-width: 991px){
+    .about-main-img-right,.solution-truck,.about-main-img-right-logo,.solution-accounting,.consulting-right-img,.solution-tax-logo{
+        display: none;
+    }
+    .hero-title h2 {
+        font-size: 60px;
+    }
+    .hero-title h4 {
+        font-size: 30px;
+    }
+    .section-title {
+        font-size: 32px;
+    }
+    .plan-footer h4{
+        font-size: 30px;
+    }
+    .section-desc {
+        font-size: 20px;
+    }
+    .plan-main-title h4{
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .hero-title h2 {
+        font-size: 40px;
+    }
+    .hero-title h4 {
+        font-size: 20px;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+    .section-desc {
+        font-size: 18px;
+    }
+    .section-divider-top{
+        border-width: 70px 0 70px 50vw;
+    }
+    .section-divider-bottom{
+        border-width: 70px 50vw 70px 0;
+    }
+    .plan-inner{
+        margin-bottom: 20px;
+    }
+    .plan-footer h4{
+        font-size: 24px;
+        line-height: 1.4;
+    }
+    .plan-main-title h4{
+        font-size: 24px;
+        line-height: 1.4;
+        margin-bottom: 30px;
+    }
+}
+@media only screen and (max-width: 475px){
+    .plan-footer h4{
+        font-size: 20px;
+    }
+    .plan-main-title h4{
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width: 375px){
+    .section-title{
+        font-size: 24px;
+    }
+}

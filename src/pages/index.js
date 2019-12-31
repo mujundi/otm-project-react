@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "../styles/home.css";
 
 import NavBar from "components/NavBar";
@@ -7,7 +7,17 @@ import GlobeImage from "../images/globe-sm.png";
 import TruckIcon from "../images/truck-icon.png";
 import PlatFormImage from "../images/Platform-Pic-lg.png";
 
-export default () => (
+export default () => {
+  
+  useEffect(() => {
+    document.getElementById("menuBackground").style.top = "120px";
+
+		return () => {
+      document.getElementById("menuBackground").style.top = "98px";    
+    }
+  }, []);
+
+  return (
   <>
     <section className="otm-hero">
       <div className="container">
@@ -640,4 +650,4 @@ export default () => (
     <section className="sliding-animation">
     </section>
   </>
-);
+)};

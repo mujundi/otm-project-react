@@ -1,0 +1,207 @@
+.about-hero{
+    background-image: url(../images/about-hero-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about-hero .row{
+    height: 500px;
+    max-height: 100%;
+}
+.hero-title{
+    color: #ffffff;
+}
+.hero-title h2{
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+.hero-title h4{
+    font-size: 40px;
+    margin-top: 0px;
+}
+.about-us-main{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+}
+.section-title{
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    color: #004D86;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+.section-title:after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100px;
+    height: 5px;
+    background-color: #D8D8D8;
+}
+.section-desc{
+    font-size: 22px;
+    color: #191919;
+    margin-bottom: 15px;
+}
+
+.btn-orange{
+    background-color: #F7941E;
+    color: #ffffff;
+    margin-top: 30px;
+    -webkit-box-shadow: -7px 8px 0px 0px rgba(216,216,216,1);
+    -moz-box-shadow: -7px 8px 0px 0px rgba(216,216,216,1);
+    box-shadow: -7px 8px 0px 0px rgba(216,216,216,1);
+    border-radius: 0px;
+    font-size: 20px;
+    padding: 10px 35px;
+}
+.dark-cta-wrapper{
+background-color: #22272A;
+color: #ffffff;
+padding-top: 60px;
+padding-bottom: 80px;
+}
+.cta-wrapp-logo{
+    max-width: 110px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.dark-cta-wrapper p{
+    font-size: 28px;
+    font-style: italic;
+}
+
+.about-service{
+    padding-top: 115px;
+    padding-bottom: 115px;
+    position: relative;
+}
+.about-service-right{
+    position: relative;
+}
+.service-img-logo{
+    position: absolute;
+    left: -10%;
+    width: 100%;
+    top: 110px;
+    max-width: 600px;
+}
+.about-main-img-right{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+.about-main-left-inner ul{
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+.about-main-left-inner ul li{
+    position: relative;
+    padding-left: 40px;
+    font-size: 28px;
+    color: #3A434A;
+    margin-bottom: 20px;
+}
+.about-main-left-inner ul li:after{
+    content: '';
+    width: 20px;
+    height: 14px;
+    background-image: url(../images/arrow-right.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+
+
+@media only screen and (min-width: 1700px) {
+    .service-img-logo{
+        max-width: 700px;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    .service-img-logo{
+        max-width: 750px;
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+    .service-img-logo{
+        max-width: 800px;
+         top: 50px;
+    }
+}
+
+@media only screen and (min-width: 2500px) {
+    .service-img-logo{
+        max-width: 850px;
+         top: 30px;
+         left: 8%;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .about-main-img-right{
+        max-width: 500px;
+    }
+}
+@media only screen and (max-width: 991px){
+    .hero-title h2{
+        font-size: 60px;
+    }
+    .hero-title h4{
+        font-size: 30px;
+    }
+    .section-title{
+        font-size: 32px;
+    }
+    .section-desc{
+        font-size: 20px;
+    }
+    .dark-cta-wrapper p{
+        font-size: 24px;
+    }
+    .service-img-logo{
+        display: none;
+    }
+    .about-main-left-inner ul li{
+        font-size: 24px;
+    }
+    .about-main-img-right{
+     display: none;
+    }
+}
+@media only screen and (max-width: 768px){
+    .hero-title h2{
+        font-size: 40px;
+    }
+    .hero-title h4{
+        font-size: 20px;
+    }
+    .section-title{
+        font-size: 28px;
+    }
+    .section-desc{
+        font-size: 18px;
+    }
+    .dark-cta-wrapper p{
+        font-size: 20px;
+    }
+    .service-img-logo{
+        display: none;
+    }
+    .about-main-left-inner ul li{
+        font-size: 20px;
+    }
+    .about-service{padding-top: 50px;padding-bottom: 50px;}
+}

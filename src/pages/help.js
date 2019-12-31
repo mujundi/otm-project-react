@@ -13,6 +13,8 @@ export default () => {
     }
   }
 
+  document.getElementById("menuBackground").classList.remove("show");
+
   return (
     <div className="sticky-menu">
       <section className="otm-hero-light">
