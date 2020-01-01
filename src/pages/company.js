@@ -8,6 +8,7 @@ import "../styles/about.css";
 import NavBar from "../components/NavBar";
 
 import AboutUsImageRight from "../images/about-img-right.png";
+import AboutUsImageRightMobile from "../images/about-img-right-mobile.jpg";
 import CTAWrapLogo from "../images/logo/otm-trademark-white.svg";
 import ServiceImageLogo from "../images/logo/otm-trademark.svg";
 
@@ -169,13 +170,13 @@ const Company = () => {
                 <Link to="/contact" className="btn btn-orange btn-shadow">Contact Us</Link>
               </div>
             </div>
+            <div className="col-12 col-lg-4 about-main-right">
+              <img src={AboutUsImageRight} alt="" className="about-main-img-right" />
+              <img src={AboutUsImageRightMobile} alt="" className="about-main-img-right-mobile" />
+            </div>
           </div>
         </div>
-        <img
-          src={AboutUsImageRight}
-          alt=""
-          className="about-main-img-right"
-        />
+        
       </section>
       <section className="dark-cta-wrapper">
         <div className="container">

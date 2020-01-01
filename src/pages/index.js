@@ -5,7 +5,8 @@ import NavBar from "components/NavBar";
 
 import GlobeImage from "../images/globe-sm.png";
 import TruckIcon from "../images/truck-icon.png";
-import PlatFormImage from "../images/Platform-Pic-lg.png";
+import OTMTrademark from "../images/logo/otm-trademark.svg";
+import PlatFormImage from "../images/logistics-platform.png";
 
 export default () => {
   
@@ -286,7 +287,7 @@ export default () => {
                             </svg>
                           </figure>
                         </span>{" "}
-                        Smart Dispatching 1
+                        Smart Dispatching
                       </h3>
                     </div>
                     <div className="carousel-item-text">
@@ -375,15 +376,12 @@ export default () => {
                           </svg>
                         </figure>
                       </span>{" "}
-                      Smart Dispatching 2
+                      Business Services
                     </h3>
                   </div>
                   <div className="carousel-item-text">
                     <p>
-                      Book and retain more business. We partner with you to keep
-                      drivers on the road, eliminate manual check calls and
-                      increase customer satisfaction. Our professional dispatchers
-                      keep you loaded with the best loads at the highest prices.{" "}
+                      OTM Dispatch provides affordable and competitively priced dispatch, tax, accounting, truck permits and consulting services to individuals as well as small and medium size businesses nationwide. OTM Dispatch is currently dispatching Reefers, Dry Vans, Flatbeds, Car Haulers and Hotshots.{" "}
                     </p>
                   </div>
                   <div className="text-stack__cta text-stack__cta--offset js-cta">
@@ -503,23 +501,22 @@ export default () => {
       </div>
     </section>
     <section className="otm-main">
-      <div className="container">
+      <div className="container otm-home-container">
         <div className="row">
-          <div className="col-xs-12 col-md-12 col-lg-7">
+          <div className="col-xs-12 col-md-12 col-lg-6 column2">
             <div className="otm-main-inner">
-              <h3>Dispatch Team</h3>
+              <h3>Professional Dispatching</h3>
               <p>
-                Our specialized team is ready to assist you with all of your
-                freight needs and will be happy to respond to any questions you
-                may have. We are here to help and to provide the best logistics in
-                the world.{" "}
+                OTM Dispatch provides affordable and competitively priced dispatch, tax, accounting, truck permits and consulting services to individuals as well as small and medium size businesses nationwide. OTM Dispatch is currently dispatching Reefers, Dry Vans, Flatbeds, Car Haulers and Hotshots.{" "}
               </p>
               <p>
-                Our agents are here to be the most transparent they can. We are
-                here to work side by side with shippers and drivers to help
-                minimize costs while maximizing profits.{" "}
+                Our agents are here to be the most transparent they can. We are here to work side by side with shippers and drivers to help minimize costs while maximizing profits.{" "}
               </p>
+              <a class="btn btn-orange btn-shadow" href="/contact">Learn More</a>
             </div>
+          </div>
+          <div className="col-xs-12 col-md-12 col-lg-6 column1">
+            <img src={OTMTrademark} alt="OTM Dispatch. Professional Dispatching" className="otm-main-logo" />
           </div>
         </div>
       </div>
@@ -541,11 +538,9 @@ export default () => {
                 </div>
                 <div className="col-xs-12 col-md-12 col-lg-6 team-text-wrap">
                   <div className="team-text-inner">
-                    <h4>Platform Designed for your Supply Chain 546345</h4>
+                    <h4>Your business is our business</h4>
                     <p>
-                      Technology embedded with deep transportation expertise to
-                      meet the unique needs of shippers, LSPs and carriers
-                      worldwide.
+                      We're building solutions to deliver peak efficiency and flexibility in your supply chain, backed by the highest level of Customer Service Agents.
                     </p>
                   </div>
                 </div>

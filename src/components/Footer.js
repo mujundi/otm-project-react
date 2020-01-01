@@ -114,7 +114,7 @@ export default () => (
         </div>
         <div className="row">
           <div className="col-12">
-            <p>2019 OTM Dispatch. All Rights Reserved?</p>
+            <p>&copy; 2019 OTM Dispatch. All Rights Reserved.</p>
           </div>
         </div>
       </div>

@@ -1,3 +1,6 @@
+.otm-hero .dropdown-item {
+    color: #fff;
+}
 .otm-hero {
     min-height: 100vh;
     background-image: url(../images/hero-bg.svg);
@@ -7,6 +10,7 @@
     color: #ffffff;
     position: relative;
     overflow: hidden;
+    z-index: 2;
 }
 
 .otm-hero .container {
@@ -243,7 +247,7 @@
 }
 
 .carousel-item-text p {
-    font-size: 24px;
+    font-size: 1.3rem;
     color: #191919;
 }
 
@@ -421,6 +425,14 @@
     text-decoration: none;
 }
 
+.otm-main {
+    margin-top: 40px;
+}
+
+.otm-home-container {
+    margin-bottom: 40px; 
+}
+
 .otm-main-inner h3 {
     margin-top: 30px;
     color: #004D86;
@@ -429,11 +441,15 @@
 }
 
 .otm-main-inner p {
-    font-size: 28px;
     color: #191919;
-    line-height: 37px;
+    line-height: 30px;
     margin-bottom: 30px;
     font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.otm-main-logo {
+    width: 95%;
 }
 
 .letters {
@@ -553,7 +569,9 @@
 
 @media only screen and (max-width: 1280px) {
     .button-wrapper {
-        right: -100px;
+        right: 0px;
+        display: block;
+        width: 220px;
     }
 }
 
@@ -583,14 +601,35 @@
         padding: 50px 20px;
     }
     .carousel-background-left {
-        height: 30em;
+        height: 34em;
     }
     .carousel-background {
-        height: 30em;
+        height: 34em;
     }
     .smart-dispatch {
         background-position: center -30px;
     }
+    #smart-dispatch .js-cta {
+        margin: 40px auto;
+        display: block;
+        width: 220px;
+    }
+    .otm-home-container .row .column1 {
+        order: 1;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .otm-home-container .row .column2 {
+        order: 2;
+    }
+
+    .otm-main {
+        margin-top: 0px;
+    }
+    .otm-main-logo {
+        width: 70%;
+        margin-right: -55px;
+    }   
     .otm-main-inner p,
     .team-text-inner p {
         font-size: 24px;
@@ -654,30 +693,36 @@
 }
 
 @media only screen and (max-width: 576px) {
+
+    .hero-text-wrapper {
+        text-align: center;
+    }
     .hero-text-wrapper h1,
     .hero-text-wrapper h2 {
-        font-size: 30px;
+        font-size: 3em;
     }
     .hero-text-wrapper h3 {
-        font-size: 20px;
+        font-size: 1.5em;
     }
     .carousel-item-title h3,
     .otm-main-inner h3,
     .team-text-inner h4 {
-        font-size: 28px;
+        font-size: 1.6em;
     }
     .otm-main-inner h3 img {
         width: 30px;
     }
     .carousel-item-text p {
-        font-size: 20px;
+        font-size: 1.3em;
     }
     .carousel-item-title h3 img {
         width: 36px;
         margin-right: 10px;
     }
     .hero-text-wrapper p {
-        font-size: 18px;
+        font-size: 1.26em;
+        font-style: italic;
+        margin-top: 25px;
     }
     .navbar-brand img {
         width: 200px;
