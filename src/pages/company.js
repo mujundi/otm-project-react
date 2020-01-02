@@ -215,7 +215,7 @@ const Company = () => {
                   <li><a href="/solutions" className="solutionsLink">Tax Planning and Preparation</a></li>
                   <li><a href="/solutions" className="solutionsLink">Accounting and Bookkeeping</a></li>
                 </ul>
-                <Link to="/contact" className="btn btn-orange btn-shadow">Contact Us</Link>
+                <Link to="/solutions#otm-plans" className="btn btn-orange btn-shadow">Our Solutions</Link>
               </div>
             </div>
           </div>

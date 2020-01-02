@@ -262,7 +262,7 @@ const Solutions = () => {
                   fuel and mileage tax reporting to all states as well as permitting
                   for all your requirements.
                 </p>
-                <p className="section-desc">WE SPECIALIZE IN:</p>
+                <p className="section-desc"><strong>WE SPECIALIZE IN:</strong></p>
                 <ul className="pl-4">
                   <li>US DOT and MC Numbers</li>
                   <li>IRP (Apportioned Tag Registrations)</li>
@@ -306,9 +306,9 @@ const Solutions = () => {
                   relationship that you can rely on when you need professional
                   assistance with a timely and a personal approach.
                 </p>
-                <p className="section-desc">
-                  OUR TAX PLANNING &amp; PREPARATION ROLES INCLUDE,BUT ARE NOT
-                  LIMITED TO:
+                <p className="section-desc"><strong>
+                  OUR TAX PLANNING &amp; PREPARATION ROLES INCLUDE, BUT ARE NOT
+                  LIMITED TO:</strong>
                 </p>
                 <ul className="pl-4">
                   <li>
