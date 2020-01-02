@@ -135,7 +135,13 @@ padding-bottom: 80px;
     transform: translate(0%, -50%);
 }
 
-
+.solutionsLink {
+    color:#1a124d;
+}
+.solutionsLink:hover {
+    color:#606a71;
+    text-decoration: none;
+}
 
 @media only screen and (min-width: 1700px) {
     .service-img-logo{

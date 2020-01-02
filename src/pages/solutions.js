@@ -7,15 +7,16 @@ import "../styles/solution.css";
 
 import NavBar from "../components/NavBar";
 
-import SolutionRightImage from "../images/solution-globe.png";
+import SolutionRightImage from "../images/globe2.png";
 import DiamondPlanImage from "../images/diamond-plan.png";
 import rightArrow from "../images/cta-right-arrow.svg";
 import EmeraldPlanImage from "../images/emerald-plan.png";
 import TruckImage from "../images/truck-left.png";
 import LogoLinesRight from "../images/logo-lines-right.png";
-import SolutionTruck from "../images/solutions-trucks.svg";
+import SolutionTruck from "../images/solutions-trucks2.svg";
 import ConsultingRightImage from "../images/consulting-right.png";
 import OTMTrademark from "../images/logo/otm-trademark.svg";
+import SolutionsPathBG from "../images/solutions-path-bg.png";
 
 // const API_URL = "http://167.114.153.121:1337";
 
@@ -140,7 +141,7 @@ const Solutions = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-6 about-main-left">
-              <div className="about-main-left-inner">
+              <div className="solutions-main-left-inner">
                 <h2 className="section-title">Solutions</h2>
                 <p className="section-desc">
                   OTM Dispatch provides professional dispatching and business
@@ -155,29 +156,38 @@ const Solutions = () => {
                   regulations to keep the carrier on the road pulling loads and
                   increasing profitability.
                 </p>
+                
+                  <a href="#hide1" class="hide" id="hide1">Read More</a>
+                  <a href="#show1" class="show" id="show1">Read Less</a>
+               
+                <div class="list">
                 <p className="section-desc">
                   Our dispatchers can help you plan for and deal with weather
                   delays, traffic congestion and other issues that can cause delays
                   while you are on the road.
-                </p>
+                </p><p></p>
                 <p className="section-desc">
                   OTM Dispatch provides the highest level of customer service,
                   support, business solutions, and help you manage relationships
                   with shippers, address issues that arise, and set proper service
                   expectations.
-                </p>
+                </p><p></p>
                 <p className="section-desc">
                   At OTM Dispatch, we also handle the paperwork associated with
                   delivering and billing for the loads including all invoice
                   submissions to the broker and/or shipper or a factoring company,
                   collections follow-ups, and payment processing.
                 </p>
+                </div>
+                <div className="clear"></div>
                 <Link to="/contact" className="btn btn-orange btn-shadow">Contact Us</Link>
               </div>
             </div>
           </div>
         </div>
-        <img src={SolutionRightImage} alt="" className="about-main-img-right" />
+        <div class="crop">
+        <img src={SolutionRightImage} alt="" className="solutions-main-img-right" />
+        </div>
       </section>
       <section className="otm-plans">
         <div className="container">
@@ -243,7 +253,7 @@ const Solutions = () => {
         <div className="container">
           <div className="row flex-row-reverse">
             <div className="col-12 col-lg-7 about-main-left">
-              <div className="about-main-left-inner">
+              <div className="solutions-main-right-inner">
                 <h2 className="section-title">Truck Permits</h2>
                 <p className="section-desc">
                   OTM Dispatch provides Business Consulting, Tax, and Accounting
@@ -278,7 +288,7 @@ const Solutions = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-7 about-main-left">
-              <div className="about-main-left-inner">
+              <div className="solutions-main-right-inner">
                 <h2 className="section-title">Tax Planning and Preparation</h2>
                 <p className="section-desc">
                   We apply tax planning strategies for you to have more money to

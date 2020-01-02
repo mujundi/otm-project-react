@@ -210,10 +210,10 @@ const Company = () => {
                   Reefers, Dry Vans, Flatbeds, Car Haulers and Hotshots.
                 </p>
                 <ul>
-                  <li>Professional Dispatching</li>
-                  <li>Truck Permits</li>
-                  <li>Tax Planning and Preparation</li>
-                  <li>Accounting and Bookkeeping</li>
+                  <li><a href="/solutions" className="solutionsLink">Professional Dispatching</a></li>
+                  <li><a href="/solutions" className="solutionsLink">Truck Permits</a></li>
+                  <li><a href="/solutions" className="solutionsLink">Tax Planning and Preparation</a></li>
+                  <li><a href="/solutions" className="solutionsLink">Accounting and Bookkeeping</a></li>
                 </ul>
                 <Link to="/contact" className="btn btn-orange btn-shadow">Contact Us</Link>
               </div>

@@ -79,10 +79,14 @@
     padding-top: 226px;
     padding-bottom: 226px;
     background-image: url(../images/Bitmap.png);
+    background-size: contain;
 }
 
 .gmap-wrapper .btn-otm-dark {
-    min-width: 300px;
+    min-width: 280px;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    font-size: 1em;
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -96,6 +100,13 @@
 @media only screen and (max-width: 768px) {
     .contact-form-title h3 {
         font-size: 32px;
+    }
+    .contact-info-logo {
+        width: 250px;
+        max-width: 100%;
+        margin-top: 30px;
+        margin-left: 55px;
+        margin-bottom: 30px;
     }
 }
 

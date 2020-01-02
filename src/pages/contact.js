@@ -298,11 +298,14 @@ const Contact = (props) => {
                   <h4>8AM - 5PM Live Chat</h4>
                 </div>
                 <div className="contact-point">
+                  <h4>Contact our Office</h4><br />
                   <p>
-                    <a href="tel:+18001231234">+1 (800) 123-1234</a>
+                    <strong>Toll Free:</strong> <a href="tel:+18001231234">888-842-9507 </a><br />
+                    <strong>Direct:</strong> <a href="tel:+18001231234">321-284-3755</a><br />
+                    <strong>Fax:</strong> <a href="tel:+18001231234">407-574-6247</a>
                   </p>
                   <p>
-                    <a href="mailto:INFO@OTMDISPATCH.COM">
+                    <strong>Email Us:</strong> <a href="mailto:INFO@OTMDISPATCH.COM">
                       INFO@OTMDISPATCH.COM
                     </a>
                   </p>
