@@ -44,19 +44,15 @@ const Solutions = () => {
 
   }, []);
 
-  // if (process.browser) {
-  //   if (location.hash === "#plans") {
-  //     setTimeout(() => {
-  //       document.getElementById("plans").scrollIntoView(true);
-  //     }, 150);
-  //   } else if (location.hash === "#solutions") {
-  //     setTimeout(() => {
-  //       document.getElementById("solutions").scrollIntoView(true);
-  //     }, 150);
-  //   } else {
-  //     scrollTo(0, 0);
-  //   }
-  // }
+  if (process.browser) {
+    if (location.hash) {
+      setTimeout(() => {
+        document.getElementById(location.hash.replace('#', '')).scrollIntoView(true);
+      }, 150);
+    } else {
+      scrollTo(0, 0);
+    }
+  }
 
   return (
     <div className="sticky-menu">
@@ -121,7 +117,7 @@ const Solutions = () => {
           </div>
         </div>
       </section>
-      <div className="otm-breadcrumb">
+      <div className="otm-breadcrumb" id="professional-dispatching">
         <div className="container">
           <div className="otm-breadcrumb-inner">
             <nav aria-label="breadcrumb">
@@ -156,27 +152,27 @@ const Solutions = () => {
                   regulations to keep the carrier on the road pulling loads and
                   increasing profitability.
                 </p>
-                
-                  <a href="#hide1" class="hide" id="hide1">Read More</a>
-                  <a href="#show1" class="show" id="show1">Read Less</a>
-               
-                <div class="list">
-                <p className="section-desc">
-                  Our dispatchers can help you plan for and deal with weather
-                  delays, traffic congestion and other issues that can cause delays
-                  while you are on the road.
+
+                <a href="#hide1" class="hide" id="hide1">Read More</a>
+                <a href="#show1" class="show" id="show1">Read Less</a>
+
+                <div className="list">
+                  <p className="section-desc">
+                    Our dispatchers can help you plan for and deal with weather
+                    delays, traffic congestion and other issues that can cause delays
+                    while you are on the road.
                 </p><p></p>
-                <p className="section-desc">
-                  OTM Dispatch provides the highest level of customer service,
-                  support, business solutions, and help you manage relationships
-                  with shippers, address issues that arise, and set proper service
-                  expectations.
+                  <p className="section-desc">
+                    OTM Dispatch provides the highest level of customer service,
+                    support, business solutions, and help you manage relationships
+                    with shippers, address issues that arise, and set proper service
+                    expectations.
                 </p><p></p>
-                <p className="section-desc">
-                  At OTM Dispatch, we also handle the paperwork associated with
-                  delivering and billing for the loads including all invoice
-                  submissions to the broker and/or shipper or a factoring company,
-                  collections follow-ups, and payment processing.
+                  <p className="section-desc">
+                    At OTM Dispatch, we also handle the paperwork associated with
+                    delivering and billing for the loads including all invoice
+                    submissions to the broker and/or shipper or a factoring company,
+                    collections follow-ups, and payment processing.
                 </p>
                 </div>
                 <div className="clear"></div>
@@ -185,8 +181,8 @@ const Solutions = () => {
             </div>
           </div>
         </div>
-        <div class="crop">
-        <img src={SolutionRightImage} alt="" className="solutions-main-img-right" />
+        <div className="crop">
+          <img src={SolutionRightImage} alt="" className="solutions-main-img-right" />
         </div>
       </section>
       <section className="otm-plans">
@@ -249,7 +245,7 @@ const Solutions = () => {
           </div>
         </div>
       </section>
-      <section className="truck-permit">
+      <section className="truck-permit" id="truck-permits">
         <div className="container">
           <div className="row flex-row-reverse">
             <div className="col-12 col-lg-7 about-main-left">
@@ -284,7 +280,7 @@ const Solutions = () => {
         <div className="section-divider section-divider-top" />
         <div className="section-divider section-divider-bottom" />
       </section>
-      <section className="solution-main">
+      <section className="solution-main" id="tax-planning">
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-7 about-main-left">
@@ -341,7 +337,7 @@ const Solutions = () => {
           className="about-main-img-right-logo"
         />
       </section>
-      <section className="accounting-otm">
+      <section className="accounting-otm" id="accounting">
         <div className="container">
           <div className="row flex-row-reverse">
             <div className="col-12 col-lg-7 about-main-left">
@@ -373,7 +369,7 @@ const Solutions = () => {
           className="solution-accounting"
         />
       </section>
-      <section className="bussiness-consulting">
+      <section className="bussiness-consulting" id="consulting">
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-7 about-main-left">
@@ -408,7 +404,7 @@ const Solutions = () => {
           className="consulting-right-img"
         />
       </section>
-      <section className="tax-debt-resolution">
+      <section className="tax-debt-resolution" id="irs-tax">
         <div className="container">
           <div className="row flex-row-reverse">
             <div className="col-12 col-lg-7 about-main-left">

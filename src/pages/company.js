@@ -27,15 +27,15 @@ const Company = () => {
   // const [aboutUsBannerImage, setAboutUsBannerImage] = useState([]);
   // const [servicesBannerImage, setServicesBannerImage] = useState([]);
 
-  // if (process.browser) {
-  //   if (location.hash === "#services") {
-  //     setTimeout(() => {
-  //       document.getElementById("services").scrollIntoView(true);
-  //     }, 150);
-  //   } else {
-  //     scrollTo(0, 0);
-  //   }
-  // }
+  if (process.browser) {
+    if (location.hash) {
+      setTimeout(() => {
+        document.getElementById(location.hash.replace('#', '')).scrollIntoView(true);
+      }, 150);
+    } else {
+      scrollTo(0, 0);
+    }
+  }
 
   useEffect(() => {
     // axios.get(url).then((res) => {
@@ -126,7 +126,7 @@ const Company = () => {
           </div>
         </div>
       </section>
-      <div className="otm-breadcrumb">
+      <div className="otm-breadcrumb" id="about">
         <div className="container">
           <div className="otm-breadcrumb-inner">
             <nav aria-label="breadcrumb">
@@ -176,7 +176,7 @@ const Company = () => {
             </div>
           </div>
         </div>
-        
+
       </section>
       <section className="dark-cta-wrapper">
         <div className="container">
@@ -196,7 +196,7 @@ const Company = () => {
           </div>
         </div>
       </section>
-      <section className="about-service">
+      <section className="about-service" id="services">
         <div className="container">
           <div className="row flex-row-reverse">
             <div className="col-12 col-lg-7 about-main-left">
@@ -210,10 +210,10 @@ const Company = () => {
                   Reefers, Dry Vans, Flatbeds, Car Haulers and Hotshots.
                 </p>
                 <ul>
-                  <li><a href="/solutions" className="solutionsLink">Professional Dispatching</a></li>
-                  <li><a href="/solutions" className="solutionsLink">Truck Permits</a></li>
-                  <li><a href="/solutions" className="solutionsLink">Tax Planning and Preparation</a></li>
-                  <li><a href="/solutions" className="solutionsLink">Accounting and Bookkeeping</a></li>
+                  <li><Link to="/solutions#professional-dispatching" className="solutionsLink">Professional Dispatching</Link></li>
+                  <li><Link to="/solutions#truck-permits" className="solutionsLink">Truck Permits</Link></li>
+                  <li><Link to="/solutions#tax-planning" className="solutionsLink">Tax Planning and Preparation</Link></li>
+                  <li><Link to="/solutions#accounting" className="solutionsLink">Accounting and Bookkeeping</Link></li>
                 </ul>
                 <Link to="/solutions#otm-plans" className="btn btn-orange btn-shadow">Our Solutions</Link>
               </div>

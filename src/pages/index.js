@@ -12,6 +12,7 @@ export default () => {
   
   useEffect(() => {
     document.getElementById("menuBackground").style.top = "120px";
+    scrollTo(0, 0);
 
 		return () => {
       document.getElementById("menuBackground").style.top = "98px";    
@@ -513,7 +514,7 @@ export default () => {
               <p>
                 Our agents are here to be the most transparent they can. We are here to work side by side with shippers and drivers to help minimize costs while maximizing profits.{" "}
               </p>
-              <a class="btn btn-orange btn-shadow" href="/contact">Learn More</a>
+              <a className="btn btn-orange btn-shadow" href="/contact">Learn More</a>
             </div>
           </div>
           <div className="col-xs-12 col-md-12 col-lg-6 column1">

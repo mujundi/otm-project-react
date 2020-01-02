@@ -4,9 +4,9 @@ import NavBar from "../components/NavBar";
 
 export default () => {
   if (process.browser) {
-    if (location.hash === "#help") {
+    if (location.hash) {
       setTimeout(() => {
-        document.getElementById("help").scrollIntoView(true);
+        document.getElementById(location.hash.replace('#', '')).scrollIntoView(true);
       }, 150);
     } else {
       scrollTo(0, 0);

@@ -189,10 +189,10 @@ const NavBar = (props) => {
               <Link to="/company" className="dropdown-item">
                 Company
                 </Link>
-              <Link to="/company" className="dropdown-item">
+              <Link to="/company#about" className="dropdown-item">
                 About Us
               </Link>
-              <Link to="/company" className="dropdown-item">
+              <Link to="/company#services" className="dropdown-item">
                 Service
               </Link>
             </div>
@@ -213,16 +213,16 @@ const NavBar = (props) => {
               <Link to="/solutions" className="dropdown-item">
                 Solution
               </Link>
-              <Link to="/solutions" className="dropdown-item">
+              <Link to="/solutions#professional-dispatching" className="dropdown-item">
                 Professional Dispatching
               </Link>
-              <Link to="/solutions" className="dropdown-item">
+              <Link to="/solutions#truck-permits" className="dropdown-item">
                 Truck Permits
               </Link>
-              <Link to="/solutions" className="dropdown-item">
+              <Link to="/solutions#tax-planning" className="dropdown-item">
                 Tax Planning and Preparation
               </Link>
-              <Link to="/solutions" className="dropdown-item">
+              <Link to="/solutions#accounting" className="dropdown-item">
                 Accounting and Bookkeeping
               </Link>
             </div>
@@ -246,7 +246,7 @@ const NavBar = (props) => {
               <Link to="/help" className="dropdown-item">
                 FAQs
               </Link>
-              <Link to="/help" className="dropdown-item">
+              <Link to="/help#help" className="dropdown-item">
                 Get Help
               </Link>
             </div>
@@ -260,7 +260,7 @@ const NavBar = (props) => {
           <li className="nav-item">
             <Link to="/careers" className="nav-link nav-cta">
               Join The Team
-                </Link>
+            </Link>
           </li>
         </ul>
       </div>

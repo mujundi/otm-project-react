@@ -71,9 +71,9 @@
     float: left;
 }
 
-.show {
+/* .show {
     display: none; 
-}
+} */
 .hide:target + .show {
     display: inline; 
 }
