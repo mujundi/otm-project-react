@@ -233,7 +233,7 @@
 }
 
 .carousel-item-title h3 {
-    font-size: 40px;
+    font-size: 2.5em;
     font-weight: 400;
     color: #004D86;
 }
@@ -436,7 +436,7 @@
 .otm-main-inner h3 {
     margin-top: 30px;
     color: #004D86;
-    font-size: 40px;
+    font-size: 2.3em;
     margin-bottom: 15px;
 }
 
@@ -471,12 +471,12 @@
 }
 
 .team-text-inner h4 {
-    font-size: 40px;
+    font-size: 2.3em;
     color: #004D86;
 }
 
 .team-text-inner p {
-    font-size: 28px;
+    font-size: 1.3rem;
     color: #191919;
     line-height: 37px;
 }

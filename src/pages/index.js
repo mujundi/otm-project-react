@@ -302,7 +302,7 @@ export default () => {
                     <div className="text-stack__cta text-stack__cta--offset js-cta">
                       <div className="button-wrapper" data-module="circle-button">
                         <a
-                          href="#"
+                          href="/contact"
                           className="button button--circle button--orange"
                         >
                           <span className="button__content js-button-content">
@@ -407,6 +407,7 @@ export default () => {
                     </div>
                   </div>
                 </div>
+                {/* Carousel Item 
                 <div className="carousel-item">
                   <div className="carousel-item-title">
                     <h3>
@@ -443,7 +444,7 @@ export default () => {
                       </a>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
               <a
                 className="carousel-control-prev"
@@ -557,7 +558,7 @@ export default () => {
                 </div>
                 <div className="col-xs-12 col-md-12 col-lg-6 team-text-wrap">
                   <div className="team-text-inner">
-                    <h4>Platform Designed for your Supply Chain 654654</h4>
+                    <h4>Platform Designed for your Supply Chain</h4>
                     <p>
                       Technology embedded with deep transportation expertise to
                       meet the unique needs of shippers, LSPs and carriers
@@ -567,7 +568,8 @@ export default () => {
                 </div>
               </div>
             </div>
-            <div className="carousel-item">
+            {/* 
+              <div className="carousel-item">
               <div className="row">
                 <div className="col-xs-12 col-md-12 col-lg-6 team-img-wrap">
                   <img
@@ -587,7 +589,7 @@ export default () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
           <a
             className="carousel-control-prev"
