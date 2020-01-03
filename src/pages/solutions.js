@@ -177,7 +177,7 @@ const Solutions = () => {
                 </p>
                 </div>
                 <div className="clear"></div>
-                <Link to="/contact" className="btn btn-orange btn-shadow">Contact Us</Link>
+                <Link to="/careers" className="btn btn-blue btn-shadow">Partner With Us</Link>
               </div>
             </div>
           </div>
@@ -219,15 +219,15 @@ const Solutions = () => {
             <div className="col-12 col-md-6 col-lg-4 otm-plans-emerald">
               <div className="plan-inner">
                 <div className="plan-icon-wrapper">
-                  <img src={DiamondPlanImage} alt="" />
+                  <img src={EmeraldPlanImage} alt="" />
                 </div>
-                <h4 className="plan-name">Diamond Plan</h4>
+                <h4 className="plan-name">Emerald Plan</h4>
                 <h4 className="plan-desc">
-                  One Plan, <br /> <span>Solves Everything</span>
+                  Not just the Basics, <br /> <span>Top Loads</span>
                 </h4>
-                <h3 className="plan-price">10%</h3>
+                <h3 className="plan-price">8%</h3>
                 <small className="price-small-desc">of the load</small>
-                <a href="#" className="plan-cta">
+                <a href="/emerald" className="plan-cta">
                   Find out more
                   <img src={rightArrow} alt="" className="cta-arrow" />
                 </a>
@@ -238,11 +238,11 @@ const Solutions = () => {
                 <div className="plan-icon-wrapper">
                   <img src={EmeraldPlanImage} alt="" />
                 </div>
-                <h4 className="plan-name">Emerald Plan</h4>
+                <h4 className="plan-name">Ruby Plan</h4>
                 <h4 className="plan-desc">
                   Simple and Efficient, <br /> <span>Easy to Manage</span>
                 </h4>
-                <h3 className="plan-price">8%</h3>
+                <h3 className="plan-price">9%</h3>
                 <small className="price-small-desc">of the load</small>
                 <a href="#" className="plan-cta">
                   Find out more

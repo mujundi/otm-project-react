@@ -46,51 +46,111 @@ const Careers = () => {
 
           <div className="controls">
             <div className="row">
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label htmlFor="form_name">First name *</label>
-                  <input
-                    id="form_name"
-                    type="text"
-                    name="name"
-                    className="form-control"
-                    placeholder="Please enter your first name *"
-                    required
-                    data-error="First name is required."
-                  />
-                  <div className="help-block with-errors"></div>
-                </div>
+              <div className="radio">
+                <label>
+                  <input type="radio" value="Ruby" />
+                  Ruby Package
+                </label>
               </div>
+              <div className="radio">
+                <label>
+                  <input type="radio" value="Emerald" />
+                  Emerald Package
+                </label>
+              </div>
+              <div className="radio">
+                <label>
+                  <input type="radio" value="Diamond" />
+                  Diamond Package
+                </label>
+              </div>
+              <div className="form-group custom-form-group col-12">
+                      <label>Your Name</label>
+                      <input
+                        type="text"
+                        className="form-control form-control-lg"
+                        placeholder="Full Name"
+                      />
+                    </div>
+                    <div className="form-group custom-form-group col-12">
+                      <label>Company (if applicable)</label>
+                      <input
+                        type="text"
+                        className="form-control form-control-lg"
+                        placeholder="Company Name"
+                      />
+                    </div>
+                    <div className="form-group custom-form-group col-12">
+                      <label>Phone Number</label>
+                      <input
+                        type="text"
+                        className="form-control form-control-lg"
+                        placeholder="+1 (123) 555-5678"
+                      />
+                    </div>
+                    <div className="form-group custom-form-group col-12">
+                      <label>Email</label>
+                      <input
+                        type="text"
+                        className="form-control form-control-lg"
+                        placeholder="youremail@address.com"
+                      />
+                    </div>
+                    <div className="form-group custom-form-group col-12">
+                      <label>Street Address</label>
+                      <input
+                        type="text"
+                        className="form-control form-control-lg"
+                        placeholder="100 Street Address"
+                      />
+                    </div>
+                    <div className="form-group custom-form-group col-12">
+                      <label>State</label>
+                      <input
+                        type="text"
+                        className="form-control form-control-lg"
+                        placeholder="Florida"
+                      />
+                    </div>
+                    <div className="form-group custom-form-group col-6">
+                      <label>City</label>
+                      <input
+                        type="text"
+                        className="form-control form-control-lg"
+                        placeholder="Orlando"
+                      />
+                    </div>
+                    <div className="form-group custom-form-group col-6">
+                      <label>Zip</label>
+                      <input
+                        type="text"
+                        className="form-control form-control-lg"
+                        placeholder={"12345"}
+                      />
+                    </div>
+              
+            </div>
+            <div className="row">
               <div className="col-md-6">
-                <div className="form-group">
-                  <label htmlFor="form_lastname">Last name *</label>
-                  <input
-                    id="form_lastname"
-                    type="text"
-                    name="surname"
-                    className="form-control"
-                    placeholder="Please enter your last name *"
-                    required
-                    data-error="Last name is required."
-                  />
-                  <div className="help-block with-errors"></div>
+                <div className="form-group custom-form-group col-6">
+                      <label>Zip</label>
+                      <input
+                        type="text"
+                        className="form-control form-control-lg"
+                        placeholder={"12345"}
+                      />
                 </div>
               </div>
             </div>
             <div className="row">
               <div className="col-md-6">
-                <div className="form-group">
-                  <label htmlFor="form_email">Email *</label>
-                  <input
-                    id="form_email"
-                    type="email"
-                    name="email"
-                    className="form-control"
-                    placeholder="Please enter your email *"
-                    required
-                    data-error="Valid email is required."
-                  />
-                  <div className="help-block with-errors"></div>
+                <div className="form-group custom-form-group col-6">
+                      <label>Zip</label>
+                      <input
+                        type="text"
+                        className="form-control form-control-lg"
+                        placeholder={"12345"}
+                      />
                 </div>
               </div>
             </div>

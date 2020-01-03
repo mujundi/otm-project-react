@@ -40,7 +40,7 @@ export default () => {
               </span> */}
               <h3>Professional Dispatching and Business Services </h3>
               <p>Set out to deliver valuable and consistent experiences</p>
-              <a href="#" className="btn btn-otm-cta">
+              <a href="/solutions#otm-plans" className="btn btn-otm-cta">
                 CARRIERS
               </a>
             </div>
@@ -511,7 +511,7 @@ export default () => {
               <p>
                 Our agents are here to be the most transparent they can. We are here to work side by side with shippers and drivers to help minimize costs while maximizing profits.{" "}
               </p>
-              <a className="btn btn-orange btn-shadow" href="/contact">Learn More</a>
+              <a className="btn btn-orange btn-shadow" href="/company">Learn More</a>
             </div>
           </div>
           <div className="col-xs-12 col-md-12 col-lg-6 column1">

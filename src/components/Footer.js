@@ -13,7 +13,7 @@ export default () => (
               Clear, upfront pricing with unrivaled transparency and the <br />{" "}
               information you need every step of the journey.
           </h4>
-            <a href="#" className="btn btn-cta-white">
+            <a href="/contact" className="btn btn-cta-white">
               SCHEDULE A CONSULTATION
           </a>
           </div>

@@ -167,7 +167,7 @@ const Company = () => {
                   importance. Individuals and/or companies who choose our firm rely
                   on our competent advice and quick accurate results.
                 </p>
-                <Link to="/contact" className="btn btn-orange btn-shadow">Contact Us</Link>
+                <Link to="/solutions" className="btn btn-orange btn-shadow">Our Solutions</Link>
               </div>
             </div>
             <div className="col-12 col-lg-4 about-main-right">
@@ -217,7 +217,7 @@ const Company = () => {
                   <li><Link to="/solutions#consulting" className="solutionsLink">Business Consulting</Link></li>
                   <li><Link to="/solutions#irs-tax" className="solutionsLink">IRS Tax Debt Resolution</Link></li>
                 </ul>
-                <Link to="/solutions#otm-plans" className="btn btn-orange btn-shadow">Our Solutions</Link>
+                <Link to="/solutions#otm-plans" className="btn btn-orange btn-shadow">Our Packages</Link>
               </div>
             </div>
           </div>

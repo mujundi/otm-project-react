@@ -121,12 +121,16 @@
     background-color: #023B7D;
     color: #ffffff;
     margin-top: 30px;
-    -webkit-box-shadow: -7px 8px 0px 0px rgba(216,216,216,1);
-    -moz-box-shadow: -7px 8px 0px 0px rgba(216,216,216,1);
+    text-transform: uppercase;
     box-shadow: -7px 8px 0px 0px rgba(216,216,216,1);
     border-radius: 0px;
-    font-size: 20px;
+    font-size: 1em;
+    font-weight: 600;
     padding: 10px 35px;
+}
+.btn-blue:hover {
+    color: #ffffff;
+    background-color: #1256a3;
 }
 
 .otm-plans{
@@ -269,6 +273,10 @@
     line-height: 46px;
     margin-top: 0px;
 }
+
+.plans-buttons btn {
+    margin-left: 50px;
+}
 .truck-permit{
     padding-top: 100px;
     padding-bottom: 100px;
@@ -279,7 +287,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    top: -10px;
+    top: 0px;
 }
 .solution-truck{
     position: absolute;
@@ -461,6 +469,15 @@
         max-width: 600px;
     }
 }
+@media only screen and (min-width: 1201px) and (max-width: 1350px) {
+    .solution-main-left {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        top: -10px;
+    }
+}
+
 @media only screen and (min-width: 2500px){
     .consulting-right-img{
         top: 0px;
