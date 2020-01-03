@@ -214,6 +214,19 @@ body {
     color: #ffffff;
 }
 
+.accordion-section .panel-heading {
+    clear: both;
+}
+.accordion-section p {
+    white-space: pre;
+}
+.questions-btn {
+    padding: 10px 55px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-weight: 600;
+    font-size: 1em;
+}
 .footer {
     padding-top: 70px;
     padding-bottom: 50px;

@@ -201,7 +201,7 @@ const Company = () => {
           <div className="row flex-row-reverse">
             <div className="col-12 col-lg-7 about-main-left">
               <div className="about-main-left-inner">
-                <h2 className="section-title">Service</h2>
+                <h2 className="section-title">Services</h2>
                 <p className="section-desc">
                   OTM Dispatch provides professional dispatching and business
                   Services. Our professional dispatchers keep you loaded with the

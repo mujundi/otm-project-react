@@ -1,6 +1,7 @@
 import React from "react";
 import QuestionList from "../components/QuestionList";
 import NavBar from "../components/NavBar";
+import { Link } from "@reach/router";
 
 export default () => {
   if (process.browser) {
@@ -22,6 +23,22 @@ export default () => {
           <NavBar />
         </div>
       </section>
+      <div className="otm-breadcrumb" id="about">
+        <div className="container">
+          <div className="otm-breadcrumb-inner">
+            <nav aria-label="breadcrumb">
+              <ol className="breadcrumb">
+                <li className="breadcrumb-item">
+                  <Link to="/">Home</Link>
+                </li>
+                <li className="breadcrumb-item" aria-current="page">
+                  FAQs
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
       <div className="container mt-5" id="faqs">
         <h2 className="text-center">Frequently Asked Questions:</h2>
         <QuestionList />
@@ -34,7 +51,7 @@ export default () => {
         style={{ paddingTop: "100px" }}
       >
         <h2 className="mb-5">Have more questions?</h2>
-        <button type="button" className="btn btn-primary btn-lg mb-5">
+        <button type="button" className="btn btn-primary btn-lg mb-5 questions-btn">
           Get Help
         </button>
       </div>

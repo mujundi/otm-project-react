@@ -323,7 +323,7 @@ const Contact = (props) => {
       </section>
       <section className="gmap-wrapper">
         <div className="gmap-inner text-center">
-          <button className="btn btn-lg btn-otm-dark">Get Direction</button>
+          <Link to="#" className="btn btn-lg btn-otm-dark">Get Direction</Link>
         </div>
       </section>
     </div>
