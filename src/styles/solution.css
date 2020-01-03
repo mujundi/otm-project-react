@@ -172,7 +172,7 @@
     margin-bottom: 50px;
 }
 .plan-main-title small{
-    font-size: 16px;
+    font-size: 1.2em;
     text-transform: uppercase;
     color: #7E8085;
     margin-bottom: 10px;
@@ -196,6 +196,7 @@
     border-radius: 50%;
     margin: 0 auto;
     background-color: #F4F4F4;
+    border: 3px solid #e5e5e5;
     align-items: center;
     display: flex;
     margin-bottom: 10px;
@@ -258,7 +259,7 @@
 .plan-footer{text-align: center;margin-top: 40px;}
 .plan-footer p{
     color: #7E8085;
-    font-size: 16px;
+    font-size: 1em;
     margin-bottom: 0px;
     text-transform: uppercase;
 }
@@ -274,12 +275,21 @@
     position: relative;
     background-color: rgb(246, 247, 247);
 }
+.solution-main-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0px;
+}
 .solution-truck{
     position: absolute;
     left: 0;
     bottom: 0;
     top: 45px;
-    max-width: 550px;
+    max-width: 530px;
+}
+.solution-truck-mobile {
+    display: none;
 }
 .section-divider{
     position: absolute;
@@ -335,13 +345,15 @@
     padding-top: 100px;
     padding-bottom: 50px;
 }
+
 .solution-tax-logo{
     position: absolute;
-    left: 50px;
-    width: 100%;
-    top: 50%;
-    transform: translate(0, -50%);
-    max-width: 525px;
+    top: 100px;
+    left: 20px;
+    right: 0;
+    max-width: 520px;
+    z-index: 1;
+    display: block !important;
 }
 
 .solutions-main-right-inner ul{
@@ -352,9 +364,9 @@
 .solutions-main-right-inner ul li{
     position: relative;
     padding-left: 40px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #3A434A;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .solutions-main-right-inner ul li:after{
     content: '';
@@ -435,6 +447,7 @@
     .solution-accounting{
         max-width: 675px;
     }
+    
 }
 @media only screen and (min-width: 1900px){
     .consulting-right-img{
@@ -470,7 +483,8 @@
         max-width: 550px;
     }
     .solution-truck{
-        max-width: 450px;
+        max-width: 440px;
+        top: 40px;
     }
     .about-main-img-right-logo{
         max-width: 450px;
@@ -482,13 +496,64 @@
         max-width: 500px;
         top: 0px;
     }
-    .solution-tax-logo{
-        max-width: 425px;
+    .solution-tax-logo {
+        position: absolute;
+        top: 85px;
+        left: 55%;
+        width: 55%;
+        max-width: 520px;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        display: block !important;
     }
+
 }
 @media only screen and (max-width: 991px){
     .about-main-img-right,.solution-truck,.about-main-img-right-logo,.solution-accounting,.consulting-right-img,.solution-tax-logo{
         display: none;
+    }
+    .solution-truck-mobile {
+        width: 100%;
+        left: 0;
+        right: 0;
+        position: absolute;
+        display: block;
+    }
+    .solutions-main-right-inner {
+        margin-top: 150px;
+    }
+    #tax-planning .about-main-img-right-logo {
+        width: 40%;
+        left: 50%;
+        right: 50%;
+        top: 100px;
+        position: absolute;
+        display: block;
+        transform: translate(-50%, -50%);
+    }
+    #consulting .about-main-left {
+        margin-top: 200px;
+    }
+    .consulting-right-img {
+        width: 75%;
+        right: 0;
+        top: 0;
+        position: absolute;
+        display: block;
+    }
+    .solutions-tax-logo {
+        width: 40%;
+        left: 50%;
+        right: 50%;
+        top: 100px;
+        position: absolute;
+        display: block;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    #irs-tax .about-main-left {
+        margin-top:100px;
     }
     .hero-title h2 {
         font-size: 60px;
@@ -560,6 +625,19 @@
         padding-top: 50px;
         padding-bottom: 50px;
     }
+    .solution-tax-logo {
+        position: absolute;
+        max-width: 620px;
+        top: 280px;
+        left: 130px;
+        width: 100%;
+        right: 0;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        display: block !important;
+    }
+
 }
 @media screen and (max-width: 900px) and (min-width: 600px) {
     .crop {
@@ -568,6 +646,60 @@
         top: 40px;
         z-index: -1;
         margin: 0 auto;
+    }
+    .solutions-main-right-inner {
+        margin-top: 400px;
+    }
+    #tax-planning .about-main-img-right-logo {
+        top:200px;
+    }
+    .consulting-right-img {
+        width: 48%;
+    }
+    .solution-tax-logo {
+        top: 70px;
+        left: 53%;
+        right: 50%;
+        width: 30%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .otm-plans-wrapper {
+        min-height: 1580px;
+    }
+    .otm-plans-diamond {
+        position: relative;
+        top: 250px !important;
+        left: 50% !important;
+        right: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 100% !important;
+        max-width: 50% !important;
+        display: block !important;
+        margin-top: 0px !important;
+        z-index: 1 !important;
+    }
+    .otm-plans-emerald {
+        position: relative;
+        top: 800px !important;
+        transform: translate(-50%, -50%) !important;
+        width: 100% !important;
+        max-width: 50% !important;
+        display: block !important;
+        margin-top: 0px !important;
+        z-index: 1 !important;
+    }
+    .otm-plans-ruby {
+        position: relative;
+        top: 520px !important;
+        left: 50% !important;
+        right: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 100% !important;
+        max-width: 50% !important;
+        display: block !important;
+        margin-top: 0px !important;
+        z-index: 1 !important;
     }
 }
 @media only screen and (max-width: 768px){
@@ -612,7 +744,7 @@
         top: 40px;
         z-index: -1;
     }
-    
+
     .otm-plans-wrapper {
         margin: 0 auto;
         width: 100%;
@@ -650,10 +782,11 @@
 }
 @media only screen and (max-width: 475px){
     .plan-footer h4{
-        font-size: 20px;
+        font-size: 1.1em;
+        font-weight: 600;
     }
     .plan-main-title h4{
-        font-size: 22px;
+        font-size: 1.5em;
     }
 }
 @media only screen and (max-width: 375px){

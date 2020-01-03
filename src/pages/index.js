@@ -295,9 +295,10 @@ export default () => {
                       <p>
                         Book and retain more business. We partner with you to keep
                         drivers on the road, eliminate manual check calls and
-                        increase customer satisfaction. Our professional
+                        increase customer satisfaction. </p>
+                        <p><i>Our professional
                         dispatchers keep you loaded with the best loads at the
-                        highest prices.{" "}
+                        highest prices.</i>{" "}
                       </p>
                     </div>
                     <div className="text-stack__cta text-stack__cta--offset js-cta">
@@ -381,9 +382,8 @@ export default () => {
                     </h3>
                   </div>
                   <div className="carousel-item-text">
-                    <p>
-                      OTM Dispatch provides affordable and competitively priced dispatch, tax, accounting, truck permits and consulting services to individuals as well as small and medium size businesses nationwide. OTM Dispatch is currently dispatching Reefers, Dry Vans, Flatbeds, Car Haulers and Hotshots.{" "}
-                    </p>
+                    <p>OTM Dispatch provides affordable and competitively priced dispatch, tax, accounting, truck permits and consulting services to individuals as well as small and medium size businesses nationwide.</p>
+                    <p>OTM Dispatch is currently dispatching Reefers, Dry Vans, Flatbeds, Car Haulers and Hotshots.{" "}</p>
                   </div>
                   <div className="text-stack__cta text-stack__cta--offset js-cta">
                     <div className="button-wrapper" data-module="circle-button">

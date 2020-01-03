@@ -2,7 +2,7 @@
     color: #fff;
 }
 .otm-hero {
-    min-height: 100vh;
+    min-height: 110vh;
     background-image: url(../images/hero-bg.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -615,10 +615,10 @@
         padding: 50px 20px;
     }
     .carousel-background-left {
-        height: 34em;
+        height: 35em;
     }
     .carousel-background {
-        height: 34em;
+        height: 35em;
     }
     .smart-dispatch {
         background-position: center -30px;
@@ -727,7 +727,7 @@
         width: 30px;
     }
     .carousel-item-text p {
-        font-size: 1.3em;
+        font-size: 1em;
     }
     .carousel-item-title h3 img {
         width: 36px;

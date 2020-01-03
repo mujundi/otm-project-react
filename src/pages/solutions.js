@@ -12,7 +12,8 @@ import DiamondPlanImage from "../images/logistics-icon.svg";
 import rightArrow from "../images/cta-right-arrow.svg";
 import EmeraldPlanImage from "../images/truck-icon.svg";
 import TruckImage from "../images/truck-left.png";
-import LogoLinesRight from "../images/logo-lines-right.png";
+import TruckImageMobile from "../images/truck-left-mobile.jpg";
+import LogoLinesRight from "../images/otm-logo-lines.svg";
 import SolutionTruck from "../images/solutions-trucks2.svg";
 import ConsultingRightImage from "../images/consulting-right.png";
 import OTMTrademark from "../images/logo/otm-trademark.svg";
@@ -293,9 +294,14 @@ const Solutions = () => {
             </div>
           </div>
         </div>
-        <img src={TruckImage} alt="" className="solution-truck" />
+        <div className="col-12 col-lg-4 solution-main-left">
+          <img src={TruckImage} alt="" className="solution-truck" />
+          <img src={TruckImageMobile} alt="" className="solution-truck-mobile" />
+        </div>
+
         <div className="section-divider section-divider-top" />
         <div className="section-divider section-divider-bottom" />
+
       </section>
       <section className="solution-main" id="tax-planning">
         <div className="container">
@@ -348,11 +354,7 @@ const Solutions = () => {
             </div>
           </div>
         </div>
-        <img
-          src={LogoLinesRight}
-          alt=""
-          className="about-main-img-right-logo"
-        />
+        <img src={LogoLinesRight} alt="" className="about-main-img-right-logo" />
       </section>
       <section className="accounting-otm" id="accounting">
         <div className="container">
