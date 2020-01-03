@@ -43,9 +43,6 @@ export default () => {
               <a href="#" className="btn btn-otm-cta">
                 CARRIERS
               </a>
-              <a href="#" className="btn btn-otm">
-                SHIPPERS
-              </a>
             </div>
           </div>
         </div>

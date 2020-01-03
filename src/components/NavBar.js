@@ -209,9 +209,9 @@ const NavBar = (props) => {
               Solutions
               <img src={DropDownArrow} alt="Dropdown" className="dropdown-menu-icon" />
             </a>
-            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+            <div className="dropdown-menu solutions-dropdown" aria-labelledby="navbarDropdown">
               <Link to="/solutions" className="dropdown-item">
-                Solution
+                Solutions
               </Link>
               <Link to="/solutions#professional-dispatching" className="dropdown-item">
                 Professional Dispatching

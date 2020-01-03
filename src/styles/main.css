@@ -107,11 +107,15 @@ body {
     background-color: #F7941E;
     color: #ffffff;
     border-radius: 50px;
-    font-size: 10px;
+    font-size: .75em;
     font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    letter-spacing: 1px;
-    padding: 10px 32px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    padding: 12px 50px;
+}
+.btn-otm-cta:hover {
+    color: #ffffff;
+    background-color: #d2790d;
 }
 
 .btn-otm {
@@ -344,6 +348,9 @@ body {
     background-color: transparent;
     border: 0px;
 }
+.solutions-dropdown {
+    column-count: 2;
+}
 
 .dropdown-menu .dropdown-item:first-child {
     font-size: 1.3em;
@@ -360,6 +367,13 @@ body {
     background-color: transparent;
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .otm-nav.navbar-light .navbar-nav .nav-link.nav-cta {
+        position: relative;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
 @media only screen and (max-width: 991px) {
     .home-cta h4 {
         font-size: 24px;
