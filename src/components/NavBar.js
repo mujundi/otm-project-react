@@ -225,6 +225,12 @@ const NavBar = (props) => {
               <Link to="/solutions#accounting" className="dropdown-item">
                 Accounting and Bookkeeping
               </Link>
+              <Link to="/solutions#consulting" className="dropdown-item">
+                Business Consulting
+              </Link>
+              <Link to="/solutions#irs-tax" className="dropdown-item">
+                IRS Tax Debt Resolution
+              </Link>
             </div>
           </li>
 
