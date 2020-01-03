@@ -35,7 +35,7 @@ export default () => {
                 <span className="letters  letters-1">Integrity.</span>
                 <span className="letters hide letters-2">Commitment.</span>
                 <span className="letters hide letters-3">Innovation.</span>
-                <span className="letters hide letters-4">Talent.</span>
+                Comment Out - - <span className="letters hide letters-4">Talent.</span>
                 <span className="letters hide letters-5">The Future.</span>
               </span> */}
               <h3>Professional Dispatching and Business Services </h3>
@@ -645,7 +645,15 @@ export default () => {
         </div>
       </div>
     </section>
-    <section className="sliding-animation">
-    </section>
+    <div className="slider-section">
+      <div className="slider-trucks">
+          <section className="sliding-animation">
+          </section>
+      </div>
+      <div className="slider-background">
+          <section className="slider-bottom">
+          </section>
+      </div>
+    </div>
   </>
 )};

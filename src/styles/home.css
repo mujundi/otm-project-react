@@ -504,6 +504,14 @@
     right: 100px;
     bottom: 40px;
 }
+.slider-section {
+    position: relative;
+    bottom: 0;
+}
+.slider-trucks {
+    position: relative;
+    top: 120px;
+}
 
 .sliding-animation {
     height: 120px;
@@ -511,8 +519,14 @@
     background-position: 0 0;
     background-size: auto 100%;
     animation: animatedBackground 500s linear infinite;
-    margin-top: 120px;
 }
+.slider-bottom{
+    height: 120px;
+    background-image: url(../images/background.svg);
+    background-position: 50%;
+    background-size: auto 100%;
+}
+
 
 @keyframes animatedBackground {
     from {

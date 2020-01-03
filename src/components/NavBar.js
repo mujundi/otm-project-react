@@ -259,7 +259,7 @@ const NavBar = (props) => {
           </li>
           <li className="nav-item">
             <Link to="/careers" className="nav-link nav-cta">
-              Join The Team
+              Partner With Us
             </Link>
           </li>
         </ul>

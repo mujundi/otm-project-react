@@ -8,9 +8,9 @@ import "../styles/solution.css";
 import NavBar from "../components/NavBar";
 
 import SolutionRightImage from "../images/globe2.png";
-import DiamondPlanImage from "../images/diamond-plan.png";
+import DiamondPlanImage from "../images/logistics-icon.svg";
 import rightArrow from "../images/cta-right-arrow.svg";
-import EmeraldPlanImage from "../images/emerald-plan.png";
+import EmeraldPlanImage from "../images/truck-icon.svg";
 import TruckImage from "../images/truck-left.png";
 import LogoLinesRight from "../images/logo-lines-right.png";
 import SolutionTruck from "../images/solutions-trucks2.svg";
@@ -192,13 +192,13 @@ const Solutions = () => {
               <div className="plan-main-title">
                 <small>OTM Dispatch Handles</small>
                 <h4>
-                  All The paperwork so you, <br /> can focus On your business!
+                  All the paperwork so you, <br /> can focus on your business!
                 </h4>
               </div>
             </div>
           </div>
-          <div className="row">
-            <div className="col-12 col-md-6 col-lg-4 offset-lg-2">
+          <div className="row otm-plans-wrapper">
+          <div className="col-12 col-md-6 col-lg-4 otm-plans-diamond">
               <div className="plan-inner">
                 <div className="plan-icon-wrapper">
                   <img src={DiamondPlanImage} alt="" />
@@ -215,14 +215,31 @@ const Solutions = () => {
                 </a>
               </div>
             </div>
-            <div className="col-12 col-md-6 col-lg-4">
+            <div className="col-12 col-md-6 col-lg-4 otm-plans-emerald">
+              <div className="plan-inner">
+                <div className="plan-icon-wrapper">
+                  <img src={DiamondPlanImage} alt="" />
+                </div>
+                <h4 className="plan-name">Diamond Plan</h4>
+                <h4 className="plan-desc">
+                  One Plan, <br /> <span>Solves Everything</span>
+                </h4>
+                <h3 className="plan-price">10%</h3>
+                <small className="price-small-desc">of the load</small>
+                <a href="#" className="plan-cta">
+                  Find out more
+                  <img src={rightArrow} alt="" className="cta-arrow" />
+                </a>
+              </div>
+            </div>
+            <div className="col-12 col-md-6 col-lg-4 otm-plans-ruby">
               <div className="plan-inner">
                 <div className="plan-icon-wrapper">
                   <img src={EmeraldPlanImage} alt="" />
                 </div>
                 <h4 className="plan-name">Emerald Plan</h4>
                 <h4 className="plan-desc">
-                  simple and Efficient, <br /> <span>Easy to Manage</span>
+                  Simple and Efficient, <br /> <span>Easy to Manage</span>
                 </h4>
                 <h3 className="plan-price">8%</h3>
                 <small className="price-small-desc">of the load</small>
@@ -361,13 +378,21 @@ const Solutions = () => {
                 <Link to="/contact" className="btn btn-orange btn-shadow">Contact Us</Link>
               </div>
             </div>
+            <div className="col-12 col-lg-5 solutions-main-left">
+              
+            </div>
+            <div className="solutions-truck-animation">
+                  <div className="solutions-slider-trucks">
+                      <section className="solutions-sliding-animation">
+                      </section>
+                  </div>
+                  <div className="solutions-slider-background">
+                      <section className="solutions-slider-bottom">
+                      </section>
+                  </div>
+              </div>
           </div>
         </div>
-        <img
-          src={SolutionTruck}
-          alt=""
-          className="solution-accounting"
-        />
       </section>
       <section className="bussiness-consulting" id="consulting">
         <div className="container">

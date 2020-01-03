@@ -63,41 +63,40 @@
 .clear{
     clear: both;
 }
-
-.list {
+.solutions-main-left-inner .list {
     display:none; 
     height:auto;
     margin:0;
     float: left;
 }
 
-/* .show {
+.solutions-main-left-inner .show {
     display: none; 
-} */
-.hide:target + .show {
+}
+.solutions-main-left-inner .hide:target + .show {
     display: inline; 
 }
-.hide:target {
+.solutions-main-left-inner .hide:target {
     display: none; 
 }
-.hide:target ~ .list {
+.solutions-main-left-inner .hide:target ~ .list {
     display:inline; 
 }
 
 /*style the (+) and (-) */
-.hide, .show {
+.solutions-main-left-inner .hide, .show {
     margin-right: 0;
     float: left;
     margin-bottom: 25px;
 }
 
-.hide:hover, .show:hover {
+.solutions-main-left-inner .hide:hover, .show:hover {
     text-decoration: none;
     opacity: 1;
     margin-bottom: 25px;
 }
 
-.list p{
+.solutions-main-left-inner .list p{
     height:auto;
     margin:0;
     margin-bottom: 15px;
@@ -139,6 +138,35 @@
     padding-top: 100px;
     padding-bottom: 100px;
 }
+.otm-plans-wrapper {
+    position: relative;
+    min-height: 500px;
+}
+.otm-plans-diamond {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    margin-top: -20px;
+    z-index: 1;
+}
+.otm-plans-diamond .plan-inner {
+    background-color: #f8f8f8;
+    min-height: 515px;
+}
+.otm-plans-diamond .plan-icon-wrapper {
+    background-color: #ffffff;
+    border: 3px solid #e5e5e5;
+}
+.otm-plans-emerald {
+    position: absolute;
+    left: 40px;
+}
+.otm-plans-ruby {
+    position: absolute;
+    right: 40px;
+}
 .plan-main-title{
     text-align: center;
     margin-bottom: 50px;
@@ -174,6 +202,7 @@
 }
 .plan-icon-wrapper img{
     margin: 0 auto;
+    max-width: 55px;
 }
 .plan-name{
     text-transform: uppercase;
@@ -339,6 +368,66 @@
     left: 0px;
     top: 50%;
     transform: translate(0%, -50%);
+}
+
+
+.solutions-truck-animation {
+    bottom: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    max-width: 600px;
+}
+.solutions-slider-trucks {
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.solutions-sliding-animation {
+    height: 100%;
+    background-image: url(../images/solutions-trucks-front.svg);
+    background-position: 0 0;
+    background-size: auto 150%;
+    -webkit-animation: run 10s linear infinite;
+    animation: run 10s linear infinite;
+    z-index: 2;
+    background-repeat-x: no-repeat;
+}
+
+@keyframes run {
+    from {
+        background-position: 0 0;
+    }
+    /*use negative width if you want it to flow right to left else and positive for left to right*/
+    to {
+        background-position: left 0px bottom -1035px
+    }
+}
+
+.solutions-slider-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    z-index: 0;
+}
+
+.solutions-slider-bottom {
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/solutions-trucks-bg.svg);
+    background-position: 0 0;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
 }
 
 
