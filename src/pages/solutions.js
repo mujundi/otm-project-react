@@ -378,9 +378,7 @@ const Solutions = () => {
                 <Link to="/contact" className="btn btn-orange btn-shadow">Contact Us</Link>
               </div>
             </div>
-            <div className="col-12 col-lg-5 solutions-main-left">
-              
-            </div>
+            <div className="clear"></div>
             <div className="solutions-truck-animation">
                   <div className="solutions-slider-trucks">
                       <section className="solutions-sliding-animation">
