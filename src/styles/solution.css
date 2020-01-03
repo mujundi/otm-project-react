@@ -1,5 +1,5 @@
 .solution-hero{
-    background-image: url(../images/about-hero-bg.png);
+    background-image: url(../images/solution-hero-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -273,9 +273,17 @@
     line-height: 46px;
     margin-top: 0px;
 }
-
+.plans-hero .solution-main {
+    padding-left: 20px;
+    padding-right: 20px;
+}
 .plans-buttons btn {
     margin-left: 50px;
+}
+.plan-text-header {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 .truck-permit{
     padding-top: 100px;

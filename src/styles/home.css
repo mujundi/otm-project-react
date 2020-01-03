@@ -20,11 +20,12 @@
 .globe {
     position: absolute;
     right: -110px;
-    top: 90px;
+    top: 100px;
     max-width: 100%;
     -webkit-animation: spin 100s linear infinite;
     -moz-animation: spin 100s linear infinite;
     animation: spin 100s linear infinite;
+    z-index: -1;
 }
 
 @-moz-keyframes spin {

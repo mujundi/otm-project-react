@@ -210,7 +210,7 @@ const Solutions = () => {
                 </h4>
                 <h3 className="plan-price">10%</h3>
                 <small className="price-small-desc">of the load</small>
-                <a href="#" className="plan-cta">
+                <a href="/diamond" className="plan-cta">
                   Find out more
                   <img src={rightArrow} alt="" className="cta-arrow" />
                 </a>
@@ -244,7 +244,7 @@ const Solutions = () => {
                 </h4>
                 <h3 className="plan-price">9%</h3>
                 <small className="price-small-desc">of the load</small>
-                <a href="#" className="plan-cta">
+                <a href="/ruby" className="plan-cta">
                   Find out more
                   <img src={rightArrow} alt="" className="cta-arrow" />
                 </a>
