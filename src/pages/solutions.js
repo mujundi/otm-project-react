@@ -186,7 +186,7 @@ const Solutions = () => {
           <img src={SolutionRightImage} alt="" className="solutions-main-img-right" />
         </div>
       </section>
-      <section className="otm-plans">
+      <section className="otm-plans" id="otm-plans">
         <div className="container">
           <div className="row">
             <div className="col-12">

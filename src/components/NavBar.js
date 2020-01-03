@@ -216,6 +216,9 @@ const NavBar = (props) => {
               <Link to="/solutions#professional-dispatching" className="dropdown-item">
                 Professional Dispatching
               </Link>
+              <Link to="/solutions#otm-plans" className="dropdown-item">
+                <strong>DISPATCHING SERVICE PLANS</strong>
+              </Link>
               <Link to="/solutions#truck-permits" className="dropdown-item">
                 Truck Permits
               </Link>
