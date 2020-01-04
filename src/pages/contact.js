@@ -323,7 +323,7 @@ const Contact = (props) => {
       </section>
       <section className="gmap-wrapper">
         <div className="gmap-inner text-center">
-          <Link to="#" className="btn btn-lg btn-otm-dark">Get Direction</Link>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=9500%20SATELLITE%20BLVD%20SUITE%20170%2C%20ORLANDO%2C%2032837" className="btn btn-lg btn-otm-dark">Get Direction</a>
         </div>
       </section>
     </div>

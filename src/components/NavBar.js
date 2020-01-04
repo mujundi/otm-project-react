@@ -28,8 +28,13 @@ const NavBar = (props) => {
     document.getElementById("menuBackground").classList.add("show");
   }
 
-  const mouseLeaveHandler = () => {
+  const mouseLeaveHandler = (event) => {
     document.getElementById("menuBackground").classList.remove("show");
+    event.target.classList.remove("show");
+    const element = document.body.querySelector("nav div.dropdown-menu.show");
+    if (element) {
+      element.classList.remove("show");
+    }
   }
 
   useEffect(() => {

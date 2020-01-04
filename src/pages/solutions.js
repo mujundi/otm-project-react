@@ -154,8 +154,8 @@ const Solutions = () => {
                   increasing profitability.
                 </p>
 
-                <a href="#hide1" class="hide" id="hide1">Read More</a>
-                <a href="#show1" class="show" id="show1">Read Less</a>
+                <a href="#hide1" className="hide" id="hide1">Read More</a>
+                <a href="#show1" className="show" id="show1">Read Less</a>
 
                 <div className="list">
                   <p className="section-desc">

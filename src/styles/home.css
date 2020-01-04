@@ -1,6 +1,7 @@
 .otm-hero .dropdown-item {
     color: #fff;
 }
+
 .otm-hero {
     min-height: 110vh;
     background-image: url(../images/hero-bg.svg);
@@ -431,7 +432,7 @@
 }
 
 .otm-home-container {
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
 }
 
 .otm-main-inner h3 {
@@ -505,10 +506,12 @@
     right: 100px;
     bottom: 40px;
 }
+
 .slider-section {
     position: relative;
     bottom: 0;
 }
+
 .slider-trucks {
     position: relative;
     top: 120px;
@@ -521,13 +524,13 @@
     background-size: auto 100%;
     animation: animatedBackground 500s linear infinite;
 }
-.slider-bottom{
+
+.slider-bottom {
     height: 120px;
     background-image: url(../images/background.svg);
     background-position: 50%;
     background-size: auto 100%;
 }
-
 
 @keyframes animatedBackground {
     from {
@@ -590,10 +593,6 @@
     }
 }
 
-@media only screen and (max-width: 1000px) {
-    right: -90px;
-}
-
 @media only screen and (max-width: 991px) {
     .globe {
         display: none;
@@ -637,14 +636,13 @@
     .otm-home-container .row .column2 {
         order: 2;
     }
-
     .otm-main {
         margin-top: 0px;
     }
     .otm-main-logo {
         width: 70%;
         margin-right: -55px;
-    }   
+    }
     .otm-main-inner p,
     .team-text-inner p {
         font-size: 24px;
@@ -708,7 +706,6 @@
 }
 
 @media only screen and (max-width: 576px) {
-
     .hero-text-wrapper {
         text-align: center;
     }
