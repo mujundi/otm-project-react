@@ -84,16 +84,18 @@
 }
 
 /*style the (+) and (-) */
-.solutions-main-left-inner .hide, .show {
+.solutions-main-left-inner .hide,
+.show {
     margin-right: 0;
     float: left;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
 }
 
-.solutions-main-left-inner .hide:hover, .show:hover {
+.solutions-main-left-inner .hide:hover,
+.show:hover {
     text-decoration: none;
     opacity: 1;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
 }
 
 .solutions-main-left-inner .list p{
