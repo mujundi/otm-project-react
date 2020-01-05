@@ -10,7 +10,7 @@ export default () => (
         <div className="row">
           <div className="col text-center">
             <h4>
-              Clear, upfront pricing with unrivaled transparency and the <br />{" "}
+              Clear, upfront pricing with unrivaled transparency and the <br />
               information you need every step of the journey.
           </h4>
             <a href="/contact" className="btn btn-cta-white">

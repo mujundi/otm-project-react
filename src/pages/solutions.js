@@ -177,7 +177,7 @@ const Solutions = () => {
                 </p>
                 </div>
                 <div className="clear"></div>
-                <Link to="/careers" className="btn btn-blue btn-shadow">Partner With Us</Link>
+                <Link to="/partnership" className="btn btn-blue btn-shadow">Partner With Us</Link>
               </div>
             </div>
           </div>

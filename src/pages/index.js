@@ -284,7 +284,7 @@ export default () => {
                               />
                             </svg>
                           </figure>
-                        </span>{" "}
+                        </span>
                         Smart Dispatching
                       </h3>
                     </div>
@@ -295,7 +295,7 @@ export default () => {
                         increase customer satisfaction. </p>
                         <p><i>Our professional
                         dispatchers keep you loaded with the best loads at the
-                        highest prices.</i>{" "}
+                        highest prices.</i>
                       </p>
                     </div>
                     <div className="text-stack__cta text-stack__cta--offset js-cta">
@@ -374,13 +374,13 @@ export default () => {
                             />
                           </svg>
                         </figure>
-                      </span>{" "}
+                      </span>
                       Business Services
                     </h3>
                   </div>
                   <div className="carousel-item-text">
                     <p>OTM Dispatch provides affordable and competitively priced dispatch, tax, accounting, truck permits and consulting services to individuals as well as small and medium size businesses nationwide.</p>
-                    <p>OTM Dispatch is currently dispatching Reefers, Dry Vans, Flatbeds, Car Haulers and Hotshots.{" "}</p>
+                    <p>OTM Dispatch is currently dispatching Reefers, Dry Vans, Flatbeds, Car Haulers and Hotshots.</p>
                   </div>
                   <div className="text-stack__cta text-stack__cta--offset js-cta">
                     <div className="button-wrapper" data-module="circle-button">
@@ -417,7 +417,7 @@ export default () => {
                       Book and retain more business. We partner with you to keep
                       drivers on the road, eliminate manual check calls and
                       increase customer satisfaction. Our professional dispatchers
-                      keep you loaded with the best loads at the highest prices.{" "}
+                      keep you loaded with the best loads at the highest prices.
                     </p>
                   </div>
                   <div className="text-stack__cta text-stack__cta--offset js-cta">
@@ -506,10 +506,10 @@ export default () => {
             <div className="otm-main-inner">
               <h3>Professional Dispatching</h3>
               <p>
-                OTM Dispatch provides affordable and competitively priced dispatch, tax, accounting, truck permits and consulting services to individuals as well as small and medium size businesses nationwide. OTM Dispatch is currently dispatching Reefers, Dry Vans, Flatbeds, Car Haulers and Hotshots.{" "}
+                OTM Dispatch provides affordable and competitively priced dispatch, tax, accounting, truck permits and consulting services to individuals as well as small and medium size businesses nationwide. OTM Dispatch is currently dispatching Reefers, Dry Vans, Flatbeds, Car Haulers and Hotshots.
               </p>
               <p>
-                Our agents are here to be the most transparent they can. We are here to work side by side with shippers and drivers to help minimize costs while maximizing profits.{" "}
+                Our agents are here to be the most transparent they can. We are here to work side by side with shippers and drivers to help minimize costs while maximizing profits.
               </p>
               <a className="btn btn-orange btn-shadow" href="/company">Learn More</a>
             </div>

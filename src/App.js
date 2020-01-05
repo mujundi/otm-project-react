@@ -18,7 +18,7 @@ const App = () => {
             <Routes path="/help" />
             <Routes path="/legal" />
             <Routes path="/privacy" />
-            <Routes path="/careers" />
+            <Routes path="/partnership" />
             <Routes path="/" />
             <Routes path="/*" />
           </Router>

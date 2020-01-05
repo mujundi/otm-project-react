@@ -54,7 +54,7 @@ export default () => (
     			</p>
     			<p><strong>Disclosure:</strong> OTM Dispatch reserves the right to not provide the services mentioned above if Carrier does not furnish all the required information to complete such services and Carrier cannot hold OTM Dispatch accountable for doing so if those requirements are not met by Carrier.</p>
     			<div className="plans-buttons">
-    				<Link to="/careers" className="btn btn-orange btn-shadow">Partner With Us</Link>
+    				<Link to="/partnership" className="btn btn-orange btn-shadow">Partner With Us</Link>
     	      <div className="clear"></div>
     				<Link to="/solutions#otm-plans" className="btn btn-blue btn-shadow">Go Back</Link>
 	        </div>
