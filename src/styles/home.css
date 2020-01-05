@@ -595,7 +595,7 @@
 
 @media only screen and (max-width: 991px) {
     .globe {
-        display: none;
+        opacity: .5;
     }
 }
 
