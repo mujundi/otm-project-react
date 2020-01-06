@@ -31,16 +31,16 @@ export default () => (
           <div className="col-xs-12 col-md-3 col-lg-3">
             <ul className="footer-menu">
               <li>
-                <Link to="/company">Overview</Link>
-              </li>
-              <li>
-                <Link to="/solutions">Services</Link>
-              </li>
-              <li>
-                <Link to="/solutions">Platform</Link>
-              </li>
-              <li>
                 <Link to="/company">Company</Link>
+              </li>
+              <li>
+                <Link to="/solutions">Solutions</Link>
+              </li>
+              <li>
+                <Link to="/solutions#otm-plans">Dispatching Plans</Link>
+              </li>
+              <li>
+                <Link to="/partnership">Partner with Us</Link>
               </li>
             </ul>
           </div>
@@ -54,6 +54,9 @@ export default () => (
               </li>
               <li>
                 <Link to="/help">FAQs</Link>
+              </li>
+              <li>
+                <Link to="/help#help">Get Help</Link>
               </li>
             </ul>
           </div>
