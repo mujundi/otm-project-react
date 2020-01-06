@@ -42,6 +42,8 @@ export default {
             crossOrigin="anonymous"
           />
           <title>Truck Dispatching Services | OTM Dispatch</title>
+          <link rel="shortcut icon" href="http://admin.otmdispatch.com/uploads/621408af2b0049cca9058a28c5d43290.png">
+
         </Head>
         <Body>
           {children}
