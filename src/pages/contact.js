@@ -7,6 +7,7 @@ import "../styles/contact.css";
 import NavBar from "components/NavBar";
 
 import OTMDispatchLogo from "../images/logo/otm-trademark.svg";
+import HelpImage from "../images/get-help.png";
 
 const API_URL = "http://167.114.153.121:1337";
 
@@ -296,20 +297,21 @@ const Contact = (props) => {
                 <div className="chat-time">
                   <p>Need to talk with an agent?</p>
                   <h4>8AM - 5PM Live Chat</h4>
+                  <a href="#"><img src={HelpImage} alt="help" /></a>
                 </div>
                 <div className="contact-point">
                   <h4>Contact our Office</h4><br />
                   <p>
-                    <strong>Toll Free:</strong> <a href="tel:+18001231234">888-842-9507 </a><br />
-                    <strong>Direct:</strong> <a href="tel:+18001231234">321-284-3755</a><br />
-                    <strong>Fax:</strong> <a href="tel:+18001231234">407-574-6247</a>
+                    <strong>Toll Free:</strong> <a href="tel:+18001231234">(888) 842-9507 </a><br />
+                    <strong>Direct:</strong> <a href="tel:+18001231234">(321) 284-3755</a><br />
+                    <strong>Fax:</strong> <a href="tel:+18001231234">(407) 574-6247</a>
                   </p>
                   <p>
                     <strong>Email Us:</strong> <a href="mailto:INFO@OTMDISPATCH.COM">
-                      INFO@OTMDISPATCH.COM
+                      info@otmdispatch.com
                     </a>
                   </p>
-                  <p>9500 SATELLITE BLVD SUITE 170, ORLANDO, 32837</p>
+                  <p>9500 Satellite Blvd Suite 170, Orlando, 32837</p>
                   <img
                     src={OTMDispatchLogo}
                     alt="OTM Dispatch"

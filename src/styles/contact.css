@@ -50,6 +50,12 @@
     margin-bottom: 20px;
 }
 
+.chat-time img {
+    width: 150px;
+    float: right;
+    margin-top: -90px;
+}
+
 .chat-time p {
     font-size: 12px;
     font-weight: 600;

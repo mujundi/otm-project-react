@@ -7,6 +7,7 @@ import "../styles/partnership.css";
 import NavBar from "../components/NavBar";
 
 import HelpImage from "../images/get-help.png";
+import ProcessImage from "../images/partnership-process.svg";
 // const API_URL = "http://167.114.153.121:1337";
 
 // const url = `${API_URL}/pages/5dff3ba2aecfad34d76ee5a0`;
@@ -391,6 +392,7 @@ const Partnership = () => {
                 <div className="process-title">
                   <h4>Partnership Process Explained</h4>
                 </div>
+                <img src={ProcessImage} className="partnership-image" alt="Partnership Process" />
                 <ul className="steps-pills">
                   <li className="step-li step-one">
                     <div className="step-pill pill-green">Fill out form</div>
@@ -412,7 +414,7 @@ const Partnership = () => {
                   <p>
                     Press below to get assistance from one of our representatives.
                   </p>
-                  <img src={HelpImage} alt="help" />
+                  <a href="#"><img src={HelpImage} alt="help" /></a>
                 </div>
               </div>
             </div>

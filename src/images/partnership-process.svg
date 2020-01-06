@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="502px" viewBox="0 0 62 502" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="93.8640625%" x2="50%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#7A8F9D" offset="0%"></stop>
+            <stop stop-color="#71D379" offset="18.4234354%"></stop>
+            <stop stop-color="#71CAD3" offset="43.2933866%"></stop>
+            <stop stop-color="#FFFFFF" offset="68.0887705%"></stop>
+            <stop stop-color="#71D379" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-2">
+            <stop stop-color="#F0F3F5" offset="0%"></stop>
+            <stop stop-color="#71D379" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Main-Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Partnership" transform="translate(-58.000000, -287.000000)">
+            <g id="sidebar" transform="translate(0.000000, 168.000000)">
+                <g id="steps" transform="translate(59.000000, 120.000000)">
+                    <g id="Group-2" transform="translate(0.000000, 0.000000)">
+                        <path d="M30.0001806,3.19744231e-14 C46.5687231,3.24835644e-14 60.0001806,13.4314575 60.0001806,30 C60.0001806,44.8648489 49.1889401,57.2045973 35.0005601,59.5851441 L35.0003795,110.414856 C49.1887595,112.795403 60,125.135151 60,140 C60,154.864849 49.1887595,167.204597 35.0003795,169.585144 L35.0003795,220.414856 C49.1887595,222.795403 60,235.135151 60,250 C60,264.864849 49.1887595,277.204597 35.0003795,279.585144 L35.0003795,330.414856 C49.1887595,332.795403 60,345.135151 60,360 C60,374.864849 49.1887595,387.204597 35.0003795,389.585144 L35.0003795,440.414856 C49.1887595,442.795403 60,455.135151 60,470 C60,486.568542 46.5685425,500 30,500 C13.4314575,500 5.49146882e-13,486.568542 5.54223551e-13,470 C5.49215497e-13,455.134802 10.811749,442.794822 25.0006214,440.414688 L25.0006214,389.585312 C10.811749,387.205178 5.74172527e-13,374.865198 5.75539616e-13,360 C5.73719231e-13,345.134802 10.811749,332.794822 25.0006214,330.414688 L25.0006214,279.585312 C10.811749,277.205178 1.23343153e-13,264.865198 1.27897909e-13,250 C1.22889856e-13,235.134802 10.811749,222.794822 25.0006214,220.414688 L25.0006214,169.585312 C10.811749,167.205178 1.26530604e-13,154.865198 1.27897692e-13,140 C1.26077307e-13,125.134802 10.811749,112.794822 25.0006214,110.414688 L25.0006214,59.585312 C10.811749,57.2051776 3.64290959e-13,44.8651985 3.63287091e-13,30 C3.60376997e-13,13.5971429 13.1641715,0.268942859 29.5038951,0.00401914288 L30.0001806,3.19744231e-14 Z" id="Combined-Shape" stroke="#D5DCE1" fill="url(#linearGradient-1)"></path>
+                        <g id="1" transform="translate(10.000000, 10.000000)">
+                            <rect id="Rectangle-5" stroke="#C9D5DC" fill="#FFFFFF" x="0.5" y="0.5" width="39" height="39" rx="19.5"></rect>
+                            <text font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-size="18" font-weight="bold" letter-spacing="0.3375" fill="#71D379">
+                                <tspan x="16.95625" y="27">1</tspan>
+                            </text>
+                        </g>
+                        <g id="2" transform="translate(10.000000, 120.000000)">
+                            <rect id="Rectangle-5" stroke="#C9D5DC" fill="#FFFFFF" x="0.5" y="0.5" width="39" height="39" rx="19.5"></rect>
+                            <text font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-size="18" font-weight="bold" letter-spacing="0.3375" fill="#464C4E">
+                                <tspan x="15.51625" y="27">2</tspan>
+                            </text>
+                        </g>
+                        <g id="3" transform="translate(10.000000, 230.000000)">
+                            <rect id="Rectangle-5" stroke="#C9D5DC" fill="#FFFFFF" x="0.5" y="0.5" width="39" height="39" rx="19.5"></rect>
+                            <text font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-size="18" font-weight="bold" letter-spacing="0.3375" fill="#464C4E">
+                                <tspan x="15.50725" y="27">3</tspan>
+                            </text>
+                        </g>
+                        <g id="4" transform="translate(10.000000, 340.000000)">
+                            <rect id="Rectangle-5" stroke="#C9D5DC" fill="#FFFFFF" x="0.5" y="0.5" width="39" height="39" rx="19.5"></rect>
+                            <text font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-size="18" font-weight="bold" letter-spacing="0.3375" fill="#464C4E">
+                                <tspan x="15.04825" y="27">4</tspan>
+                            </text>
+                        </g>
+                        <g id="5" transform="translate(10.000000, 450.000000)">
+                            <rect id="Rectangle-5" stroke="#C9D5DC" fill="#FFFFFF" x="0.5" y="0.5" width="39" height="39" rx="19.5"></rect>
+                            <text font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-size="18" font-weight="bold" letter-spacing="0.3375" fill="#464C4E">
+                                <tspan x="15.71425" y="27">5</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

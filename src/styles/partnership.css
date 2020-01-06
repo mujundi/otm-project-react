@@ -17,6 +17,13 @@
     background-color: #D8D8D8;
 }
 
+.partnership-image {
+    position: absolute;
+    top: 127px;
+    left: 24px;
+    z-index: 1;
+}
+
 .steps-pills {
     list-style: none;
     padding-left: 0;
