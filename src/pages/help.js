@@ -51,9 +51,9 @@ export default () => {
         style={{ paddingTop: "100px" }}
       >
         <h2 className="mb-5">Have more questions?</h2>
-        <button type="button" className="btn btn-primary btn-lg mb-5 questions-btn">
+        <a href="https://app.purechat.com/w/otmdispatch" target="_app" className="btn btn-primary btn-lg mb-5 questions-btn">
           Get Help
-        </button>
+        </a>
       </div>
     </div>
   );

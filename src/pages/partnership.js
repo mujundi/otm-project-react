@@ -414,7 +414,7 @@ const Partnership = () => {
                   <p>
                     Press below to get assistance from one of our representatives.
                   </p>
-                  <a href="#"><img src={HelpImage} alt="help" /></a>
+                  <a href="https://app.purechat.com/w/otmdispatch" target="_app"><img src={HelpImage} alt="help" /></a>
                 </div>
               </div>
             </div>

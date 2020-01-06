@@ -297,14 +297,14 @@ const Contact = (props) => {
                 <div className="chat-time">
                   <p>Need to talk with an agent?</p>
                   <h4>8AM - 5PM Live Chat</h4>
-                  <a href="#"><img src={HelpImage} alt="help" /></a>
+                  <a href="https://app.purechat.com/w/otmdispatch" target="_app"><img src={HelpImage} alt="help" /></a>
                 </div>
                 <div className="contact-point">
                   <h4>Contact our Office</h4><br />
                   <p>
-                    <strong>Toll Free:</strong> <a href="tel:+18001231234">(888) 842-9507 </a><br />
-                    <strong>Direct:</strong> <a href="tel:+18001231234">(321) 284-3755</a><br />
-                    <strong>Fax:</strong> <a href="tel:+18001231234">(407) 574-6247</a>
+                    <strong>Toll Free:</strong> <a href="tel:+18008429507">(888) 842-9507 </a><br />
+                    <strong>Direct:</strong> <a href="tel:+3212843755">(321) 284-3755</a><br />
+                    <strong>Fax:</strong> <a href="tel:+4075746247">(407) 574-6247</a>
                   </p>
                   <p>
                     <strong>Email Us:</strong> <a href="mailto:INFO@OTMDISPATCH.COM">
