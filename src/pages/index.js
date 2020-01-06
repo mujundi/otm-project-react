@@ -21,7 +21,6 @@ export default () => {
 
   return (
   <>
-  <script>$('.carousel').carousel();</script>
     <section className="otm-hero">
       <div className="container">
         <NavBar light />
