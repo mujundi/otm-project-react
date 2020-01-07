@@ -23,7 +23,7 @@ const Partnership = () => {
     //   setBannerSubheader(res.data.fields[0].subheader);
     //   setImageURL(`${API_URL + res.data.fields[0].background.url}`);
     // });
-    // if (process.browser) scrollTo(0, 0);
+    if (process.browser) scrollTo(0, 0);
   }, []);
 
   return (

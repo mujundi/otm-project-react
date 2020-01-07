@@ -13,7 +13,8 @@ export default () => {
   useEffect(() => {
     document.getElementById("menuBackground").style.top = "120px";
     scrollTo(0, 0);
-
+    $('.carousel').carousel();
+    
 		return () => {
       document.getElementById("menuBackground").style.top = "98px";    
     }
