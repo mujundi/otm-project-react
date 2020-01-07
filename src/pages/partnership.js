@@ -314,7 +314,7 @@ const Partnership = () => {
                         id="physicalAddress"
                         className="form-control otm-form-control"
                         type="text"
-                        placeholder="123 Street Address"
+                        placeholder="123 Street Address City, State & Zip"
                       />
                     </div>
                   </div>
