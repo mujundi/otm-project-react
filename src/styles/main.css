@@ -297,6 +297,14 @@ body {
     .nav-item {
         text-align: right;
     }
+    .sticky-menu {
+        padding-top: 90px;
+    }
+    .solutions-dropdown {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
 }
 
 .otm-hero-light .otm-nav.navbar-light .navbar-nav .active>.nav-link,
