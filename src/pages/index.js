@@ -114,9 +114,9 @@ export default () => {
               <h2 className="ml7">
                 <span className="text-wrapper w-100">
                   <span className="letters letters-1">Integrity.</span>
-                  <span className="letters d-none letters-2">Commitment.</span>
+                  <span className="letters d-none letters-2">Our Commitment.</span>
                   <span className="letters d-none letters-3">Innovation.</span>
-                  <span className="letters d-none letters-4">The Future.</span>
+                  <span className="letters d-none letters-4">Your Future.</span>
                 </span>
               </h2>           
               <h3>Professional Dispatching and Business Services </h3>

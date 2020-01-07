@@ -600,6 +600,17 @@
     }
     
 }
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+    .globe {
+        opacity: .5;
+        max-width: 100%;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 200px;
+    }
+    
+}
 
 @media only screen and (max-width: 991px) {
     .hero-text-wrapper h1,
@@ -694,15 +705,15 @@
         display: none;
     }
     .ml7 .text-wrapper {
-        position: relative;
-        display: inline-block;
-        padding-top: 0.2em;
-        padding-right: 0.05em;
-        padding-bottom: 0.1em;
-        overflow: hidden;
-        height: 90px !important;
-        width: 90% !important;
-        max-width: 345px;
+        position: relative !important;
+        display: block !important;
+        padding-top: 60px !important;
+        overflow: hidden !important;
+        font-size: .7em !important;
+        height: 0px !important;
+    }
+    .hero-text-wrapper h1, h2, h3, p {
+        text-align: left;
     }
 }
 
@@ -771,7 +782,7 @@
     display: inline-block;
     padding-top: 0.2em;
     padding-right: 0.05em;
-    padding-bottom: 0.1em;
+    padding-bottom: 0;
     overflow: hidden;
     height: 100px;
 }
