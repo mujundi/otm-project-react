@@ -14,10 +14,10 @@ import EmeraldPlanImage from "../images/truck-icon.svg";
 import TruckImage from "../images/truck-left.png";
 import TruckImageMobile from "../images/truck-left-mobile.jpg";
 import LogoLinesRight from "../images/otm-logo-lines.svg";
-import SolutionTruck from "../images/solutions-trucks2.svg";
+// import SolutionTruck from "../images/solutions-trucks2.svg";
 import ConsultingRightImage from "../images/consulting-right.png";
 import OTMTrademark from "../images/logo/otm-trademark.svg";
-import SolutionsPathBG from "../images/solutions-path-bg.png";
+// import SolutionsPathBG from "../images/solutions-path-bg.png";
 
 // const API_URL = "http://167.114.153.121:1337";
 

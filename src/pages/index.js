@@ -8,13 +8,93 @@ import TruckIcon from "../images/truck-icon.png";
 import OTMTrademark from "../images/logo/otm-trademark.svg";
 import PlatFormImage from "../images/logistics-platform.png";
 
+import anime from 'animejs/lib/anime.es.js';
+
 export default () => {
+  
+  const textAnimation = ()=>{
+    $('.text-wrapper .letters:not(.letters-1)').removeClass('d-none');
+    $('.ml7 .letters').each(function(){
+        $(this).html($(this).text().replace(/([^\x80-\xFF]|[À-ÖØ-öø-ÿ]|\w)/g, "<span class='letter letter-$&'>$&</span>"));
+    });
+
+    anime.timeline({loop: true})
+        .add({
+            targets: '.letters-1 .letter',
+            translateY: ["1.1em", 0],
+            translateX: ["0.55em", 0],
+            translateZ: 0,
+            rotateZ: [180, 0],
+            duration: 750,
+            easing: "easeOutExpo",
+            delay: function(el, i) {
+                return 50 * i;
+            }
+        }).add({
+        targets: '.letters-1',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 800
+    }).add({
+        targets: '.letters-2 .letter',
+        translateY: ["1.1em", 0],
+        translateX: ["0.55em", 0],
+        translateZ: 0,
+        rotateZ: [180, 0],
+        duration: 750,
+        easing: "easeOutExpo",
+        delay: function(el, i) {
+            return 50 * i;
+        }
+    }).add({
+        targets: '.letters-2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 800
+    }).add({
+        targets: '.letters-3 .letter',
+        translateY: ["1.1em", 0],
+        translateX: ["0.55em", 0],
+        translateZ: 0,
+        rotateZ: [180, 0],
+        duration: 750,
+        easing: "easeOutExpo",
+        delay: function(el, i) {
+            return 50 * i;
+        }
+    }).add({
+        targets: '.letters-3',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 800
+    }).add({
+        targets: '.letters-4 .letter',
+        translateY: ["1.1em", 0],
+        translateX: ["0.55em", 0],
+        translateZ: 0,
+        rotateZ: [180, 0],
+        duration: 750,
+        easing: "easeOutExpo",
+        delay: function(el, i) {
+            return 50 * i;
+        }
+    }).add({
+        targets: '.letters-4',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 800
+    });
+  }
   
   useEffect(() => {
     document.getElementById("menuBackground").style.top = "120px";
     scrollTo(0, 0);
     $('.carousel').carousel();
-    
+    textAnimation();
 		return () => {
       document.getElementById("menuBackground").style.top = "98px";    
     }
@@ -31,14 +111,14 @@ export default () => {
           <div className="col">
             <div className="hero-text-wrapper">
               <h1>Powered By</h1>
-              <h2>Commitment.</h2>
-              {/* <span className="text-wrapper">
-                <span className="letters  letters-1">Integrity.</span>
-                <span className="letters hide letters-2">Commitment.</span>
-                <span className="letters hide letters-3">Innovation.</span>
-                Comment Out - - <span className="letters hide letters-4">Talent.</span>
-                <span className="letters hide letters-5">The Future.</span>
-              </span> */}
+              <h2 className="ml7">
+                <span className="text-wrapper w-100">
+                  <span className="letters letters-1">Integrity.</span>
+                  <span className="letters d-none letters-2">Commitment.</span>
+                  <span className="letters d-none letters-3">Innovation.</span>
+                  <span className="letters d-none letters-4">The Future.</span>
+                </span>
+              </h2>           
               <h3>Professional Dispatching and Business Services </h3>
               <p>Set out to deliver valuable and consistent experiences</p>
               <a href="/solutions#otm-plans" className="btn btn-otm-cta">
