@@ -8,6 +8,7 @@ import NavBar from "../components/NavBar";
 
 import HelpImage from "../images/get-help.png";
 import ProcessImage from "../images/partnership-process.svg";
+import loaderImage from "../images/loader.gif";
 // const API_URL = "http://167.114.153.121:1337";
 
 // const url = `${API_URL}/pages/5dff3ba2aecfad34d76ee5a0`;
@@ -17,6 +18,8 @@ const Partnership = () => {
   // const [bannerSubheader, setBannerSubheader] = useState([]);
   // const [imageURL, setImageURL] = useState([]);
 
+  const [sendingMail, setSendingMail] = useState(false);
+
   useEffect(() => {
     // axios.get(url).then((res) => {
     //   setBannerHeader(res.data.fields[0].header);
@@ -25,6 +28,53 @@ const Partnership = () => {
     // });
     if (process.browser) scrollTo(0, 0);
   }, []);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const alert = document.getElementById("loader");
+    alert.style.display = "block";
+    setTimeout(() => {
+      alert.style.display = "none";
+    }, 4000);
+
+    setSendingMail(true);
+
+    const data = $(event.target).serializeArray();
+    let body =
+      "Hi, You have received a new partnership request for OTM Dispatch. Please see below for lead information: <br /><br />";
+    //let signature ='Thank you! <br />OTM Dispatch Lead Capture';
+    data.map(
+      (field) => (body = body + field.name + " : " + field.value + "<br />")
+    );
+
+    Email.send({
+      Host: "smtp.office365.com",
+      Username: "leads@otmdispatch.com",
+      Password: "Kok49018",
+      To: "leads@otmdispatch.com",
+      From: "leads@otmdispatch.com",
+      Subject: "New Lead - OTM Dispatch",
+      Body: body
+    }).then((message) => {
+      setSendingMail(false);
+      if (message === "OK") {
+        const alert = document.getElementById("thank-you-alert");
+        //alert('We received your details. Thank you :)');
+        alert.style.display = "block";
+        setTimeout(() => {
+          alert.style.display = "none";
+        }, 4000);
+        document.getElementById("partnershipForm").reset();
+      } else {
+        const alert = document.getElementById("error-alert");
+        //alert('We received your details. Thank you :)');
+        alert.style.display = "block";
+        setTimeout(() => {
+          alert.style.display = "none";
+        }, 4000);
+      }
+    });
+  };
 
   return (
     <div className="sticky-menu">
@@ -210,24 +260,18 @@ const Partnership = () => {
             <div className="col-12 col-lg-7 offset-lg-1 partner-form">
               <div className="partner-form-inner">
                 <h2 className="section-title">Partner With Us</h2>
-                <form
-                  id="contact-form"
-                  method="post"
-                  action="contact.php"
-                  role="form"
-                >
+                <form id="partnershipForm" onSubmit={handleSubmit}>
                   <div className="form-group">
-                    <label htmlFor className="form-label">
-                      Package Of Interest?
-                    </label>
+                    <label className="form-label">Package Of Interest?</label>
                     <br />
                     <div className="form-check form-check-inline">
                       <input
                         className="form-check-input"
                         type="radio"
-                        name="packageName"
+                        name="Package Name"
                         id="Ruby"
                         defaultValue="Ruby"
+                        required
                       />
                       <label className="form-check-label" htmlFor="Ruby">
                         Ruby
@@ -237,7 +281,7 @@ const Partnership = () => {
                       <input
                         className="form-check-input"
                         type="radio"
-                        name="packageName"
+                        name="Package Name"
                         id="Emerald"
                         defaultValue="Emerald"
                       />
@@ -249,7 +293,7 @@ const Partnership = () => {
                       <input
                         className="form-check-input"
                         type="radio"
-                        name="packageName"
+                        name="Package Name"
                         id="Diamond"
                         defaultValue="Diamond"
                       />
@@ -268,6 +312,8 @@ const Partnership = () => {
                         className="form-control otm-form-control"
                         type="text"
                         placeholder="Your Name"
+                        name="Name"
+                        required
                       />
                     </div>
                   </div>
@@ -281,6 +327,8 @@ const Partnership = () => {
                         className="form-control otm-form-control"
                         type="text"
                         placeholder="Carrier Name"
+                        name="Carrier Name"
+                        required
                       />
                     </div>
                   </div>
@@ -294,6 +342,8 @@ const Partnership = () => {
                         className="form-control otm-form-control"
                         type="text"
                         placeholder="123-234-5678"
+                        name="Phone Number"
+                        required
                       />
                     </div>
                   </div>
@@ -307,6 +357,8 @@ const Partnership = () => {
                         className="form-control otm-form-control"
                         type="email"
                         placeholder="email@emailaddress.com"
+                        name="Email"
+                        required
                       />
                     </div>
                   </div>
@@ -320,6 +372,8 @@ const Partnership = () => {
                         className="form-control otm-form-control"
                         type="text"
                         placeholder="123 Street Address City, State & Zip"
+                        name="Physical Address"
+                        required
                       />
                     </div>
                   </div>
@@ -331,6 +385,7 @@ const Partnership = () => {
                         className="form-control otm-form-control"
                         type="text"
                         placeholder="123-456-7890"
+                        name="Fax Number"
                       />
                     </div>
                   </div>
@@ -343,6 +398,7 @@ const Partnership = () => {
                           className="form-control otm-form-control"
                           id="dotNumber"
                           placeholder={12345}
+                          name="DOT"
                         />
                       </div>
                     </div>
@@ -354,14 +410,43 @@ const Partnership = () => {
                           className="form-control otm-form-control"
                           id="MCNumber"
                           placeholder={12345}
+                          name="MC"
                         />
                       </div>
                     </div>
                   </div>
+                  <div
+                    id="thank-you-alert"
+                    className="alert alert-success mb-5"
+                    role="alert"
+                    style={{ display: "none" }}
+                  >
+                    <h4 className="alert-heading">Thank you!</h4>
+                    <p>We will get back to you shortly.</p>
+                  </div>
+                  <div
+                    id="error-alert"
+                    className="alert alert-success mb-5"
+                    role="alert"
+                    style={{ display: "none" }}
+                  >
+                    <h4 className="alert-heading">Hmmm!</h4>
+                    <p>
+                      Something went wrong.{" "}
+                      <a href="https://app.purechat.com/w/otmdispatch">
+                        Contact Support
+                      </a>
+                    </p>
+                  </div>
                   <div className="form-group text-center">
+                    <div id="loader" role="alert" style={{ display: "none" }}>
+                      <img src={loaderImage} className="loaderImage" />
+                    </div>
+
                     <button
                       type="submit"
                       className="btn btn-success partner-btn-submit"
+                      disabled={sendingMail}
                     >
                       <span>Ok</span>
                       <svg

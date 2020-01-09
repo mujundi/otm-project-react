@@ -1,3 +1,9 @@
+#loader {
+    text-align: center;
+}
+#loader img {
+    width:35px;
+}
 .contact-us-main {
     padding-top: 40px;
     padding-bottom: 40px;

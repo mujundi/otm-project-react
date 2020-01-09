@@ -1,7 +1,10 @@
 import path from "path";
 import axios from "axios";
 import React from "react";
-import { getSiteData } from "react-static/node";
+// import { getSiteData } from "react-static/node";
+
+const pureChatScript =
+  "window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: 'c714e54d-aafb-49e1-891f-2796dc30d270', f: true }); done = true; } }; })();";
 
 export default {
   getSiteData: async () => {
@@ -52,6 +55,9 @@ export default {
       <Body>
         {children}
         <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script type="text/javascript" data-cfasync="false">
+          {pureChatScript}
+        </script>
         <script
           src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
           integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -70,7 +76,7 @@ export default {
         <script
           src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"
           integrity="sha256-BuxrUdr/4YoztQLxT6xmdO6hSQw2d6BtBUY1pteGds4="
-          crossOrigin="anonymous"
+          crossorigin="anonymous"
         ></script>
       </Body>
     </Html>

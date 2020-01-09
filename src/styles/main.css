@@ -298,12 +298,12 @@ body {
         text-align: right;
     }
     .sticky-menu {
-        padding-top: 90px;
+        padding-top: 90px !important;
     }
     .solutions-dropdown {
-        -webkit-column-count: 1;
-        -moz-column-count: 1;
-        column-count: 1;
+        -webkit-column-count: 1 !important;
+        -moz-column-count: 1 !important;
+        column-count: 1 !important;
     }
 }
 
@@ -433,6 +433,6 @@ body {
         width: 180px;
     }
     .sticky-menu {
-        padding-top: 90px;
+        padding-top: 90px !important;
     }
 }

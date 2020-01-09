@@ -4,6 +4,9 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.about-hero .hero-text-wrapper h1, h2 {
+    text-align: center !important;
+}
 .about-hero .row{
     height: 500px;
     max-height: 100%;

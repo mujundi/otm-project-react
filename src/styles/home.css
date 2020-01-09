@@ -712,7 +712,7 @@
         font-size: .7em !important;
         height: 0px !important;
     }
-    .hero-text-wrapper h1, h2, h3, p {
+    .otm-hero .hero-text-wrapper h1, h2, h3, p {
         text-align: left;
     }
 }
