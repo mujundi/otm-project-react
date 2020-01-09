@@ -110,7 +110,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 35);
+/******/ 	return __webpack_require__(__webpack_require__.s = 56);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -123,7 +123,7 @@ module.exports = require("react");
 /* 1 */
 /***/ (function(module, exports) {
 
-module.exports = require("@babel/runtime/helpers/slicedToArray");
+module.exports = require("@reach/router");
 
 /***/ }),
 /* 2 */
@@ -139,178 +139,316 @@ module.exports = require("babel-plugin-universal-import/universalImport");
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports) {
-
-module.exports = require("@reach/router");
-
-/***/ }),
-/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
-/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_reach_router__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_async__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9);
-/* harmony import */ var react_async__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_async__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_reach_router__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _images_logo_Logo_Light_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(42);
+/* harmony import */ var _images_logo_Logo_Light_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_images_logo_Logo_Light_svg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _images_logo_Logo_Dark_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(43);
+/* harmony import */ var _images_logo_Logo_Dark_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_images_logo_Logo_Dark_svg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _images_down_arrow_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(14);
+/* harmony import */ var _images_down_arrow_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_images_down_arrow_svg__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
 
+ // import axios from "axios";
+// import Async from "react-async";
+// const API_URL = "http://167.114.153.121:1337";
+// const logoUrl = `${API_URL}/logos/5dff4f59a21c443501c3241a`;
+// const careersUrl = `${API_URL}/pages/5dff3ba2aecfad34d76ee5a0`;
+// const companyUrl = `${API_URL}/pages/5dff3787aecfad34d76ee579`;
+// const contactUrl = `${API_URL}/pages/5dff3d19aecfad34d76ee5b6`;
+// const solutionsUrl = `${API_URL}/pages/5dff3f78aecfad34d76ee5c5`;
+// const helpUrl = `${API_URL}/pages/5dff3bdaaecfad34d76ee5a5`;
 
-var API_URL = "https://otm-dispatch-strapi.herokuapp.com";
-var url = "".concat(API_URL, "/logos/5dff4f59a21c443501c3241a");
+var NavBar = function NavBar(props) {
+  // const [imageURL, setImageURL] = useState([]);
+  // const [companyLinkText, setCompanyLinkText] = useState([]);
+  // const [solutionsLinkText, setSolutionsLinkText] = useState([]);
+  // const [helpLinkText, setHelpLinkText] = useState([]);
+  // const [contactLinkText, setContactLinkText] = useState([]);
+  // const [careersLinkText, setCareersLinkText] = useState([]);
+  var mouseEnterHandler = function mouseEnterHandler() {
+    document.getElementById("menuBackground").classList.add("show");
+  };
 
-var NavBar = function NavBar() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])([]),
-      _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
-      imageURL = _useState2[0],
-      setImageURL = _useState2[1];
+  var mouseLeaveHandler = function mouseLeaveHandler(event) {
+    document.getElementById("menuBackground").classList.remove("show");
+    event.target.classList.remove("show");
+    var element = document.body.querySelector("nav div.dropdown-menu.show");
 
-  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
-    axios__WEBPACK_IMPORTED_MODULE_3___default.a.get(url).then(function (res) {
-      setImageURL("".concat(API_URL + res.data[0].navigation_bar_logo.url));
-    });
+    if (element) {
+      element.classList.remove("show");
+    }
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {// axios.get(logoUrl).then((res) => {
+    //   setImageURL(`${API_URL + res.data.navigation_bar_logo.url}`);
+    // });
+    // axios.get(careersUrl).then((res) => {
+    //   setCareersLinkText(res.data.page_name);
+    // });
+    // axios.get(companyUrl).then((res) => {
+    //   setCompanyLinkText(res.data.page_name);
+    // });
+    // axios.get(contactUrl).then((res) => {
+    //   setContactLinkText(res.data.page_name);
+    // });
+    // axios.get(solutionsUrl).then((res) => {
+    //   setSolutionsLinkText(res.data.page_name);
+    // });
+    // axios.get(helpUrl).then((res) => {
+    //   setHelpLinkText(res.data.page_name);
+    // });
   }, []);
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("nav", {
-    className: "navbar navbar-expand-md navbar-dark bg-dark"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
-    className: "navbar-brand",
-    href: "/"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", {
-    src: imageURL,
-    width: "125",
-    height: "30"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    className: "navbar-toggler",
-    type: "button",
-    "data-toggle": "collapse",
-    "data-target": "#navbarSupportedContent",
-    "aria-controls": "navbarSupportedContent",
-    "aria-expanded": "false",
-    "aria-label": "Toggle navigation"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "navbar-toggler-icon"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "collapse navbar-collapse",
-    id: "navbarSupportedContent"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-    className: "navbar-nav mr-auto"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "nav-item dropdown"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
-    href: "/company",
-    className: "nav-link dropdown-toggle",
-    id: "navbarDropdown",
-    role: "button",
-    "data-toggle": "dropdown",
-    "aria-haspopup": "true",
-    "aria-expanded": "false"
-  }, "Company"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "dropdown-menu",
-    "aria-labelledby": "navbarDropdown"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/company#about",
-    className: "dropdown-item"
-  }, "About Us"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/company#services",
-    className: "dropdown-item"
-  }, "Services"))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "nav-item dropdown"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/solutions",
-    className: "nav-link dropdown-toggle",
-    id: "navbarDropdown",
-    role: "button",
-    "data-toggle": "dropdown",
-    "aria-haspopup": "true",
-    "aria-expanded": "false"
-  }, "Solutions"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "dropdown-menu",
-    "aria-labelledby": "navbarDropdown"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/solutions#shippers",
-    className: "dropdown-item"
-  }, "For Shippers"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/solutions#carriers",
-    className: "dropdown-item"
-  }, "For Carriers"))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "nav-item dropdown"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/help",
-    className: "nav-link dropdown-toggle",
-    href: "#",
-    id: "navbarDropdown",
-    role: "button",
-    "data-toggle": "dropdown",
-    "aria-haspopup": "true",
-    "aria-expanded": "false"
-  }, "Help"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "dropdown-menu",
-    "aria-labelledby": "navbarDropdown"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/help#faqs",
-    className: "dropdown-item"
-  }, "FAQs"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/help#help",
-    className: "dropdown-item"
-  }, "Get Help"))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "nav-item"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/contact",
-    className: "nav-link"
-  }, "Contact")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "nav-item"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/careers",
-    className: "nav-link"
-  }, "Careers"))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-    className: "navbar-nav"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "nav-item"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/login",
-    className: "nav-link disabled"
-  }, "Login")))));
+  return (// <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+    //   <a className="navbar-brand" href="/">
+    //     <img src={imageURL} width="125" height="30" />
+    //   </a>
+    //   <button
+    //     className="navbar-toggler"
+    //     type="button"
+    //     data-toggle="collapse"
+    //     data-target="#navbarSupportedContent"
+    //     aria-controls="navbarSupportedContent"
+    //     aria-expanded="false"
+    //     aria-label="Toggle navigation"
+    //   >
+    //     <span className="navbar-toggler-icon"></span>
+    //   </button>
+    //   <div className="collapse navbar-collapse" id="navbarSupportedContent">
+    //     <ul className="navbar-nav mr-auto">
+    //       <li className="nav-item dropdown">
+    //         <a
+    //           href="/company"
+    //           className="nav-link dropdown-toggle"
+    //           id="navbarDropdown"
+    //           role="button"
+    //           data-toggle="dropdown"
+    //           aria-haspopup="true"
+    //           aria-expanded="false"
+    //         >
+    //           {companyLinkText}
+    //         </a>
+    //         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+    //           <Link to="/company#about" className="dropdown-item">
+    //             About Us
+    //           </Link>
+    //           <Link to="/company#services" className="dropdown-item">
+    //             Services
+    //           </Link>
+    //         </div>
+    //       </li>
+    //       <li className="nav-item dropdown">
+    //         <Link
+    //           to="/solutions"
+    //           className="nav-link dropdown-toggle"
+    //           id="navbarDropdown"
+    //           role="button"
+    //           data-toggle="dropdown"
+    //           aria-haspopup="true"
+    //           aria-expanded="false"
+    //         >
+    //           {solutionsLinkText}
+    //         </Link>
+    //         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+    //           <Link to="/solutions#carriers" className="dropdown-item">
+    //             For Carriers
+    //           </Link>
+    //           <Link to="/solutions#shippers" className="dropdown-item">
+    //             For Shippers
+    //           </Link>
+    //         </div>
+    //       </li>
+    //       <li className="nav-item dropdown">
+    //         <Link
+    //           to="/help"
+    //           className="nav-link dropdown-toggle"
+    //           href="#"
+    //           id="navbarDropdown"
+    //           role="button"
+    //           data-toggle="dropdown"
+    //           aria-haspopup="true"
+    //           aria-expanded="false"
+    //         >
+    //           {helpLinkText}
+    //         </Link>
+    //         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+    //           <Link to="/help#faqs" className="dropdown-item">
+    //             FAQs
+    //           </Link>
+    //           <Link to="/help#help" className="dropdown-item">
+    //             Get Help
+    //           </Link>
+    //         </div>
+    //       </li>
+    //       <li className="nav-item">
+    //         <Link to="/contact" className="nav-link">
+    //           {contactLinkText}
+    //         </Link>
+    //       </li>
+    //       <li className="nav-item">
+    //         <Link to="/careers" className="nav-link">
+    //           {careersLinkText}
+    //         </Link>
+    //       </li>
+    //     </ul>
+    //     <ul className="navbar-nav">
+    //       <li className="nav-item">
+    //         <Link to="/login" className="nav-link disabled">
+    //           Login
+    //         </Link>
+    //       </li>
+    //     </ul>
+    //   </div>
+    // </nav>
+    react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("nav", {
+      className: "navbar navbar-expand-lg navbar-light otm-nav"
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_0__["Link"], {
+      to: "/",
+      className: "navbar-brand"
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+      src: props.light ? _images_logo_Logo_Light_svg__WEBPACK_IMPORTED_MODULE_2___default.a : _images_logo_Logo_Dark_svg__WEBPACK_IMPORTED_MODULE_3___default.a,
+      alt: "OTM Dispatch"
+    })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+      className: "navbar-toggler",
+      type: "button",
+      "data-toggle": "collapse",
+      "data-target": "#navbarSupportedContent",
+      "aria-controls": "navbarSupportedContent",
+      "aria-expanded": "false",
+      "aria-label": "Toggle navigation"
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+      className: "navbar-toggler-icon"
+    })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "collapse navbar-collapse",
+      id: "navbarSupportedContent"
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
+      className: "navbar-nav ml-auto"
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+      className: "nav-item dropdown",
+      onMouseEnter: mouseEnterHandler,
+      onMouseLeave: mouseLeaveHandler
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+      href: "#",
+      className: "nav-link dropdown-toggle",
+      "data-toggle": "dropdown",
+      "aria-haspopup": "true",
+      "aria-expanded": "false"
+    }, "Company", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+      src: _images_down_arrow_svg__WEBPACK_IMPORTED_MODULE_4___default.a,
+      alt: "Dropdown",
+      className: "dropdown-menu-icon"
+    })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "dropdown-menu",
+      "aria-labelledby": "navbarDropdown"
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_0__["Link"], {
+      to: "/company",
+      className: "dropdown-item"
+    }, "Company"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_0__["Link"], {
+      to: "/company#about",
+      className: "dropdown-item"
+    }, "About Us"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_0__["Link"], {
+      to: "/company#services",
+      className: "dropdown-item"
+    }, "Service"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+      className: "nav-item dropdown",
+      onMouseEnter: mouseEnterHandler,
+      onMouseLeave: mouseLeaveHandler
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+      href: "#",
+      className: "nav-link dropdown-toggle",
+      "data-toggle": "dropdown",
+      "aria-haspopup": "true",
+      "aria-expanded": "false"
+    }, "Solutions", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+      src: _images_down_arrow_svg__WEBPACK_IMPORTED_MODULE_4___default.a,
+      alt: "Dropdown",
+      className: "dropdown-menu-icon"
+    })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "dropdown-menu solutions-dropdown",
+      "aria-labelledby": "navbarDropdown"
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_0__["Link"], {
+      to: "/solutions",
+      className: "dropdown-item"
+    }, "Solutions"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_0__["Link"], {
+      to: "/solutions#professional-dispatching",
+      className: "dropdown-item"
+    }, "Professional Dispatching"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_0__["Link"], {
+      to: "/solutions#otm-plans",
+      className: "dropdown-item"
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("strong", null, "DISPATCHING SERVICE PLANS")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_0__["Link"], {
+      to: "/solutions#truck-permits",
+      className: "dropdown-item"
+    }, "Truck Permits"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_0__["Link"], {
+      to: "/solutions#tax-planning",
+      className: "dropdown-item"
+    }, "Tax Planning and Preparation"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_0__["Link"], {
+      to: "/solutions#accounting",
+      className: "dropdown-item"
+    }, "Accounting and Bookkeeping"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_0__["Link"], {
+      to: "/solutions#consulting",
+      className: "dropdown-item"
+    }, "Business Consulting"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_0__["Link"], {
+      to: "/solutions#irs-tax",
+      className: "dropdown-item"
+    }, "IRS Tax Debt Resolution"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+      className: "nav-item dropdown",
+      onMouseEnter: mouseEnterHandler,
+      onMouseLeave: mouseLeaveHandler
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+      href: "#",
+      className: "nav-link dropdown-toggle",
+      "data-toggle": "dropdown",
+      "aria-haspopup": "true",
+      "aria-expanded": "false"
+    }, "Help", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+      src: _images_down_arrow_svg__WEBPACK_IMPORTED_MODULE_4___default.a,
+      alt: "Dropdown",
+      className: "dropdown-menu-icon"
+    })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "dropdown-menu",
+      "aria-labelledby": "navbarDropdown"
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_0__["Link"], {
+      to: "/help",
+      className: "dropdown-item"
+    }, "Help"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_0__["Link"], {
+      to: "/help",
+      className: "dropdown-item"
+    }, "FAQs"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_0__["Link"], {
+      to: "/help#help",
+      className: "dropdown-item"
+    }, "Get Help"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+      className: "nav-item"
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_0__["Link"], {
+      to: "/contact",
+      className: "nav-link"
+    }, "Contact ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+      className: "sr-only"
+    }, "(current)"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+      className: "nav-item"
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_0__["Link"], {
+      to: "/partnership",
+      className: "nav-link nav-cta"
+    }, "Partner With Us")))))
+  );
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (NavBar);
 
 /***/ }),
-/* 6 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-/* harmony default export */ __webpack_exports__["a"] = (function () {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
-    className: "fixed-bottom text-center bg-dark align-middle text-secondary py-0"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "my-1"
-  }, "Placeholder footer text"));
-});
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports) {
-
-module.exports = require("axios");
-
-/***/ }),
-/* 8 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(module) {
 
-var _typeof = __webpack_require__(15);
+var _typeof = __webpack_require__(18);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -349,7 +487,7 @@ var _createClass = function () {
   };
 }();
 
-var _requireUniversalModule = __webpack_require__(38);
+var _requireUniversalModule = __webpack_require__(59);
 
 Object.defineProperty(exports, 'CHUNK_NAMES', {
   enumerable: true,
@@ -364,7 +502,7 @@ Object.defineProperty(exports, 'MODULE_IDS', {
   }
 });
 
-var _reportChunks = __webpack_require__(40);
+var _reportChunks = __webpack_require__(61);
 
 Object.defineProperty(exports, 'ReportChunks', {
   enumerable: true,
@@ -378,21 +516,21 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(21);
+var _propTypes = __webpack_require__(26);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _hoistNonReactStatics = __webpack_require__(22);
+var _hoistNonReactStatics = __webpack_require__(27);
 
 var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
-var _vm = __webpack_require__(41);
+var _vm = __webpack_require__(62);
 
 var _requireUniversalModule2 = _interopRequireDefault(_requireUniversalModule);
 
-var _utils = __webpack_require__(16);
+var _utils = __webpack_require__(19);
 
-var _helpers = __webpack_require__(42);
+var _helpers = __webpack_require__(63);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
@@ -787,13 +925,136 @@ function universal(asyncModule) {
     report: _propTypes2["default"].func
   }, _temp;
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(14)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17)(module)))
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-static");
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "37ddf9182795f695e4d11d0c5203bce4.svg";
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+
+module.exports = function (useSourceMap) {
+  var list = []; // return the list of modules as css string
+
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item, useSourceMap);
+
+      if (item[2]) {
+        return '@media ' + item[2] + '{' + content + '}';
+      } else {
+        return content;
+      }
+    }).join('');
+  }; // import a list of modules into the list
+
+
+  list.i = function (modules, mediaQuery) {
+    if (typeof modules === 'string') {
+      modules = [[null, modules, '']];
+    }
+
+    var alreadyImportedModules = {};
+
+    for (var i = 0; i < this.length; i++) {
+      var id = this[i][0];
+
+      if (id != null) {
+        alreadyImportedModules[id] = true;
+      }
+    }
+
+    for (i = 0; i < modules.length; i++) {
+      var item = modules[i]; // skip already imported module
+      // this implementation is not 100% perfect for weird media query combinations
+      // when a module is imported multiple times with different media queries.
+      // I hope this will never occur (Hey this way we have smaller bundles)
+
+      if (item[0] == null || !alreadyImportedModules[item[0]]) {
+        if (mediaQuery && !item[2]) {
+          item[2] = mediaQuery;
+        } else if (mediaQuery) {
+          item[2] = '(' + item[2] + ') and (' + mediaQuery + ')';
+        }
+
+        list.push(item);
+      }
+    }
+  };
+
+  return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+  var content = item[1] || '';
+  var cssMapping = item[3];
+
+  if (!cssMapping) {
+    return content;
+  }
+
+  if (useSourceMap && typeof btoa === 'function') {
+    var sourceMapping = toComment(cssMapping);
+    var sourceURLs = cssMapping.sources.map(function (source) {
+      return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';
+    });
+    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+  }
+
+  return [content].join('\n');
+} // Adapted from convert-source-map (MIT)
+
+
+function toComment(sourceMap) {
+  // eslint-disable-next-line no-undef
+  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+  var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+  return '/*# ' + data + ' */';
+}
 
 /***/ }),
 /* 9 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = require("react-async");
+"use strict";
+
+
+module.exports = function escape(url, needQuotes) {
+  if (typeof url !== 'string') {
+    return url;
+  } // If url is already wrapped in quotes, remove them
+
+
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  } // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+
+
+  if (/["'() \t\n]/.test(url) || needQuotes) {
+    return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"';
+  }
+
+  return url;
+};
 
 /***/ }),
 /* 10 */
@@ -806,11 +1067,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _utils = __webpack_require__(16);
+var _utils = __webpack_require__(19);
 
 var requireById = function requireById(id) {
   if (!(0, _utils.isWebpack)() && typeof id === 'string') {
-    return __webpack_require__(39)("" + id);
+    return __webpack_require__(60)("" + id);
   }
 
   return __webpack_require__('' + id);
@@ -820,18 +1081,36 @@ exports["default"] = requireById;
 
 /***/ }),
 /* 11 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = require("scroll-into-view-if-needed");
+module.exports = __webpack_require__.p + "8886ae013d849e8c3ccfa6a37ea7636e.svg";
 
 /***/ }),
 /* 12 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-static");
+module.exports = require("axios");
 
 /***/ }),
 /* 13 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0iMTBweCIgaGVpZ2h0PSI2cHgiIHZpZXdCb3g9IjAgMCAxMCA2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZXNjPkNyZWF0ZWQgd2l0aCBMdW5hY3k8L2Rlc2M+CiAgPHBhdGggZD0iTTkuMTQ3OSAwLjE0NzgxN0M5LjA1NDAxIDAuMDUzMjEzMyA4LjkyNjIyIDAgOC43OTI5IDBDOC42NTk1OCAwIDguNTMxNzggMC4wNTMyMTMzIDguNDM3OSAwLjE0NzgxN0w0Ljk5NzkgMy41OTU5TDEuNTU3OSAwLjE1NzgxMkMxLjQ2NTc0IDAuMDYzNzk5NyAxLjMzOTU5IDAuMDEwODIxNyAxLjIwNzkgMC4wMTA4MjE3QzEuMDc2MjEgMC4wMTA4MjE3IDAuOTUwMDYzIDAuMDYzNzk5NyAwLjg1Nzg5OSAwLjE1NzgxMkwwLjE0Nzg5OSAwLjg2NzQxN0MwLjA1MzI0MjggMC45NjEyNDkgMCAxLjA4ODk4IDAgMS4yMjIyMkMwIDEuMzU1NDYgMC4wNTMyNDI4IDEuNDgzMTkgMC4xNDc4OTkgMS41NzcwMkw0LjI3NzkgNS43MTQ3M0M0LjQxOTYyIDUuODUzNTMgNC42MDk0OCA1LjkzMjMgNC44MDc5IDUuOTM0Nkw1LjE4NzkgNS45MzQ2QzUuMzg2NzQgNS45MzQ0MyA1LjU3NzM4IDUuODU1MzQgNS43MTc5IDUuNzE0NzNMOS44NDc5IDEuNTc3MDJDOS45NDI1NSAxLjQ4MzE5IDkuOTk1OCAxLjM1NTQ2IDkuOTk1OCAxLjIyMjIyQzkuOTk1OCAxLjA4ODk4IDkuOTQyNTUgMC45NjEyNDkgOS44NDc5IDAuODY3NDE3TDkuMTQ3OSAwLjE0NzgxN1oiIGlkPSJQYXRoIiBmaWxsPSIjMTkxNDREIiBzdHJva2U9Im5vbmUiIC8+Cjwvc3ZnPg=="
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0iMTRweCIgaGVpZ2h0PSIxMHB4IiB2aWV3Qm94PSIwIDAgMTQgMTAiIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGRlc2M+Q3JlYXRlZCB3aXRoIEx1bmFjeTwvZGVzYz4KICA8ZyBpZD0idGFpbC1yaWdodCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMSAxKSI+CiAgICA8cGF0aCBkPSJNMCAwLjE0Mjg1N0wxMiAwLjE0Mjg1NyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAzLjg1NzExNykiIGlkPSJQYXRoIiBmaWxsPSJub25lIiBzdHJva2U9IiMyQzJFMzAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiAvPgogICAgPHBhdGggZD0iTTAgMEw0IDRMMCA4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4IDApIiBpZD0iUGF0aCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMkMyRTMwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgLz4KICA8L2c+Cjwvc3ZnPg=="
+
+/***/ }),
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -841,28 +1120,127 @@ var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
 // EXTERNAL MODULE: external "react-static"
-var external_react_static_ = __webpack_require__(12);
+var external_react_static_ = __webpack_require__(6);
 
 // EXTERNAL MODULE: external "@reach/router"
-var router_ = __webpack_require__(4);
+var router_ = __webpack_require__(1);
 
 // CONCATENATED MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/Router.js
 
-// EXTERNAL MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/NavBar.js
-var NavBar = __webpack_require__(5);
+// EXTERNAL MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/images/logo/otm-trademark-white.svg
+var otm_trademark_white = __webpack_require__(11);
+var otm_trademark_white_default = /*#__PURE__*/__webpack_require__.n(otm_trademark_white);
 
-// EXTERNAL MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/Footer.js
-var Footer = __webpack_require__(6);
+// CONCATENATED MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/Footer.js
 
+
+
+/* harmony default export */ var Footer = (function () {
+  return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("section", {
+    className: "home-cta"
+  }, external_react_default.a.createElement("div", {
+    className: "container"
+  }, external_react_default.a.createElement("div", {
+    className: "row"
+  }, external_react_default.a.createElement("div", {
+    className: "col text-center"
+  }, external_react_default.a.createElement("h4", null, "Clear, upfront pricing with unrivaled transparency and the ", external_react_default.a.createElement("br", null), "information you need every step of the journey."), external_react_default.a.createElement("a", {
+    href: "/contact",
+    className: "btn btn-cta-white"
+  }, "SCHEDULE A CONSULTATION"))))), external_react_default.a.createElement("section", {
+    className: "footer"
+  }, external_react_default.a.createElement("div", {
+    className: "container"
+  }, external_react_default.a.createElement("div", {
+    className: "row"
+  }, external_react_default.a.createElement("div", {
+    className: "col-12"
+  }, external_react_default.a.createElement("h4", {
+    className: "company"
+  }, "OTM Dispatch"))), external_react_default.a.createElement("div", {
+    className: "row"
+  }, external_react_default.a.createElement("div", {
+    className: "col-xs-12 col-md-3 col-lg-3"
+  }, external_react_default.a.createElement("ul", {
+    className: "footer-menu"
+  }, external_react_default.a.createElement("li", null, external_react_default.a.createElement(router_["Link"], {
+    to: "/company"
+  }, "Company")), external_react_default.a.createElement("li", null, external_react_default.a.createElement(router_["Link"], {
+    to: "/solutions"
+  }, "Solutions")), external_react_default.a.createElement("li", null, external_react_default.a.createElement(router_["Link"], {
+    to: "/solutions#otm-plans"
+  }, "Dispatching Plans")), external_react_default.a.createElement("li", null, external_react_default.a.createElement(router_["Link"], {
+    to: "/partnership"
+  }, "Partner with Us")))), external_react_default.a.createElement("div", {
+    className: "col-xs-12 col-md-3 col-lg-3"
+  }, external_react_default.a.createElement("ul", {
+    className: "footer-menu"
+  }, external_react_default.a.createElement("li", null, external_react_default.a.createElement(router_["Link"], {
+    to: "/privacy"
+  }, "Privacy")), external_react_default.a.createElement("li", null, external_react_default.a.createElement(router_["Link"], {
+    to: "/contact"
+  }, "Contact Us")), external_react_default.a.createElement("li", null, external_react_default.a.createElement(router_["Link"], {
+    to: "/help"
+  }, "FAQs")), external_react_default.a.createElement("li", null, external_react_default.a.createElement(router_["Link"], {
+    to: "/help#help"
+  }, "Get Help")))), external_react_default.a.createElement("div", {
+    className: "col-xs-12 col-md-6 col-lg-6 follow-menu"
+  }, external_react_default.a.createElement("h4", null, "Follow Us"), external_react_default.a.createElement("ul", null, external_react_default.a.createElement("li", null, external_react_default.a.createElement("a", {
+    href: "#"
+  }, external_react_default.a.createElement("svg", {
+    width: "9px",
+    height: "17px",
+    viewBox: "0 0 9 17",
+    version: "1.1",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, external_react_default.a.createElement("defs", null, external_react_default.a.createElement("image", {
+    width: 9,
+    height: 17,
+    xlinkHref: "data:image/png;base64,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",
+    id: "facebookIcon"
+  })), external_react_default.a.createElement("use", {
+    xlinkHref: "#facebookIcon",
+    fill: "#FFFFFF",
+    stroke: "none"
+  })))), external_react_default.a.createElement("li", null, external_react_default.a.createElement("a", {
+    href: "#"
+  }, external_react_default.a.createElement("svg", {
+    width: "17px",
+    height: "17px",
+    viewBox: "0 0 17 17",
+    version: "1.1",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, external_react_default.a.createElement("defs", null, external_react_default.a.createElement("image", {
+    width: 17,
+    height: 17,
+    xlinkHref: "data:image/png;base64,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",
+    id: "InstagramIcon"
+  })), external_react_default.a.createElement("use", {
+    xlinkHref: "#InstagramIcon",
+    fill: "#FFFFFF",
+    stroke: "none"
+  }))))))), external_react_default.a.createElement("div", {
+    className: "row"
+  }, external_react_default.a.createElement("div", {
+    className: "col-12 text-center footer-logo"
+  }, external_react_default.a.createElement("img", {
+    src: otm_trademark_white_default.a,
+    alt: "OTM Dispatch"
+  }))), external_react_default.a.createElement("div", {
+    className: "row"
+  }, external_react_default.a.createElement("div", {
+    className: "col-12"
+  }, external_react_default.a.createElement("p", null, "\xA9 2019 OTM Dispatch. All Rights Reserved."))))));
+});
 // EXTERNAL MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/app.css
-var app = __webpack_require__(51);
+var app = __webpack_require__(72);
 
 // EXTERNAL MODULE: external "scroll-into-view-if-needed"
-var external_scroll_into_view_if_needed_ = __webpack_require__(11);
+var external_scroll_into_view_if_needed_ = __webpack_require__(76);
 
 // CONCATENATED MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/App.js
-
- //
 
 
 
@@ -876,14 +1254,33 @@ var App_App = function App() {
   }, external_react_default.a.createElement(external_react_default.a.Suspense, {
     fallback: null
   }, external_react_default.a.createElement(router_["Router"], null, external_react_default.a.createElement(external_react_static_["Routes"], {
-    path: "*"
-  })))));
+    path: "/contact"
+  }), external_react_default.a.createElement(external_react_static_["Routes"], {
+    path: "/company"
+  }), external_react_default.a.createElement(external_react_static_["Routes"], {
+    path: "/solutions"
+  }), external_react_default.a.createElement(external_react_static_["Routes"], {
+    path: "/help"
+  }), external_react_default.a.createElement(external_react_static_["Routes"], {
+    path: "/legal"
+  }), external_react_default.a.createElement(external_react_static_["Routes"], {
+    path: "/privacy"
+  }), external_react_default.a.createElement(external_react_static_["Routes"], {
+    path: "/partnership"
+  }), external_react_default.a.createElement(external_react_static_["Routes"], {
+    path: "/"
+  }), external_react_default.a.createElement(external_react_static_["Routes"], {
+    path: "/*"
+  })), external_react_default.a.createElement(Footer, null), external_react_default.a.createElement("div", {
+    className: "menu-background",
+    id: "menuBackground"
+  }))));
 };
 
 /* harmony default export */ var src_App = __webpack_exports__["a"] = (App_App);
 
 /***/ }),
-/* 14 */
+/* 17 */
 /***/ (function(module, exports) {
 
 module.exports = function (module) {
@@ -912,19 +1309,19 @@ module.exports = function (module) {
 };
 
 /***/ }),
-/* 15 */
+/* 18 */
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/helpers/typeof");
 
 /***/ }),
-/* 16 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _typeof2 = __webpack_require__(15);
+var _typeof2 = __webpack_require__(18);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -1084,18 +1481,30 @@ var cacheProm = exports.cacheProm = function cacheProm(pr, chunkName, props, pro
 };
 
 /***/ }),
-/* 17 */
+/* 20 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom");
 
 /***/ }),
-/* 18 */
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "1ef49a485095c0e2eb38904bc8db051f.png";
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIzLjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAzOC44IDQ4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzOC44IDQ4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6IzI1NjM5Mjt9Cjwvc3R5bGU+Cjx0aXRsZT5CaXRtYXA8L3RpdGxlPgo8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KPGcgaWQ9Ik1haW4tRGVzaWduIj4KCTxnIGlkPSJIb21lIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTk4LjAwMDAwMCwgLTc3Ny4wMDAwMDApIj4KCQk8ZyBpZD0iQ2Fyb3VzZWwtLS1Ub3AiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLCA2NjEuMDAwMDAwKSI+CgkJCTxnIGlkPSJDYXJyaWVycy0tLVNsaWRlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzUuMDAwMDAwLCAwLjAwMDAwMCkiPgoJCQkJPGc+CgkJCQkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTcxLjcsMTIzYzAuNy0wLjgsMS40LTEuNiwyLjEtMi4zYzAuMi0wLjMsMC40LTAuNCwwLjgtMC40YzUuMiwwLDEwLjQsMCwxNS43LDBjMC4zLDAsMC42LDAuMSwwLjgsMC40CgkJCQkJCWMwLjcsMC44LDEuMywxLjUsMi4xLDIuNGMwLTAuMywwLTAuNCwwLTAuNWMwLTAuOCwwLTEuNiwwLTIuNGMwLTAuMiwwLjEtMC41LDAuMy0wLjdjMC41LTAuNiwxLTEuMiwxLjUtMS44CgkJCQkJCWMwLjMtMC40LDAuNS0wLjQsMC44LTAuMmMwLjMsMC4yLDAuMywwLjUsMCwwLjljLTAuNCwwLjUtMC45LDEuMS0xLjMsMS42Yy0wLjEsMC4xLTAuMiwwLjMtMC4yLDAuNWMwLDIuOCwwLDUuNSwwLDguMwoJCQkJCQljMCwwLDAsMC4xLDAsMC4yYzAuNywwLDEuNCwwLDIuMSwwYzAuMywwLDAuNiwwLDAuOSwwYzAuMywwLDAuNSwwLjIsMC41LDAuNmMwLDAuMy0wLjIsMC41LTAuNiwwLjVjLTAuOSwwLTEuOCwwLTIuNywwCgkJCQkJCWMtMC4yLDAtMC40LDAtMC40LDAuM2MwLDIsMCw0LDAsNmMwLDAuMSwwLDAuMSwwLDAuMmMwLjIsMCwwLjMsMCwwLjUsMGMwLjUsMCwwLjcsMC4yLDAuNywwLjdjMCwwLjYsMCwxLjIsMCwxLjcKCQkJCQkJYzAsMS40LDAsMi45LDAsNC4zYzAsMC4yLDAsMC40LDAuMywwLjVjMC4xLDAsMC4yLDAuMiwwLjMsMC4yYzEuMSwxLjEsMi4yLDIuMiwzLjMsMy40YzAuMiwwLjIsMC4zLDAuNSwwLjMsMC44CgkJCQkJCWMwLDAuOSwwLDEuOSwwLDIuOGMwLDAuNi0wLjIsMC44LTAuOCwwLjhjMCwwLDAsMCwwLDBjLTEsMC0xLDAuMS0wLjgsMS4xYzAuNSwwLDEuMSwwLDEuNiwwYzAuNiwwLDAuOCwwLjIsMC44LDAuOAoJCQkJCQljMCwxLDAsMiwwLDIuOWMwLDAuNC0wLjEsMC42LTAuNSwwLjhjLTAuNiwwLjMtMS4xLDAuNi0xLjcsMC45Yy0wLjMsMC4xLTAuNCwwLjMtMC40LDAuNmMwLDAuOCwwLDEuNiwwLDIuNAoJCQkJCQljMCwxLTAuNywxLjYtMS42LDEuNmMtMC45LDAtMS44LDAtMi44LDBjLTAuOSwwLTEuNi0wLjYtMS42LTEuNWMwLTAuMywwLTAuNSwwLTAuOGMwLTAuNC0wLjEtMC42LTAuNS0wLjVjMCwwLDAsMCwwLDAKCQkJCQkJYy02LjEsMC0xMi4xLDAtMTguMiwwYy0wLjIsMC0wLjMsMC0wLjUsMGMwLDAuNCwwLDAuNywwLDFjMCwxLjItMC42LDEuOC0xLjgsMS44Yy0wLjgsMC0xLjcsMC0yLjUsMGMtMSwwLTEuNi0wLjYtMS42LTEuNgoJCQkJCQljMC0wLjgsMC0xLjYsMC0yLjNjMC0wLjMtMC4xLTAuNS0wLjQtMC43Yy0wLjYtMC4zLTEuMi0wLjYtMS44LTAuOWMtMC4zLTAuMS0wLjQtMC4zLTAuNC0wLjdjMC0xLDAtMi4xLDAtMy4xCgkJCQkJCWMwLTAuNSwwLjItMC43LDAuNy0wLjdjMC41LDAsMS4xLDAsMS42LDBjMC4yLDAsMC40LDAsMC40LTAuM2MwLTEsMC4xLTAuOC0wLjgtMC44Yy0wLjgsMC0wLjktMC4xLTAuOS0wLjljMC0wLjksMC0xLjgsMC0yLjcKCQkJCQkJYzAtMC4zLDAuMS0wLjYsMC4zLTAuOGMxLjEtMS4xLDIuMi0yLjIsMy4zLTMuM2MwLjEtMC4xLDAuMS0wLjEsMC4yLTAuMmMwLjUtMC4xLDAuNC0wLjYsMC40LTAuOWMwLTEuOSwwLTMuNywwLTUuNgoJCQkJCQljMC0wLjcsMC4xLTAuOCwwLjgtMC44YzAuNCwwLDAuNS0wLjEsMC41LTAuNWMwLTEuOSwwLTMuNywwLTUuNmMwLTAuNC0wLjEtMC41LTAuNS0wLjVjLTAuOCwwLTEuNiwwLTIuNCwwCgkJCQkJCWMtMC41LDAtMC44LTAuMi0wLjgtMC41YzAtMC40LDAuMy0wLjUsMC44LTAuNWMwLjgsMCwxLjYsMCwyLjQsMGMwLjQsMCwwLjUtMC4xLDAuNS0wLjVjMC0xLjMsMC0yLjYsMC0zLjljMC0xLjMsMC0yLjYsMC0zLjkKCQkJCQkJYzAtMC4zLTAuMS0wLjYtMC4zLTAuOGMtMC40LTAuNS0wLjgtMS0xLjItMS42Yy0wLjMtMC4zLTAuMy0wLjYsMC0wLjhjMC4zLTAuMiwwLjUtMC4yLDAuOCwwLjJjMC41LDAuNiwxLjEsMS4zLDEuNiwxLjkKCQkJCQkJYzAuMSwwLjEsMC4yLDAuNCwwLjIsMC41YzAsMC44LDAsMS43LDAsMi41QzcxLjYsMTIyLjcsNzEuNiwxMjIuOCw3MS43LDEyM0M3MS43LDEyMyw3MS43LDEyMyw3MS43LDEyM3ogTTczLjgsMTUyLjgKCQkJCQkJYzUuOCwwLDExLjUsMCwxNy4yLDBjMC0wLjIsMC0wLjMsMC0wLjRjMC00LjgsMC05LjYsMC0xNC40YzAtMC40LTAuMS0wLjUtMC41LTAuNWMtNS40LDAtMTAuOSwwLTE2LjMsMAoJCQkJCQljLTAuNCwwLTAuNSwwLjEtMC41LDAuNWMwLDQuNCwwLDguNywwLDEzLjFDNzMuOCwxNTEuNyw3My44LDE1Mi4yLDczLjgsMTUyLjh6IE02NS4xLDE1My45YzAsMC44LDAsMS41LDAsMi4yCgkJCQkJCWMwLDAuMiwwLjEsMC40LDAuMywwLjVjMS41LDAuNywzLDEuNSw0LjUsMi4yYzAuMiwwLjEsMC4zLDAuMSwwLjUsMC4xYzcuOSwwLDE1LjksMCwyMy44LDBjMC4yLDAsMC4zLDAsMC41LTAuMQoJCQkJCQljMS41LTAuOCwzLjEtMS41LDQuNi0yLjNjMC4xLDAsMC4yLTAuMiwwLjItMC4yYzAtMC44LDAtMS42LDAtMi40Qzg4LDE1My45LDc2LjYsMTUzLjksNjUuMSwxNTMuOXogTTkxLDEzMAoJCQkJCQljLTAuMSwwLTAuMiwwLTAuMywwYy01LjUsMC0xMSwwLTE2LjYsMGMtMC4zLDAtMC40LDAuMS0wLjQsMC40YzAsMS45LDAsMy43LDAsNS42YzAsMC41LDAsMC41LDAuNSwwLjVjNS40LDAsMTAuOCwwLDE2LjIsMAoJCQkJCQljMC4yLDAsMC4zLDAsMC41LDBDOTEsMTM0LjMsOTEsMTMyLjEsOTEsMTMweiBNOTAuOSwxMjYuNGMwLTAuMSwwLTAuMiwwLTAuMmMtMC4zLTEuNS0wLjYtMy0wLjgtNC41YzAtMC4yLTAuMi0wLjMtMC40LTAuMwoJCQkJCQljLTQuOCwwLTkuNywwLTE0LjUsMGMtMC4zLDAtMC40LDAuMS0wLjQsMC40Yy0wLjIsMC45LTAuMywxLjgtMC41LDIuOGMtMC4xLDAuNi0wLjIsMS4zLTAuNCwxLjkKCQkJCQkJQzc5LjYsMTI2LjQsODUuMiwxMjYuNCw5MC45LDEyNi40eiBNOTUuNCwxNTAuN2MxLDAsMiwwLDMsMGMwLjMsMCwwLjQtMC4xLDAuMy0wLjNjMC0wLjYsMC0xLjMsMC0xLjljMC0wLjItMC4xLTAuMy0wLjItMC40CgkJCQkJCWMtMS0xLTItMi0zLTNjLTAuMS0wLjEtMC4zLTAuMi0wLjUtMC4yYy0wLjgsMC0xLjcsMC0yLjUsMGMtMC4zLDAtMC40LDAuMS0wLjQsMC40YzAsMS43LDAsMy41LDAsNS4yYzAsMC4zLDAuMSwwLjQsMC40LDAuNAoJCQkJCQlDOTMuNCwxNTAuNiw5NC40LDE1MC43LDk1LjQsMTUwLjd6IE03Mi43LDE0NC43Yy0xLDAtMS45LDAtMi44LDBjLTAuMiwwLTAuNSwwLjEtMC42LDAuMmMtMSwwLjktMS45LDEuOS0yLjksMi45CgkJCQkJCWMtMC4xLDAuMi0wLjIsMC40LTAuMywwLjZjMCwwLjYsMCwxLjIsMCwxLjdjMCwwLjMsMC4xLDAuNCwwLjQsMC40YzEuOSwwLDMuOCwwLDUuOCwwYzAuMSwwLDAuMywwLDAuNCwwCgkJCQkJCUM3Mi43LDE0OC43LDcyLjcsMTQ2LjcsNzIuNywxNDQuN3ogTTczLjgsMTI4LjhjNS43LDAsMTEuNSwwLDE3LjIsMGMwLTAuNSwwLTAuOSwwLTEuNGMtMC4yLDAtMC4zLDAtMC41LDBjLTEuNiwwLTMuMywwLTQuOSwwCgkJCQkJCWMtMy42LDAtNy4xLDAtMTAuNywwQzczLjYsMTI3LjUsNzMuNiwxMjcuNSw3My44LDEyOC44eiBNNzAuNCwxMzcuNWMwLDIuMSwwLDQuMSwwLDYuMWMwLjgsMCwxLjUsMCwyLjMsMGMwLTIsMC00LjEsMC02LjEKCQkJCQkJQzcxLjksMTM3LjUsNzEuMiwxMzcuNSw3MC40LDEzNy41eiBNOTIuMSwxMzcuNWMwLDAuNiwwLDEuMSwwLDEuNmMwLDEuNCwwLDIuOCwwLDQuMmMwLDAuMSwwLjEsMC4zLDAuMiwwLjNjMC43LDAsMS40LDAsMi4xLDAKCQkJCQkJYzAtMC42LDAtMS4yLDAtMS44YzAtMS4zLDAtMi43LDAtNGMwLTAuMiwwLTAuNC0wLjItMC40QzkzLjUsMTM3LjUsOTIuOCwxMzcuNSw5Mi4xLDEzNy41eiBNOTMsMTYwYzAsMC41LDAsMSwwLDEuNAoJCQkJCQljMCwwLjMsMC4yLDAuNCwwLjUsMC40YzAuOSwwLDEuOSwwLDIuOCwwYzAuMiwwLDAuNS0wLjIsMC41LTAuNGMwLTAuOCwwLTEuNiwwLTIuNUM5NS42LDE1OS42LDk0LjUsMTYwLjQsOTMsMTYweiBNNjcuOCwxNTkKCQkJCQkJYzAsMC44LDAsMS42LDAsMi40YzAsMC4zLDAuMywwLjQsMC41LDAuNGMwLjcsMCwxLjQsMCwyLjEsMGMxLjIsMCwxLjIsMCwxLjItMS4yYzAtMC42LDAtMC42LTAuNS0wLjYKCQkJCQkJYy0wLjgsMC4xLTEuNi0wLjEtMi4zLTAuNkM2OC41LDE1OS4zLDY4LjIsMTU5LjIsNjcuOCwxNTl6IE05Mi4xLDEzMy4xYzAsMC45LDAsMS44LDAsMi43YzAsMC43LTAuMSwwLjYsMC42LDAuNgoJCQkJCQljMC40LDAsMC40LTAuMSwwLjQtMC40YzAtMS4xLDAtMi4yLDAtMy4yYzAtMC44LDAtMS42LDAtMi41YzAtMC4zLTAuMS0wLjQtMC40LTAuNGMtMC4xLDAtMC4yLDAtMC4zLDBjLTAuMywwLTAuNCwwLjEtMC40LDAuNAoJCQkJCQlDOTIuMSwxMzEuMyw5Mi4xLDEzMi4yLDkyLjEsMTMzLjF6IE03Mi43LDEyOS45Yy0wLjIsMC0wLjMsMC0wLjUsMGMtMC42LDAtMC42LDAtMC42LDAuNmMwLDEuNywwLDMuNCwwLDUuMQoJCQkJCQljMCwxLTAuMiwwLjksMC45LDAuOGMwLDAsMC4xLDAsMC4xLDBDNzIuNywxMzQuMyw3Mi43LDEzMi4xLDcyLjcsMTI5Ljl6IE03My40LDEyMi44Yy0wLjUsMC42LTEsMS4xLTEuNSwxLjcKCQkJCQkJYy0wLjEsMC4yLTAuMiwwLjQtMC4yLDAuNmMwLDEsMCwxLjksMCwyLjljMCwwLjksMCwwLjksMC45LDAuOWMwLDAsMCwwLDAuMS0wLjFDNzIuNSwxMjYuOCw3My4yLDEyNC44LDczLjQsMTIyLjh6CgkJCQkJCSBNOTEuNCwxMjIuOGMwLjIsMiwwLjksNCwwLjYsNi4xYzAuMywwLDAuNSwwLDAuNiwwYzAuMywwLDAuNS0wLjEsMC40LTAuNGMwLTEuMSwwLTIuMiwwLTMuNGMwLTAuMiwwLTAuNC0wLjEtMC41CgkJCQkJCUM5Mi41LDEyNCw5MiwxMjMuNCw5MS40LDEyMi44eiBNOTIuMSwxNTIuOWMwLjIsMCwwLjMsMCwwLjQsMGMxLjIsMCwyLjUsMCwzLjcsMGMwLjgsMCwwLjcsMC4yLDAuNy0wLjdjMC0wLjMtMC4xLTAuNC0wLjQtMC40CgkJCQkJCWMtMS4yLDAtMi40LDAtMy42LDBDOTIsMTUxLjcsOTIsMTUxLjcsOTIuMSwxNTIuOXogTTcyLjcsMTUyLjhjMC0wLjMsMC0wLjYsMC0wLjhjMC0wLjEtMC4yLTAuMy0wLjItMC4zYy0xLjUsMC0yLjksMC00LjQsMAoJCQkJCQljLTAuMSwwLTAuMiwwLjItMC4yLDAuMmMwLDAuMywwLDAuNSwwLDAuOEM2OS40LDE1Mi44LDcxLDE1Mi44LDcyLjcsMTUyLjh6Ii8+CgkJCQkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTk1LjcsMTMzLjJjMC0wLjcsMC0xLjQsMC0yLjFjMC0wLjQsMC4yLTAuNiwwLjYtMC42YzAuNywwLDEuNCwwLDIuMiwwYzAuNCwwLDAuNiwwLjIsMC42LDAuNgoJCQkJCQljMCwxLjQsMCwyLjgsMCw0LjNjMCwwLjQtMC4yLDAuNi0wLjcsMC42Yy0wLjcsMC0xLjQsMC0yLjEsMGMtMC40LDAtMC42LTAuMi0wLjYtMC42Qzk1LjcsMTM0LjcsOTUuNywxMzQsOTUuNywxMzMuMnoKCQkJCQkJIE05Ni44LDEzMS43YzAsMS4xLDAsMi4yLDAsMy4zYzAuMywwLDAuNiwwLDAuOSwwYzAuMywwLDAuMy0wLjEsMC4zLTAuM2MwLTAuNiwwLTEuMywwLTEuOUM5OCwxMzEuNiw5OCwxMzEuNiw5Ni44LDEzMS43eiIvPgoJCQkJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik02OS4xLDEzMy4zYzAsMC43LDAsMS4zLDAsMmMwLDAuNS0wLjIsMC43LTAuNywwLjdjLTAuNywwLTEuMywwLTIsMGMtMC41LDAtMC43LTAuMi0wLjctMC42CgkJCQkJCWMwLTEuNCwwLTIuOCwwLTQuMmMwLTAuNCwwLjItMC42LDAuNi0wLjZjMC43LDAsMS40LDAsMi4xLDBjMC41LDAsMC42LDAuMiwwLjYsMC42QzY5LjEsMTMxLjksNjkuMSwxMzIuNiw2OS4xLDEzMy4zegoJCQkJCQkgTTY4LDEzMS42Yy0wLjMsMC0wLjYsMC0wLjgsMGMtMC4zLDAtMC40LDAuMS0wLjQsMC40YzAsMC42LDAsMS4zLDAsMS45YzAsMS4xLDAsMS4xLDEuMSwxYzAsMCwwLDAsMC4xLDAKCQkJCQkJQzY4LDEzMy44LDY4LDEzMi44LDY4LDEzMS42eiIvPgoJCQkJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik04Mi4xLDE0MS43Yy0yLjMsMC00LjUsMC02LjgsMGMtMC4yLDAtMC40LDAtMC41LTAuMWMtMC4xLTAuMS0wLjItMC4zLTAuMi0wLjVjMC0wLjIsMC4yLTAuMywwLjQtMC40CgkJCQkJCWMwLjEtMC4xLDAuMywwLDAuNSwwYzQuNSwwLDguOSwwLDEzLjQsMGMwLjEsMCwwLjIsMCwwLjIsMGMwLjQsMCwwLjYsMC4yLDAuNiwwLjZjMCwwLjMtMC4yLDAuNS0wLjYsMC41CgkJCQkJCUM4Ni44LDE0MS43LDg0LjUsMTQxLjcsODIuMSwxNDEuN3oiLz4KCQkJCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNODIuMiwxNTEuN2MtMi4zLDAtNC42LDAtNi44LDBjLTAuMiwwLTAuNS0wLjEtMC42LTAuMmMtMC4yLTAuMi0wLjEtMC43LDAuMy0wLjhjMC4yLDAsMC4zLTAuMSwwLjUtMC4xCgkJCQkJCWM0LjUsMCw4LjksMCwxMy40LDBjMC4xLDAsMC4yLDAsMC4yLDBjMC40LDAsMC42LDAuMiwwLjYsMC42YzAsMC4zLTAuMiwwLjUtMC42LDAuNUM4Ni44LDE1MS43LDg0LjUsMTUxLjcsODIuMiwxNTEuN3oiLz4KCQkJCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNODQuNywxNDYuMWMwLDEuMSwwLDIuMiwwLDMuM2MwLDAuNC0wLjIsMC42LTAuNSwwLjZjLTAuMywwLTAuNS0wLjItMC41LTAuNmMwLTAuMSwwLTAuMiwwLTAuMgoJCQkJCQljMC0yLjEsMC00LjIsMC02LjJjMC0wLjEsMC0wLjIsMC0wLjNjMC0wLjMsMC4yLTAuNSwwLjUtMC41YzAuMywwLDAuNSwwLjIsMC41LDAuNkM4NC43LDE0My45LDg0LjcsMTQ1LDg0LjcsMTQ2LjF6Ii8+CgkJCQkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTc2LjUsMTQ2LjFjMCwxLjEsMCwyLjIsMCwzLjRjMCwwLjItMC4yLDAuNC0wLjMsMC41Yy0wLjEsMC4xLTAuNCwwLTAuNS0wLjFjLTAuMS0wLjEtMC4yLTAuMy0wLjItMC40CgkJCQkJCWMwLTIuMywwLTQuNSwwLTYuOGMwLTAuMywwLjItMC41LDAuNS0wLjVjMC4zLDAsMC41LDAuMiwwLjUsMC42Qzc2LjUsMTQzLjksNzYuNSwxNDUsNzYuNSwxNDYuMXoiLz4KCQkJCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNODAuNiwxNDYuMWMwLDEuMSwwLDIuMiwwLDMuM2MwLDAuNC0wLjMsMC44LTAuNywwLjZjLTAuMi0wLjEtMC40LTAuMy0wLjQtMC41YzAtMi4zLDAtNC41LDAtNi44CgkJCQkJCWMwLTAuMywwLjItMC41LDAuNS0wLjVjMC4zLDAsMC41LDAuMiwwLjUsMC42QzgwLjYsMTQzLjksODAuNiwxNDUsODAuNiwxNDYuMUM4MC42LDE0Ni4xLDgwLjYsMTQ2LjEsODAuNiwxNDYuMXoiLz4KCQkJCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNODguOCwxNDYuMWMwLDEuMSwwLDIuMiwwLDMuMmMwLDAuNS0wLjIsMC43LTAuNSwwLjdjLTAuMywwLTAuNS0wLjItMC41LTAuN2MwLTIuMiwwLTQuMywwLTYuNQoJCQkJCQljMC0wLjQsMC4yLTAuNywwLjUtMC43YzAuMywwLDAuNSwwLjMsMC41LDAuN0M4OC44LDE0NCw4OC44LDE0NSw4OC44LDE0Ni4xeiIvPgoJCQkJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik04Mi4yLDEzOC42YzAuNywwLDEuMywwLDIsMGMwLjQsMCwwLjYsMC4yLDAuNiwwLjVjMCwwLjMtMC4yLDAuNi0wLjYsMC42Yy0xLjQsMC0yLjcsMC00LjEsMAoJCQkJCQljLTAuNCwwLTAuNi0wLjItMC42LTAuNWMwLTAuMywwLjItMC41LDAuNi0wLjVDODAuOCwxMzguNiw4MS41LDEzOC42LDgyLjIsMTM4LjZ6Ii8+CgkJCQkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTgyLjIsMTU1LjRjLTAuNywwLTEuMywwLTIsMGMtMC40LDAtMC42LTAuMi0wLjYtMC41YzAtMC4zLDAuMi0wLjUsMC42LTAuNWMxLjQsMCwyLjcsMCw0LjEsMAoJCQkJCQljMC40LDAsMC42LDAuMiwwLjYsMC41YzAsMC4zLTAuMiwwLjUtMC42LDAuNUM4My41LDE1NS41LDgyLjksMTU1LjQsODIuMiwxNTUuNHoiLz4KCQkJCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNODIuMiwxMjMuMmMtMC43LDAtMS4zLDAtMiwwYy0wLjMsMC0wLjYtMC4xLTAuNi0wLjVjMC0wLjMsMC4yLTAuNiwwLjYtMC42YzEuNCwwLDIuOCwwLDQuMSwwCgkJCQkJCWMwLjQsMCwwLjYsMC4yLDAuNiwwLjZjMCwwLjMtMC4yLDAuNS0wLjYsMC41QzgzLjUsMTIzLjIsODIuOCwxMjMuMiw4Mi4yLDEyMy4yeiIvPgoJCQkJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik05NS42LDE0OC41YzAuNiwwLDEuMiwwLDEuOCwwYzAuNCwwLDAuNiwwLjIsMC42LDAuNWMwLDAuMy0wLjIsMC41LTAuNiwwLjVjLTEuMiwwLTIuNSwwLTMuNywwCgkJCQkJCWMtMC40LDAtMC42LTAuMi0wLjYtMC41YzAtMC40LDAuMi0wLjUsMC42LTAuNUM5NC40LDE0OC41LDk1LDE0OC41LDk1LjYsMTQ4LjV6Ii8+CgkJCQkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTY5LjIsMTQ4LjVjMC42LDAsMS4yLDAsMS45LDBjMC40LDAsMC42LDAuMiwwLjYsMC41YzAsMC4zLTAuMiwwLjUtMC42LDAuNWMtMS4yLDAtMi41LDAtMy43LDAKCQkJCQkJYy0wLjQsMC0wLjYtMC4yLTAuNi0wLjVjMC0wLjMsMC4yLTAuNSwwLjYtMC41QzY4LDE0OC41LDY4LjYsMTQ4LjUsNjkuMiwxNDguNXoiLz4KCQkJCTwvZz4KCQkJPC9nPgoJCTwvZz4KCTwvZz4KPC9nPgo8L3N2Zz4K"
+
+/***/ }),
+/* 23 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_static_plugin_reach_router_browser_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(33);
+/* harmony import */ var _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_static_plugin_reach_router_browser_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(40);
 /* harmony import */ var _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_static_plugin_reach_router_browser_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_static_plugin_reach_router_browser_api_js__WEBPACK_IMPORTED_MODULE_0__);
 // Imports
  // Plugins
@@ -1121,13 +1530,13 @@ var plugins = [{
 /* harmony default export */ __webpack_exports__["default"] = (plugins);
 
 /***/ }),
-/* 19 */
+/* 24 */
 /***/ (function(module, exports) {
 
 module.exports = require("/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-static/lib/browser");
 
 /***/ }),
-/* 20 */
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1139,8 +1548,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8);
+/* harmony import */ var _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
 /* harmony import */ var _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
 
 
 
@@ -1175,7 +1588,7 @@ var universalOptions = {
 var t_0 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default()(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default()({
   id: "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/404.js",
   load: function load() {
-    return Promise.all([Promise.resolve(/* import() | mnt/d/workspace/work/otm-dispatch/static-site/src/pages/404 */).then(__webpack_require__.bind(null, 24))]).then(function (proms) {
+    return Promise.all([Promise.resolve(/* import() | mnt/d/workspace/work/otm-dispatch/static-site/src/pages/404 */).then(__webpack_require__.bind(null, 28))]).then(function (proms) {
       return proms[0];
     });
   },
@@ -1183,7 +1596,7 @@ var t_0 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_univ
     return path__WEBPACK_IMPORTED_MODULE_0___default.a.join(__dirname, '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/404.js');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(24);
+    return /*require.resolve*/(28);
   },
   chunkName: function chunkName() {
     return "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/404";
@@ -1191,27 +1604,9 @@ var t_0 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_univ
 }), universalOptions);
 t_0.template = '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/404.js';
 var t_1 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default()(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default()({
-  id: "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/careers.js",
-  load: function load() {
-    return Promise.all([Promise.resolve(/* import() | mnt/d/workspace/work/otm-dispatch/static-site/src/pages/careers */).then(__webpack_require__.bind(null, 25))]).then(function (proms) {
-      return proms[0];
-    });
-  },
-  path: function path() {
-    return path__WEBPACK_IMPORTED_MODULE_0___default.a.join(__dirname, '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/careers.js');
-  },
-  resolve: function resolve() {
-    return /*require.resolve*/(25);
-  },
-  chunkName: function chunkName() {
-    return "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/careers";
-  }
-}), universalOptions);
-t_1.template = '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/careers.js';
-var t_2 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default()(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default()({
   id: "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js",
   load: function load() {
-    return Promise.all([Promise.resolve(/* import() | mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company */).then(__webpack_require__.bind(null, 31))]).then(function (proms) {
+    return Promise.all([Promise.resolve(/* import() | mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company */).then(__webpack_require__.bind(null, 29))]).then(function (proms) {
       return proms[0];
     });
   },
@@ -1219,17 +1614,17 @@ var t_2 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_univ
     return path__WEBPACK_IMPORTED_MODULE_0___default.a.join(__dirname, '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(31);
+    return /*require.resolve*/(29);
   },
   chunkName: function chunkName() {
     return "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company";
   }
 }), universalOptions);
-t_2.template = '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js';
-var t_3 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default()(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default()({
+t_1.template = '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js';
+var t_2 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default()(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default()({
   id: "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/contact.js",
   load: function load() {
-    return Promise.all([Promise.resolve(/* import() | mnt/d/workspace/work/otm-dispatch/static-site/src/pages/contact */).then(__webpack_require__.bind(null, 26))]).then(function (proms) {
+    return Promise.all([Promise.resolve(/* import() | mnt/d/workspace/work/otm-dispatch/static-site/src/pages/contact */).then(__webpack_require__.bind(null, 31))]).then(function (proms) {
       return proms[0];
     });
   },
@@ -1237,35 +1632,53 @@ var t_3 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_univ
     return path__WEBPACK_IMPORTED_MODULE_0___default.a.join(__dirname, '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/contact.js');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(26);
+    return /*require.resolve*/(31);
   },
   chunkName: function chunkName() {
     return "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/contact";
   }
 }), universalOptions);
-t_3.template = '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/contact.js';
-var t_4 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default()(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default()({
-  id: "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/dashboard.js",
+t_2.template = '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/contact.js';
+var t_3 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default()(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default()({
+  id: "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/diamond.js",
   load: function load() {
-    return Promise.all([Promise.resolve(/* import() | mnt/d/workspace/work/otm-dispatch/static-site/src/pages/dashboard */).then(__webpack_require__.bind(null, 27))]).then(function (proms) {
+    return Promise.all([Promise.resolve(/* import() | mnt/d/workspace/work/otm-dispatch/static-site/src/pages/diamond */).then(__webpack_require__.bind(null, 32))]).then(function (proms) {
       return proms[0];
     });
   },
   path: function path() {
-    return path__WEBPACK_IMPORTED_MODULE_0___default.a.join(__dirname, '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/dashboard.js');
+    return path__WEBPACK_IMPORTED_MODULE_0___default.a.join(__dirname, '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/diamond.js');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(27);
+    return /*require.resolve*/(32);
   },
   chunkName: function chunkName() {
-    return "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/dashboard";
+    return "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/diamond";
   }
 }), universalOptions);
-t_4.template = '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/dashboard.js';
+t_3.template = '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/diamond.js';
+var t_4 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default()(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default()({
+  id: "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/emerald.js",
+  load: function load() {
+    return Promise.all([Promise.resolve(/* import() | mnt/d/workspace/work/otm-dispatch/static-site/src/pages/emerald */).then(__webpack_require__.bind(null, 33))]).then(function (proms) {
+      return proms[0];
+    });
+  },
+  path: function path() {
+    return path__WEBPACK_IMPORTED_MODULE_0___default.a.join(__dirname, '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/emerald.js');
+  },
+  resolve: function resolve() {
+    return /*require.resolve*/(33);
+  },
+  chunkName: function chunkName() {
+    return "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/emerald";
+  }
+}), universalOptions);
+t_4.template = '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/emerald.js';
 var t_5 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default()(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default()({
   id: "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js",
   load: function load() {
-    return Promise.all([Promise.resolve(/* import() | mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help */).then(__webpack_require__.bind(null, 30))]).then(function (proms) {
+    return Promise.all([Promise.resolve(/* import() | mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help */).then(__webpack_require__.bind(null, 39))]).then(function (proms) {
       return proms[0];
     });
   },
@@ -1273,7 +1686,7 @@ var t_5 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_univ
     return path__WEBPACK_IMPORTED_MODULE_0___default.a.join(__dirname, '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(30);
+    return /*require.resolve*/(39);
   },
   chunkName: function chunkName() {
     return "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help";
@@ -1283,7 +1696,7 @@ t_5.template = '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js
 var t_6 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default()(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default()({
   id: "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/index.js",
   load: function load() {
-    return Promise.all([Promise.resolve(/* import() | mnt/d/workspace/work/otm-dispatch/static-site/src/pages/index */).then(__webpack_require__.bind(null, 28))]).then(function (proms) {
+    return Promise.all([Promise.resolve(/* import() | mnt/d/workspace/work/otm-dispatch/static-site/src/pages/index */).then(__webpack_require__.bind(null, 34))]).then(function (proms) {
       return proms[0];
     });
   },
@@ -1291,7 +1704,7 @@ var t_6 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_univ
     return path__WEBPACK_IMPORTED_MODULE_0___default.a.join(__dirname, '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/index.js');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(28);
+    return /*require.resolve*/(34);
   },
   chunkName: function chunkName() {
     return "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/index";
@@ -1299,27 +1712,63 @@ var t_6 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_univ
 }), universalOptions);
 t_6.template = '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/index.js';
 var t_7 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default()(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default()({
-  id: "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/login.js",
+  id: "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/partnership.js",
   load: function load() {
-    return Promise.all([Promise.resolve(/* import() | mnt/d/workspace/work/otm-dispatch/static-site/src/pages/login */).then(__webpack_require__.bind(null, 29))]).then(function (proms) {
+    return Promise.all([Promise.resolve(/* import() | mnt/d/workspace/work/otm-dispatch/static-site/src/pages/partnership */).then(__webpack_require__.bind(null, 35))]).then(function (proms) {
       return proms[0];
     });
   },
   path: function path() {
-    return path__WEBPACK_IMPORTED_MODULE_0___default.a.join(__dirname, '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/login.js');
+    return path__WEBPACK_IMPORTED_MODULE_0___default.a.join(__dirname, '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/partnership.js');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(29);
+    return /*require.resolve*/(35);
   },
   chunkName: function chunkName() {
-    return "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/login";
+    return "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/partnership";
   }
 }), universalOptions);
-t_7.template = '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/login.js';
+t_7.template = '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/partnership.js';
 var t_8 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default()(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default()({
+  id: "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/privacy.js",
+  load: function load() {
+    return Promise.all([Promise.resolve(/* import() | mnt/d/workspace/work/otm-dispatch/static-site/src/pages/privacy */).then(__webpack_require__.bind(null, 36))]).then(function (proms) {
+      return proms[0];
+    });
+  },
+  path: function path() {
+    return path__WEBPACK_IMPORTED_MODULE_0___default.a.join(__dirname, '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/privacy.js');
+  },
+  resolve: function resolve() {
+    return /*require.resolve*/(36);
+  },
+  chunkName: function chunkName() {
+    return "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/privacy";
+  }
+}), universalOptions);
+t_8.template = '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/privacy.js';
+var t_9 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default()(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default()({
+  id: "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/ruby.js",
+  load: function load() {
+    return Promise.all([Promise.resolve(/* import() | mnt/d/workspace/work/otm-dispatch/static-site/src/pages/ruby */).then(__webpack_require__.bind(null, 37))]).then(function (proms) {
+      return proms[0];
+    });
+  },
+  path: function path() {
+    return path__WEBPACK_IMPORTED_MODULE_0___default.a.join(__dirname, '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/ruby.js');
+  },
+  resolve: function resolve() {
+    return /*require.resolve*/(37);
+  },
+  chunkName: function chunkName() {
+    return "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/ruby";
+  }
+}), universalOptions);
+t_9.template = '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/ruby.js';
+var t_10 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_universal_component_dist_index_js__WEBPACK_IMPORTED_MODULE_3___default()(babel_plugin_universal_import_universalImport__WEBPACK_IMPORTED_MODULE_1___default()({
   id: "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js",
   load: function load() {
-    return Promise.all([Promise.resolve(/* import() | mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions */).then(__webpack_require__.bind(null, 32))]).then(function (proms) {
+    return Promise.all([Promise.resolve(/* import() | mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions */).then(__webpack_require__.bind(null, 38))]).then(function (proms) {
       return proms[0];
     });
   },
@@ -1327,508 +1776,42 @@ var t_8 = _mnt_d_workspace_work_otm_dispatch_static_site_node_modules_react_univ
     return path__WEBPACK_IMPORTED_MODULE_0___default.a.join(__dirname, '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js');
   },
   resolve: function resolve() {
-    return /*require.resolve*/(32);
+    return /*require.resolve*/(38);
   },
   chunkName: function chunkName() {
     return "mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions";
   }
 }), universalOptions);
-t_8.template = '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js'; // Template Map
+t_10.template = '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js'; // Template Map
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/404.js': t_0,
-  '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/careers.js': t_1,
-  '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js': t_2,
-  '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/contact.js': t_3,
-  '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/dashboard.js': t_4,
+  '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js': t_1,
+  '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/contact.js': t_2,
+  '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/diamond.js': t_3,
+  '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/emerald.js': t_4,
   '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js': t_5,
   '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/index.js': t_6,
-  '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/login.js': t_7,
-  '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js': t_8
+  '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/partnership.js': t_7,
+  '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/privacy.js': t_8,
+  '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/ruby.js': t_9,
+  '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js': t_10
 }); // Not Found Template
 
 var notFoundTemplate = "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/404.js";
 /* WEBPACK VAR INJECTION */}.call(this, "/"))
 
 /***/ }),
-/* 21 */
+/* 26 */
 /***/ (function(module, exports) {
 
 module.exports = require("prop-types");
 
 /***/ }),
-/* 22 */
+/* 27 */
 /***/ (function(module, exports) {
 
 module.exports = require("hoist-non-react-statics");
-
-/***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/*
-  MIT License http://www.opensource.org/licenses/mit-license.php
-  Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-
-module.exports = function (useSourceMap) {
-  var list = []; // return the list of modules as css string
-
-  list.toString = function toString() {
-    return this.map(function (item) {
-      var content = cssWithMappingToString(item, useSourceMap);
-
-      if (item[2]) {
-        return '@media ' + item[2] + '{' + content + '}';
-      } else {
-        return content;
-      }
-    }).join('');
-  }; // import a list of modules into the list
-
-
-  list.i = function (modules, mediaQuery) {
-    if (typeof modules === 'string') {
-      modules = [[null, modules, '']];
-    }
-
-    var alreadyImportedModules = {};
-
-    for (var i = 0; i < this.length; i++) {
-      var id = this[i][0];
-
-      if (id != null) {
-        alreadyImportedModules[id] = true;
-      }
-    }
-
-    for (i = 0; i < modules.length; i++) {
-      var item = modules[i]; // skip already imported module
-      // this implementation is not 100% perfect for weird media query combinations
-      // when a module is imported multiple times with different media queries.
-      // I hope this will never occur (Hey this way we have smaller bundles)
-
-      if (item[0] == null || !alreadyImportedModules[item[0]]) {
-        if (mediaQuery && !item[2]) {
-          item[2] = mediaQuery;
-        } else if (mediaQuery) {
-          item[2] = '(' + item[2] + ') and (' + mediaQuery + ')';
-        }
-
-        list.push(item);
-      }
-    }
-  };
-
-  return list;
-};
-
-function cssWithMappingToString(item, useSourceMap) {
-  var content = item[1] || '';
-  var cssMapping = item[3];
-
-  if (!cssMapping) {
-    return content;
-  }
-
-  if (useSourceMap && typeof btoa === 'function') {
-    var sourceMapping = toComment(cssMapping);
-    var sourceURLs = cssMapping.sources.map(function (source) {
-      return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';
-    });
-    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-  }
-
-  return [content].join('\n');
-} // Adapted from convert-source-map (MIT)
-
-
-function toComment(sourceMap) {
-  // eslint-disable-next-line no-undef
-  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-  var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
-  return '/*# ' + data + ' */';
-}
-
-/***/ }),
-/* 24 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "404 - Oh no's! We couldn't find that page :("));
-});
-
-/***/ }),
-/* 25 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_async__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9);
-/* harmony import */ var react_async__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_async__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_NavBar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
-
-
-
-
-
-
-var API_URL = "https://otm-dispatch-strapi.herokuapp.com";
-var url = "".concat(API_URL, "/careers-pages");
-
-var Careers = function Careers() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([]),
-      _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
-      careersBanner = _useState2[0],
-      setCareersBanner = _useState2[1];
-
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([]),
-      _useState4 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState3, 2),
-      imageURL = _useState4[0],
-      setImageURL = _useState4[1];
-
-  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(url).then(function (res) {
-      setCareersBanner(res.data[0].Banner);
-      setImageURL("".concat(API_URL + res.data[0].BannerImage.url));
-    });
-  }, []);
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_NavBar__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "jumbotron jumbotron-fluid pb-4 text-light",
-    style: {
-      backgroundImage: "url(".concat(imageURL, ")"),
-      backgroundSize: "cover"
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "container"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "mx-auto text-center"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", null, careersBanner.BannerHeader), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, careersBanner.BannerDescription)))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "container"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
-    id: "contact-form",
-    method: "post",
-    action: "contact.php",
-    role: "form"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "messages"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "controls"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "row"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "col-md-6"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-group"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-    htmlFor: "form_name"
-  }, "First name *"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-    id: "form_name",
-    type: "text",
-    name: "name",
-    className: "form-control",
-    placeholder: "Please enter your first name *",
-    required: "required",
-    "data-error": "First name is required."
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "help-block with-errors"
-  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "col-md-6"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-group"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-    htmlFor: "form_lastname"
-  }, "Last name *"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-    id: "form_lastname",
-    type: "text",
-    name: "surname",
-    className: "form-control",
-    placeholder: "Please enter your last name *",
-    required: "required",
-    "data-error": "Last name is required."
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "help-block with-errors"
-  })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "row"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "col-md-6"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-group"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-    htmlFor: "form_email"
-  }, "Email *"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-    id: "form_email",
-    type: "email",
-    name: "email",
-    className: "form-control",
-    placeholder: "Please enter your email *",
-    required: "required",
-    "data-error": "Valid email is required."
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "help-block with-errors"
-  })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "row"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "col-md-12"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-group"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-    htmlFor: "form_message"
-  }, "Message *"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("textarea", {
-    id: "form_message",
-    name: "message",
-    className: "form-control",
-    placeholder: "Message for us *",
-    rows: "4",
-    required: "required",
-    "data-error": "Please, leave us a message."
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "help-block with-errors"
-  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "col-md-12 pb-5"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-    type: "submit",
-    className: "btn btn-primary btn-send mb-5",
-    value: "Send message"
-  })))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"], null));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Careers);
-
-/***/ }),
-/* 26 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_async__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9);
-/* harmony import */ var react_async__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_async__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_NavBar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
-
-
-
-
-
-
-var API_URL = "https://otm-dispatch-strapi.herokuapp.com";
-var url = "".concat(API_URL, "/contact-pages");
-
-var Contact = function Contact() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([]),
-      _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
-      data = _useState2[0],
-      setData = _useState2[1];
-
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([]),
-      _useState4 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState3, 2),
-      contactHeader = _useState4[0],
-      setContactHeader = _useState4[1];
-
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([]),
-      _useState6 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState5, 2),
-      needs = _useState6[0],
-      setNeeds = _useState6[1];
-
-  var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([]),
-      _useState8 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState7, 2),
-      imageURL = _useState8[0],
-      setImageURL = _useState8[1];
-
-  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(url).then(function (res) {
-      setData(res.data[0]);
-      setContactHeader(res.data[0].ContactHeader);
-      setNeeds(res.data[0].Needs);
-      setImageURL("".concat(API_URL + res.data[0].BannerImage.url));
-    });
-  }, []);
-
-  var handleEmail = function handleEmail(e) {
-    if (e) e.preventDefault();
-    var firstName = e.target.name.value;
-    var lastName = e.target.surname.value;
-    var email = e.target.email.value;
-    var reason = e.target.need.value;
-    var message = e.target.message.value;
-    axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("".concat(API_URL, "/info-requests"), {
-      FirstName: firstName,
-      LastName: lastName,
-      Email: email,
-      Message: message,
-      Reason: reason
-    }).then(function (res) {
-      var alert = document.getElementById("thank-you-alert");
-      alert.style.display = "block";
-      setTimeout(function () {
-        alert.style.display = "none";
-      }, 4000);
-    });
-  };
-
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_NavBar__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"], null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "jumbotron jumbotron-fluid pb-4 text-light",
-    style: {
-      backgroundImage: "url(".concat(imageURL, ")"),
-      backgroundSize: "cover"
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "container"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "mx-auto text-center"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", null, contactHeader.BannerHeader), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, contactHeader.BannerSubheader)))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "container"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    id: "thank-you-alert",
-    className: "alert alert-success mb-5",
-    role: "alert",
-    style: {
-      display: "none"
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", {
-    className: "alert-heading"
-  }, "Thank you!"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "We will get back to you shortly.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
-    id: "contact-form",
-    role: "form",
-    onSubmit: handleEmail
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "messages"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "controls"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "row"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "col-md-6"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-group"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-    htmlFor: "form_name"
-  }, "First name *"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-    id: "form_name",
-    type: "text",
-    name: "name",
-    className: "form-control",
-    placeholder: "Please enter your first name *",
-    required: "required",
-    "data-error": "First name is required."
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "help-block with-errors"
-  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "col-md-6"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-group"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-    htmlFor: "form_lastname"
-  }, "Last name *"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-    id: "form_lastname",
-    type: "text",
-    name: "surname",
-    className: "form-control",
-    placeholder: "Please enter your last name *",
-    required: "required",
-    "data-error": "Last name is required."
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "help-block with-errors"
-  })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "row"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "col-md-6"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-group"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-    htmlFor: "form_email"
-  }, "Email *"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-    id: "form_email",
-    type: "email",
-    name: "email",
-    className: "form-control",
-    placeholder: "Please enter your email *",
-    required: "required",
-    "data-error": "Valid email is required."
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "help-block with-errors"
-  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "col-md-6"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-group"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-    htmlFor: "form_need"
-  }, "Please specify your need *"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("select", {
-    id: "form_need",
-    name: "need",
-    className: "form-control",
-    required: "required",
-    "data-error": "Please specify your need."
-  }, needs.map(function (need, index) {
-    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
-      key: index,
-      value: need.Needs
-    }, need.Needs);
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "help-block with-errors"
-  })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "row"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "col-md-12"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-group"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-    htmlFor: "form_message"
-  }, "Message *"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("textarea", {
-    id: "form_message",
-    name: "message",
-    className: "form-control",
-    placeholder: "Message for us *",
-    rows: "4",
-    required: "required",
-    "data-error": "Please, leave us a message."
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "help-block with-errors"
-  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "col-md-12 pb-5"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-    id: "form-submit-btn",
-    type: "submit",
-    className: "btn btn-primary mb-5",
-    value: "Send message"
-  })))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"], null));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Contact);
-
-/***/ }),
-/* 27 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Dashboard Page"));
-});
 
 /***/ }),
 /* 28 */
@@ -1838,15 +1821,19 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_NavBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
-
+/* harmony import */ var components_NavBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_NavBar__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    className: "test"
-  }, "Get Started"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"], null));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "sticky-menu"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "otm-hero-light"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_NavBar__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "text-center"
+  }, "404 - Oh no's! We couldn't find that page :("));
 });
 
 /***/ }),
@@ -1857,13 +1844,2035 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
+/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_reach_router__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _styles_about_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(77);
+/* harmony import */ var _styles_about_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_about_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_NavBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
+/* harmony import */ var _images_about_img_right_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(44);
+/* harmony import */ var _images_about_img_right_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_images_about_img_right_png__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _images_about_img_right_mobile_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(45);
+/* harmony import */ var _images_about_img_right_mobile_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_images_about_img_right_mobile_jpg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _images_logo_otm_trademark_white_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(11);
+/* harmony import */ var _images_logo_otm_trademark_white_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_images_logo_otm_trademark_white_svg__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _images_logo_otm_trademark_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7);
+/* harmony import */ var _images_logo_otm_trademark_svg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_images_logo_otm_trademark_svg__WEBPACK_IMPORTED_MODULE_7__);
+ // import Service from "../components/Service";
+// import axios from "axios";
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Login page"));
-});
+
+
+
+
+
+
+ // const API_URL = "http://167.114.153.121:1337";
+// const url = `${API_URL}/pages/5dff3787aecfad34d76ee579`;
+
+var Company = function Company() {
+  // const [data, setData] = useState([]);
+  // const [aboutUsHeader, setAboutUsHeader] = useState([]);
+  // const [aboutUsSubheader, setAboutUsSubheader] = useState([]);
+  // const [aboutUsDescriptions, setAboutUsDescriptions] = useState([]);
+  // const [servicesHeader, setServicesHeader] = useState([]);
+  // const [servicesSubheader, setServicesSubheader] = useState([]);
+  // const [servicesDescriptions, setServicesDescriptions] = useState([]);
+  // const [aboutUsBannerImage, setAboutUsBannerImage] = useState([]);
+  // const [servicesBannerImage, setServicesBannerImage] = useState([]);
+  if (process.browser) {
+    if (location.hash) {
+      setTimeout(function () {
+        document.getElementById(location.hash.replace('#', '')).scrollIntoView(true);
+      }, 150);
+    } else {
+      scrollTo(0, 0);
+    }
+  }
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    // axios.get(url).then((res) => {
+    //   setData(res.data);
+    //   setAboutUsHeader(res.data.fields[0].header);
+    //   setAboutUsSubheader(res.data.fields[0].subheader);
+    //   setAboutUsBannerImage(`${API_URL + res.data.fields[0].background.url}`);
+    //   setAboutUsDescriptions(res.data.fields[1].paragraph);
+    //   setServicesHeader(res.data.fields[2].header);
+    //   setServicesSubheader(res.data.fields[2].subheader);
+    //   setServicesBannerImage(`${API_URL + res.data.fields[2].background.url}`);
+    //   setServicesDescriptions(res.data.fields[3].paragraph);
+    // });
+    document.getElementById("menuBackground").classList.remove("show");
+  }, []);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "sticky-menu"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "otm-hero-light"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_NavBar__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "about-hero"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row align-items-center"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hero-title text-center"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "About Us"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "OTM DISPATCH")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "otm-breadcrumb",
+    id: "about"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "otm-breadcrumb-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    "aria-label": "breadcrumb"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
+    className: "breadcrumb"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "breadcrumb-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/"
+  }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "breadcrumb-item",
+    "aria-current": "page"
+  }, "About Us")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "about-us-main"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12 col-lg-7 about-main-left"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "about-main-left-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "section-title"
+  }, "About Us"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "OTM Dispatch provides clients (both intrastate and interstate) access to a network of freight shippers and brokers in hundreds of product categories with over 25 years of experience."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "Our professional dispatchers and administration staff possess the skills and experience that will help your organization meet challenges, improve efficiencies, and increase profitability."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "We provide affordable and competitively priced dispatch, tax, accounting, truck permits and consulting services to individuals as well as small and medium size businesses. OTM Dispatch prides itself on delivering the highest level of professional service to its clients. Our firm treats all clients with the utmost importance. Individuals and/or companies who choose our firm rely on our competent advice and quick accurate results."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/solutions",
+    className: "btn btn-orange btn-shadow"
+  }, "Our Solutions"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12 col-lg-4 about-main-right"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_about_img_right_png__WEBPACK_IMPORTED_MODULE_4___default.a,
+    alt: "",
+    className: "about-main-img-right"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_about_img_right_mobile_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
+    alt: "",
+    className: "about-main-img-right-mobile"
+  }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "dark-cta-wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12 text-center"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_logo_otm_trademark_white_svg__WEBPACK_IMPORTED_MODULE_6___default.a,
+    alt: "",
+    className: "cta-wrapp-logo"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u201COTM Dispatch prides itself on delivering the highest level of professional service to its clients. Our firm treats all clients with the utmost importance.\u201D"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "about-service",
+    id: "services"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row flex-row-reverse"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12 col-lg-7 about-main-left"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "about-main-left-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "section-title"
+  }, "Services"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "OTM Dispatch provides professional dispatching and business Services. Our professional dispatchers keep you loaded with the best loads at the highest prices and will match a load with your best resource to deliver it. OTM Dispatch is currently dispatching Reefers, Dry Vans, Flatbeds, Car Haulers and Hotshots."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/solutions#professional-dispatching",
+    className: "solutionsLink"
+  }, "Professional Dispatching")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/solutions#truck-permits",
+    className: "solutionsLink"
+  }, "Truck Permits")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/solutions#tax-planning",
+    className: "solutionsLink"
+  }, "Tax Planning and Preparation")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/solutions#accounting",
+    className: "solutionsLink"
+  }, "Accounting and Bookkeeping")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/solutions#consulting",
+    className: "solutionsLink"
+  }, "Business Consulting")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/solutions#irs-tax",
+    className: "solutionsLink"
+  }, "IRS Tax Debt Resolution"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/solutions#otm-plans",
+    className: "btn btn-orange btn-shadow"
+  }, "Our Packages"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_logo_otm_trademark_svg__WEBPACK_IMPORTED_MODULE_7___default.a,
+    alt: "",
+    className: "service-img-logo"
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Company);
 
 /***/ }),
 /* 30 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0iMjNweCIgaGVpZ2h0PSIxN3B4IiB2aWV3Qm94PSIwIDAgMjMgMTciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGRlc2M+Q3JlYXRlZCB3aXRoIEx1bmFjeTwvZGVzYz4KICA8cGF0aCBkPSJNMCA3LjUwMDE1TDAgNi40OTk4NUMwIDYuMjIzNjIgMC4yMjM4NTggNS45OTk3IDAuNSA1Ljk5OTdMMTYuNjcgNS45OTk3TDEyLjIyIDEuNTU4MzdDMTIuMTI1MyAxLjQ2NDQ2IDEyLjA3MjEgMS4zMzY2MiAxMi4wNzIxIDEuMjAzMjZDMTIuMDcyMSAxLjA2OTkgMTIuMTI1MyAwLjk0MjA2NSAxMi4yMiAwLjg0ODE1NEwxMi45MyAwLjE0Nzk0NEMxMy4wMjM5IDAuMDUzMjU4OCAxMy4xNTE3IDAgMTMuMjg1IDBDMTMuNDE4MyAwIDEzLjU0NjEgMC4wNTMyNTg4IDEzLjY0IDAuMTQ3OTQ0TDE5Ljc4IDYuMjc5NzhDMTkuOTIwNyA2LjQyMDM0IDE5Ljk5OTggNi42MTEwNCAyMCA2LjgwOTk0TDIwIDcuMTkwMDZDMTkuOTk3NyA3LjM4ODUzIDE5LjkxODkgNy41Nzg0NSAxOS43OCA3LjcyMDIyTDEzLjY0IDEzLjg1MjFDMTMuNTQ2MSAxMy45NDY3IDEzLjQxODMgMTQgMTMuMjg1IDE0QzEzLjE1MTcgMTQgMTMuMDIzOSAxMy45NDY3IDEyLjkzIDEzLjg1MjFMMTIuMjIgMTMuMTQxOEMxMi4xMjU5IDEzLjA0OTcgMTIuMDcyOSAxMi45MjM1IDEyLjA3MjkgMTIuNzkxN0MxMi4wNzI5IDEyLjY2IDEyLjEyNTkgMTIuNTMzOCAxMi4yMiAxMi40NDE2TDE2LjY3IDguMDAwM0wwLjUgOC4wMDAzQzAuMjIzODU4IDguMDAwMyAwIDcuNzc2MzggMCA3LjUwMDE1WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMS41IDEuNSkiIGlkPSJJY29uLWNvbG9yIiBmaWxsPSIjMDA0RDg2IiBzdHJva2U9IiMwMDRDODgiIHN0cm9rZS13aWR0aD0iMyIgLz4KPC9zdmc+"
+
+/***/ }),
+/* 31 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(12);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
+/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_reach_router__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _styles_contact_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(79);
+/* harmony import */ var _styles_contact_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_contact_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var components_NavBar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4);
+/* harmony import */ var _images_logo_otm_trademark_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
+/* harmony import */ var _images_logo_otm_trademark_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_images_logo_otm_trademark_svg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _images_get_help_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(13);
+/* harmony import */ var _images_get_help_png__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_images_get_help_png__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+
+
+
+
+var API_URL = "http://167.114.153.121:1337"; // const url = `${API_URL}/pages/5dff3d19aecfad34d76ee5b6`;
+
+var Contact = function Contact(props) {
+  // const [data, setData] = useState([]);
+  // const [contactHeader, setContactHeader] = useState([]);
+  // const [contactSubheader, setContactSubheader] = useState([]);
+  // const [needs, setNeeds] = useState([]);
+  // const [imageURL, setImageURL] = useState([]);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    // axios.get(url).then((res) => {
+    //   setData(res.data);
+    //   setContactHeader(res.data.fields[0].header);
+    //   setContactSubheader(res.data.fields[0].subheader);
+    //   setImageURL(`${API_URL + res.data.fields[0].background.url}`);
+    //   setNeeds(res.data.fields[1].option);
+    // });
+    if (process.browser) scrollTo(0, 0);
+  }, []);
+
+  var handleEmail = function handleEmail(e) {
+    if (e) e.preventDefault();
+    var firstName = e.target.name.value;
+    var lastName = e.target.surname.value;
+    var email = e.target.email.value;
+    var reason = e.target.need.value;
+    var message = e.target.message.value;
+
+    if (firstName) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("".concat(API_URL, "/contact-requests"), {
+        first_name: firstName,
+        last_name: lastName,
+        email: email,
+        message: message,
+        reason_for_inquiry: reason
+      }).then(function (res) {
+        var alert = document.getElementById("thank-you-alert");
+        alert.style.display = "block";
+        setTimeout(function () {
+          alert.style.display = "none";
+        }, 4000);
+      });
+    }
+  };
+
+  return (// <div>
+    //   <div
+    //     className="jumbotron jumbotron-fluid pb-4 text-light"
+    //     style={{
+    //       backgroundImage: `url(${imageURL})`,
+    //       backgroundSize: `cover`
+    //     }}
+    //   >
+    //     <div className="container">
+    //       <div className="mx-auto text-center">
+    //         <h1>{contactHeader}</h1>
+    //         <p>{contactSubheader}</p>
+    //       </div>
+    //     </div>
+    //   </div>
+    //   <div className="container">
+    //     <div
+    //       id="thank-you-alert"
+    //       className="alert alert-success mb-5"
+    //       role="alert"
+    //       style={{ display: "none" }}
+    //     >
+    //       <h4 className="alert-heading">Thank you!</h4>
+    //       <p>We will get back to you shortly.</p>
+    //     </div>
+    //     <form id="contact-form" role="form" onSubmit={handleEmail}>
+    //       <div className="messages"></div>
+    //       <div className="controls">
+    //         <div className="row">
+    //           <div className="col-md-6">
+    //             <div className="form-group">
+    //               <label htmlFor="form_name">First name *</label>
+    //               <input
+    //                 id="form_name"
+    //                 type="text"
+    //                 name="name"
+    //                 className="form-control"
+    //                 placeholder="Please enter your first name *"
+    //                 required="required"
+    //                 data-error="First name is required."
+    //               />
+    //               <div className="help-block with-errors"></div>
+    //             </div>
+    //           </div>
+    //           <div className="col-md-6">
+    //             <div className="form-group">
+    //               <label htmlFor="form_lastname">Last name *</label>
+    //               <input
+    //                 id="form_lastname"
+    //                 type="text"
+    //                 name="surname"
+    //                 className="form-control"
+    //                 placeholder="Please enter your last name *"
+    //                 required="required"
+    //                 data-error="Last name is required."
+    //               />
+    //               <div className="help-block with-errors"></div>
+    //             </div>
+    //           </div>
+    //         </div>
+    //         <div className="row">
+    //           <div className="col-md-6">
+    //             <div className="form-group">
+    //               <label htmlFor="form_email">Email *</label>
+    //               <input
+    //                 id="form_email"
+    //                 type="email"
+    //                 name="email"
+    //                 className="form-control"
+    //                 placeholder="Please enter your email *"
+    //                 required="required"
+    //                 data-error="Valid email is required."
+    //               />
+    //               <div className="help-block with-errors"></div>
+    //             </div>
+    //           </div>
+    //           <div className="col-md-6">
+    //             <div className="form-group">
+    //               <label htmlFor="form_need">Please specify your need *</label>
+    //               <select
+    //                 id="form_need"
+    //                 name="need"
+    //                 className="form-control"
+    //                 required="required"
+    //                 data-error="Please specify your need."
+    //               >
+    //                 {needs.map((need, index) => (
+    //                   <option key={index} value={need.option}>
+    //                     {need.option}
+    //                   </option>
+    //                 ))}
+    //               </select>
+    //               <div className="help-block with-errors"></div>
+    //             </div>
+    //           </div>
+    //         </div>
+    //         <div className="row">
+    //           <div className="col-md-12">
+    //             <div className="form-group">
+    //               <label htmlFor="form_message">Message *</label>
+    //               <textarea
+    //                 id="form_message"
+    //                 name="message"
+    //                 className="form-control"
+    //                 placeholder="Message for us *"
+    //                 rows="4"
+    //                 required="required"
+    //                 data-error="Please, leave us a message."
+    //               ></textarea>
+    //               <div className="help-block with-errors"></div>
+    //             </div>
+    //           </div>
+    //           <div className="col-md-12 pb-5">
+    //             <input
+    //               id="form-submit-btn"
+    //               type="submit"
+    //               className="btn btn-primary mb-5"
+    //               value="Send message"
+    //             />
+    //           </div>
+    //         </div>
+    //       </div>
+    //     </form>
+    //   </div>
+    // </div>
+    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "sticky-menu"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      className: "otm-hero-light"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "container"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_NavBar__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "otm-breadcrumb"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "container"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "otm-breadcrumb-inner"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+      "aria-label": "breadcrumb"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
+      className: "breadcrumb"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      className: "breadcrumb-item"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      to: "/"
+    }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      className: "breadcrumb-item",
+      "aria-current": "page"
+    }, "Contact Us")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      className: "contact-us-main"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "container"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "row"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "col-12 col-lg-6"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "contact-form-title"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Contact Us")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "contact-form-wrapper"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "form-row"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "form-group custom-form-group col-12"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Your Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "text",
+      className: "form-control form-control-lg",
+      placeholder: "Full Name"
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "form-group custom-form-group col-12"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Company (if applicable)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "text",
+      className: "form-control form-control-lg",
+      placeholder: "Company Name"
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "form-group custom-form-group col-12"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Phone Number"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "text",
+      className: "form-control form-control-lg",
+      placeholder: "+1 (123) 555-5678"
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "form-group custom-form-group col-12"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "text",
+      className: "form-control form-control-lg",
+      placeholder: "youremail@address.com"
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "form-group custom-form-group col-12"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Street Address"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "text",
+      className: "form-control form-control-lg",
+      placeholder: "100 Street Address"
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "form-group custom-form-group col-12"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "State"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "text",
+      className: "form-control form-control-lg",
+      placeholder: "Florida"
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "form-group custom-form-group col-6"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "City"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "text",
+      className: "form-control form-control-lg",
+      placeholder: "Orlando"
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "form-group custom-form-group col-6"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Zip"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "text",
+      className: "form-control form-control-lg",
+      placeholder: "12345"
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "form-group custom-form-group col-12 text-right"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "btn btn-lg otm-action-btn"
+    }, "Submit")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "col-12 col-lg-5 offset-lg-1"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "contact-form-title"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Contact Information")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "contact-details"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "chat-time"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Need to talk with an agent?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "8AM - 5PM Live Chat"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: "https://app.purechat.com/w/otmdispatch",
+      target: "_app"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: _images_get_help_png__WEBPACK_IMPORTED_MODULE_6___default.a,
+      alt: "help"
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "contact-point"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Contact our Office"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Toll Free:"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: "tel:+18008429507"
+    }, "(888) 842-9507 "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Direct:"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: "tel:+3212843755"
+    }, "(321) 284-3755"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Fax:"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: "tel:+4075746247"
+    }, "(407) 574-6247")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Email Us:"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: "mailto:INFO@OTMDISPATCH.COM"
+    }, "info@otmdispatch.com")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "9500 Satellite Blvd Suite 170, Orlando, 32837"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: _images_logo_otm_trademark_svg__WEBPACK_IMPORTED_MODULE_5___default.a,
+      alt: "OTM Dispatch",
+      className: "contact-info-logo"
+    }))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      className: "gmap-wrapper"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "gmap-inner text-center"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: "https://www.google.com/maps/dir/?api=1&destination=9500%20SATELLITE%20BLVD%20SUITE%20170%2C%20ORLANDO%2C%2032837",
+      className: "btn btn-lg btn-otm-dark"
+    }, "Get Direction"))))
+  );
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Contact);
+
+/***/ }),
+/* 32 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_NavBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
+/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
+/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_reach_router__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "sticky-menu plans-hero"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "otm-hero-light"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_NavBar__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "solution-hero"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row align-items-center"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hero-title text-center"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Diamond Plan"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "OTM DISPATCH")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "otm-breadcrumb",
+    id: "professional-dispatching"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "otm-breadcrumb-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    "aria-label": "breadcrumb"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
+    className: "breadcrumb"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "breadcrumb-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/"
+  }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "breadcrumb-item",
+    "aria-current": "page"
+  }, "Diamond Plan")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "solution-main"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "text-center"
+  }, "Diamond Plan"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "plan-text-header"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "What is included in this plan:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Search for the best paying loads"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Negotiate the best rates and terms"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, " Complete Broker-Carrier Packets"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Daily check of load status and updates"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Detention time negotiation "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Handle Invoicing and all paperwork for each load"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Corporate & Individual Income Tax Preparation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Corporations, Partnerships and/or LLCs State\u2019s Annual Report Filing "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "FTA & IRP Renewal"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "UCR Renewal"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Form 2290 \u2013 Schedule 1 Renewal (mostly known as Road Taxes) "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "NY HUT & NM Weight Distance Permits Renewal"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "IFTA Quarterly Report Filing "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "NY HUT, KY & NM Weight Distance Quarterly Report Filing  "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Disclosure:"), " OTM Dispatch reserves the right to not provide the services mentioned above if Carrier does not furnish all the required information to complete such services and Carrier cannot hold OTM Dispatch accountable for doing so if those requirements are not met by Carrier."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "plans-buttons"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/partnership",
+    className: "btn btn-orange btn-shadow"
+  }, "Partner With Us"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "clear"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/solutions#otm-plans",
+    className: "btn btn-blue btn-shadow"
+  }, "Go Back"))))));
+});
+
+/***/ }),
+/* 33 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_NavBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
+/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
+/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_reach_router__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "sticky-menu plans-hero"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "otm-hero-light"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_NavBar__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "solution-hero"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row align-items-center"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hero-title text-center"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Emerald Plan"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "OTM DISPATCH")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "otm-breadcrumb",
+    id: "professional-dispatching"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "otm-breadcrumb-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    "aria-label": "breadcrumb"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
+    className: "breadcrumb"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "breadcrumb-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/"
+  }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "breadcrumb-item",
+    "aria-current": "page"
+  }, "Emerald Plan")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "solution-main"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "text-center"
+  }, "Emerald Plan"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "plan-text-header"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "What is included in this plan:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Search for the best paying loads"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Negotiate the best rates and terms"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Complete Broker-Carrier Packets"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Daily check of load status and updates"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Detention time negotiation"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Disclosure:"), " OTM Dispatch reserves the right to not provide the services mentioned above if Carrier does not furnish all the required information to complete such services and Carrier cannot hold OTM Dispatch accountable for doing so if those requirements are not met by Carrier."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "plans-buttons"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/partnership",
+    className: "btn btn-orange btn-shadow"
+  }, "Partner With Us"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "clear"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/solutions#otm-plans",
+    className: "btn btn-blue btn-shadow"
+  }, "Go Back"))))));
+});
+
+/***/ }),
+/* 34 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styles_home_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(82);
+/* harmony import */ var _styles_home_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_home_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var components_NavBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
+/* harmony import */ var _images_globe_sm_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(47);
+/* harmony import */ var _images_globe_sm_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_images_globe_sm_png__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _images_truck_icon_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(86);
+/* harmony import */ var _images_truck_icon_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_images_truck_icon_png__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _images_logo_otm_trademark_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
+/* harmony import */ var _images_logo_otm_trademark_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_images_logo_otm_trademark_svg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _images_logistics_platform_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(21);
+/* harmony import */ var _images_logistics_platform_png__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_images_logistics_platform_png__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(48);
+/* harmony import */ var animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_7__);
+
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var textAnimation = function textAnimation() {
+    $('.text-wrapper .letters:not(.letters-1)').removeClass('d-none');
+    $('.ml7 .letters').each(function () {
+      $(this).html($(this).text().replace(/([^\x80-\xFF]|[À-ÖØ-öø-ÿ]|\w)/g, "<span class='letter letter-$&'>$&</span>"));
+    });
+    animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_7___default.a.timeline({
+      loop: true
+    }).add({
+      targets: '.letters-1 .letter',
+      translateY: ["1.1em", 0],
+      translateX: ["0.55em", 0],
+      translateZ: 0,
+      rotateZ: [180, 0],
+      duration: 750,
+      easing: "easeOutExpo",
+      delay: function delay(el, i) {
+        return 50 * i;
+      }
+    }).add({
+      targets: '.letters-1',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 800
+    }).add({
+      targets: '.letters-2 .letter',
+      translateY: ["1.1em", 0],
+      translateX: ["0.55em", 0],
+      translateZ: 0,
+      rotateZ: [180, 0],
+      duration: 750,
+      easing: "easeOutExpo",
+      delay: function delay(el, i) {
+        return 50 * i;
+      }
+    }).add({
+      targets: '.letters-2',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 800
+    }).add({
+      targets: '.letters-3 .letter',
+      translateY: ["1.1em", 0],
+      translateX: ["0.55em", 0],
+      translateZ: 0,
+      rotateZ: [180, 0],
+      duration: 750,
+      easing: "easeOutExpo",
+      delay: function delay(el, i) {
+        return 50 * i;
+      }
+    }).add({
+      targets: '.letters-3',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 800
+    }).add({
+      targets: '.letters-4 .letter',
+      translateY: ["1.1em", 0],
+      translateX: ["0.55em", 0],
+      translateZ: 0,
+      rotateZ: [180, 0],
+      duration: 750,
+      easing: "easeOutExpo",
+      delay: function delay(el, i) {
+        return 50 * i;
+      }
+    }).add({
+      targets: '.letters-4',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 800
+    });
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    document.getElementById("menuBackground").style.top = "120px";
+    scrollTo(0, 0);
+    $('.carousel').carousel();
+    textAnimation();
+    return function () {
+      document.getElementById("menuBackground").style.top = "98px";
+    };
+  }, []);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "otm-hero"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_NavBar__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"], {
+    light: true
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row align-items-center hero-text-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hero-text-wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Powered By"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "ml7"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "text-wrapper w-100"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "letters letters-1"
+  }, "Integrity."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "letters d-none letters-2"
+  }, "Our Commitment."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "letters d-none letters-3"
+  }, "Innovation."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "letters d-none letters-4"
+  }, "Your Future."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Professional Dispatching and Business Services "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Set out to deliver valuable and consistent experiences"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/solutions#otm-plans",
+    className: "btn btn-otm-cta"
+  }, "CARRIERS"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_globe_sm_png__WEBPACK_IMPORTED_MODULE_3___default.a,
+    alt: "Globe",
+    className: "globe"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "smart-dispatch"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "carousel-background-top"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "carousel-background-left"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "carousel-background"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "smart-dispatch",
+    className: "carousel slide carousel-fade",
+    "data-ride": "carousel"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "carousel-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "carousel-item active"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "carousel-item-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "carousel-item-title"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "carousel-icon"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figure", {
+    className: "icon  icon--tall"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 53.29 66.43"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("defs", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("style", {
+    dangerouslySetInnerHTML: {
+      __html: ".qndhcoflos-a{fill:none;stroke:#00548a;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.64px}"
+    }
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("polygon", {
+    className: "qndhcoflos-a",
+    points: "8.71 61.48 0.82 57.54 0.82 52.61 52.47 52.61 52.47 57.54 44.58 61.48 8.71 61.48"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    className: "qndhcoflos-a",
+    x1: "23.38",
+    y1: "54.83",
+    x2: "29.55",
+    y2: "54.83"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("polyline", {
+    className: "qndhcoflos-a",
+    points: "13.39 52.61 13.39 28.7 40.15 28.7 40.15 52.61"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    className: "qndhcoflos-a",
+    x1: "5.07",
+    y1: "17.68",
+    x2: "48.59",
+    y2: "17.68"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    className: "qndhcoflos-a",
+    x1: "23.38",
+    y1: "31.81",
+    x2: "29.55",
+    y2: "31.81"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    className: "qndhcoflos-a",
+    x1: "23.38",
+    y1: "7.87",
+    x2: "29.55",
+    y2: "7.87"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    className: "qndhcoflos-a",
+    x1: "16.23",
+    y1: "34.74",
+    x2: "36.7",
+    y2: "34.74"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    className: "qndhcoflos-a",
+    x1: "16.23",
+    y1: "49.4",
+    x2: "36.7",
+    y2: "49.4"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("polyline", {
+    className: "qndhcoflos-a",
+    points: "7.82 0.82 10.32 3.89 10.32 28.7"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("polyline", {
+    className: "qndhcoflos-a",
+    points: "13.39 39.23 7.63 39.23 2.24 44.61 2.24 49.4 13.39 49.4"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    className: "qndhcoflos-a",
+    x1: "4.69",
+    y1: "46.2",
+    x2: "10.32",
+    y2: "46.2"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("polyline", {
+    className: "qndhcoflos-a",
+    points: "40.15 39.23 45.91 39.23 51.3 44.61 51.3 49.4 40.15 49.4"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    className: "qndhcoflos-a",
+    x1: "48.85",
+    y1: "46.2",
+    x2: "43.22",
+    y2: "46.2"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("polyline", {
+    className: "qndhcoflos-a",
+    points: "13.39 28.7 8.47 28.7 8.47 39.23"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("rect", {
+    className: "qndhcoflos-a",
+    x: "3.28",
+    y: "20.14",
+    width: "3.34",
+    height: "6.37"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("polyline", {
+    className: "qndhcoflos-a",
+    points: "45.72 0.82 43.22 3.89 43.22 28.7"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("polyline", {
+    className: "qndhcoflos-a",
+    points: "40.15 28.7 45.07 28.7 45.07 39.23"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("rect", {
+    className: "qndhcoflos-a",
+    x: "46.92",
+    y: "20.14",
+    width: "3.34",
+    height: "6.37",
+    transform: "translate(97.18 46.65) rotate(-180)"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    className: "qndhcoflos-a",
+    x1: "13.39",
+    y1: "28.7",
+    x2: "13.39",
+    y2: "14.08"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    className: "qndhcoflos-a",
+    x1: "32.7",
+    y1: "14.11",
+    x2: "13.39",
+    y2: "14.11"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    className: "qndhcoflos-a",
+    x1: "40.15",
+    y1: "14.11",
+    x2: "32.7",
+    y2: "14.11"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    className: "qndhcoflos-a",
+    x1: "4.69",
+    y1: "49.4",
+    x2: "4.69",
+    y2: "52.61"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    className: "qndhcoflos-a",
+    x1: "48.85",
+    y1: "49.4",
+    x2: "48.85",
+    y2: "52.61"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    className: "qndhcoflos-a",
+    d: "M11.85,61.48v2.66a1.48,1.48,0,0,1-1.47,1.48H6.16a1.48,1.48,0,0,1-1.47-1.48V59.47"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    className: "qndhcoflos-a",
+    d: "M41.49,61.48v2.66A1.48,1.48,0,0,0,43,65.62h4.22a1.48,1.48,0,0,0,1.47-1.48V59.47"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    className: "qndhcoflos-a",
+    x1: "40.15",
+    y1: "14.08",
+    x2: "40.15",
+    y2: "28.7"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    className: "qndhcoflos-a",
+    x1: "13.39",
+    y1: "14.08",
+    x2: "15.06",
+    y2: "5.18"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("polyline", {
+    className: "qndhcoflos-a",
+    points: "10.32 10.55 15.06 5.18 38.48 5.18 43.22 10.55"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    className: "qndhcoflos-a",
+    x1: "38.48",
+    y1: "5.18",
+    x2: "40.15",
+    y2: "14.08"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    className: "qndhcoflos-a",
+    x1: "17.36",
+    y1: "37.05",
+    x2: "17.36",
+    y2: "46.94"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    className: "qndhcoflos-a",
+    x1: "23.36",
+    y1: "37.05",
+    x2: "23.36",
+    y2: "46.94"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    className: "qndhcoflos-a",
+    x1: "29.35",
+    y1: "37.05",
+    x2: "29.35",
+    y2: "46.94"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("line", {
+    className: "qndhcoflos-a",
+    x1: "35.35",
+    y1: "37.05",
+    x2: "35.35",
+    y2: "46.94"
+  })))), "Smart Dispatching")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "carousel-item-text"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Book and retain more business. We partner with you to keep drivers on the road, eliminate manual check calls and increase customer satisfaction. "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", null, "Our professional dispatchers keep you loaded with the best loads at the highest prices."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "text-stack__cta text-stack__cta--offset js-cta"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "button-wrapper",
+    "data-module": "circle-button"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/contact",
+    className: "button button--circle button--orange"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "button__content js-button-content"
+  }, "Speak to a Representative"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "button__arrow js-button-arrow"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    viewBox: "0 0 27 15",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M0 7.5h25.62M19.602 1l6.335 6.5-6.335 6.5"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "button__outline js-button-outline"
+  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "carousel-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "carousel-item-title"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "carousel-icon"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figure", {
+    className: "icon  icon--square"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 59.74 59.74"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("defs", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("style", {
+    dangerouslySetInnerHTML: {
+      __html: ".dlqjspgcln-a{fill:none;stroke:#216294;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}"
+    }
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    className: "dlqjspgcln-a",
+    d: "M23.15,46.09a87.53,87.53,0,0,1-1.41-16.22C21.74,13.93,25.38,1,29.87,1c2.29,0,4.37,3.39,5.85,8.82"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    className: "dlqjspgcln-a",
+    d: "M36.59,13.64A87.65,87.65,0,0,1,38,29.87c0,16-3.64,28.87-8.13,28.87-2.3,0-4.37-3.38-5.85-8.83"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    className: "dlqjspgcln-a",
+    d: "M13.64,36.59A88.91,88.91,0,0,1,24.12,24.12C35.4,12.85,47.11,6.28,50.29,9.46c1.62,1.62.69,5.48-2.11,10.37"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    className: "dlqjspgcln-a",
+    d: "M46.1,23.15A87.56,87.56,0,0,1,35.62,35.62c-11.28,11.27-23,17.84-26.16,14.67-1.63-1.63-.7-5.49,2.1-10.38"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    className: "dlqjspgcln-a",
+    d: "M13.65,23.15a87.61,87.61,0,0,1,16.22-1.41c16,0,28.87,3.64,28.87,8.13,0,2.29-3.39,4.37-8.82,5.85"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    className: "dlqjspgcln-a",
+    d: "M46.1,36.59A87.65,87.65,0,0,1,29.87,38C13.93,38,1,34.36,1,29.87,1,27.57,4.38,25.5,9.83,24"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    className: "dlqjspgcln-a",
+    d: "M23.15,13.65A87.55,87.55,0,0,1,35.62,24.12c11.27,11.28,17.84,23,14.67,26.17-1.63,1.62-5.49.69-10.37-2.1"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    className: "dlqjspgcln-a",
+    d: "M36.59,46.1A87.56,87.56,0,0,1,24.12,35.62C12.85,24.34,6.28,12.63,9.46,9.46c1.62-1.63,5.48-.7,10.37,2.1"
+  })))), "Business Services")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "carousel-item-text"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "OTM Dispatch provides affordable and competitively priced dispatch, tax, accounting, truck permits and consulting services to individuals as well as small and medium size businesses nationwide."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "OTM Dispatch is currently dispatching Reefers, Dry Vans, Flatbeds, Car Haulers and Hotshots.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "text-stack__cta text-stack__cta--offset js-cta"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "button-wrapper",
+    "data-module": "circle-button"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    className: "button button--circle button--orange"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "button__content js-button-content"
+  }, "Speak to a Representative"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "button__arrow js-button-arrow"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    viewBox: "0 0 27 15",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M0 7.5h25.62M19.602 1l6.335 6.5-6.335 6.5"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "button__outline js-button-outline"
+  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "carousel-control-prev",
+    href: "#smart-dispatch",
+    role: "button",
+    "data-slide": "prev"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "arrow-left-slider"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    x: "0px",
+    y: "0px",
+    viewBox: "0 0 512 512",
+    xmlSpace: "preserve"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M501.333,245.333H36.417l141.792-141.792c4.167-4.167,4.167-10.917,0-15.083c-4.167-4.167-10.917-4.167-15.083,0l-160,160\r c-4.167,4.167-4.167,10.917,0,15.083l160,160c2.083,2.083,4.813,3.125,7.542,3.125c2.729,0,5.458-1.042,7.542-3.125\r c4.167-4.167,4.167-10.917,0-15.083L36.417,266.667h464.917c5.896,0,10.667-4.771,10.667-10.667S507.229,245.333,501.333,245.333z\r "
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "carousel-control-next",
+    href: "#smart-dispatch",
+    role: "button",
+    "data-slide": "next"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "arrow-right-slider"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    version: "1.1",
+    id: "Layer_1",
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    x: "0px",
+    y: "0px",
+    viewBox: "0 0 512 512",
+    xmlSpace: "preserve"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M508.875,248.458l-160-160c-4.167-4.167-10.917-4.167-15.083,0c-4.167,4.167-4.167,10.917,0,15.083l141.792,141.792\r H10.667C4.771,245.333,0,250.104,0,256s4.771,10.667,10.667,10.667h464.917L333.792,408.458c-4.167,4.167-4.167,10.917,0,15.083\r c2.083,2.083,4.813,3.125,7.542,3.125c2.729,0,5.458-1.042,7.542-3.125l160-160C513.042,259.375,513.042,252.625,508.875,248.458z"
+  }))))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "otm-main"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container otm-home-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-xs-12 col-md-12 col-lg-6 column2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "otm-main-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Professional Dispatching"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "OTM Dispatch provides affordable and competitively priced dispatch, tax, accounting, truck permits and consulting services to individuals as well as small and medium size businesses nationwide. OTM Dispatch is currently dispatching Reefers, Dry Vans, Flatbeds, Car Haulers and Hotshots."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Our agents are here to be the most transparent they can. We are here to work side by side with shippers and drivers to help minimize costs while maximizing profits."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "btn btn-orange btn-shadow",
+    href: "/company"
+  }, "Learn More"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-xs-12 col-md-12 col-lg-6 column1"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_logo_otm_trademark_svg__WEBPACK_IMPORTED_MODULE_5___default.a,
+    alt: "OTM Dispatch. Professional Dispatching",
+    className: "otm-main-logo"
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "otm-carousel-team",
+    className: "carousel slide carousel-fade",
+    "data-ride": "carousel"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "carousel-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "carousel-item active"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-xs-12 col-md-12 col-lg-6 team-img-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_logistics_platform_png__WEBPACK_IMPORTED_MODULE_6___default.a,
+    alt: "Platform",
+    className: "img-fluid"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-xs-12 col-md-12 col-lg-6 team-text-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "team-text-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Your business is our business"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "We're building solutions to deliver peak efficiency and flexibility in your supply chain, backed by the highest level of Customer Service Agents."))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "carousel-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-xs-12 col-md-12 col-lg-6 team-img-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_logistics_platform_png__WEBPACK_IMPORTED_MODULE_6___default.a,
+    alt: "Platform",
+    className: "img-fluid"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-xs-12 col-md-12 col-lg-6 team-text-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "team-text-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Platform Designed for your Supply Chain"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Technology embedded with deep transportation expertise to meet the unique needs of shippers, LSPs and carriers worldwide.")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "carousel-control-prev",
+    href: "#otm-carousel-team",
+    role: "button",
+    "data-slide": "prev"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "arrow-left-slider"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    x: "0px",
+    y: "0px",
+    viewBox: "0 0 512 512",
+    xmlSpace: "preserve"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M501.333,245.333H36.417l141.792-141.792c4.167-4.167,4.167-10.917,0-15.083c-4.167-4.167-10.917-4.167-15.083,0l-160,160\r c-4.167,4.167-4.167,10.917,0,15.083l160,160c2.083,2.083,4.813,3.125,7.542,3.125c2.729,0,5.458-1.042,7.542-3.125\r c4.167-4.167,4.167-10.917,0-15.083L36.417,266.667h464.917c5.896,0,10.667-4.771,10.667-10.667S507.229,245.333,501.333,245.333z\r "
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "carousel-control-next",
+    href: "#otm-carousel-team",
+    role: "button",
+    "data-slide": "next"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "arrow-right-slider"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    version: "1.1",
+    id: "Layer_1",
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    x: "0px",
+    y: "0px",
+    viewBox: "0 0 512 512",
+    xmlSpace: "preserve"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M508.875,248.458l-160-160c-4.167-4.167-10.917-4.167-15.083,0c-4.167,4.167-4.167,10.917,0,15.083l141.792,141.792\r H10.667C4.771,245.333,0,250.104,0,256s4.771,10.667,10.667,10.667h464.917L333.792,408.458c-4.167,4.167-4.167,10.917,0,15.083\r c2.083,2.083,4.813,3.125,7.542,3.125c2.729,0,5.458-1.042,7.542-3.125l160-160C513.042,259.375,513.042,252.625,508.875,248.458z"
+  }))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "slider-section"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "slider-trucks"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "sliding-animation"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "slider-background"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "slider-bottom"
+  }))));
+});
+
+/***/ }),
+/* 35 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
+/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_reach_router__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _styles_partnership_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(87);
+/* harmony import */ var _styles_partnership_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_partnership_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_NavBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
+/* harmony import */ var _images_get_help_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(13);
+/* harmony import */ var _images_get_help_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_images_get_help_png__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _images_partnership_process_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(49);
+/* harmony import */ var _images_partnership_process_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_images_partnership_process_svg__WEBPACK_IMPORTED_MODULE_5__);
+ // import axios from "axios";
+
+
+
+
+
+ // const API_URL = "http://167.114.153.121:1337";
+// const url = `${API_URL}/pages/5dff3ba2aecfad34d76ee5a0`;
+
+var Partnership = function Partnership() {
+  // const [bannerHeader, setBannerHeader] = useState([]);
+  // const [bannerSubheader, setBannerSubheader] = useState([]);
+  // const [imageURL, setImageURL] = useState([]);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    // axios.get(url).then((res) => {
+    //   setBannerHeader(res.data.fields[0].header);
+    //   setBannerSubheader(res.data.fields[0].subheader);
+    //   setImageURL(`${API_URL + res.data.fields[0].background.url}`);
+    // });
+    if (process.browser) scrollTo(0, 0);
+  }, []);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "sticky-menu"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "otm-hero-light"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_NavBar__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "otm-breadcrumb"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "otm-breadcrumb-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    "aria-label": "breadcrumb"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
+    className: "breadcrumb"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "breadcrumb-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/"
+  }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "breadcrumb-item",
+    "aria-current": "page"
+  }, "Partner With Us")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "partner-main"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row flex-row-reverse"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12 col-lg-7 offset-lg-1 partner-form"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "partner-form-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "section-title"
+  }, "Partner With Us"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    id: "contact-form",
+    method: "post",
+    action: "contact.php",
+    role: "form"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: true,
+    className: "form-label"
+  }, "Package Of Interest?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-check form-check-inline"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "form-check-input",
+    type: "radio",
+    name: "packageName",
+    id: "Ruby",
+    defaultValue: "Ruby"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "form-check-label",
+    htmlFor: "Ruby"
+  }, "Ruby")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-check form-check-inline"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "form-check-input",
+    type: "radio",
+    name: "packageName",
+    id: "Emerald",
+    defaultValue: "Emerald"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "form-check-label",
+    htmlFor: "Emerald"
+  }, "Emerald")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-check form-check-inline"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "form-check-input",
+    type: "radio",
+    name: "packageName",
+    id: "Diamond",
+    defaultValue: "Diamond"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "form-check-label",
+    htmlFor: "Diamond"
+  }, "Diamond"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "contactName"
+  }, "1. What is your Name? Contact Person"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "input-has-icon"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    id: "contactName",
+    className: "form-control otm-form-control",
+    type: "text",
+    placeholder: "Your Name"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "carrierName"
+  }, "2. What is the Carrier Name?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "input-has-icon"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    id: "carrierName",
+    className: "form-control otm-form-control",
+    type: "text",
+    placeholder: "Carrier Name"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "phoneNumber"
+  }, "3. What is your Phone Number?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "input-has-icon"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    id: "phoneNumber",
+    className: "form-control otm-form-control",
+    type: "text",
+    placeholder: "123-234-5678"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "emailAddress"
+  }, "4. What is your Email Address?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "input-has-icon"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    id: "emailAddress",
+    className: "form-control otm-form-control",
+    type: "email",
+    placeholder: "email@emailaddress.com"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "physicalAddress"
+  }, "5. What is the Physical Address?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "input-has-icon"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    id: "physicalAddress",
+    className: "form-control otm-form-control",
+    type: "text",
+    placeholder: "123 Street Address City, State & Zip"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "faxNumber"
+  }, "6. Fax Number?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "input-has-icon"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    id: "faxNumber",
+    className: "form-control otm-form-control",
+    type: "text",
+    placeholder: "123-456-7890"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group col-md-6"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "dotNumber"
+  }, "7. DOT #"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "input-has-icon"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    className: "form-control otm-form-control",
+    id: "dotNumber",
+    placeholder: 12345
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group col-md-6"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "MCNumber"
+  }, "8. MC #"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "input-has-icon"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    className: "form-control otm-form-control",
+    id: "MCNumber",
+    placeholder: 12345
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group text-center"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "submit",
+    className: "btn btn-success partner-btn-submit"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Ok"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    x: "0px",
+    y: "0px",
+    viewBox: "0 0 512 512",
+    style: {
+      enableBackground: "new 0 0 512 512"
+    },
+    xmlSpace: "preserve"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M504.502,75.496c-9.997-9.998-26.205-9.998-36.204,0L161.594,382.203L43.702,264.311c-9.997-9.998-26.205-9.997-36.204,0 c-9.998,9.997-9.998,26.205,0,36.203l135.994,135.992c9.994,9.997,26.214,9.99,36.204,0L504.502,111.7 C514.5,101.703,514.499,85.494,504.502,75.496z"
+  }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "form-footer"
+  }, "OTM Dispatch reserves the right to not provide the services mentioned above if Carrier does not furnish all the required information to complete such services and Carrier cannot hold OTM Dispatch accountable for doing so if those requirements are not met by Carrier."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12 col-lg-4 partner-process"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "partner-process-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "process-title"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Partnership Process Explained")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_partnership_process_svg__WEBPACK_IMPORTED_MODULE_5___default.a,
+    className: "partnership-image",
+    alt: "Partnership Process"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "steps-pills"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "step-li step-one"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "step-pill pill-green"
+  }, "Fill out form")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "step-li step-two"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "step-pill pill-light"
+  }, "Wait for our call")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "step-li step-three"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "step-pill pill-blue"
+  }, "Get Approved")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "step-li step-four"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "step-pill pill-green"
+  }, "Get Top Loads")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "step-li step-five"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "step-pill pill-dark"
+  }, "Maximize Profits"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "get-help-wrap"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Press below to get assistance from one of our representatives."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://app.purechat.com/w/otmdispatch",
+    target: "_app"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_get_help_png__WEBPACK_IMPORTED_MODULE_4___default.a,
+    alt: "help"
+  })))))))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Partnership);
+
+/***/ }),
+/* 36 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_NavBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
+/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
+/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_reach_router__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (process.browser) scrollTo(0, 0);
+  }, []);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "sticky-menu"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "otm-hero-light"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_NavBar__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "otm-breadcrumb",
+    id: "about"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "otm-breadcrumb-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    "aria-label": "breadcrumb"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
+    className: "breadcrumb"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "breadcrumb-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/"
+  }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "breadcrumb-item",
+    "aria-current": "page"
+  }, "Privacy")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container mt-5",
+    id: "Privacy"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "text-center"
+  }, "Privacy"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "OTM Dispatch requires Carrier to provide the following documentation to provide specified services, please see below:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Corporate & Individual Income Tax Preparation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Corporations, Partnerships and/or LLCs State\u2019s Annual Report Filing"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "IFTA & IRP Renewal"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "UCR Renewal"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Form 2290 - Road Taxes Renewal"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "NY HUT & NM Weight Distance Permits Renewal"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "IFTA Quarterly Report Filing "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "NY HUT, KY & NM Weight Distance Quarterly Report Filing ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "1- Corporate & Individual Income Tax Preparation:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Carrier is responsible of providing all the necessary information and documentation in a timely manner to OTM Dispatch to prevent paying penalties and interests to the Internal Revenue Service and/or any State Department of Revenue for filing tax returns after the due date. Carrier will have to be under contract with OTM Dispatch for at least 9 months ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "a-"), " Corporate Tax Return \u2013 Carrier is responsible of providing the following information in detail and in an organized manner: the total amount of income for the year, total amount of expenses for the year per category or expense, example: Fuel-$_ _._ _, Tolls-$_ _._ _, etc. Carrier is also responsible for paying all the tax due amounts if any to the Internal Revenue Service and/or any State Department of Revenue  ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "b-"), " Individual Income Tax Return - Carrier is responsible of providing the following information in detail and in an organized manner: Personal information such as name(s), social security number(s), date(s) of birth, phone number(s), email address(s), income, expenses and any other information needed to complete and file the income tax return to the Internal Revenue Service and/or any State Department of Revenue. Carrier is also responsible for paying all the tax due amounts if any to the Internal Revenue Service and/or any State Department of Revenue.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "2- Corporations, Partnerships and/or LLCs State\u2019s Annual Report Filing:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Carrier is responsible of providing the State\u2019s name, document number, officer\u2019s name(s) and title, address, registered agent\u2019s name and address, and any information changes if applicable. Carrier is solely responsible for paying all the state related fees. ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "3- IFTA & IRP Renewal: "), "\u2013 IFTA stands for International Fuel Tax Agreement. IFTA pertains to the cooperative agreement between 48 states in the U.S. and 10 provinces in Canada. It allows interjurisdictional carriers to report and pay taxes for the fuel their vehicles consume across states using a single fuel tax license. IRP stands for International Registration Plan. The International Registration Plan (IRP) is a reciprocal agreement that authorizes the proportional registration among the jurisdictions (states) of commercial motor vehicles and truckers. Carrier is responsible of providing the login information to OTM Dispatch to be able to renew the IFTA Decals and the IRP Tag/Registration every year. Carrier is solely responsible for paying all the state related fees.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "4- UCR Renewal: "), " - UCR stands for Unified Carrier Registration program. It is a federally-mandated system for registering operators of commercial vehicles who are involved in interstate and international travel. This annual registration must be renewed by December 31 each year. Carrier is solely responsible for paying all the state related fees. ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "5- Form 2290: "), "- Schedule 1, Renewal (mostly known as Road Taxes) - Form 2290 - Schedule 1. Form 2290 - Schedule 1 is the proof of payment for the Heavy Vehicle Use Tax (HVUT) that Truckers pay to the Internal Revenue Service (IRS). An IRS stamped Schedule 1 is required for tags and vehicle registration at the Department of Motor Vehicle (DMV). Carrier is solely responsible for paying all the processing and filing fees to the IRS.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "6- NY HUT & NM Weight Distance Permits Renewal "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "a-"), " What is the New York HUT permit? The New York highway use tax (HUT) is imposed on motor carriers operating certain motor vehicles on New York State public highways. ... A HUT certificate of registration is required for any truck, tractor, or other self-propelled vehicle with a gross weight in excess of 18,000 pounds. Carrier is responsible for providing the Login information for the One Stop Credentialing and Registration (OSCAR) system. Five New York State agencies involved in regulating motor carrier activities have designed a one stop shopping Web site which allows the industry a single point of contact to apply, change, pay for, and receive the operating credentials for HUT. Carrier is solely responsible for paying all the state renewal fees for HUT for each vehicle before the current permit series is due for renewal.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "b-"), " New Mexico imposes a weight-distance tax on owners, operators, and registrants of intra and interstate commercial vehicles with a declared gross vehicle weight in excess of 26,000 pounds. Any motor carrier 26,001-80,000 pounds traveling on New Mexico highways is subject to this tax. Companies must register and apply each year for a New Mexico Weight Distance Tax Electronic Permit for each vehicle. Carrier is solely responsible for paying all the state renewal fees for the New Mexico Weight Distance Tax Electronic Permit for each vehicle.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "7- IFTA Quarterly Report Filing:"), " \u2013 Carrier is responsible for providing a list of all the states that the carrier traveled for any particular quarter of the year including the total amount of miles and gallons of fuel per each state traveled and such information must be furnished to OTM Dispatch on or before the 10th day of the month that the quarterly report is due to make sure the IFTA quarterly report is filed on-time and to avoid paying late penalty and interest fees. Carrier is also responsible for paying the amount due on the IFTA quarterly report.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "8-NY HUT, KY & NM Weight Distance Quarterly Report Filing:"), " \u2013 Carrier is responsible for providing the total amount of miles per vehicle traveled across the states of NY and NM and the total miles for all the vehicles traveled across the state of KY and such information must be furnished to OTM Dispatch on or before the 10th day of the month that the quarterly report is due to make sure the NY HUT, KY & NM Weight Distance Quarterly Reports are filed on-time and to avoid paying late penalty and interest fees. Carrier is also responsible for paying the amount due on the NY HUT, KY & NM Weight Distance Quarterly Reports.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "9- All quarterly reports are due as follows: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "a-"), " Q1 (January, February, March) is due on April 30th", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "b-"), " Q2 (April, May, June) is due on July 31st ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "c-"), " Q3 (July, August, September) is due on October 31", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "d-"), " Q4 (October, November, December) is due on January 31st ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Disclosure: OTM Dispatch reserves the right to not provide the services mentioned above if Carrier does not furnish all the required information to complete such services and Carrier cannot hold OTM Dispatch accountable for doing so if those requirements are not met by Carrier.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))));
+});
+
+/***/ }),
+/* 37 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_NavBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
+/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
+/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_reach_router__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "sticky-menu plans-hero"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "otm-hero-light"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_NavBar__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "solution-hero"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row align-items-center"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hero-title text-center"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Ruby Plan"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "OTM DISPATCH")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "otm-breadcrumb",
+    id: "professional-dispatching"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "otm-breadcrumb-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    "aria-label": "breadcrumb"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
+    className: "breadcrumb"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "breadcrumb-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/"
+  }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "breadcrumb-item",
+    "aria-current": "page"
+  }, "Ruby Plan")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "solution-main"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "clear"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "text-center"
+  }, "Ruby Plan")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "plan-text-header"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "What is included in this plan:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Search for the best paying loads"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Negotiate the best rates and terms"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Complete Broker-Carrier Packets"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Daily check of load status and updates"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Detention time negotiation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Handle Invoicing and all paperwork for each load"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Disclosure:"), " OTM Dispatch reserves the right to not provide the services mentioned above if Carrier does not furnish all the required information to complete such services and Carrier cannot hold OTM Dispatch accountable for doing so if those requirements are not met by Carrier."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "plans-buttons"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/partnership",
+    className: "btn btn-orange btn-shadow"
+  }, "Partner With Us"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "clear"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/solutions#otm-plans",
+    className: "btn btn-blue btn-shadow"
+  }, "Go Back"))))));
+});
+
+/***/ }),
+/* 38 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
+/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_reach_router__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _styles_solution_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(89);
+/* harmony import */ var _styles_solution_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_solution_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_NavBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
+/* harmony import */ var _images_globe2_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(50);
+/* harmony import */ var _images_globe2_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_images_globe2_png__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _images_logistics_icon_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(51);
+/* harmony import */ var _images_logistics_icon_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_images_logistics_icon_svg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _images_cta_right_arrow_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(15);
+/* harmony import */ var _images_cta_right_arrow_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_images_cta_right_arrow_svg__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _images_truck_icon_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(22);
+/* harmony import */ var _images_truck_icon_svg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_images_truck_icon_svg__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _images_truck_left_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(52);
+/* harmony import */ var _images_truck_left_png__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_images_truck_left_png__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _images_truck_left_mobile_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(53);
+/* harmony import */ var _images_truck_left_mobile_jpg__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_images_truck_left_mobile_jpg__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _images_otm_logo_lines_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(54);
+/* harmony import */ var _images_otm_logo_lines_svg__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_images_otm_logo_lines_svg__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _images_consulting_right_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(55);
+/* harmony import */ var _images_consulting_right_png__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_images_consulting_right_png__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _images_logo_otm_trademark_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(7);
+/* harmony import */ var _images_logo_otm_trademark_svg__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_images_logo_otm_trademark_svg__WEBPACK_IMPORTED_MODULE_12__);
+ // import Solution from "../components/Solution";
+// import axios from "axios";
+
+
+
+
+
+
+
+
+
+
+ // import SolutionTruck from "../images/solutions-trucks2.svg";
+
+
+ // import SolutionsPathBG from "../images/solutions-path-bg.png";
+// const API_URL = "http://167.114.153.121:1337";
+// const solutionsPageUrl = `${API_URL}/pages/5dff3f78aecfad34d76ee5c5`;
+
+var Solutions = function Solutions() {
+  // const [data, setData] = useState([]);
+  // const [banner, setBanner] = useState([]);
+  // const [bannerImage, setBannerImage] = useState([]);
+  // const [solutionsIntro, setSolutionsIntro] = useState([]);
+  // const [solutionsIntroImage, setSolutionsIntroImage] = useState([]);
+  // const [solutions, setSolutions] = useState([]);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    // axios.get(solutionsPageUrl).then((res) => {
+    //   setData(res.data);
+    //   setBanner(res.data.fields[0]);
+    //   setBannerImage(API_URL + res.data.fields[0].background.url);
+    //   setSolutionsIntro(res.data.fields[1].content[0]);
+    //   setSolutionsIntroImage(API_URL + res.data.fields[1].content[0].icon.url);
+    //   setSolutions(res.data.fields[2].content);
+    // });
+    document.getElementById("menuBackground").classList.remove("show");
+  }, []);
+
+  if (process.browser) {
+    if (location.hash) {
+      setTimeout(function () {
+        document.getElementById(location.hash.replace('#', '')).scrollIntoView(true);
+      }, 150);
+    } else {
+      scrollTo(0, 0);
+    }
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "sticky-menu"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "otm-hero-light"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_NavBar__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "solution-hero"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row align-items-center"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hero-title text-center"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Solutions"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "OTM DISPATCH")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "otm-breadcrumb",
+    id: "professional-dispatching"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "otm-breadcrumb-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    "aria-label": "breadcrumb"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
+    className: "breadcrumb"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "breadcrumb-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/"
+  }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "breadcrumb-item",
+    "aria-current": "page"
+  }, "Solutions")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "solution-main"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12 col-lg-6 about-main-left"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "solutions-main-left-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "section-title"
+  }, "Solutions"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "OTM Dispatch provides professional dispatching and business Services. Our professional dispatchers keep you loaded with the best loads at the highest prices and will match a load with your best resource to deliver it. OTM Dispatch is currently dispatching Reefers, Dry Vans, Flatbeds, Car Haulers and Hotshots."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "We will ensure that the motor carrier is in compliance with all the FMCSA (Federal Motor Carrier Safety Administration) rules and regulations to keep the carrier on the road pulling loads and increasing profitability."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#hide1",
+    className: "hide",
+    id: "hide1"
+  }, "Read More"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#show1",
+    className: "show",
+    id: "show1"
+  }, "Read Less"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "list"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "Our dispatchers can help you plan for and deal with weather delays, traffic congestion and other issues that can cause delays while you are on the road."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "OTM Dispatch provides the highest level of customer service, support, business solutions, and help you manage relationships with shippers, address issues that arise, and set proper service expectations."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "At OTM Dispatch, we also handle the paperwork associated with delivering and billing for the loads including all invoice submissions to the broker and/or shipper or a factoring company, collections follow-ups, and payment processing.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "clear"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/partnership",
+    className: "btn btn-blue btn-shadow"
+  }, "Partner With Us"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "crop"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_globe2_png__WEBPACK_IMPORTED_MODULE_4___default.a,
+    alt: "",
+    className: "solutions-main-img-right"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "otm-plans",
+    id: "otm-plans"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "plan-main-title"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "OTM Dispatch Handles"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "All the paperwork so you, ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " can focus on your business!")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row otm-plans-wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12 col-md-6 col-lg-4 otm-plans-diamond"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "plan-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "plan-icon-wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_logistics_icon_svg__WEBPACK_IMPORTED_MODULE_5___default.a,
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "plan-name"
+  }, "Diamond Plan"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "plan-desc"
+  }, "One Plan, ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Solves Everything")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "plan-price"
+  }, "10%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
+    className: "price-small-desc"
+  }, "of the load"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/diamond",
+    className: "plan-cta"
+  }, "Find out more", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_cta_right_arrow_svg__WEBPACK_IMPORTED_MODULE_6___default.a,
+    alt: "",
+    className: "cta-arrow"
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12 col-md-6 col-lg-4 otm-plans-emerald"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "plan-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "plan-icon-wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_truck_icon_svg__WEBPACK_IMPORTED_MODULE_7___default.a,
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "plan-name"
+  }, "Emerald Plan"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "plan-desc"
+  }, "Not just the Basics, ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Top Loads")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "plan-price"
+  }, "8%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
+    className: "price-small-desc"
+  }, "of the load"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/emerald",
+    className: "plan-cta"
+  }, "Find out more", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_cta_right_arrow_svg__WEBPACK_IMPORTED_MODULE_6___default.a,
+    alt: "",
+    className: "cta-arrow"
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12 col-md-6 col-lg-4 otm-plans-ruby"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "plan-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "plan-icon-wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_truck_icon_svg__WEBPACK_IMPORTED_MODULE_7___default.a,
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "plan-name"
+  }, "Ruby Plan"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "plan-desc"
+  }, "Simple and Efficient, ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Easy to Manage")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "plan-price"
+  }, "9%"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
+    className: "price-small-desc"
+  }, "of the load"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/ruby",
+    className: "plan-cta"
+  }, "Find out more", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_cta_right_arrow_svg__WEBPACK_IMPORTED_MODULE_6___default.a,
+    alt: "",
+    className: "cta-arrow"
+  }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row plan-footer"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "More than a service"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "You get the proper support that helps you ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " unlock your real business potential."))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "truck-permit",
+    id: "truck-permits"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row flex-row-reverse"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12 col-lg-7 about-main-left"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "solutions-main-right-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "section-title"
+  }, "Truck Permits"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "OTM Dispatch provides Business Consulting, Tax, and Accounting Services nationwide to businesses in the transportation industry such as Trucking and Motor Coach bus companies. We are offering fuel and mileage tax reporting to all states as well as permitting for all your requirements."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "WE SPECIALIZE IN:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "pl-4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "US DOT and MC Numbers"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "IRP (Apportioned Tag Registrations)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "IFTA License and Decals"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "2290 (Road Taxes)"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Overweight, Oversize, Wide load & Super load Permits"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Trip, Fuel & Mileage Permits"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "USDOT Compliance Audits"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "IFTA Quarterly Fuel Tax Returns"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Fuel Tax audits"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "And much more")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/contact",
+    className: "btn btn-orange btn-shadow"
+  }, "Contact Us"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12 col-lg-4 solution-main-left"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_truck_left_png__WEBPACK_IMPORTED_MODULE_8___default.a,
+    alt: "",
+    className: "solution-truck"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_truck_left_mobile_jpg__WEBPACK_IMPORTED_MODULE_9___default.a,
+    alt: "",
+    className: "solution-truck-mobile"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "section-divider section-divider-top"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "section-divider section-divider-bottom"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "solution-main",
+    id: "tax-planning"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12 col-lg-7 about-main-left"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "solutions-main-right-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "section-title"
+  }, "Tax Planning and Preparation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "We apply tax planning strategies for you to have more money to save and invest or more money to spend. By offering tax planning you could defer and flat out avoid taxes by taking advantage of beneficial tax-law provisions, increasing and accelerating tax deductions and tax credits. We help you make an informed decision that you will be comfortable with while keeping compliance as a critical component."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "You can be confident that our firm provides our individual and business clients with taxation expertise and knowledge that they deserve year round. It is our goal to build a long-term relationship that you can rely on when you need professional assistance with a timely and a personal approach."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "OUR TAX PLANNING & PREPARATION ROLES INCLUDE, BUT ARE NOT LIMITED TO:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "pl-4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Tax Consulting, providing answers and solutions to everyday business needs"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Tax return preparation for Individuals, LLC\u2019s, Corporations, and Partnerships"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Multi-State Tax Return filings"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Review of prior year\u2019s tax returns"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "IRS problem resolution for potential abatements, settlements or payment options"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Secure electronic storage of your tax returns and supporting documents")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/contact",
+    className: "btn btn-orange btn-shadow"
+  }, "Contact Us"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_otm_logo_lines_svg__WEBPACK_IMPORTED_MODULE_10___default.a,
+    alt: "",
+    className: "about-main-img-right-logo"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "accounting-otm",
+    id: "accounting"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row flex-row-reverse"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12 col-lg-7 about-main-left"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "about-main-left-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "section-title"
+  }, "Accounting and Bookkeeping"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "OTM Dispatch is dedicated to provide the highest quality accounting standards. We can prepare, examine, and analyze financial records and make sure that those records are accurate and that taxes are paid properly and on time. We provide advice and recommend financial actions to help businesses run efficiently."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "Bookkeeping, we can provide the recording of your financial transactions on a day to day basis by establishing a chart of accounts. Those transactions include sales, purchases receipts and payments by individuals or businesses along with reconciliation of bank and credit card statements."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/contact",
+    className: "btn btn-orange btn-shadow"
+  }, "Contact Us"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "clear"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "solutions-truck-animation"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "solutions-slider-trucks"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "solutions-sliding-animation"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "solutions-slider-background"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "solutions-slider-bottom"
+  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "bussiness-consulting",
+    id: "consulting"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12 col-lg-7 about-main-left"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "about-main-left-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "section-title"
+  }, "Business Consulting"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "For more than 25 years, our team has provided quality tailored accounting and consulting services to meet the needs of each individual client."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "Our Business Consultants provide expert advice in management consulting to help organizations improve performance and efficiency. Our professionals analyze businesses, provide strategic planning and create solutions to help companies meet their goals and maximize growth."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "The success of our firm lies in the personal relationships we build with our clients which is our primary focus. We strive to offer the best services in tax, accounting and consulting for both individuals and businesses."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/contact",
+    className: "btn btn-orange btn-shadow"
+  }, "Contact Us"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_consulting_right_png__WEBPACK_IMPORTED_MODULE_11___default.a,
+    alt: "",
+    className: "consulting-right-img"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "tax-debt-resolution",
+    id: "irs-tax"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row flex-row-reverse"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-12 col-lg-7 about-main-left"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "about-main-left-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "section-title"
+  }, "IRS Tax Debt Resolution"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "At OTM Dispatch we serve clients nationwide to help solve both federal and state tax problems."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "Your case will be efficiently reviewed in a timely manner by our tax professionals."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "We provide personalized attention to the details of each case, representing our clients in all negotiations with the IRS including responding to IRS communications and pursuing procedural and administrative remedies to attain the best outcome and relief for our clients."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "In most cases we are able to settle outstanding taxes, penalties and accumulated interest for a fraction of the amount due and no more threatening calls or letters giving you peace of mind, especially knowing that you have a company that cares about your present and future needs."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "section-desc"
+  }, "Our professionals will provide the solution to your IRS Tax Debt including Filing Missing Tax Returns, IRS Offer in Compromise, Payroll Tax Issues, Business Tax Resolution, Federal Tax Liens & Levies, and much more."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/contact",
+    className: "btn btn-orange btn-shadow"
+  }, "Contact Us"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _images_logo_otm_trademark_svg__WEBPACK_IMPORTED_MODULE_12___default.a,
+    alt: "",
+    className: "solution-tax-logo"
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Solutions);
+
+/***/ }),
+/* 39 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1874,7 +3883,7 @@ var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
 // EXTERNAL MODULE: external "@babel/runtime/helpers/slicedToArray"
-var slicedToArray_ = __webpack_require__(1);
+var slicedToArray_ = __webpack_require__(46);
 var slicedToArray_default = /*#__PURE__*/__webpack_require__.n(slicedToArray_);
 
 // CONCATENATED MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/Question.js
@@ -1907,11 +3916,11 @@ var slicedToArray_default = /*#__PURE__*/__webpack_require__.n(slicedToArray_);
   }, external_react_default.a.createElement("p", null, props.answer))));
 });
 // EXTERNAL MODULE: external "axios"
-var external_axios_ = __webpack_require__(7);
+var external_axios_ = __webpack_require__(12);
 var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_);
 
 // EXTERNAL MODULE: external "react-async"
-var external_react_async_ = __webpack_require__(9);
+var external_react_async_ = __webpack_require__(81);
 
 // CONCATENATED MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/QuestionList.js
 
@@ -1919,8 +3928,8 @@ var external_react_async_ = __webpack_require__(9);
 
 
 
-var API_URL = "https://otm-dispatch-strapi.herokuapp.com";
-var url = "".concat(API_URL, "/help-pages");
+var API_URL = "http://167.114.153.121:1337";
+var url = "".concat(API_URL, "/pages/5dff3bdaaecfad34d76ee5a5");
 function QuestionList() {
   var _useState = Object(external_react_["useState"])([]),
       _useState2 = slicedToArray_default()(_useState, 2),
@@ -1929,7 +3938,7 @@ function QuestionList() {
 
   Object(external_react_["useEffect"])(function () {
     external_axios_default.a.get(url).then(function (res) {
-      return setData(res.data[0].FAQs);
+      return setData(res.data.fields[0].question);
     });
   }, []);
   return external_react_default.a.createElement("section", {
@@ -1949,361 +3958,81 @@ function QuestionList() {
       key: index
     }, external_react_default.a.createElement(Question, {
       id: question._id,
-      question: question.Question,
-      answer: question.Answer
+      question: question.question,
+      answer: question.answer
     }));
   })))));
 }
-// EXTERNAL MODULE: external "scroll-into-view-if-needed"
-var external_scroll_into_view_if_needed_ = __webpack_require__(11);
-
 // EXTERNAL MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/NavBar.js
-var NavBar = __webpack_require__(5);
+var NavBar = __webpack_require__(4);
 
-// EXTERNAL MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/Footer.js
-var Footer = __webpack_require__(6);
+// EXTERNAL MODULE: external "@reach/router"
+var router_ = __webpack_require__(1);
 
 // CONCATENATED MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/pages/help.js
 
 
 
 
-
 /* harmony default export */ var help = __webpack_exports__["default"] = (function () {
   if (process.browser) {
-    if (location.hash === "#help") {
+    if (location.hash) {
       setTimeout(function () {
-        document.getElementById("help").scrollIntoView(true);
+        document.getElementById(location.hash.replace("#", "")).scrollIntoView(true);
       }, 150);
     } else {
       scrollTo(0, 0);
     }
+
+    document.getElementById("menuBackground").classList.remove("show");
   }
 
-  return external_react_default.a.createElement("div", null, external_react_default.a.createElement(NavBar["a" /* default */], null), external_react_default.a.createElement("div", {
+  return external_react_default.a.createElement("div", {
+    className: "sticky-menu"
+  }, external_react_default.a.createElement("section", {
+    className: "otm-hero-light"
+  }, external_react_default.a.createElement("div", {
+    className: "container"
+  }, external_react_default.a.createElement(NavBar["a" /* default */], null))), external_react_default.a.createElement("div", {
+    className: "otm-breadcrumb",
+    id: "about"
+  }, external_react_default.a.createElement("div", {
+    className: "container"
+  }, external_react_default.a.createElement("div", {
+    className: "otm-breadcrumb-inner"
+  }, external_react_default.a.createElement("nav", {
+    "aria-label": "breadcrumb"
+  }, external_react_default.a.createElement("ol", {
+    className: "breadcrumb"
+  }, external_react_default.a.createElement("li", {
+    className: "breadcrumb-item"
+  }, external_react_default.a.createElement(router_["Link"], {
+    to: "/"
+  }, "Home")), external_react_default.a.createElement("li", {
+    className: "breadcrumb-item",
+    "aria-current": "page"
+  }, "FAQs")))))), external_react_default.a.createElement("div", {
     className: "container mt-5",
     id: "faqs"
   }, external_react_default.a.createElement("h2", {
     className: "text-center"
   }, "Frequently Asked Questions:"), external_react_default.a.createElement(QuestionList, null)), external_react_default.a.createElement("br", null), external_react_default.a.createElement("hr", null), external_react_default.a.createElement("div", {
     className: "container my-5 text-center",
-    id: "help"
+    id: "help",
+    style: {
+      paddingTop: "100px"
+    }
   }, external_react_default.a.createElement("h2", {
     className: "mb-5"
-  }, "Have more questions?"), external_react_default.a.createElement("button", {
-    type: "button",
-    className: "btn btn-primary btn-lg mb-5"
-  }, "Get Help")), external_react_default.a.createElement(Footer["a" /* default */], null));
+  }, "Have more questions?"), external_react_default.a.createElement("a", {
+    href: "https://app.purechat.com/w/otmdispatch",
+    target: "_app",
+    className: "btn btn-primary btn-lg mb-5 questions-btn"
+  }, "Get Help")));
 });
 
 /***/ }),
-/* 31 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-
-// EXTERNAL MODULE: external "@babel/runtime/helpers/slicedToArray"
-var slicedToArray_ = __webpack_require__(1);
-var slicedToArray_default = /*#__PURE__*/__webpack_require__.n(slicedToArray_);
-
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(0);
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-
-// CONCATENATED MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/Service.js
-
-/* harmony default export */ var Service = (function (props) {
-  return external_react_default.a.createElement("div", null, external_react_default.a.createElement("h3", null, props.header), external_react_default.a.createElement("p", null, props.description));
-});
-// EXTERNAL MODULE: external "scroll-into-view-if-needed"
-var external_scroll_into_view_if_needed_ = __webpack_require__(11);
-
-// EXTERNAL MODULE: external "axios"
-var external_axios_ = __webpack_require__(7);
-var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_);
-
-// EXTERNAL MODULE: external "react-async"
-var external_react_async_ = __webpack_require__(9);
-
-// EXTERNAL MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/NavBar.js
-var NavBar = __webpack_require__(5);
-
-// EXTERNAL MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/Footer.js
-var Footer = __webpack_require__(6);
-
-// CONCATENATED MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js
-
-
-
-
-
-
-
-
-var API_URL = "https://otm-dispatch-strapi.herokuapp.com";
-var url = "".concat(API_URL, "/company-pages");
-
-var company_Company = function Company() {
-  var _useState = Object(external_react_["useState"])([]),
-      _useState2 = slicedToArray_default()(_useState, 2),
-      data = _useState2[0],
-      setData = _useState2[1];
-
-  var _useState3 = Object(external_react_["useState"])([]),
-      _useState4 = slicedToArray_default()(_useState3, 2),
-      aboutUsHeader = _useState4[0],
-      setAboutUsHeader = _useState4[1];
-
-  var _useState5 = Object(external_react_["useState"])([]),
-      _useState6 = slicedToArray_default()(_useState5, 2),
-      aboutUsDescriptions = _useState6[0],
-      setAboutUsDescriptions = _useState6[1];
-
-  var _useState7 = Object(external_react_["useState"])([]),
-      _useState8 = slicedToArray_default()(_useState7, 2),
-      servicesHeader = _useState8[0],
-      setServicesHeader = _useState8[1];
-
-  var _useState9 = Object(external_react_["useState"])([]),
-      _useState10 = slicedToArray_default()(_useState9, 2),
-      servicesDescriptions = _useState10[0],
-      setServicesDescriptions = _useState10[1];
-
-  var _useState11 = Object(external_react_["useState"])([]),
-      _useState12 = slicedToArray_default()(_useState11, 2),
-      imageURL = _useState12[0],
-      setImageURL = _useState12[1];
-
-  if (process.browser) {
-    if (location.hash === "#services") {
-      setTimeout(function () {
-        document.getElementById("services").scrollIntoView(true);
-      }, 150);
-    } else {
-      scrollTo(0, 0);
-    }
-  }
-
-  Object(external_react_["useEffect"])(function () {
-    external_axios_default.a.get(url).then(function (res) {
-      setData(res.data[0]);
-      setAboutUsHeader(res.data[0].AboutUsHeader);
-      setAboutUsDescriptions(res.data[0].AboutDescriptions);
-      setServicesHeader(res.data[0].ServicesHeader);
-      setServicesDescriptions(res.data[0].ServicesDescriptions);
-      setImageURL("".concat(API_URL + res.data[0].BannerImage.url));
-    });
-  }, []);
-  return external_react_default.a.createElement("div", null, external_react_default.a.createElement(NavBar["a" /* default */], null), external_react_default.a.createElement("div", {
-    id: "about"
-  }, external_react_default.a.createElement("div", {
-    className: "jumbotron jumbotron-fluid pb-4 text-light",
-    style: {
-      backgroundImage: "url(".concat(imageURL, ")"),
-      backgroundSize: "cover"
-    }
-  }, external_react_default.a.createElement("div", {
-    className: "container"
-  }, external_react_default.a.createElement("div", {
-    className: "mx-auto my-auto text-center"
-  }, external_react_default.a.createElement("h1", null, aboutUsHeader.BannerHeader), external_react_default.a.createElement("p", {
-    className: "mx-auto w-50"
-  }, aboutUsHeader.Motto)))), external_react_default.a.createElement("div", {
-    className: "container mt-5 mb-5"
-  }, aboutUsDescriptions.map(function (description, index) {
-    return external_react_default.a.createElement("div", {
-      key: index
-    }, external_react_default.a.createElement("h3", null, description.Header), external_react_default.a.createElement("p", null, description.Paragraph));
-  }))), external_react_default.a.createElement("div", {
-    id: "services"
-  }, external_react_default.a.createElement("div", {
-    className: "jumbotron jumbotron-fluid pb-4 text-light",
-    style: {
-      backgroundImage: "url(".concat(imageURL, ")"),
-      backgroundSize: "cover"
-    }
-  }, external_react_default.a.createElement("div", {
-    className: "container"
-  }, external_react_default.a.createElement("div", {
-    className: "mx-auto my-auto text-center"
-  }, external_react_default.a.createElement("h1", null, servicesHeader.BannerHeader), external_react_default.a.createElement("p", {
-    className: "mx-auto w-50"
-  }, servicesHeader.BannerSubheader)))), external_react_default.a.createElement("div", {
-    className: "container"
-  }, external_react_default.a.createElement("div", {
-    className: "row mt-5 mb-5"
-  }, servicesDescriptions.map(function (service, index) {
-    return external_react_default.a.createElement("div", {
-      key: index,
-      className: "col-sm-6 mt-3 text-center"
-    }, external_react_default.a.createElement(Service, {
-      id: service._id,
-      header: service.Header,
-      description: service.Paragraph
-    }));
-  })))), external_react_default.a.createElement(Footer["a" /* default */], null));
-};
-
-/* harmony default export */ var company = __webpack_exports__["default"] = (company_Company);
-
-/***/ }),
-/* 32 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-
-// EXTERNAL MODULE: external "@babel/runtime/helpers/slicedToArray"
-var slicedToArray_ = __webpack_require__(1);
-var slicedToArray_default = /*#__PURE__*/__webpack_require__.n(slicedToArray_);
-
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(0);
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-
-// CONCATENATED MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/Solution.js
-
-/* harmony default export */ var Solution = (function (props) {
-  return external_react_default.a.createElement("div", null, external_react_default.a.createElement("h4", null, props.header), external_react_default.a.createElement("p", null, props.description));
-});
-// EXTERNAL MODULE: external "scroll-into-view-if-needed"
-var external_scroll_into_view_if_needed_ = __webpack_require__(11);
-
-// EXTERNAL MODULE: external "axios"
-var external_axios_ = __webpack_require__(7);
-var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_);
-
-// EXTERNAL MODULE: external "react-async"
-var external_react_async_ = __webpack_require__(9);
-
-// EXTERNAL MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/NavBar.js
-var NavBar = __webpack_require__(5);
-
-// EXTERNAL MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/components/Footer.js
-var Footer = __webpack_require__(6);
-
-// CONCATENATED MODULE: /mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js
-
-
-
-
-
-
-
-
-var API_URL = "http://167.114.153.121:1337";
-var solutionsPageUrl = "".concat(API_URL, "/pages/5dff3f78aecfad34d76ee5c5");
-
-var solutions_Solutions = function Solutions() {
-  var _useState = Object(external_react_["useState"])([]),
-      _useState2 = slicedToArray_default()(_useState, 2),
-      data = _useState2[0],
-      setData = _useState2[1];
-
-  var _useState3 = Object(external_react_["useState"])([]),
-      _useState4 = slicedToArray_default()(_useState3, 2),
-      shipperSolutions = _useState4[0],
-      setShipperSolutions = _useState4[1];
-
-  var _useState5 = Object(external_react_["useState"])([]),
-      _useState6 = slicedToArray_default()(_useState5, 2),
-      carrierSolutions = _useState6[0],
-      setCarrierSolutions = _useState6[1];
-
-  var _useState7 = Object(external_react_["useState"])([]),
-      _useState8 = slicedToArray_default()(_useState7, 2),
-      shipperBanner = _useState8[0],
-      setShipperBanner = _useState8[1];
-
-  var _useState9 = Object(external_react_["useState"])([]),
-      _useState10 = slicedToArray_default()(_useState9, 2),
-      carrierBanner = _useState10[0],
-      setCarrierBanner = _useState10[1];
-
-  Object(external_react_["useEffect"])(function () {
-    external_axios_default.a.get(solutionsPageUrl).then(function (res) {
-      setData(res.data[0]);
-      setShipperSolutions(res.data[0].fields[3].paragraph);
-      setCarrierSolutions(res.data[0].fields[1].paragraph);
-      setShipperBanner(res.data[0].fields[2]);
-      setCarrierBanner(res.data[0].fields[0]);
-      console.log(res);
-    });
-  }, []);
-
-  if (process.browser) {
-    if (location.hash === "#shippers") {
-      setTimeout(function () {
-        document.getElementById("shippers").scrollIntoView(true);
-      }, 150);
-    } else {
-      scrollTo(0, 0);
-    }
-  }
-
-  return external_react_default.a.createElement("div", null, external_react_default.a.createElement(NavBar["a" /* default */], null), external_react_default.a.createElement("div", {
-    id: "carriers"
-  }, external_react_default.a.createElement("div", {
-    className: "jumbotron jumbotron-fluid pb-4 text-light",
-    style: {
-      backgroundImage: "url(".concat(API_URL + carrierBanner.background.url, ")"),
-      backgroundSize: "cover"
-    }
-  }, external_react_default.a.createElement("div", {
-    className: "container"
-  }, external_react_default.a.createElement("div", {
-    className: "mx-auto my-auto text-center"
-  }, external_react_default.a.createElement("h1", null, carrierBanner.header), external_react_default.a.createElement("p", {
-    className: "mx-auto w-50"
-  }, carrierBanner.subheader)))), external_react_default.a.createElement("div", {
-    className: "container"
-  }, external_react_default.a.createElement("div", {
-    className: "row mt-5 mb-5 mx-auto justify-content-center"
-  }, carrierSolutions.map(function (solution, index) {
-    return external_react_default.a.createElement("div", {
-      key: index,
-      className: "col-sm-6 mt-3 text-center"
-    }, external_react_default.a.createElement(Solution, {
-      id: solution._id,
-      header: solution.header,
-      description: solution.body
-    }));
-  }))), external_react_default.a.createElement("div", {
-    id: "shippers",
-    className: "py-5"
-  }, external_react_default.a.createElement("div", {
-    className: "jumbotron jumbotron-fluid pb-4 text-light",
-    style: {
-      backgroundImage: "url(".concat(API_URL + shipperBanner.background.url, ")"),
-      backgroundSize: "cover"
-    }
-  }, external_react_default.a.createElement("div", {
-    className: "container"
-  }, external_react_default.a.createElement("div", {
-    className: "mx-auto my-auto text-center"
-  }, external_react_default.a.createElement("h1", null, shipperBanner.header), external_react_default.a.createElement("p", {
-    className: "mx-auto w-50"
-  }, shipperBanner.subheader)))), external_react_default.a.createElement("div", {
-    className: "container"
-  }, external_react_default.a.createElement("div", {
-    className: "row mt-5 mb-5 mx-auto justify-content-center"
-  }, shipperSolutions.map(function (solution, index) {
-    return external_react_default.a.createElement("div", {
-      key: index,
-      className: "col-sm-6 mt-3 text-center"
-    }, external_react_default.a.createElement(Solution, {
-      id: solution._id,
-      header: solution.header,
-      description: solution.body
-    }));
-  }))))), external_react_default.a.createElement(Footer["a" /* default */], null));
-};
-
-/* harmony default export */ var solutions = __webpack_exports__["default"] = (solutions_Solutions);
-
-/***/ }),
-/* 33 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2316,9 +4045,9 @@ exports["default"] = void 0;
 
 var _react = _interopRequireDefault(__webpack_require__(0));
 
-var _reactStatic = __webpack_require__(12);
+var _reactStatic = __webpack_require__(6);
 
-var _router = __webpack_require__(4);
+var _router = __webpack_require__(1);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
@@ -2429,54 +4158,138 @@ var _default = function _default(_ref) {
 exports["default"] = _default;
 
 /***/ }),
-/* 34 */
+/* 41 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-hot-loader");
 
 /***/ }),
-/* 35 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(36);
-__webpack_require__(37);
-module.exports = __webpack_require__(43);
+module.exports = __webpack_require__.p + "03be059b61bc52fcca6593a9d448b8da.svg";
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "5c69f4d7da33bf729997141d3157dbe2.svg";
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "b2ea7e9410916bafc88f20be78c85ab5.png";
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "7300ede3caeb105304fe42711ab5e5a0.jpg";
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports) {
+
+module.exports = require("@babel/runtime/helpers/slicedToArray");
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "709b3115f53eed4206638058afdfecbf.png";
+
+/***/ }),
+/* 48 */
+/***/ (function(module, exports) {
+
+module.exports = require("animejs/lib/anime.es.js");
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNjJweCIgaGVpZ2h0PSI1MDJweCIgdmlld0JveD0iMCAwIDYyIDUwMiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNjEuMiAoODk2NTMpIC0gaHR0cHM6Ly9za2V0Y2guY29tIC0tPgogICAgPHRpdGxlPkdyb3VwIDI8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz4KICAgICAgICA8bGluZWFyR3JhZGllbnQgeDE9IjUwJSIgeTE9IjkzLjg2NDA2MjUlIiB4Mj0iNTAlIiB5Mj0iMCUiIGlkPSJsaW5lYXJHcmFkaWVudC0xIj4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzdBOEY5RCIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjNzFEMzc5IiBvZmZzZXQ9IjE4LjQyMzQzNTQlIj48L3N0b3A+CiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiM3MUNBRDMiIG9mZnNldD0iNDMuMjkzMzg2NiUiPjwvc3RvcD4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0ZGRkZGRiIgb2Zmc2V0PSI2OC4wODg3NzA1JSI+PC9zdG9wPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjNzFEMzc5IiBvZmZzZXQ9IjEwMCUiPjwvc3RvcD4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iMTAwJSIgeTE9IjUwJSIgeDI9IjAlIiB5Mj0iNTAlIiBpZD0ibGluZWFyR3JhZGllbnQtMiI+CiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNGMEYzRjUiIG9mZnNldD0iMCUiPjwvc3RvcD4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzcxRDM3OSIgb2Zmc2V0PSIxMDAlIj48L3N0b3A+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGlkPSJNYWluLURlc2lnbiIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IlBhcnRuZXJzaGlwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTguMDAwMDAwLCAtMjg3LjAwMDAwMCkiPgogICAgICAgICAgICA8ZyBpZD0ic2lkZWJhciIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsIDE2OC4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxnIGlkPSJzdGVwcyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTkuMDAwMDAwLCAxMjAuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwLTIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLCAwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMzAuMDAwMTgwNiwzLjE5NzQ0MjMxZS0xNCBDNDYuNTY4NzIzMSwzLjI0ODM1NjQ0ZS0xNCA2MC4wMDAxODA2LDEzLjQzMTQ1NzUgNjAuMDAwMTgwNiwzMCBDNjAuMDAwMTgwNiw0NC44NjQ4NDg5IDQ5LjE4ODk0MDEsNTcuMjA0NTk3MyAzNS4wMDA1NjAxLDU5LjU4NTE0NDEgTDM1LjAwMDM3OTUsMTEwLjQxNDg1NiBDNDkuMTg4NzU5NSwxMTIuNzk1NDAzIDYwLDEyNS4xMzUxNTEgNjAsMTQwIEM2MCwxNTQuODY0ODQ5IDQ5LjE4ODc1OTUsMTY3LjIwNDU5NyAzNS4wMDAzNzk1LDE2OS41ODUxNDQgTDM1LjAwMDM3OTUsMjIwLjQxNDg1NiBDNDkuMTg4NzU5NSwyMjIuNzk1NDAzIDYwLDIzNS4xMzUxNTEgNjAsMjUwIEM2MCwyNjQuODY0ODQ5IDQ5LjE4ODc1OTUsMjc3LjIwNDU5NyAzNS4wMDAzNzk1LDI3OS41ODUxNDQgTDM1LjAwMDM3OTUsMzMwLjQxNDg1NiBDNDkuMTg4NzU5NSwzMzIuNzk1NDAzIDYwLDM0NS4xMzUxNTEgNjAsMzYwIEM2MCwzNzQuODY0ODQ5IDQ5LjE4ODc1OTUsMzg3LjIwNDU5NyAzNS4wMDAzNzk1LDM4OS41ODUxNDQgTDM1LjAwMDM3OTUsNDQwLjQxNDg1NiBDNDkuMTg4NzU5NSw0NDIuNzk1NDAzIDYwLDQ1NS4xMzUxNTEgNjAsNDcwIEM2MCw0ODYuNTY4NTQyIDQ2LjU2ODU0MjUsNTAwIDMwLDUwMCBDMTMuNDMxNDU3NSw1MDAgNS40OTE0Njg4MmUtMTMsNDg2LjU2ODU0MiA1LjU0MjIzNTUxZS0xMyw0NzAgQzUuNDkyMTU0OTdlLTEzLDQ1NS4xMzQ4MDIgMTAuODExNzQ5LDQ0Mi43OTQ4MjIgMjUuMDAwNjIxNCw0NDAuNDE0Njg4IEwyNS4wMDA2MjE0LDM4OS41ODUzMTIgQzEwLjgxMTc0OSwzODcuMjA1MTc4IDUuNzQxNzI1MjdlLTEzLDM3NC44NjUxOTggNS43NTUzOTYxNmUtMTMsMzYwIEM1LjczNzE5MjMxZS0xMywzNDUuMTM0ODAyIDEwLjgxMTc0OSwzMzIuNzk0ODIyIDI1LjAwMDYyMTQsMzMwLjQxNDY4OCBMMjUuMDAwNjIxNCwyNzkuNTg1MzEyIEMxMC44MTE3NDksMjc3LjIwNTE3OCAxLjIzMzQzMTUzZS0xMywyNjQuODY1MTk4IDEuMjc4OTc5MDllLTEzLDI1MCBDMS4yMjg4OTg1NmUtMTMsMjM1LjEzNDgwMiAxMC44MTE3NDksMjIyLjc5NDgyMiAyNS4wMDA2MjE0LDIyMC40MTQ2ODggTDI1LjAwMDYyMTQsMTY5LjU4NTMxMiBDMTAuODExNzQ5LDE2Ny4yMDUxNzggMS4yNjUzMDYwNGUtMTMsMTU0Ljg2NTE5OCAxLjI3ODk3NjkyZS0xMywxNDAgQzEuMjYwNzczMDdlLTEzLDEyNS4xMzQ4MDIgMTAuODExNzQ5LDExMi43OTQ4MjIgMjUuMDAwNjIxNCwxMTAuNDE0Njg4IEwyNS4wMDA2MjE0LDU5LjU4NTMxMiBDMTAuODExNzQ5LDU3LjIwNTE3NzYgMy42NDI5MDk1OWUtMTMsNDQuODY1MTk4NSAzLjYzMjg3MDkxZS0xMywzMCBDMy42MDM3Njk5N2UtMTMsMTMuNTk3MTQyOSAxMy4xNjQxNzE1LDAuMjY4OTQyODU5IDI5LjUwMzg5NTEsMC4wMDQwMTkxNDI4OCBMMzAuMDAwMTgwNiwzLjE5NzQ0MjMxZS0xNCBaIiBpZD0iQ29tYmluZWQtU2hhcGUiIHN0cm9rZT0iI0Q1RENFMSIgZmlsbD0idXJsKCNsaW5lYXJHcmFkaWVudC0xKSI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgICAgICA8ZyBpZD0iMSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAuMDAwMDAwLCAxMC4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUtNSIgc3Ryb2tlPSIjQzlENURDIiBmaWxsPSIjRkZGRkZGIiB4PSIwLjUiIHk9IjAuNSIgd2lkdGg9IjM5IiBoZWlnaHQ9IjM5IiByeD0iMTkuNSI+PC9yZWN0PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRleHQgZm9udC1mYW1pbHk9IkFwcGxlU0RHb3RoaWNOZW8tQm9sZCwgQXBwbGUgU0QgR290aGljIE5lbyIgZm9udC1zaXplPSIxOCIgZm9udC13ZWlnaHQ9ImJvbGQiIGxldHRlci1zcGFjaW5nPSIwLjMzNzUiIGZpbGw9IiM3MUQzNzkiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0c3BhbiB4PSIxNi45NTYyNSIgeT0iMjciPjE8L3RzcGFuPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90ZXh0PgogICAgICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICAgICAgICAgIDxnIGlkPSIyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMC4wMDAwMDAsIDEyMC4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUtNSIgc3Ryb2tlPSIjQzlENURDIiBmaWxsPSIjRkZGRkZGIiB4PSIwLjUiIHk9IjAuNSIgd2lkdGg9IjM5IiBoZWlnaHQ9IjM5IiByeD0iMTkuNSI+PC9yZWN0PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRleHQgZm9udC1mYW1pbHk9IkFwcGxlU0RHb3RoaWNOZW8tQm9sZCwgQXBwbGUgU0QgR290aGljIE5lbyIgZm9udC1zaXplPSIxOCIgZm9udC13ZWlnaHQ9ImJvbGQiIGxldHRlci1zcGFjaW5nPSIwLjMzNzUiIGZpbGw9IiM0NjRDNEUiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0c3BhbiB4PSIxNS41MTYyNSIgeT0iMjciPjI8L3RzcGFuPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90ZXh0PgogICAgICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICAgICAgICAgIDxnIGlkPSIzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMC4wMDAwMDAsIDIzMC4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUtNSIgc3Ryb2tlPSIjQzlENURDIiBmaWxsPSIjRkZGRkZGIiB4PSIwLjUiIHk9IjAuNSIgd2lkdGg9IjM5IiBoZWlnaHQ9IjM5IiByeD0iMTkuNSI+PC9yZWN0PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRleHQgZm9udC1mYW1pbHk9IkFwcGxlU0RHb3RoaWNOZW8tQm9sZCwgQXBwbGUgU0QgR290aGljIE5lbyIgZm9udC1zaXplPSIxOCIgZm9udC13ZWlnaHQ9ImJvbGQiIGxldHRlci1zcGFjaW5nPSIwLjMzNzUiIGZpbGw9IiM0NjRDNEUiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0c3BhbiB4PSIxNS41MDcyNSIgeT0iMjciPjM8L3RzcGFuPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90ZXh0PgogICAgICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICAgICAgICAgIDxnIGlkPSI0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMC4wMDAwMDAsIDM0MC4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUtNSIgc3Ryb2tlPSIjQzlENURDIiBmaWxsPSIjRkZGRkZGIiB4PSIwLjUiIHk9IjAuNSIgd2lkdGg9IjM5IiBoZWlnaHQ9IjM5IiByeD0iMTkuNSI+PC9yZWN0PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRleHQgZm9udC1mYW1pbHk9IkFwcGxlU0RHb3RoaWNOZW8tQm9sZCwgQXBwbGUgU0QgR290aGljIE5lbyIgZm9udC1zaXplPSIxOCIgZm9udC13ZWlnaHQ9ImJvbGQiIGxldHRlci1zcGFjaW5nPSIwLjMzNzUiIGZpbGw9IiM0NjRDNEUiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0c3BhbiB4PSIxNS4wNDgyNSIgeT0iMjciPjQ8L3RzcGFuPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90ZXh0PgogICAgICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICAgICAgICAgIDxnIGlkPSI1IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMC4wMDAwMDAsIDQ1MC4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUtNSIgc3Ryb2tlPSIjQzlENURDIiBmaWxsPSIjRkZGRkZGIiB4PSIwLjUiIHk9IjAuNSIgd2lkdGg9IjM5IiBoZWlnaHQ9IjM5IiByeD0iMTkuNSI+PC9yZWN0PgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRleHQgZm9udC1mYW1pbHk9IkFwcGxlU0RHb3RoaWNOZW8tQm9sZCwgQXBwbGUgU0QgR290aGljIE5lbyIgZm9udC1zaXplPSIxOCIgZm9udC13ZWlnaHQ9ImJvbGQiIGxldHRlci1zcGFjaW5nPSIwLjMzNzUiIGZpbGw9IiM0NjRDNEUiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0c3BhbiB4PSIxNS43MTQyNSIgeT0iMjciPjU8L3RzcGFuPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90ZXh0PgogICAgICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4="
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "21a1eff64b917b97e2cdbbac3659aad1.png";
+
+/***/ }),
+/* 51 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIzLjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0OCA1MC4zIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0OCA1MC4zOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2VuYWJsZS1iYWNrZ3JvdW5kOm5ldyAgICA7fQoJLnN0MXtmaWxsOiMyNTYzOTI7fQo8L3N0eWxlPgo8dGl0bGU+Qml0bWFwPC90aXRsZT4KPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CjxnIGlkPSJNYWluLURlc2lnbiI+Cgk8ZyBpZD0iSG9tZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE5MS4wMDAwMDAsIC03NzUuMDAwMDAwKSI+CgkJPGcgaWQ9IkNhcm91c2VsLS0tVG9wIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwgNjYxLjAwMDAwMCkiPgoJCQk8ZyBpZD0iQnVzaW5lc3MtLS1TbGlkZS1Db3B5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzUuMDAwMDAwLCAwLjAwMDAwMCkiIGNsYXNzPSJzdDAiPgoJCQkJPGc+CgkJCQkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTY1LjEsMTIwLjljMi40LDAsNC4xLDAuOCw1LjksMS43YzAuNCwwLjIsMC44LDAuNCwxLjIsMC43YzAuNSwwLjMsMC42LDAuNiwwLjMsMQoJCQkJCQljLTAuMiwwLjQtMC41LDAuNS0xLjEsMC4zYy0wLjctMC4zLTEuNC0wLjctMi4xLTEuMWMtMS4yLTAuNi0yLjQtMS4xLTMuOC0xLjFjLTAuNCwwLTAuOCwwLTEuMiwwLjJjLTAuNSwwLjItMC44LDAuNi0wLjcsMS4xCgkJCQkJCWMwLDAuOCwwLjEsMS42LDAuMywyLjRjMC42LDIuMywxLjksNC4yLDMuMiw2LjJjMC4xLDAuMSwwLjMsMC4yLDAuNSwwLjJjMS43LTAuMiwzLjMtMC40LDUtMC43YzAuMiwwLDAuNC0wLjIsMC40LTAuNAoJCQkJCQljMC4zLTEuOSwwLjQtMy44LDAuOC01LjZjMC43LTMuMywxLjMtNi42LDMuNC05LjRjMC42LTAuOSwxLjQtMS41LDIuNi0xLjZjMC43LTAuMSwxLjIsMC4xLDEuOCwwLjVjMS4xLDAuNywxLjgsMS43LDIuMywyLjgKCQkJCQkJYzAuNiwxLjQsMS4xLDIuOCwxLjYsNC4yYzAuMiwwLjUsMCwwLjktMC41LDFjLTAuNSwwLjEtMC44LTAuMS0xLTAuNmMtMC40LTEuMi0wLjgtMi41LTEuNC0zLjdjLTAuNC0wLjgtMC45LTEuNS0xLjUtMi4yCgkJCQkJCWMtMC43LTAuOC0xLjYtMC44LTIuMywwYy0wLjUsMC42LTEsMS4zLTEuNCwxLjljLTEsMS45LTEuNSw0LTIsNi4xYy0wLjEsMC4zLDAsMC41LDAuMywwLjdjMS4zLDAuOSwyLjUsMS45LDMuOCwyLjkKCQkJCQkJYzAuMywwLjMsMC41LDAuMiwwLjgsMGMyLjMtMiw0LjgtMy43LDcuNS01LjJjMS43LTAuOSwzLjMtMS44LDUuMi0yLjJjMS0wLjIsMi0wLjMsMywwLjFjMSwwLjQsMS43LDEuNCwxLjgsMi40CgkJCQkJCWMwLjEsMS42LTAuMywzLjEtMSw0LjVjLTAuNCwwLjktMC45LDEuOC0xLjQsMi44Yy0wLjIsMC40LTAuNSwwLjYtMC45LDAuNWMtMC41LTAuMS0wLjctMC42LTAuNC0xLjJjMC40LTAuOCwwLjktMS42LDEuMi0yLjUKCQkJCQkJYzAuNS0xLjIsMS0yLjUsMC45LTMuOWMtMC4xLTAuOS0wLjUtMS40LTEuNC0xLjVjLTEuMi0wLjEtMi4zLDAuMi0zLjQsMC43Yy0xLjcsMC44LTMuMywxLjgtNSwyLjZjLTAuMywwLjEtMC4zLDAuMy0wLjMsMC42CgkJCQkJCWMwLjIsMS42LDAuNSwzLjIsMC42LDQuOGMwLDAuNCwwLjIsMC41LDAuNSwwLjVjMy4xLDAuMiw2LjIsMC44LDkuMiwxLjZjMiwwLjYsNC4xLDEuMiw1LjgsMi42YzAuOCwwLjYsMS41LDEuNCwxLjYsMi41CgkJCQkJCWMwLjEsMC43LTAuMSwxLjMtMC40LDEuOGMtMC43LDEuMS0xLjcsMS44LTIuOCwyLjNjLTEuNCwwLjYtMi44LDEuMS00LjMsMS42Yy0wLjUsMC4yLTAuOSwwLTEtMC40Yy0wLjEtMC41LDAuMS0wLjgsMC42LTEKCQkJCQkJYzEuMi0wLjQsMi41LTAuOCwzLjctMS4zYzAuNy0wLjMsMS40LTAuOCwyLjEtMS4zYzEuMS0wLjksMS0xLjktMC4yLTIuOGMtMS4yLTAuOS0yLjUtMS41LTMuOS0xLjljLTEuMi0wLjQtMi41LTAuNy0zLjgtMQoJCQkJCQljLTAuMy0wLjEtMC42LDAtMC44LDAuM2MtMC45LDEuMy0xLjksMi41LTIuOSwzLjdjLTAuMywwLjMtMC4zLDAuNSwwLDAuOGMxLjksMi4zLDMuNyw0LjYsNS4xLDcuMmMwLjgsMS42LDEuNiwzLjIsMi4yLDQuOAoJCQkJCQljMC41LDEuMiwwLjYsMi41LDAuMSwzLjdjLTAuNCwxLjEtMS4zLDEuNi0yLjQsMS43Yy0xLjUsMC4xLTIuOS0wLjItNC4zLTAuOGMtMS4xLTAuNC0yLjEtMS0zLjEtMS41Yy0wLjUtMC4zLTAuNi0wLjYtMC40LTEuMQoJCQkJCQljMC4yLTAuNCwwLjYtMC41LDEuMS0wLjNjMS4xLDAuNSwyLjIsMS4xLDMuMywxLjZjMSwwLjQsMiwwLjYsMy4xLDAuNmMwLjgtMC4xLDEuMy0wLjYsMS4zLTEuNGMwLjEtMS4yLTAuMi0yLjQtMC44LTMuNQoJCQkJCQljLTAuOC0xLjYtMS43LTMuMi0yLjYtNC44Yy0wLjItMC4zLTAuMy0wLjQtMC43LTAuM2MtMS42LDAuMi0zLjIsMC41LTQuOCwwLjZjLTAuNCwwLTAuNSwwLjItMC41LDAuNWMtMC4zLDMuNS0wLjksNy0yLDEwLjQKCQkJCQkJYy0wLjUsMS42LTEuMSwzLjEtMi4yLDQuNWMtMC42LDAuNy0xLjIsMS4zLTIuMiwxLjVjLTEuMSwwLjMtMi4xLTAuMS0yLjktMC45Yy0xLjItMS4xLTEuOC0yLjUtMi40LTMuOQoJCQkJCQljLTAuMy0wLjgtMC41LTEuNi0wLjgtMi40Yy0wLjItMC43LTAuMS0xLjEsMC40LTEuMmMwLjUtMC4yLDAuOSwwLjEsMS4xLDAuOGMwLjQsMS42LDEsMy4xLDEuOCw0LjVjMC4yLDAuMywwLjQsMC43LDAuNywwLjkKCQkJCQkJYzEsMS4yLDIuMSwxLjEsMy0wLjFjMC45LTEuMiwxLjUtMi41LDEuOS00YzAuNC0xLjIsMC43LTIuNCwxLTMuNmMwLjEtMC40LDAtMC42LTAuMy0wLjljLTEuMy0wLjktMi41LTEuOS0zLjctMi44CgkJCQkJCWMtMC4zLTAuMy0wLjUtMC4yLTAuOCwwYy0yLjMsMS45LTQuOCwzLjctNy40LDUuMmMtMS44LDEtMy42LDEuOS01LjUsMi4zYy0wLjgsMC4yLTEuNiwwLjItMi40LDBjLTEuMS0wLjItMi0xLjUtMi4xLTIuNwoJCQkJCQljLTAuMS0yLjIsMC44LTQuMiwxLjctNi4xYzAuMi0wLjQsMC40LTAuOCwwLjYtMS4xYzAuMy0wLjUsMC43LTAuNiwxLjEtMC40YzAuNCwwLjIsMC40LDAuNiwwLjIsMS4xYy0wLjUsMS4yLTEuMSwyLjMtMS42LDMuNQoJCQkJCQljLTAuNCwwLjktMC42LDEuOS0wLjUsMi45YzAsMC44LDAuNSwxLjMsMS4zLDEuNGMxLjQsMC4yLDIuNy0wLjMsMy45LTAuOWMxLjYtMC43LDMtMS42LDQuNS0yLjRjMC4zLTAuMiwwLjQtMC4zLDAuMy0wLjcKCQkJCQkJYy0wLjItMS42LTAuNS0zLjItMC42LTQuOGMwLTAuNC0wLjItMC41LTAuNS0wLjVjLTMuMS0wLjItNi4yLTAuOC05LjItMS42Yy0yLTAuNi00LjEtMS4yLTUuOC0yLjZjLTAuNy0wLjYtMS4zLTEuMy0xLjYtMi4yCgkJCQkJCWMtMC4yLTEuMSwwLjEtMi4xLDAuOS0yLjhjMC43LTAuNiwxLjQtMS4yLDIuMy0xLjZjMS40LTAuNiwyLjktMS4xLDQuNC0xLjZjMC42LTAuMiwxLjEsMC4zLDAuOSwwLjljLTAuMSwwLjItMC40LDAuNC0wLjYsMC41CgkJCQkJCWMtMS4yLDAuNS0yLjQsMC44LTMuNiwxLjRjLTAuOCwwLjQtMS42LDAuOS0yLjIsMS41Yy0wLjgsMC43LTAuOCwxLjYsMCwyLjNjMC42LDAuNiwxLjMsMSwyLjEsMS40YzEuOSwxLDMuOSwxLjQsNS45LDEuOQoJCQkJCQljMC4zLDAuMSwwLjYsMCwwLjgtMC4zYzAuOS0xLjIsMS44LTIuNSwyLjgtMy43YzAuMy0wLjQsMC4zLTAuNiwwLTFjLTItMi4zLTMuNy00LjgtNS4yLTcuNGMtMS0xLjctMS44LTMuNC0yLjItNS40CgkJCQkJCWMtMC4yLTEtMC4zLTIuMSwwLjMtM0M2My4xLDEyMS4zLDY0LDEyMC45LDY1LjEsMTIwLjl6IE04NS44LDEzOC44Qzg1LjgsMTM4LjgsODUuOCwxMzguOCw4NS44LDEzOC44YzAtMC43LDAtMS40LDAtMi4xCgkJCQkJCWMwLTAuMi0wLjEtMC41LTAuMy0wLjZjLTAuOS0xLTEuOS0xLjktMi45LTIuOGMtMC4yLTAuMi0wLjUtMC4zLTAuNy0wLjNjLTEuMywwLTIuNiwwLTMuOSwwYy0wLjIsMC0wLjUsMC4xLTAuNywwLjMKCQkJCQkJYy0xLDAuOS0xLjksMS44LTIuOCwyLjhjLTAuMiwwLjItMC4zLDAuNS0wLjMsMC43YzAsMS4zLDAsMi42LDAsMy45YzAsMC4yLDAuMSwwLjUsMC4zLDAuN2MwLjksMSwxLjksMS45LDIuOCwyLjgKCQkJCQkJYzAuMiwwLjEsMC40LDAuMiwwLjYsMC4zYzEuMywwLDIuNiwwLDQsMGMwLjIsMCwwLjUtMC4xLDAuNy0wLjNjMS0wLjksMS45LTEuOSwyLjktMi45YzAuMS0wLjEsMC4yLTAuNCwwLjItMC41CgkJCQkJCUM4NS44LDE0MC4xLDg1LjgsMTM5LjQsODUuOCwxMzguOHogTTg5LDEzOS45Yy0xLjUsMS4xLTIuMiwyLjQtMS43LDQuM2MxLjQtMC4yLDIuOS0wLjQsNC40LTAuNmMwLTAuMSwwLjEtMC4xLDAuMS0wLjIKCQkJCQkJQzkwLjgsMTQyLjMsODkuOSwxNDEuMSw4OSwxMzkuOXogTTc4LjgsMTQ3LjdjLTEuMS0xLjQtMi40LTIuMi00LjMtMS43YzAuMiwxLjUsMC40LDIuOSwwLjYsNC40YzAuMSwwLDAuMSwwLDAuMiwwCgkJCQkJCUM3Ni40LDE0OS41LDc3LjYsMTQ4LjYsNzguOCwxNDcuN3ogTTY4LjIsMTQzLjVjMCwwLjEsMC4xLDAuMSwwLjEsMC4yYzEuNSwwLjIsMywwLjQsNC41LDAuNmMtMC4xLTAuOC0wLjEtMS40LTAuMS0yCgkJCQkJCWMwLTAuMiwwLTAuNS0wLjEtMC42Yy0wLjUtMC42LTEtMS4xLTEuNi0xLjdDNzAuMSwxNDEuMSw2OS4yLDE0Mi4zLDY4LjIsMTQzLjV6IE04NS41LDEzMS41Yy0wLjItMS41LTAuNC0yLjktMC42LTQuNgoJCQkJCQljLTEuMywxLTIuNSwxLjktMy43LDIuOEM4Mi4zLDEzMS4xLDgzLjYsMTMxLjksODUuNSwxMzEuNXogTTkxLjcsMTMzLjljMC0wLjEtMC4xLTAuMS0wLjEtMC4yYy0xLjUtMC4yLTMtMC40LTQuNS0wLjYKCQkJCQkJYzAuMSwwLjgsMC4xLDEuNSwwLjIsMi4xYzAsMC4yLDAsMC40LDAuMSwwLjVjMC41LDAuNiwxLDEuMSwxLjYsMS43Qzg5LjksMTM2LjMsOTAuOCwxMzUuMSw5MS43LDEzMy45eiBNODEuMiwxNDcuNwoJCQkJCQljMS4yLDEsMi40LDEuOSwzLjcsMi45YzAuMi0xLjcsMC40LTMuMSwwLjYtNC43Yy0wLjcsMC0xLjQsMC4xLTIsMC4xYy0wLjIsMC0wLjUsMC0wLjYsMC4xQzgyLjMsMTQ2LjYsODEuOCwxNDcuMSw4MS4yLDE0Ny43egoJCQkJCQkgTTY4LjEsMTMzLjljMSwxLjMsMS45LDIuNSwyLjgsMy43YzEuNS0xLjEsMi4yLTIuNCwxLjctNC4zQzcxLjIsMTMzLjQsNjkuOCwxMzMuNiw2OC4xLDEzMy45eiBNNzguOCwxMjkuOAoJCQkJCQljLTEuMi0xLTIuNC0xLjktMy43LTIuOWMtMC4yLDEuNi0wLjQsMy4xLTAuNiw0LjdjMC43LDAsMS40LTAuMSwyLTAuMWMwLjIsMCwwLjUsMCwwLjYtMC4xQzc3LjcsMTMwLjksNzguMiwxMzAuNCw3OC44LDEyOS44egoJCQkJCQkgTTg3LjMsMTM5LjNjMC43LTAuNSwwLjctMC43LDAtMS4xQzg3LjMsMTM4LjUsODcuMywxMzguOSw4Ny4zLDEzOS4zeiBNNzkuNCwxNDZjMC42LDAuNywwLjgsMC43LDEuMSwwCgkJCQkJCUM4MC4yLDE0Niw3OS44LDE0Niw3OS40LDE0NnogTTcyLjYsMTM5LjNjMC0wLjQsMC0wLjgsMC0xLjFDNzIsMTM4LjYsNzIsMTM4LjgsNzIuNiwxMzkuM3ogTTc5LjQsMTMxLjRjMC40LDAsMC43LDAsMS4xLDAKCQkJCQkJQzgwLDEzMC44LDc5LjksMTMwLjgsNzkuNCwxMzEuNHogTTc0LjQsMTMzLjhjMC4zLTAuMiwwLjUtMC40LDAuOC0wLjdDNzQuNCwxMzMsNzQuMywxMzMuMSw3NC40LDEzMy44eiBNODQuNywxMzMuMQoJCQkJCQljMC4zLDAuMywwLjUsMC41LDAuOCwwLjhDODUuNywxMzMuMSw4NS42LDEzMyw4NC43LDEzMy4xeiBNNzQuNCwxNDMuNmMwLDAtMC4xLDAtMC4xLDBjMCwwLjIsMCwwLjUsMC4xLDAuNwoJCQkJCQljMC4xLDAuMSwwLjQsMC4xLDAuNywwLjFDNzQuOSwxNDQuMSw3NC43LDE0My44LDc0LjQsMTQzLjZ6IE04NC44LDE0NC4zYzAuOSwwLjEsMS0wLjEsMC44LTAuNwoJCQkJCQlDODUuMywxNDMuOCw4NS4xLDE0NCw4NC44LDE0NC4zeiIvPgoJCQkJPC9nPgoJCQk8L2c+CgkJPC9nPgoJPC9nPgo8L2c+Cjwvc3ZnPgo="
+
+/***/ }),
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "54bbefd5333bf2055b7b26ca79f1cee4.png";
+
+/***/ }),
+/* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "e42541792e27edc303b4a60781b167d5.jpg";
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "51aafd19c389b5f3a95a47fe77849051.svg";
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "8a3d695c3f5232550afa78084452207a.png";
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(57);
+__webpack_require__(58);
+module.exports = __webpack_require__(64);
 
 
 /***/ }),
-/* 36 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(module) {
 /* eslint-disable import/no-dynamic-require */
 
-var plugins = __webpack_require__(18)["default"];
+var plugins = __webpack_require__(23)["default"];
 
-var _require = __webpack_require__(19),
+var _require = __webpack_require__(24),
     registerPlugins = _require.registerPlugins;
 
 registerPlugins(plugins);
 
 if (typeof document !== 'undefined' && module && module.hot) {
   module.hot.accept("/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-browser-plugins.js", function () {
-    registerPlugins(__webpack_require__(18)["default"]);
+    registerPlugins(__webpack_require__(23)["default"]);
   });
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(14)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17)(module)))
 
 /***/ }),
-/* 37 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(module) {
 /* eslint-disable import/no-dynamic-require */
 
-var _require = __webpack_require__(19),
+var _require = __webpack_require__(24),
     registerTemplates = _require.registerTemplates;
 
-var _require2 = __webpack_require__(20),
+var _require2 = __webpack_require__(25),
     templates = _require2["default"],
     notFoundTemplate = _require2.notFoundTemplate;
 
@@ -2484,17 +4297,17 @@ registerTemplates(templates, notFoundTemplate);
 
 if (typeof document !== 'undefined' && module && module.hot) {
   module.hot.accept("/mnt/d/workspace/work/otm-dispatch/static-site/artifacts/react-static-templates.js", function () {
-    var _require3 = __webpack_require__(20),
+    var _require3 = __webpack_require__(25),
         templates = _require3["default"],
         notFoundTemplate = _require3.notFoundTemplate;
 
     registerTemplates(templates, notFoundTemplate);
   });
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(14)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17)(module)))
 
 /***/ }),
-/* 38 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2521,7 +4334,7 @@ var _extends = Object.assign || function (target) {
 
 exports["default"] = requireUniversalModule;
 
-var _utils = __webpack_require__(16);
+var _utils = __webpack_require__(19);
 
 var CHUNK_NAMES = exports.CHUNK_NAMES = new Set();
 var MODULE_IDS = exports.MODULE_IDS = new Set();
@@ -2705,7 +4518,7 @@ var getConfig = function getConfig(isDynamic, universalConfig, options, props) {
 };
 
 /***/ }),
-/* 39 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -2733,16 +4546,16 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 39;
+webpackContext.id = 60;
 
 /***/ }),
-/* 40 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _typeof = __webpack_require__(15);
+var _typeof = __webpack_require__(18);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -2770,7 +4583,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(21);
+var _propTypes = __webpack_require__(26);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -2845,13 +4658,13 @@ ReportChunks.childContextTypes = {
 exports["default"] = ReportChunks;
 
 /***/ }),
-/* 41 */
+/* 62 */
 /***/ (function(module, exports) {
 
 module.exports = require("vm");
 
 /***/ }),
-/* 42 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2862,11 +4675,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.__handleAfter = exports.__update = undefined;
 
-var _hoistNonReactStatics = __webpack_require__(22);
+var _hoistNonReactStatics = __webpack_require__(27);
 
 var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
-var _index = __webpack_require__(8);
+var _index = __webpack_require__(5);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -2918,28 +4731,28 @@ var __handleAfter = exports.__handleAfter = function __handleAfter(props, state,
 };
 
 /***/ }),
-/* 43 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _interopRequireWildcard = __webpack_require__(44);
+var _interopRequireWildcard = __webpack_require__(65);
 
-var _interopRequireDefault = __webpack_require__(45);
+var _interopRequireDefault = __webpack_require__(66);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
 
-var _extends2 = _interopRequireDefault(__webpack_require__(46));
+var _extends2 = _interopRequireDefault(__webpack_require__(67));
 
-var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(47));
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(68));
 
 var React = _interopRequireWildcard(__webpack_require__(0));
 
-var _useStaticInfo = __webpack_require__(48);
+var _useStaticInfo = __webpack_require__(69);
 /* eslint-disable import/no-dynamic-require */
 
 
@@ -2960,7 +4773,7 @@ function Suspense(_ref) {
 React.Suspense = Suspense;
 React["default"].Suspense = Suspense;
 
-var App = __webpack_require__(49)["default"];
+var App = __webpack_require__(70)["default"];
 
 var _default = function _default(staticInfo) {
   return function (props) {
@@ -2973,48 +4786,48 @@ var _default = function _default(staticInfo) {
 exports["default"] = _default;
 
 /***/ }),
-/* 44 */
+/* 65 */
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/helpers/interopRequireWildcard");
 
 /***/ }),
-/* 45 */
+/* 66 */
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/helpers/interopRequireDefault");
 
 /***/ }),
-/* 46 */
+/* 67 */
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/helpers/extends");
 
 /***/ }),
-/* 47 */
+/* 68 */
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/helpers/objectWithoutProperties");
 
 /***/ }),
-/* 48 */
+/* 69 */
 /***/ (function(module, exports) {
 
 module.exports = require("/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-static/lib/browser/hooks/useStaticInfo");
 
 /***/ }),
-/* 49 */
+/* 70 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(17);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(20);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_hot_loader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(34);
+/* harmony import */ var react_hot_loader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(41);
 /* harmony import */ var react_hot_loader__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_hot_loader__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(13);
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(16);
 
 
  // Your top level component
@@ -3040,10 +4853,10 @@ if (typeof document !== "undefined") {
     });
   }
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(50)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(71)(module)))
 
 /***/ }),
-/* 50 */
+/* 71 */
 /***/ (function(module, exports) {
 
 module.exports = function (originalModule) {
@@ -3073,27 +4886,192 @@ module.exports = function (originalModule) {
 };
 
 /***/ }),
-/* 51 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(23)(false);
+exports = module.exports = __webpack_require__(8)(false);
 // Imports
-exports.i(__webpack_require__(52), "");
+exports.i(__webpack_require__(73), "");
 
 // Module
-exports.push([module.i, "* {\r\n  scroll-behavior: smooth;\r\n}\r\n\r\nbody {\r\n  font-family: \"HelveticaNeue-Light\", \"Helvetica Neue Light\", \"Helvetica Neue\",\r\n    Helvetica, Arial, \"Lucida Grande\", sans-serif;\r\n  font-weight: 300;\r\n  font-size: 16px;\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n", ""]);
+exports.push([module.i, "* {\r\n    scroll-behavior: smooth;\r\n}", ""]);
 
 
 
 /***/ }),
-/* 52 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(23)(false);
+exports = module.exports = __webpack_require__(8)(false);
+// Imports
+var urlEscape = __webpack_require__(9);
+var ___CSS_LOADER_URL___0___ = urlEscape(__webpack_require__(74));
+var ___CSS_LOADER_URL___1___ = urlEscape(__webpack_require__(75));
+
 // Module
-exports.push([module.i, ".test {\r\n  background-color: cyan;\r\n}\r\n", ""]);
+exports.push([module.i, "body {\r\n    font-family: 'Lato', sans-serif;\r\n    font-size: 16px;\r\n    -webkit-font-smoothing: antialiased;\r\n    -moz-osx-font-smoothing: grayscale;\r\n    font-weight: 400;\r\n}\r\n\r\n.otm-nav {\r\n    padding-top: 20px;\r\n    z-index: 2;\r\n}\r\n\r\n.otm-hero-light .otm-nav {\r\n    padding-top: 0px;\r\n    padding-bottom: 0px;\r\n}\r\n\r\n.otm-nav.navbar-expand-lg .navbar-nav .nav-link {\r\n    position: relative;\r\n    padding: 15px;\r\n    text-transform: uppercase;\r\n    font-size: 10px;\r\n}\r\n\r\n.otm-nav.navbar-expand-lg .navbar-nav .nav-item .nav-link:not(.nav-cta):before {\r\n    content: '';\r\n    position: absolute;\r\n    bottom: 0px;\r\n    left: 50%;\r\n    max-width: 90%;\r\n    height: 7px;\r\n    background-color: #0476B8;\r\n    -webkit-transform: translate(-50%, 0%);\r\n            transform: translate(-50%, 0%);\r\n    opacity: 0;\r\n    width: 100%;\r\n}\r\n\r\n.otm-nav.navbar-expand-lg .navbar-nav .nav-item:hover .nav-link:not(.nav-cta):before {\r\n    content: '';\r\n    position: absolute;\r\n    bottom: 0px;\r\n    left: 50%;\r\n    max-width: 60%;\r\n    height: 6px;\r\n    background-color: #0093e8;\r\n    -webkit-transform: translate(-50%, 0%);\r\n    transform: translate(-50%, 0%);\r\n    opacity: 1;\r\n    width: 100%;\r\n}\r\n\r\n.dropdown-toggle::after {\r\n    display: none;\r\n}\r\n\r\n.otm-nav.navbar-light .navbar-nav .active>.nav-link,\r\n.otm-nav.navbar-light .navbar-nav .nav-link.active,\r\n.otm-nav.navbar-light .navbar-nav .nav-link.show,\r\n.otm-nav.navbar-light .navbar-nav .show>.nav-link,\r\n.otm-nav.navbar-light .navbar-nav .nav-link {\r\n    color: #ffffff;\r\n}\r\n\r\n.otm-nav.navbar-light .navbar-nav .nav-link {\r\n    padding-left: 20px;\r\n    padding-right: 20px;\r\n    padding-top: 41.5px;\r\n    padding-bottom: 41.5px;\r\n    font-family: 'Poppins', sans-serif;\r\n    font-weight: 600;\r\n    letter-spacing: 0.83px;\r\n    font-size: 0.87em;\r\n}\r\n\r\n.otm-nav.navbar-light .navbar-nav .nav-link.nav-cta {\r\n    position: relative;\r\n    padding-left: 30px;\r\n    padding-right: 30px;\r\n    padding-top: 15px;\r\n    padding-bottom: 15px;\r\n    margin-top: 25px;\r\n}\r\n\r\n.otm-nav.navbar-light .navbar-nav .nav-link.nav-cta:after {\r\n    content: '';\r\n    width: 100%;\r\n    height: 100%;\r\n    border: 2px solid #0476B8;\r\n    top: 0px;\r\n    left: 0px;\r\n    position: absolute;\r\n    -webkit-transform: skewX(-25deg);\r\n            transform: skewX(-25deg);\r\n}\r\n\r\n.btn-orange:hover {\r\n    color: #ffffff;\r\n    background-color: #d2790d;\r\n}\r\n\r\n.btn-otm-cta {\r\n    background-color: #F7941E;\r\n    color: #ffffff;\r\n    border-radius: 50px;\r\n    font-size: .75em;\r\n    font-family: 'Poppins', sans-serif;\r\n    font-weight: 600;\r\n    letter-spacing: .5px;\r\n    padding: 12px 50px;\r\n}\r\n\r\n.btn-otm-cta:hover {\r\n    color: #ffffff;\r\n    background-color: #d2790d;\r\n}\r\n\r\n.btn-otm {\r\n    color: #ffffff;\r\n    padding: 10px 32px;\r\n    font-size: 10px;\r\n    margin-left: 15px;\r\n    font-family: 'Poppins', sans-serif;\r\n    font-weight: 500;\r\n    border-color: #429FEA;\r\n    border-radius: 50px;\r\n    border-width: 2px;\r\n}\r\n\r\n.btn-otm-dark {\r\n    background-color: #191919;\r\n    color: #ffffff;\r\n    font-weight: 600;\r\n    font-size: 20px;\r\n    border-radius: 0px;\r\n}\r\n\r\n.btn-otm-dark:hover,\r\n.btn-otm-dark:focus {\r\n    color: #ffffff;\r\n}\r\n\r\n.navbar-toggler {\r\n    border: none !important;\r\n}\r\n\r\n.navbar-light .navbar-toggler {\r\n    color: rgba(0, 0, 0, .5);\r\n    /* border-color: rgba(255, 255, 255, .9); */\r\n}\r\n\r\n.navbar-light .navbar-toggler-icon {\r\n    background-image: url(" + ___CSS_LOADER_URL___0___ + ");\r\n    background-size: cover;\r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n}\r\n\r\n.otm-hero-light .navbar-light .navbar-toggler-icon {\r\n    background-image: url(" + ___CSS_LOADER_URL___1___ + ");\r\n    ;\r\n}\r\n\r\n.otm-hero-light .navbar-light .navbar-toggler {\r\n    color: rgba(0, 0, 0, .5);\r\n    border-color: rgba(0, 0, 0, .9);\r\n}\r\n\r\n.home-cta {\r\n    background-color: #1D79B1;\r\n    padding-top: 40px;\r\n    padding-bottom: 40px;\r\n    color: #ffffff;\r\n}\r\n\r\n.home-cta h4 {\r\n    font-size: 30px;\r\n}\r\n\r\n\r\n/* .btn-cta-white{\r\n    background-color: #ffffff;\r\n    color: #212121;\r\n    font-size: 14px;\r\n    padding-left: 30px;\r\n    padding-right: 30px;\r\n    border-radius: 50px;\r\n    margin-top: 25px;\r\n    font-family: 'Poppins', sans-serif;\r\n    font-weight: 500;\r\n} */\r\n\r\n.btn-cta-white {\r\n    background-color: #ffffff;\r\n    color: #212121;\r\n    /* font-size: 14px; */\r\n    /* Updated font size */\r\n    font-size: 1em;\r\n    font-weight: 600;\r\n    letter-spacing: 0.75px;\r\n    line-height: 30px;\r\n    padding-left: 30px;\r\n    padding-right: 30px;\r\n    border-radius: 50px;\r\n    margin-top: 25px;\r\n    font-family: 'Poppins', sans-serif;\r\n}\r\n\r\n.btn-cta-white:hover {\r\n    background-color: #f7941d;\r\n    color: #ffffff;\r\n}\r\n\r\n.accordion-section .panel-heading {\r\n    clear: both;\r\n}\r\n\r\n.accordion-section p {\r\n    white-space: pre;\r\n}\r\n\r\n.questions-btn {\r\n    padding: 10px 55px;\r\n    text-transform: uppercase;\r\n    letter-spacing: .5px;\r\n    font-weight: 600;\r\n    font-size: 1em;\r\n    border-radius: .1rem;\r\n}\r\n\r\n.footer {\r\n    padding-top: 70px;\r\n    padding-bottom: 50px;\r\n    background-color: #212121;\r\n    color: #ffffff;\r\n}\r\n\r\n.follow-menu {\r\n    text-align: right;\r\n}\r\n\r\n.follow-menu ul {\r\n    list-style: none;\r\n    display: inline-block;\r\n    min-width: 90px;\r\n    padding-left: 0;\r\n    text-align: left;\r\n}\r\n\r\n.follow-menu ul li {\r\n    display: inline-block;\r\n    margin-right: 15px;\r\n}\r\n\r\n.footer-logo img {\r\n    width: 60px;\r\n}\r\n\r\n.footer-menu {\r\n    list-style: none;\r\n    padding-left: 0px;\r\n}\r\n\r\n.footer-menu li a {\r\n    color: #ffffff;\r\n    font-size: 16px;\r\n    line-height: 33px;\r\n}\r\n\r\n.footer-menu li a:hover {\r\n    text-decoration: none;\r\n}\r\n\r\n.footer h4.company {\r\n    font-size: 20px;\r\n    text-transform: uppercase;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.follow-menu h4 {\r\n    font-size: 20px;\r\n    font-family: 'Poppins', sans-serif;\r\n    color: #ffffff;\r\n}\r\n\r\n.footer-logo {\r\n    margin-top: 30px;\r\n    margin-bottom: 30px;\r\n    font-size: 12px;\r\n    font-family: 'Poppins', sans-serif;\r\n    font-weight: 300;\r\n}\r\n\r\n@media only screen and (max-width: 991px) {\r\n    .nav-link {\r\n        display: inline-block;\r\n    }\r\n    .nav-item {\r\n        text-align: right;\r\n    }\r\n    .sticky-menu {\r\n        padding-top: 90px;\r\n    }\r\n    .solutions-dropdown {\r\n        -webkit-column-count: 1;\r\n        -moz-column-count: 1;\r\n        column-count: 1;\r\n    }\r\n}\r\n\r\n.otm-hero-light .otm-nav.navbar-light .navbar-nav .active>.nav-link,\r\n.otm-hero-light .otm-nav.navbar-light .navbar-nav .nav-link.active,\r\n.otm-hero-light .otm-nav.navbar-light .navbar-nav .nav-link.show,\r\n.otm-hero-light .otm-nav.navbar-light .navbar-nav .show>.nav-link,\r\n.otm-hero-light .otm-nav.navbar-light .navbar-nav .nav-link {\r\n    color: #1B1550;\r\n}\r\n\r\n.sticky-menu {\r\n    padding-top: 98px;\r\n}\r\n\r\n.sticky-menu .otm-hero-light {\r\n    box-shadow: 0px -10px 25px rgba(0, 0, 0, 0.5);\r\n    position: fixed;\r\n    width: 100%;\r\n    top: 0;\r\n    z-index: 6;\r\n    background-color: #ffffff;\r\n}\r\n\r\n.menu-background {\r\n    position: fixed;\r\n    top: 98px;\r\n    width: 100%;\r\n    height: 50vh;\r\n    background-color: rgba(255, 255, 255, 0.97);\r\n    box-shadow: 0px -10px 25px rgba(0, 0, 0, 0.5);\r\n    opacity: 0;\r\n    z-index: 1;\r\n    display: none;\r\n}\r\n\r\n.menu-background.show {\r\n    opacity: 1;\r\n    display: block;\r\n}\r\n\r\n.dropdown:hover>.dropdown-menu {\r\n    display: block;\r\n}\r\n\r\n.otm-breadcrumb {\r\n    background: -webkit-gradient(linear, right top, left top, from(#ffffff), to(#F4F5F7));\r\n    background: linear-gradient(270deg, #ffffff, #F4F5F7);\r\n}\r\n\r\n.otm-breadcrumb .otm-breadcrumb-inner .breadcrumb {\r\n    background-color: transparent;\r\n    margin-bottom: 0px;\r\n}\r\n\r\n.otm-breadcrumb .otm-breadcrumb-inner .breadcrumb li a,\r\n.otm-breadcrumb .otm-breadcrumb-inner .breadcrumb li {\r\n    color: #8B8B8B;\r\n    font-family: 'Poppins', sans-serif;\r\n    font-size: 13px;\r\n}\r\n\r\n.dropdown-menu {\r\n    background-color: transparent;\r\n    border: 0px;\r\n}\r\n\r\n.solutions-dropdown {\r\n    -webkit-column-count: 2;\r\n       -moz-column-count: 2;\r\n            column-count: 2;\r\n}\r\n\r\n.dropdown-menu .dropdown-item:first-child {\r\n    font-size: 1.3em;\r\n    margin-bottom: 10px;\r\n    font-weight: 700;\r\n}\r\n\r\n.dropdown-menu .dropdown-item {\r\n    font-size: 1rem;\r\n}\r\n\r\n.dropdown-item:focus,\r\n.dropdown-item:hover {\r\n    background-color: transparent;\r\n}\r\n\r\n@media screen and (min-width: 1024px) and (max-width: 1279px) {\r\n    .otm-nav.navbar-light .navbar-nav .nav-link.nav-cta {\r\n        position: relative;\r\n        padding-left: 25px;\r\n        padding-right: 25px;\r\n    }\r\n}\r\n\r\n@media only screen and (max-width: 991px) {\r\n    .home-cta h4 {\r\n        font-size: 24px;\r\n    }\r\n    .otm-nav.navbar-light .navbar-nav .nav-link {\r\n        padding-top: 15px;\r\n        padding-bottom: 15px;\r\n        padding-right: 0px;\r\n    }\r\n    .otm-hero-light .otm-nav {\r\n        padding-top: 21px;\r\n        padding-bottom: 21px;\r\n    }\r\n    .navbar-nav .dropdown-menu {\r\n        text-align: right;\r\n    }\r\n    .dropdown-menu .dropdown-item:first-child {\r\n        font-size: 18px;\r\n    }\r\n    .dropdown-menu .dropdown-item {\r\n        font-size: 16px;\r\n        padding-right: 0px;\r\n    }\r\n}\r\n\r\n@media only screen and (max-width: 768px) {\r\n    .follow-menu {\r\n        text-align: left;\r\n    }\r\n}\r\n\r\n@media only screen and (max-width: 370px) {\r\n    .navbar-brand img {\r\n        width: 180px;\r\n    }\r\n    .sticky-menu {\r\n        padding-top: 90px;\r\n    }\r\n}", ""]);
 
 
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDMwIDMwIiBzdHlsZT0iJiMxMDsiPjxwYXRoIHN0cm9rZT0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjkpIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNNCA3aDIyTTQgMTVoMjJNNCAyM2gyMiIvPjwvc3ZnPg=="
+
+/***/ }),
+/* 75 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSczMCcgaGVpZ2h0PSczMCcgdmlld0JveD0nMCAwIDMwIDMwJz48cGF0aCBzdHJva2U9J3JnYmEoMCwgMCwgMCwgMC41KScgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJyBzdHJva2UtbWl0ZXJsaW1pdD0nMTAnIHN0cm9rZS13aWR0aD0nMicgZD0nTTQgN2gyMk00IDE1aDIyTTQgMjNoMjInLz48L3N2Zz4="
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports) {
+
+module.exports = require("scroll-into-view-if-needed");
+
+/***/ }),
+/* 77 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(8)(false);
+// Imports
+var urlEscape = __webpack_require__(9);
+var ___CSS_LOADER_URL___0___ = urlEscape(__webpack_require__(78));
+var ___CSS_LOADER_URL___1___ = urlEscape(__webpack_require__(30));
+
+// Module
+exports.push([module.i, ".about-hero{\n    background-image: url(" + ___CSS_LOADER_URL___0___ + ");\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}\n.about-hero .row{\n    height: 500px;\n    max-height: 100%;\n}\n.hero-title{\n    color: #ffffff;\n}\n.hero-title h2{\n    font-size: 80px;\n    margin-bottom: 10px;\n}\n.hero-title h4{\n    font-size: 40px;\n    margin-top: 0px;\n}\n.about-us-main{\n    padding-top: 50px;\n    padding-bottom: 50px;\n    position: relative;\n}\n.about-main-right {\n    position: absolute;\n    right: 0;\n    top: 0;\n}\n\n.section-title{\n    position: relative;\n    font-size: 40px;\n    font-weight: 600;\n    color: #004D86;\n    padding-bottom: 30px;\n    margin-bottom: 30px;\n}\n.section-title:after{\n    content: '';\n    position: absolute;\n    bottom: 0px;\n    left: 0px;\n    width: 100px;\n    height: 5px;\n    background-color: #D8D8D8;\n}\n.section-desc{\n    font-size: 22px;\n    color: #191919;\n    margin-bottom: 15px;\n}\n\n.btn-orange{\n    background-color: #F7941E;\n    color: #ffffff;\n    margin-top: 30px;\n    box-shadow: -7px 8px 0px 0px rgba(216,216,216,1);\n    border-radius: 0px;\n    font-size: 1rem;\n    text-transform: uppercase;\n    font-weight: 600;\n    padding: 10px 30px;\n}\n.dark-cta-wrapper{\nbackground-color: #22272A;\ncolor: #ffffff;\npadding-top: 60px;\npadding-bottom: 80px;\n}\n.cta-wrapp-logo{\n    max-width: 110px;\n    width: 100%;\n    margin-bottom: 40px;\n}\n.dark-cta-wrapper p{\n    font-size: 28px;\n    font-style: italic;\n}\n\n.about-service{\n    padding-top: 115px;\n    padding-bottom: 115px;\n    position: relative;\n}\n.about-service-right{\n    position: relative;\n}\n.service-img-logo{\n    position: absolute;\n    left: -10%;\n    width: 100%;\n    top: 110px;\n    max-width: 700px;\n}\n.about-main-img-right{\n    position: absolute;\n    right: 0px;\n    top: -44px;\n    z-index: 0;\n    bottom: 0px;\n    max-width: 500px;\n}\n.about-main-img-right-mobile {\n    display: none;\n}\n\n.about-main-left-inner ul{\n    list-style: none;\n    padding-left: 0px;\n    margin-bottom: 0px;\n}\n.about-main-left-inner ul li{\n    position: relative;\n    padding-left: 40px;\n    font-size: 1.3em;\n    color: #3A434A;\n    margin-bottom: 20px;\n}\n.about-main-left-inner ul li:after{\n    content: '';\n    width: 20px;\n    height: 14px;\n    background-image: url(" + ___CSS_LOADER_URL___1___ + ");\n    background-position: center;\n    background-size: cover;\n    background-repeat: no-repeat;\n    position: absolute;\n    left: 0px;\n    top: 50%;\n    -webkit-transform: translate(0%, -50%);\n            transform: translate(0%, -50%);\n}\n\n.solutionsLink {\n    color:#1a124d;\n}\n.solutionsLink:hover {\n    color:#606a71;\n    text-decoration: none;\n}\n\n@media only screen and (min-width: 1700px) {\n    .service-img-logo{\n        max-width: 700px;\n    }\n}\n\n@media only screen and (min-width: 1800px) {\n    .service-img-logo{\n        max-width: 750px;\n    }\n}\n\n@media only screen and (min-width: 1900px) {\n    .service-img-logo{\n        max-width: 800px;\n         top: 50px;\n    }\n}\n\n@media only screen and (min-width: 2500px) {\n    .service-img-logo{\n        max-width: 850px;\n         top: 30px;\n         left: 8%;\n    }\n}\n@media only screen and (max-width: 1200px){\n    .about-main-img-right{\n        max-width: 500px;\n    }\n}\n@media screen and (max-width: 1199px) and (min-width: 992px) {\n    .about-main-right {\n        right: 50px;\n        top: -45px;\n    }\n    .about-main-img-right {\n        right: 0px;\n        top: -44px;\n        z-index: 0;\n        position: relative;\n    }\n}\n@media only screen and (max-width: 991px){\n    .hero-title h2{\n        font-size: 60px;\n    }\n    .hero-title h4{\n        font-size: 30px;\n    }\n    .section-title{\n        font-size: 32px;\n    }\n    .section-desc{\n        font-size: 20px;\n    }\n    .dark-cta-wrapper p{\n        font-size: 24px;\n    }\n    .service-img-logo{\n        display: none;\n    }\n    .about-main-left-inner ul li{\n        font-size: 24px;\n    }\n    .about-main-img-right{\n     display: none;\n    }\n    .about-main-img-right-mobile {\n        display: block;\n        position: absolute;\n        width: 100%;\n        left: 0;\n        right: 0;\n    }\n}\n@media screen and (max-width: 900px) and (min-width: 600px) {\n    .about-us-main {\n        padding-top: 350px !important;\n        padding-bottom: 60px;\n        position: relative;\n    }\n}\n@media only screen and (max-width: 768px){\n    .hero-title h2{\n        font-size: 40px;\n    }\n    .hero-title h4{\n        font-size: 20px;\n    }\n    .section-title{\n        font-size: 28px;\n    }\n    .section-desc{\n        font-size: 18px;\n    }\n    .dark-cta-wrapper p{\n        font-size: 20px;\n    }\n    .service-img-logo{\n        display: none;\n    }\n    .about-main-left-inner ul li{\n        font-size: 20px;\n    }\n    .about-service{padding-top: 50px;padding-bottom: 50px;}\n    .about-us-main {\n        padding-top: 190px;\n        padding-bottom: 60px;\n        position: relative;\n    }\n}", ""]);
+
+
+
+/***/ }),
+/* 78 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "fa13f9ce54e83ed52326b91691b89f0a.png";
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(8)(false);
+// Imports
+var urlEscape = __webpack_require__(9);
+var ___CSS_LOADER_URL___0___ = urlEscape(__webpack_require__(80));
+
+// Module
+exports.push([module.i, ".contact-us-main {\r\n    padding-top: 40px;\r\n    padding-bottom: 40px;\r\n}\r\n\r\n.custom-form-group {\r\n    margin-bottom: 30px;\r\n}\r\n\r\n.custom-form-group .form-control {\r\n    border: 1px solid #dbdbdb;\r\n}\r\n\r\n.otm-action-btn {\r\n    background-color: #19144D;\r\n    color: #ffffff;\r\n}\r\n\r\n.contact-form-title h3 {\r\n    color: #004D86;\r\n    font-weight: 600;\r\n    position: relative;\r\n    padding-bottom: 20px;\r\n    font-size: 40px;\r\n}\r\n\r\n.contact-form-title h3:after {\r\n    content: '';\r\n    width: 107px;\r\n    height: 5px;\r\n    position: absolute;\r\n    bottom: 0px;\r\n    left: 0px;\r\n    background-color: #d8d8d8;\r\n}\r\n\r\n.contact-form-title {\r\n    margin-bottom: 30px;\r\n}\r\n\r\n.contact-info-logo {\r\n    width: 250px;\r\n    max-width: 100%;\r\n    margin-top: 30px;\r\n}\r\n\r\n.chat-time {\r\n    border-bottom: 1px solid #979797;\r\n    padding-bottom: 20px;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.chat-time img {\r\n    width: 150px;\r\n    float: right;\r\n    margin-top: -90px;\r\n}\r\n\r\n.chat-time p {\r\n    font-size: 12px;\r\n    font-weight: 600;\r\n}\r\n\r\n.chat-time h4 {\r\n    font-size: 16px;\r\n    font-weight:bold;\r\n}\r\n\r\n.contact-point {\r\n    text-align: center;\r\n}\r\n\r\n.contact-point p {\r\n    text-align: left;\r\n}\r\n\r\n.contact-point p a {\r\n    color: #000000;\r\n}\r\n\r\n.contact-point p a:hover {\r\n    text-decoration: none;\r\n}\r\n\r\n.gmap-wrapper {\r\n    padding-top: 226px;\r\n    padding-bottom: 226px;\r\n    background-image: url(" + ___CSS_LOADER_URL___0___ + ");\r\n    background-size: contain;\r\n}\r\n\r\n.gmap-wrapper .btn-otm-dark {\r\n    min-width: 280px;\r\n    text-transform: uppercase;\r\n    letter-spacing: 0.75px;\r\n    font-size: 1em;\r\n    padding-top: 15px;\r\n    padding-bottom: 15px;\r\n}\r\n\r\n@media only screen and (max-width: 991px) {\r\n    .contact-form-title h3 {\r\n        font-size: 36px;\r\n    }\r\n}\r\n\r\n@media only screen and (max-width: 768px) {\r\n    .contact-form-title h3 {\r\n        font-size: 32px;\r\n    }\r\n    .contact-info-logo {\r\n        width: 250px;\r\n        max-width: 100%;\r\n        margin-top: 30px;\r\n        margin-left: 55px;\r\n        margin-bottom: 30px;\r\n    }\r\n}\r\n\r\n@media only screen and (max-width: 576px) {\r\n    .contact-form-title h3 {\r\n        font-size: 32px;\r\n    }\r\n}", ""]);
+
+
+
+/***/ }),
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "82d4d68e83cafeb3ae816db2ebd83b1f.png";
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-async");
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(8)(false);
+// Imports
+var urlEscape = __webpack_require__(9);
+var ___CSS_LOADER_URL___0___ = urlEscape(__webpack_require__(83));
+var ___CSS_LOADER_URL___1___ = urlEscape(__webpack_require__(84));
+var ___CSS_LOADER_URL___2___ = urlEscape(__webpack_require__(85));
+
+// Module
+exports.push([module.i, ".otm-hero .dropdown-item {\r\n    color: #fff;\r\n}\r\n\r\n.otm-hero {\r\n    min-height: 110vh;\r\n    background-image: url(" + ___CSS_LOADER_URL___0___ + ");\r\n    background-repeat: no-repeat;\r\n    background-size: cover;\r\n    background-position: center;\r\n    color: #ffffff;\r\n    position: relative;\r\n    overflow: hidden;\r\n    z-index: 2;\r\n}\r\n\r\n.otm-hero .container {\r\n    z-index: 2;\r\n}\r\n\r\n.globe {\r\n    position: absolute;\r\n    right: -110px;\r\n    top: 100px;\r\n    max-width: 100%;\r\n    -webkit-animation: spin 100s linear infinite;\r\n    animation: spin 100s linear infinite;\r\n    z-index: -1;\r\n}\r\n\r\n@-webkit-keyframes spin {\r\n    100% {\r\n        -webkit-transform: rotate(360deg);\r\n    }\r\n}\r\n\r\n@keyframes spin {\r\n    100% {\r\n        -webkit-transform: rotate(360deg);\r\n        transform: rotate(360deg);\r\n    }\r\n}\r\n\r\n.hero-text-wrapper {\r\n    z-index: 100;\r\n}\r\n\r\n.hero-text-wrapper h1 {\r\n    font-weight: 300;\r\n    font-size: 80px;\r\n    margin: 0;\r\n    line-height: 70px;\r\n}\r\n\r\n.hero-text-wrapper h2 {\r\n    font-weight: 700;\r\n    font-size: 80px;\r\n    margin-bottom: 30px;\r\n}\r\n\r\n.hero-text-wrapper h3 {\r\n    font-size: 30px;\r\n    font-weight: 400;\r\n}\r\n\r\n.hero-text-wrapper p {\r\n    font-size: 20px;\r\n    font-weight: 400;\r\n    margin-bottom: 60px;\r\n}\r\n\r\n.hero-text-wrap {\r\n    min-height: calc(100vh - 113px);\r\n}\r\n\r\n#smart-dispatch {\r\n    position: relative;\r\n    z-index: 3;\r\n}\r\n\r\n.carousel-background {\r\n    height: 25.3em;\r\n    width: 100%;\r\n    z-index: 1;\r\n    position: absolute;\r\n    -webkit-transform: skewY(188deg);\r\n            transform: skewY(188deg);\r\n    background-repeat: repeat-x;\r\n    background-repeat: repeat-x;\r\n    background-image: -webkit-gradient(linear, right top, left top, color-stop(30%, #D9DFE3), to(#D9DFE3));\r\n    background-image: linear-gradient(-90deg, #D9DFE3 30%, #D9DFE3);\r\n}\r\n\r\n.carousel-background-top {\r\n    height: 7.3em;\r\n    width: 100%;\r\n    z-index: 2;\r\n    position: absolute;\r\n    -webkit-transform: skewY(0deg);\r\n            transform: skewY(0deg);\r\n    background-repeat: repeat-x;\r\n    background-repeat: repeat-x;\r\n    background-image: -webkit-gradient(linear, right top, left top, color-stop(30%, #D9DFE3), to(#D9DFE3));\r\n    background-image: linear-gradient(-90deg, #D9DFE3 30%, #D9DFE3);\r\n}\r\n\r\n.carousel-background-left {\r\n    height: 25.3em;\r\n    width: 100%;\r\n    z-index: 0;\r\n    position: absolute;\r\n    -webkit-transform: skewY(-188deg);\r\n            transform: skewY(-188deg);\r\n    background-repeat: repeat-x;\r\n    background-repeat: repeat-x;\r\n    background-image: -webkit-gradient(linear, right top, left top, color-stop(30%, #3EB1D9), to(#1475AF));\r\n    background-image: linear-gradient(-90deg, #3EB1D9 30%, #1475AF);\r\n}\r\n\r\n\r\n/*.smart-dispatch{\r\n    background-image: url(../images/slider-bg.png);\r\n    background-size: cover;\r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n}*/\r\n\r\n\r\n/* Update to SVG Icon */\r\n\r\n.carousel-icon svg {\r\n    width: 40px;\r\n    float: left;\r\n    margin-right: 10px;\r\n}\r\n\r\n.truck-icon figure {\r\n    margin: 0px;\r\n}\r\n\r\n.carousel-control-next span svg,\r\n.carousel-control-prev span svg {\r\n    width: 18px;\r\n    fill: #00adef;\r\n    margin-top: -4px;\r\n}\r\n\r\n.carousel-control-next,\r\n.carousel-control-prev {\r\n    opacity: 1;\r\n    border-radius: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.carousel-control-prev span,\r\n.carousel-control-next span {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 50px;\r\n    height: 50px;\r\n    border-radius: 50%;\r\n    -webkit-transition: opacity .3s cubic-bezier(.19, 1, .22, 1), background-color .3s ease;\r\n    transition: opacity .3s cubic-bezier(.19, 1, .22, 1), background-color .3s ease;\r\n}\r\n\r\n.carousel-control-prev span:after,\r\n.carousel-control-next span:after {\r\n    content: \"\";\r\n    display: block;\r\n    width: 50px;\r\n    height: 50px;\r\n    border-radius: 50%;\r\n    border: 1px solid #00aeef;\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    will-change: transform;\r\n    -webkit-transition: -webkit-transform .3s cubic-bezier(.4, 0, 0, 1);\r\n    transition: -webkit-transform .3s cubic-bezier(.4, 0, 0, 1);\r\n    transition: transform .3s cubic-bezier(.4, 0, 0, 1);\r\n    transition: transform .3s cubic-bezier(.4, 0, 0, 1), -webkit-transform .3s cubic-bezier(.4, 0, 0, 1);\r\n}\r\n\r\n.carousel-control-prev:hover,\r\n.carousel-control-next:hover {\r\n    background-color: #00aeef;\r\n}\r\n\r\n.carousel-control-prev:hover span svg,\r\n.carousel-control-next:hover span svg {\r\n    fill: #ffffff;\r\n}\r\n\r\n.carousel-control-prev:hover span:after,\r\n.carousel-control-next:hover span:after {\r\n    -webkit-transform: scale(1.2);\r\n    transform: scale(1.2);\r\n}\r\n\r\n.smart-dispatch .carousel-inner {\r\n    background-color: #ffffff;\r\n    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);\r\n    padding: 100px 60px;\r\n    border-radius: 25px;\r\n    margin-bottom: 150px;\r\n    margin-top: -55px;\r\n    overflow: visible;\r\n}\r\n\r\n.carousel-item-title h3 {\r\n    font-size: 2.5em;\r\n    font-weight: 400;\r\n    color: #004D86;\r\n}\r\n\r\n.carousel-item-title h3 img {\r\n    vertical-align: bottom;\r\n}\r\n\r\n.carousel-item-title {\r\n    margin-bottom: 30px;\r\n}\r\n\r\n.carousel-item-text p {\r\n    font-size: 1.3rem;\r\n    color: #191919;\r\n}\r\n\r\n#smart-dispatch .carousel-control-next,\r\n#smart-dispatch .carousel-control-prev {\r\n    top: 0;\r\n    bottom: auto;\r\n    width: 50px;\r\n    height: 50px;\r\n}\r\n\r\n#smart-dispatch .carousel-control-next {\r\n    right: 40px;\r\n    top: 40px;\r\n}\r\n\r\n#smart-dispatch .carousel-control-prev {\r\n    left: auto;\r\n    right: 100px;\r\n    top: 40px;\r\n}\r\n\r\n.carousel-cta-orange {\r\n    font-size: 18px;\r\n    color: #ffffff;\r\n    height: 220px;\r\n    width: 220px;\r\n    display: inline-block;\r\n    background-color: #F7941E;\r\n    position: absolute;\r\n    bottom: -105px;\r\n    right: -80px;\r\n    border-radius: 100%;\r\n    z-index: 2;\r\n    text-align: center;\r\n    padding: 70px 50px;\r\n    -webkit-transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) all 0.3s;\r\n    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) all 0.3s;\r\n}\r\n\r\n.text-stack__cta--offset {\r\n    position: relative;\r\n    -webkit-transform: translate(0%, -40px);\r\n            transform: translate(0%, -40px);\r\n    z-index: 2;\r\n}\r\n\r\n.text-stack__headline+.text-stack__cta--offset .button-wrapper,\r\n.text-stack__text+.text-stack__cta--offset .button-wrapper {\r\n    position: absolute;\r\n    right: 0;\r\n    bottom: -5em;\r\n    -webkit-transform: translateY(50%);\r\n    transform: translateY(50%);\r\n}\r\n\r\n.button-wrapper {\r\n    position: absolute;\r\n    right: -140px;\r\n    top: 0px;\r\n}\r\n\r\n.button--circle {\r\n    --button-circle-size: 220px;\r\n    --circleY: 1.6288%;\r\n    width: var(--button-circle-size);\r\n    height: var(--button-circle-size);\r\n    text-align: center;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    border-radius: 50%;\r\n    padding: 0em;\r\n    -webkit-transform: translateY(var(--circleY));\r\n    transform: translateY(var(--circleY));\r\n}\r\n\r\n.button--orange {\r\n    color: #ffffff;\r\n}\r\n\r\n.button--circle .button__arrow,\r\n.button--circle .button__content {\r\n    position: relative;\r\n    z-index: 1;\r\n    max-width: 120px;\r\n}\r\n\r\n.button--circle .button__content+.button__arrow {\r\n    margin-top: .75em;\r\n}\r\n\r\n.button--circle .button__arrow svg {\r\n    width: 26px;\r\n    height: 13px;\r\n    -webkit-transform: translateX(-10%);\r\n    transform: translateX(-10%);\r\n    -webkit-transition: stroke .1s ease, -webkit-transform .3s cubic-bezier(.175, .885, .32, 1.275) .1s;\r\n    transition: stroke .1s ease, -webkit-transform .3s cubic-bezier(.175, .885, .32, 1.275) .1s;\r\n    transition: transform .3s cubic-bezier(.175, .885, .32, 1.275) .1s, stroke .1s ease;\r\n    transition: transform .3s cubic-bezier(.175, .885, .32, 1.275) .1s, stroke .1s ease, -webkit-transform .3s cubic-bezier(.175, .885, .32, 1.275) .1s;\r\n}\r\n\r\n.button--orange .button__arrow svg {\r\n    stroke: #ffffff;\r\n}\r\n\r\n.button--circle .button__outline {\r\n    border: 1px solid;\r\n    background-color: #F7941E;\r\n    position: absolute;\r\n    z-index: 0;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    width: var(--button-circle-size);\r\n    height: var(--button-circle-size);\r\n    border-radius: 50%;\r\n    will-change: transform;\r\n    -webkit-transform: translateZ(0) scale(.8);\r\n    transform: translateZ(0) scale(.8);\r\n    -webkit-transition: background-color .1s ease, -webkit-transform .3s cubic-bezier(.175, .885, .32, 1.275);\r\n    transition: background-color .1s ease, -webkit-transform .3s cubic-bezier(.175, .885, .32, 1.275);\r\n    transition: transform .3s cubic-bezier(.175, .885, .32, 1.275), background-color .1s ease;\r\n    transition: transform .3s cubic-bezier(.175, .885, .32, 1.275), background-color .1s ease, -webkit-transform .3s cubic-bezier(.175, .885, .32, 1.275);\r\n}\r\n\r\n.button--orange .button__outline {\r\n    border-color: #ffcb05;\r\n}\r\n\r\n.button--orange:hover {\r\n    color: #fff;\r\n    text-decoration: none;\r\n}\r\n\r\n.button--circle:hover .button__outline {\r\n    -webkit-transform: translateZ(0) scale(1);\r\n    transform: translateZ(0) scale(1);\r\n}\r\n\r\n.button--orange:hover .button__outline {\r\n    border-color: #f7941d;\r\n    background-color: #f7941d;\r\n}\r\n\r\n.button--orange:hover .button__arrow svg {\r\n    stroke: #fff;\r\n    -webkit-transform: translateX(20%);\r\n    transform: translateX(20%);\r\n}\r\n\r\n.carousel-cta-orange svg {\r\n    width: 20px;\r\n    fill: #ffffff;\r\n}\r\n\r\n.carousel-cta-orange:hover {\r\n    color: #ffffff;\r\n    text-decoration: none;\r\n}\r\n\r\n.otm-main {\r\n    margin-top: 40px;\r\n}\r\n\r\n.otm-home-container {\r\n    margin-bottom: 40px;\r\n}\r\n\r\n.otm-main-inner h3 {\r\n    margin-top: 30px;\r\n    color: #004D86;\r\n    font-size: 2.3em;\r\n    margin-bottom: 15px;\r\n}\r\n\r\n.otm-main-inner p {\r\n    color: #191919;\r\n    line-height: 30px;\r\n    margin-bottom: 30px;\r\n    font-weight: 400;\r\n    font-size: 1.3rem;\r\n}\r\n\r\n.otm-main-logo {\r\n    width: 95%;\r\n}\r\n\r\n.letters {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    ;\r\n}\r\n\r\n.text-wrapper {\r\n    position: relative;\r\n    display: block;\r\n    padding-top: 60px;\r\n    overflow: hidden;\r\n}\r\n\r\n.team-text-inner {\r\n    padding: 20px 10px;\r\n}\r\n\r\n.team-text-inner h4 {\r\n    font-size: 2.3em;\r\n    color: #004D86;\r\n}\r\n\r\n.team-text-inner p {\r\n    font-size: 1.3rem;\r\n    color: #191919;\r\n    line-height: 37px;\r\n}\r\n\r\n#otm-carousel-team {\r\n    padding-top: 50px;\r\n    padding-bottom: 50px;\r\n}\r\n\r\n#otm-carousel-team .carousel-control-next,\r\n#otm-carousel-team .carousel-control-prev {\r\n    top: auto;\r\n    bottom: 0;\r\n    width: 50px;\r\n    height: 50px;\r\n}\r\n\r\n#otm-carousel-team .carousel-control-next {\r\n    right: 40px;\r\n    bottom: 40px;\r\n}\r\n\r\n#otm-carousel-team .carousel-control-prev {\r\n    left: auto;\r\n    right: 100px;\r\n    bottom: 40px;\r\n}\r\n\r\n.slider-section {\r\n    position: relative;\r\n    bottom: 0;\r\n}\r\n\r\n.slider-trucks {\r\n    position: relative;\r\n    top: 120px;\r\n}\r\n\r\n.sliding-animation {\r\n    height: 120px;\r\n    background-image: url(" + ___CSS_LOADER_URL___1___ + ");\r\n    background-position: 0 0;\r\n    background-size: auto 100%;\r\n    -webkit-animation: animatedBackground 500s linear infinite;\r\n            animation: animatedBackground 500s linear infinite;\r\n}\r\n\r\n.slider-bottom {\r\n    height: 120px;\r\n    background-image: url(" + ___CSS_LOADER_URL___2___ + ");\r\n    background-position: 50%;\r\n    background-size: auto 100%;\r\n}\r\n\r\n@-webkit-keyframes animatedBackground {\r\n    from {\r\n        background-position: 0 0;\r\n    }\r\n    /*use negative width if you want it to flow right to left else and positive for left to right*/\r\n    to {\r\n        background-position: 10000px 0;\r\n    }\r\n}\r\n\r\n@keyframes animatedBackground {\r\n    from {\r\n        background-position: 0 0;\r\n    }\r\n    /*use negative width if you want it to flow right to left else and positive for left to right*/\r\n    to {\r\n        background-position: 10000px 0;\r\n    }\r\n}\r\n\r\n@media only screen and (min-width: 1400px) {\r\n    .smart-dispatch {\r\n        background-position: center -60px;\r\n    }\r\n}\r\n\r\n@media only screen and (min-width: 1700px) {\r\n    .smart-dispatch {\r\n        background-position: center -120px;\r\n    }\r\n}\r\n\r\n@media only screen and (min-width: 1800px) {\r\n    .smart-dispatch {\r\n        background-position: center -150px;\r\n    }\r\n}\r\n\r\n@media only screen and (min-width: 1900px) {\r\n    .smart-dispatch {\r\n        background-position: center -200px;\r\n    }\r\n    .globe {\r\n        right: 90px;\r\n    }\r\n}\r\n\r\n@media only screen and (min-width: 2500px) {\r\n    .globe {\r\n        right: 390px;\r\n        top: 200px\r\n    }\r\n    .smart-dispatch {\r\n        background-position: center -400px;\r\n    }\r\n}\r\n\r\n@media only screen and (max-width: 1300px) {\r\n    .carousel-cta-orange {\r\n        right: -50px\r\n    }\r\n}\r\n\r\n@media only screen and (max-width: 1280px) {\r\n    .button-wrapper {\r\n        right: 0px;\r\n        display: block;\r\n        width: 220px;\r\n    }\r\n}\r\n\r\n@media only screen and (max-width: 991px) {\r\n    .globe {\r\n        opacity: .5;\r\n        max-width: 600px;\r\n    }\r\n    \r\n}\r\n@media only screen and (min-width: 768px) and (max-width: 1279px) {\r\n    .globe {\r\n        opacity: .5;\r\n        max-width: 100%;\r\n        width: 100%;\r\n        left: 0;\r\n        right: 0;\r\n        top: 200px;\r\n    }\r\n    \r\n}\r\n\r\n@media only screen and (max-width: 991px) {\r\n    .hero-text-wrapper h1,\r\n    .hero-text-wrapper h2 {\r\n        font-size: 60px;\r\n    }\r\n    .carousel-item-title h3,\r\n    .otm-main-inner h3,\r\n    .team-text-inner h4 {\r\n        font-size: 36px;\r\n    }\r\n    .carousel-cta-orange {\r\n        width: 180px;\r\n        height: 180px;\r\n        padding: 50px 20px;\r\n    }\r\n    .carousel-background-left {\r\n        height: 35em;\r\n    }\r\n    .carousel-background {\r\n        height: 35em;\r\n    }\r\n    .smart-dispatch {\r\n        background-position: center -30px;\r\n    }\r\n    #smart-dispatch .js-cta {\r\n        margin: 40px auto;\r\n        display: block;\r\n        width: 220px;\r\n    }\r\n    .otm-home-container .row .column1 {\r\n        order: 1;\r\n        text-align: center;\r\n        margin-bottom: 30px;\r\n    }\r\n    .otm-home-container .row .column2 {\r\n        order: 2;\r\n    }\r\n    .otm-main {\r\n        margin-top: 0px;\r\n    }\r\n    .otm-main-logo {\r\n        width: 70%;\r\n        margin-right: -55px;\r\n    }\r\n    .otm-main-inner p,\r\n    .team-text-inner p {\r\n        font-size: 24px;\r\n    }\r\n    #otm-carousel-team .carousel-control-next,\r\n    #otm-carousel-team .carousel-control-prev {\r\n        bottom: 10px;\r\n    }\r\n}\r\n\r\n@media only screen and (max-width: 768px) {\r\n    .hero-text-wrapper h1,\r\n    .hero-text-wrapper h2 {\r\n        font-size: 40px;\r\n    }\r\n    .hero-text-wrapper h3 {\r\n        font-size: 24px;\r\n    }\r\n    .carousel-item-title h3,\r\n    .otm-main-inner h3,\r\n    .team-text-inner h4 {\r\n        font-size: 32px;\r\n    }\r\n    .otm-main-inner h3 img {\r\n        width: 36px;\r\n    }\r\n    .carousel-item-text p {\r\n        font-size: 22px;\r\n    }\r\n    .carousel-cta-orange {\r\n        width: 180px;\r\n        height: 180px;\r\n        padding: 50px 20px;\r\n    }\r\n    .smart-dispatch {\r\n        background-position: center -30px;\r\n    }\r\n    .otm-main-inner p,\r\n    .team-text-inner p {\r\n        font-size: 22px;\r\n    }\r\n    #otm-carousel-team .carousel-control-next,\r\n    #otm-carousel-team .carousel-control-prev {\r\n        bottom: 10px;\r\n    }\r\n    .home-cta h4 br {\r\n        display: none;\r\n    }\r\n    .ml7 .text-wrapper {\r\n        position: relative !important;\r\n        display: block !important;\r\n        padding-top: 60px !important;\r\n        overflow: hidden !important;\r\n        font-size: .7em !important;\r\n        height: 0px !important;\r\n    }\r\n    .hero-text-wrapper h1, h2, h3, p {\r\n        text-align: left;\r\n    }\r\n}\r\n\r\n@media only screen and (max-width: 650px) {\r\n    .carousel-cta-orange {\r\n        right: 10px\r\n    }\r\n}\r\n\r\n@media only screen and (max-width: 600px) {\r\n    .button-wrapper {\r\n        right: -50px;\r\n    }\r\n}\r\n\r\n@media only screen and (max-width: 576px) {\r\n    .hero-text-wrapper {\r\n        text-align: center;\r\n    }\r\n    .hero-text-wrapper h1,\r\n    .hero-text-wrapper h2 {\r\n        font-size: 3em;\r\n    }\r\n    .hero-text-wrapper h3 {\r\n        font-size: 1.5em;\r\n    }\r\n    .carousel-item-title h3,\r\n    .otm-main-inner h3,\r\n    .team-text-inner h4 {\r\n        font-size: 1.6em;\r\n    }\r\n    .otm-main-inner h3 img {\r\n        width: 30px;\r\n    }\r\n    .carousel-item-text p {\r\n        font-size: 1em;\r\n    }\r\n    .carousel-item-title h3 img {\r\n        width: 36px;\r\n        margin-right: 10px;\r\n    }\r\n    .hero-text-wrapper p {\r\n        font-size: 1.26em;\r\n        font-style: italic;\r\n        margin-top: 25px;\r\n    }\r\n    .navbar-brand img {\r\n        width: 200px;\r\n    }\r\n    .smart-dispatch .carousel-inner {\r\n        padding: 100px 30px;\r\n    }\r\n    .button-wrapper {\r\n        right: 0px;\r\n    }\r\n}\r\n\r\n.ml7 {\r\n    position: relative;\r\n    font-weight: 900;\r\n    font-size: 3.7em;\r\n}\r\n\r\n.ml7 .text-wrapper {\r\n    position: relative;\r\n    display: inline-block;\r\n    padding-top: 0.2em;\r\n    padding-right: 0.05em;\r\n    padding-bottom: 0;\r\n    overflow: hidden;\r\n    height: 100px;\r\n}\r\n\r\n.ml7 .letter {\r\n    -webkit-transform-origin: 0 100%;\r\n            transform-origin: 0 100%;\r\n    display: inline-block;\r\n    line-height: 1em;\r\n}\r\n\r\n.letters .letter- {\r\n    width: 25px;\r\n}", ""]);
+
+
+
+/***/ }),
+/* 83 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "9c4962524ce66cb75779f5cced5af011.svg";
+
+/***/ }),
+/* 84 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "19e0f389baa53cae313cb79fb09a5ae0.svg";
+
+/***/ }),
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "e4d381b6f7d22a11f1195e8aa729d3a0.svg";
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAwCAYAAABnjuimAAAABHNCSVQICAgIfAhkiAAADJBJREFUWIW1mFlsXOd1x393n7mzD4fiTomSaJqiZEuQFzmOvCRtCtst4iItUBdFgAJBgSLJQ9GHoo8F+lSgBQq0D0mAtoDRxK3Rum0cOEpjO5alWLZk0dotUQv3dTj73Llzt68PlxxpRFKiZPe8zZ3vO9//O99Z/udIQgjBPcR2PC5OL7OnJ0syaqDI0r2WP7SU601KdRtNlenJJJDuOka+nwLXD/jPU1f51YUpFks17n2thxPb9fhscokf/e84xZoNbDxEvZ8SRZbYP9jJGycuE9VV0mYE01CxXZ9AiM10bktkWUJTZBRZ4uZikbdPT6CrCh2JKLDx1e4LNKqr/O6RET69vsB7FybZN9CJHxjMrlYJArFB5Wa4N1ujKBLJqEFnyuTY+E0qVpM/fekw3Zn4pjjuC1SSJKK6xtce28X7F6ZYKte5NL3M3/73x6iKTFRrVyEAcQdcaQ3mnWC9IMDxfJ55tJ/vvfIks/kK+wZyDOaSW+K4L9B1UWSZasPh3K1F/u3EFSzH5c+/eYShrnQL4UqlzsR8kUKt0dqXiUcY7smyIx1rfWu6Pq+/f56fHL9EyjQo1GwGd6SQ7o6ghwEKsFiq8dapa9iOS182wYGdnezuzoQ4BczmK5y5vsBq1WoFnR8IfutQht3d6ZYezws4dTXLu+cnOX5pmtVqg9GB3D3PfiCgZatJVNfYN9hJKmqQiBio8u3EsSMV47WjY1hNt/Utamh0p2Nt6xRdpjsTJxOPcHCoi9d/dQHfD74coIEQDPdkeXH/To5fnmZPdwZdU8LIb4FS2dWV3nL/ndKRiNKRiPIbjw9xcXoFQ1PvmUC2DVQCUqZB1NCYzld4ariPmXyFlYq1YR1sFv0ChNRa0HA8hICFYo1c0kRT753Stw90zdFtx2O5VOf9C5OcvbnQ9qR3rru74K3/Wr9IodrAdj3mC7XW2nvVvC2B+kGA7frYjgdAveliNV1qtoPteAx1pYkZ2oZSt12JRzQKdZt8tUHT9anbLqW6jRACSZKIR3U05bYRtgTacDxuLZWZWikhI3FtbpXFYo3J5TK+EAz3dpA2DaT7FuHNpVizubZQZDZfIV+xiOgqZ64vEDU0FFni6Ud6ScciyGuW2BSoHwgqVpNfnrvJJ9fmMQ2N2dUKpXqT1ZpNreFwbPwGpv5ASaNNqrbDTL6CEIJqw6HScKhYTRRJAiQGc0lMXSOydoZ0N3sSAuZWK/zHR59zZTaPHwhefXqEpVKdk5/P8MSeHn74i3F+9N1XyCWjt5P0uppt+sJyqc4/v3eeRERnrlBluCfLU8O9vH9hktVqg3Qswre+8ijPjPQhSdJGiwoEyxWLjyfm0RWZ5bKF5bgkTZ1MLELKNDBUhb5sgq50DPkhaZ8iSWRjEUxDo1hvkE1E0DWFK7N59g3k+PDyDKMDHRx5pA9J2oLmOa5P3NB4dnSAHekYjuvjBwJZkgjEHUb7MqipdJsPeL6PEPDNp0dImQaeH7R4w5ahoKzRsLvTz7r8P9BSIDRCRFNR7jp3UxSyLLFatbk0k2e+UEWSpDVrCmQpdMcvakwBbSRk3apNz+eDi1PkW3xhi6iXCMtbbzbOzcUiKdMgGdUp1mxKdZtKw8HxfBaKNRzfR5akEPhdyO+Orbs7g6VSjWKtgecbNByXQq2BLGXZ05Xhs8kletJx+joSrIfAhqgHsJou0ysVKpZNICBfsXj7zARzq1VSZoRT1+Z47egY8ajWynPrVgq13alS2tT6xbrNZzcXkWUJxwtImjrP7Rvk6Nggnh+gyGGK6kzFNrcogGloPNrfAYSM6R9/dpqFQp293VmqtoMfBJQtGy/w74Ah8AOB6wdtBESWJNS1luNOqVoO9aaLoaoc2t3NxMIqp6/P8/vPjm7a3G0rY/tC8NhQJ99+4THmizUuTC3x/VeepDNpIsnrtT3koz8/e4PFUq21N5c0eenwHnbtaGdV84UqP/j5WTLxKN/5xkHePj3BpzcWNrCsBwKKAENViUU0TCOMSNNQURS53XqyhOv7ay4Qfnc9f8Pja4pMRFOJ6CqGppCI6EQ0NXSjLdLJQ9VAgaBsNfno6hylehMpvAv2GnWLRzTWo1WWZY5fmiZ6PTxKCOhMmgx2Jlv+vZ1U93BABdQaDqeuzjFfqGFGNGQpBOoHAl1VUBUZPwio2S6mrmJoKr4QlGo2YwM5UjHjgc7cPtC1/ClEWAx6swkO7+mhN1vj954dxdRVPru1xPjNRV46vJcdKZPZfIV/evccf/j8fkZ6O6jZDn/97yd49UhYedZvLYQgQDx8c+f6AcVqg2vzBWzX481fX6ZUt7GaLrIska9aFGsNTF0lFYvgeD7L5TqqIpOMGghC8iECQSpm4AcB1+cLeH6AqsjYjsf1xSI/Pn6Rc7eWmFut8vncKt2ZOIoit3n2lkBdL2CuUOEnH16mULPpSES5OlsgX7XwfNFa4641ZYok4ftBWJ+FQJbDSuYFgkCE/0tIWI5LsEaOAyGYW60yfmORphdg6Cr/+sFFsvEII305zDuI+RZ8NGCxVOO/Tl3j/OQSf/KNQ+zqSqGrCpemV/ibtz56oBK61RxOVWSeGenjtaNjmBGNpVKdn56e4AfHxvnuy4fZ25MlamhImwEVQKne5F/ePc/F6RW+85sHefHAztZT1BrOWovw4NU+tI7UKqeqIpOORRjuzZI0Dfb2ZNndneGv3viAv/ufj/ney09yaHcXiixvJCVBIPjhsXGmV8p8+8UDHBzqwvUDmq639qwPjO+2EbbY6wUCx/Px/ICUafBnv/M06ViENz68xNRyObzURmWCk5/PcHR0gIVijbdOfb5mPIm9PZlW7pOk24RDan0LrdVag9Rq1tr2rGWQdUZ2cWqZ6ZUyluMhhMAPAh7f1cWHl2dYKNbY3Z3Z3EetpoumyuQrFnOFauu7Kkt0Z+IEQhAEgnhEp6w1cT0fy3HRFJmooREI0epeo3pIXBqOh+sFdCSiqLJMEIScwPUClkp1Ls/kqdlO60JP7O1FkcN9m1oUwgitNhwe39XFnu5My3JRXWNquYzrBViORzYeRZElLk6voCoyZcthuDfLjcUii8U6VtPlyEgfy+U6pycWcD2fF/bvpGI1MQ0VPwhYKFQZG8jx1HAvXhCACLlFxWri+kHrNTbyUQlG+nO8e36Sdz69QcLUieph5ElSGGjVhsNSscYvz91ivlAN2bgUZot1Fwh5qmi1MLIcuoXr+8zkq7z69CM0XZ9fX51jdrWCqiiAwPMDFkt1DE1luCdLLhHdCNTxfOZXqzw/Nkg8onHyygzP7RukKx1rWXUmX+XNk1dYKtf56r6BtoHYdiVpGqxULFarDR7t6+D5/YMYqgKEY/K3Tl1lV1eao6MDuH6Yq9uIc6lu8w8/O8PkconVagPH80mZBomo0UpGJavJbL7CSH8HmqK0MQo38Gm6fttkTlVkdFUJ197xag3Ho1S3cTyfrnSsNRVxPJ+plTKZeOjL/R0J/uJbX2m3aL3pcm5yidH+HF87sAtdUze26SJkTxvqsoDVWoOTl2eorQUAQDyi8+RwL50pc6NpxXrvROvC6xRRliTO3lzg4vQKZavJhrm2AA7v7eb5sZ3EI/pG5VuIACbmC0wuldoqUVcmzrOj/Yz233tQu5lIEtxaKiOEaAcqSaDKMtfmChzY2YVpaOiqspWeDTK0I8X3f/vJVmoCiOgKKTOCqmx/SBUIQbFmM52v0PQ8ZFna6KNvnrzCmesLZOIRjoz0cXCoi55MHE1V2hq5rUQIcVdrxz3p2+19oX+uVhucn1rmk2tzTC6V2DfYyR9//fF2oK4fUKrZXJha5tj4TT67tchof46Xn9jLvoFcW0B82eIFAVPLZd45e4Pjl6YZG8jx8uG9HNi5g/5csv3pNUWmM2Xywv6d2K7HpzcWyFcb/P1PPyGXMFFVmSAQqIq8LSvdT4QI86YsS7heQLXRJB7RKdYafP3xIZ4bGyS5RrA3rUyyHLa4fR0J/uiFA6RNg6VynbM3FjlxeYY/ODpGNhH5wmCrVpMfH7/Eod3dHBzqYrAziaGp/OXr7xHV28c6WxJnQ1URAoq1BomI3sqlhqZweE83O9KxbfnsvSRfsXjn7A1kSSIWCTlC2bKxHQ9DU9omhVsC7cnG2dmZ4u3TE2TiUSRgqWxxaHc3Q11pElH9C1tUVxW+um+AU1fnyH9ioWsKTdcnaRoM5FJtmWLTkQ6EyX9ivsD4zUVcL6w0SdNgbCDH/p2dX4qPup7PStXixOUZyvUmQoRx0p9L8tRwD6lYpLX2/wCHEuPqfKYBpgAAAABJRU5ErkJggg=="
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(8)(false);
+// Imports
+var urlEscape = __webpack_require__(9);
+var ___CSS_LOADER_URL___0___ = urlEscape(__webpack_require__(88));
+
+// Module
+exports.push([module.i, ".section-title {\n    position: relative;\n    font-size: 40px;\n    font-weight: 600;\n    color: #004D86;\n    padding-bottom: 30px;\n    margin-bottom: 30px;\n}\n\n.section-title:after {\n    content: '';\n    position: absolute;\n    bottom: 0px;\n    left: 0px;\n    width: 100px;\n    height: 5px;\n    background-color: #D8D8D8;\n}\n\n.partnership-image {\n    position: absolute;\n    top: 127px;\n    left: 24px;\n    z-index: 1;\n}\n\n.steps-pills {\n    list-style: none;\n    padding-left: 0;\n    margin-bottom: 0px;\n    position: relative;\n}\n\n.steps-pills:after {\n    content: '';\n    position: absolute;\n    width: 10px;\n    height: 100%;\n    top: 0px;\n    left: 25px;\n    background: -webkit-gradient(linear, left top, left bottom, from(#F0F3F5), to(#71D379));\n    background: linear-gradient(180deg, #F0F3F5, #71D379);\n}\n\n.steps-pills li {\n    margin-bottom: 70px;\n    padding-left: 80px;\n    position: relative;\n}\n\n.steps-pills li:last-child {\n    margin-bottom: 30px;\n}\n\n.partner-process {\n    border-right: 1px solid #DAE2ED;\n}\n\n.partner-process-inner {\n    padding-top: 70px;\n    padding-left: 10px;\n}\n\n.partner-form-inner {\n    padding-top: 70px;\n}\n\n.partner-form-inner .form-group label {\n    font-size: 24px;\n}\n\n.partner-form-inner .form-group {\n    margin-bottom: 40px;\n}\n\n.step-pill {\n    width: 155px;\n    height: 40px;\n    position: relative;\n    font-size: 18px;\n    padding-left: 20px;\n    padding-top: 5px;\n    color: #ffffff;\n    font-weight: 500;\n}\n\n.step-pill:after {\n    content: '';\n    position: absolute;\n    top: 0;\n    right: -20px;\n    width: 0;\n    height: 0;\n    border-style: solid;\n    border-width: 20px 0 20px 20px;\n}\n\n.step-pill.pill-green {\n    background-color: #71d379;\n}\n\n.step-pill.pill-green:after {\n    border-color: transparent transparent transparent #71d379;\n}\n\n.step-pill.pill-light {\n    background-color: #EEF3EE;\n    color: #464C4E;\n}\n\n.step-pill.pill-light:after {\n    border-color: transparent transparent transparent #EEF3EE;\n}\n\n.step-pill.pill-blue {\n    background-color: #71CAD3;\n}\n\n.step-pill.pill-blue:after {\n    border-color: transparent transparent transparent #71CAD3;\n}\n\n.step-pill.pill-dark {\n    background-color: #7A8F9D;\n}\n\n.step-pill.pill-dark:after {\n    border-color: transparent transparent transparent #7A8F9D;\n}\n\n.step-li:after {\n    content: '';\n    width: 60px;\n    height: 60px;\n    border: 1px solid #D5DCE1;\n    position: absolute;\n    left: 0px;\n    top: -10px;\n    border-radius: 100%;\n}\n\n.step-li:before {\n    content: '';\n    width: 40px;\n    height: 40px;\n    position: absolute;\n    left: 10px;\n    top: 0px;\n    border-radius: 100%;\n    background-color: #ffffff;\n    z-index: 1;\n    padding: 6px;\n    font-size: 18px;\n    text-align: center;\n}\n\n.process-title {\n    margin-bottom: 40px;\n}\n\n.step-li.step-one:after {\n    background: -webkit-gradient(linear, left bottom, left top, from(#F0F3F5), to(#71D379));\n    background: linear-gradient(0deg, #F0F3F5, #71D379);\n}\n\n.step-li.step-one:before {\n    content: '1';\n}\n\n.step-li.step-two:before {\n    content: '2';\n}\n\n.step-li.step-three:before {\n    content: '3';\n}\n\n.step-li.step-four:before {\n    content: '4';\n}\n\n.step-li.step-five:before {\n    content: '5';\n}\n\n.step-li.step-two:after {\n    background: -webkit-gradient(linear, left bottom, left top, from(#F0F3F5), to(#71D379));\n    background: linear-gradient(0deg, #F0F3F5, #71D379);\n}\n\n.step-li.step-three:after {\n    background: -webkit-gradient(linear, left bottom, left top, from(#F0F3F5), to(#71D379));\n    background: linear-gradient(0deg, #F0F3F5, #71D379);\n}\n\n.step-li.step-four:after {\n    background: -webkit-gradient(linear, left bottom, left top, from(#F0F3F5), to(#71D379));\n    background: linear-gradient(0deg, #F0F3F5, #71D379);\n}\n\n.step-li.step-five:after {\n    background: -webkit-gradient(linear, left bottom, left top, from(#F0F3F5), to(#71D379));\n    background: linear-gradient(0deg, #F0F3F5, #71D379);\n}\n\n.get-help-wrap {\n    text-align: center;\n    padding-top: 30px;\n    border-top: 1px solid #DAE2ED;\n}\n\n.get-help-wrap p {\n    margin-bottom: 40px;\n}\n\n.partner-form {\n    padding-left: 30px;\n}\n\n.partner-btn-submit {\n    padding-left: 20px;\n    padding-right: 20px;\n    margin-top: 50px;\n}\n\n.partner-btn-submit svg {\n    fill: #ffffff;\n}\n\n.partner-btn-submit svg,\n.partner-btn-submit span {\n    display: inline-block;\n    width: 20px;\n    margin-left: 10px;\n}\n\n.form-control.otm-form-control {\n    border-top: 0px;\n    border-right: 0px;\n    border-left: 0px;\n    border-radius: 0px;\n    position: relative;\n    padding-left: 20px;\n}\n\n.input-has-icon {\n    position: relative;\n}\n\n.input-has-icon:after {\n    content: '';\n    width: 15px;\n    height: 15px;\n    background-image: url(" + ___CSS_LOADER_URL___0___ + ");\n    background-size: cover;\n    background-position: center;\n    background-repeat: no-repeat;\n    position: absolute;\n    left: 0px;\n    top: 50%;\n    -webkit-transform: translate(0%, -50%);\n            transform: translate(0%, -50%);\n}\n\n@media only screen and (max-width: 991px) {\n    .get-help-wrap {\n        margin-bottom: 30px;\n    }\n    .partner-process {\n        border-right: 0px;\n    }\n    .section-title {\n        font-size: 32px;\n    }\n}\n\n@media only screen and (max-width: 768px) {\n    .section-title {\n        font-size: 28px;\n    }\n    .partner-form-inner .form-group label {\n        font-size: 18px;\n    }\n}", ""]);
+
+
+
+/***/ }),
+/* 88 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjY4LjgzMiAyNjguODMyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNjguODMyIDI2OC44MzI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KCTxwYXRoIGQ9Ik0yNjUuMTcxLDEyNS41NzdsLTgwLTgwYy00Ljg4MS00Ljg4MS0xMi43OTctNC44ODEtMTcuNjc4LDBjLTQuODgyLDQuODgyLTQuODgyLDEyLjc5NiwwLDE3LjY3OGw1OC42NjEsNTguNjYxSDEyLjUKCQljLTYuOTAzLDAtMTIuNSw1LjU5Ny0xMi41LDEyLjVjMCw2LjkwMiw1LjU5NywxMi41LDEyLjUsMTIuNWgyMTMuNjU0bC01OC42NTksNTguNjYxYy00Ljg4Miw0Ljg4Mi00Ljg4MiwxMi43OTYsMCwxNy42NzgKCQljMi40NCwyLjQzOSw1LjY0LDMuNjYxLDguODM5LDMuNjYxczYuMzk4LTEuMjIyLDguODM5LTMuNjYxbDc5Ljk5OC04MEMyNzAuMDUzLDEzOC4zNzMsMjcwLjA1MywxMzAuNDU5LDI2NS4xNzEsMTI1LjU3N3oiLz4KPC9zdmc+"
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(8)(false);
+// Imports
+var urlEscape = __webpack_require__(9);
+var ___CSS_LOADER_URL___0___ = urlEscape(__webpack_require__(90));
+var ___CSS_LOADER_URL___1___ = urlEscape(__webpack_require__(30));
+var ___CSS_LOADER_URL___2___ = urlEscape(__webpack_require__(91));
+var ___CSS_LOADER_URL___3___ = urlEscape(__webpack_require__(92));
+
+// Module
+exports.push([module.i, ".solution-hero{\n    background-image: url(" + ___CSS_LOADER_URL___0___ + ");\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n}\n.solution-hero .row{\n    height: 500px;\n    max-height: 100%;\n}\n.hero-title{\n    color: #ffffff;\n}\n.hero-title h2{\n    font-size: 80px;\n    margin-bottom: 10px;\n}\n.hero-title h4{\n    font-size: 40px;\n    margin-top: 0px;\n}\n.solution-main{\n    padding-top: 50px;\n    padding-bottom: 50px;\n    position: relative;\n    overflow: hidden;\n}\n.section-title{\n    position: relative;\n    font-size: 40px;\n    font-weight: 600;\n    color: #004D86;\n    padding-bottom: 30px;\n    margin-bottom: 30px;\n}\n.section-title:after{\n    content: '';\n    position: absolute;\n    bottom: 0px;\n    left: 0px;\n    width: 100px;\n    height: 5px;\n    background-color: #D8D8D8;\n}\n.section-desc{\n    font-size: 1.2rem;\n    color: #191919;\n    margin-bottom: 15px;\n}\n.crop {\n    max-width: 700px;\n    overflow: hidden;\n    position: absolute;\n    right: -90px;\n    top: 40px;\n    z-index: -1;\n}\n.crop img {\n    max-width: initial;\n    width: 100%;\n}\n\n.clear{\n    clear: both;\n}\n.solutions-main-left-inner .list {\n    display:none; \n    height:auto;\n    margin:0;\n    float: left;\n}\n\n.solutions-main-left-inner .show {\n    display: none; \n}\n.solutions-main-left-inner .hide:target + .show {\n    display: inline; \n}\n.solutions-main-left-inner .hide:target {\n    display: none; \n}\n.solutions-main-left-inner .hide:target ~ .list {\n    display:inline; \n}\n\n/*style the (+) and (-) */\n.solutions-main-left-inner .hide,\n.show {\n    margin-right: 0;\n    float: left;\n    /* margin-bottom: 25px; */\n}\n\n.solutions-main-left-inner .hide:hover,\n.show:hover {\n    text-decoration: none;\n    opacity: 1;\n    /* margin-bottom: 25px; */\n}\n\n.solutions-main-left-inner .list p{\n    height:auto;\n    margin:0;\n    margin-bottom: 15px;\n}\n/*.about-main-img-right{\n    position: absolute;\n    right: 0px;\n    top: 50px;\n    bottom: 0px;\n    max-width: 650px;\n}*/\n\n.about-main-img-right-logo{\n    position: absolute;\n    right: 0px;\n    top: 50px;\n    bottom: 0px;\n    max-width: 510px;\n}\n\n.btn-blue{\n    background-color: #023B7D;\n    color: #ffffff;\n    margin-top: 30px;\n    text-transform: uppercase;\n    box-shadow: -7px 8px 0px 0px rgba(216,216,216,1);\n    border-radius: 0px;\n    font-size: 1em;\n    font-weight: 600;\n    padding: 10px 35px;\n}\n.btn-blue:hover {\n    color: #ffffff;\n    background-color: #1256a3;\n}\n\n.otm-plans{\n    background-image: url(/static/solutions-path-bg.87c3bb36.png);\n    background-position: bottom;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-color: #F6F8F9;\n    padding-top: 100px;\n    padding-bottom: 100px;\n}\n.otm-plans-wrapper {\n    position: relative;\n    min-height: 500px;\n}\n.otm-plans-diamond {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    height: 100%;\n    margin-top: -20px;\n    z-index: 1;\n}\n.otm-plans-diamond .plan-inner {\n    background-color: #f8f8f8;\n    min-height: 515px;\n}\n.otm-plans-diamond .plan-icon-wrapper {\n    background-color: #ffffff;\n    border: 3px solid #e5e5e5;\n}\n.otm-plans-emerald {\n    position: absolute;\n    left: 40px;\n}\n.otm-plans-ruby {\n    position: absolute;\n    right: 40px;\n}\n.plan-main-title{\n    text-align: center;\n    margin-bottom: 50px;\n}\n.plan-main-title small{\n    font-size: 1.2em;\n    text-transform: uppercase;\n    color: #7E8085;\n    margin-bottom: 10px;\n    display: inline-block;\n}\n.plan-main-title h4{\n    font-size: 34px;\n    color: #2C2E30;\n    line-height: 46px;\n}\n.plan-inner{\n    background-color: #ffffff;\n    text-align: center;\n    padding-top: 55px;\n    padding-bottom: 55px;\n    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\n}\n.plan-icon-wrapper{\n    width: 108px;\n    height: 108px;\n    border-radius: 50%;\n    margin: 0 auto;\n    background-color: #F4F4F4;\n    border: 3px solid #e5e5e5;\n    align-items: center;\n    display: flex;\n    margin-bottom: 10px;\n}\n.plan-icon-wrapper img{\n    margin: 0 auto;\n    max-width: 55px;\n}\n.plan-name{\n    text-transform: uppercase;\n    font-size: 15px;\n    font-weight: 600;\n    color: #302F2C;\n    margin-bottom: 15px;\n    margin-top: 15px;\n}\n.plan-desc{\n    font-size: 24px;\n    color: #2C2E30;\n    margin-bottom: 20px;\n}\n.plan-desc span{\n    color: #2F5BEA;\n}\n.plan-price{\n    font-size: 40px;\n    line-height: 34px;\n    color: #2C2E30;\n}\n.price-small-desc{\n    display: inline-block;\n    width: 100%;\n    font-size: 13px;\n    color: #91959E;\n}\n.plan-cta{\n    display: inline-block;\n    margin-top: 40px;\n    font-size: 18px;\n    color: #2C2E30;\n    position: relative;\n}\n.plan-cta img{\n    margin-left: 10px;\n}\n.plan-cta:after{\n    content: '';\n    width: 100%;\n    height: 1px;\n    background-color: #2F5BEA;\n    position: absolute;\n    bottom: -5px;\n    left: 0px;\n    opacity: 0;\n}\n.plan-cta:hover:after{\n    opacity: 1;\n}\n.plan-cta:hover{text-decoration: none;color: #2C2E30;}\n.plan-footer{text-align: center;margin-top: 40px;}\n.plan-footer p{\n    color: #7E8085;\n    font-size: 1em;\n    margin-bottom: 0px;\n    text-transform: uppercase;\n}\n.plan-footer h4{\n    font-size: 34px;\n    color: #2C2E30;\n    line-height: 46px;\n    margin-top: 0px;\n}\n.plans-hero .solution-main {\n    padding-left: 20px;\n    padding-right: 20px;\n}\n.plans-buttons btn {\n    margin-left: 50px;\n}\n.plan-text-header {\n    margin-left: 20px;\n    margin-bottom: 20px;\n    margin-top: 20px;\n}\n.truck-permit{\n    padding-top: 100px;\n    padding-bottom: 100px;\n    position: relative;\n    background-color: rgb(246, 247, 247);\n}\n.solution-main-left {\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    top: 0px;\n}\n.solution-truck{\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    top: 45px;\n    max-width: 530px;\n}\n.solution-truck-mobile {\n    display: none;\n}\n.section-divider{\n    position: absolute;\n    top: 0;\n    -webkit-transform: translate(0%, -50%);\n            transform: translate(0%, -50%);\n}\n.section-divider-top{\n    left: 0px;\n    width: 0;\n    height: 0;\n    border-style: solid;\n    border-width: 100px 0 100px 50vw;\n    border-color: transparent transparent transparent #007CC7;\n}\n.section-divider-bottom{\n    width: 0;\n    height: 0;\n    right: 0px;\n    border-style: solid;\n    border-width: 100px 50vw 100px 0;\n    border-color: transparent #007CC7 transparent transparent;\n}\n.solution-accounting{\n    position: absolute;\n    left: 0px;\n    top: 100px;\n    bottom: 0px;\n    max-width: 575px;\n}\n.accounting-otm{\n    position: relative;\n    padding-top: 100px;\n    padding-bottom: 100px;\n    background-color: #f7f7f7;\n}\n.accounting-otm .section-desc{font-size: 20px;}\n.accounting-otm .btn-blue{margin-top: 10px;}\n.bussiness-consulting{\n    position: relative;\n    padding-bottom: 30px;\n    padding-top: 100px;\n}\n.consulting-right-img{\n    position: absolute;\n    top: 0px;\n    right: 0px;\n    bottom: 0px;\n    width: 100%;\n    max-width: 600px;\n}\n.tax-debt-resolution{\n    position: relative;\n    padding-top: 100px;\n    padding-bottom: 50px;\n}\n\n.solution-tax-logo{\n    position: absolute;\n    top: 100px;\n    left: 20px;\n    right: 0;\n    max-width: 520px;\n    z-index: 1;\n    display: block !important;\n}\n\n.solutions-main-right-inner ul{\n    list-style: none;\n    padding-left: 0px;\n    margin-bottom: 0px;\n}\n.solutions-main-right-inner ul li{\n    position: relative;\n    padding-left: 40px;\n    font-size: 1.2rem;\n    color: #3A434A;\n    margin-bottom: 10px;\n}\n.solutions-main-right-inner ul li:after{\n    content: '';\n    width: 20px;\n    height: 14px;\n    background-image: url(" + ___CSS_LOADER_URL___1___ + ");\n    background-position: center;\n    background-size: cover;\n    background-repeat: no-repeat;\n    position: absolute;\n    left: 0px;\n    top: 50%;\n    -webkit-transform: translate(0%, -50%);\n            transform: translate(0%, -50%);\n}\n\n\n.solutions-truck-animation {\n    bottom: 0;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    max-width: 600px;\n}\n.solutions-slider-trucks {\n    top: 0;\n    bottom: 0;\n    height: 100%;\n    width: 100px;\n    position: relative;\n    z-index: 2;\n}\n\n.solutions-sliding-animation {\n    height: 100%;\n    background-image: url(" + ___CSS_LOADER_URL___2___ + ");\n    background-position: 0 0;\n    background-size: auto 150%;\n    -webkit-animation: run 10s linear infinite;\n    animation: run 10s linear infinite;\n    z-index: 2;\n    background-repeat-x: no-repeat;\n}\n\n@-webkit-keyframes run {\n    from {\n        background-position: 0 0;\n    }\n    /*use negative width if you want it to flow right to left else and positive for left to right*/\n    to {\n        background-position: left 0px bottom -1035px\n    }\n}\n\n@keyframes run {\n    from {\n        background-position: 0 0;\n    }\n    /*use negative width if you want it to flow right to left else and positive for left to right*/\n    to {\n        background-position: left 0px bottom -1035px\n    }\n}\n\n.solutions-slider-background {\n    position: absolute;\n    top: 0;\n    left: 0;\n    bottom: 0;\n    width: 100%;\n    max-width: 600px;\n    height: 100%;\n    z-index: 0;\n}\n\n.solutions-slider-bottom {\n    height: 100%;\n    width: 100%;\n    background-image: url(" + ___CSS_LOADER_URL___3___ + ");\n    background-position: 0 0;\n    background-size: auto 100%;\n    background-repeat: no-repeat;\n}\n\n\n@media only screen and (min-width: 1700px){\n    .solution-accounting{\n        max-width: 675px;\n    }\n    \n}\n@media only screen and (min-width: 1900px){\n    .consulting-right-img{\n        width: 100%;\n        max-width: 650px;\n    }\n    .solution-tax-logo{\n        max-width: 625px;\n    }\n    .solution-truck{\n        max-width: 600px;\n    }\n}\n@media only screen and (min-width: 1201px) and (max-width: 1350px) {\n    .solution-main-left {\n        position: absolute;\n        left: 0;\n        bottom: 0;\n        top: -10px;\n    }\n}\n\n@media only screen and (min-width: 2500px){\n    .consulting-right-img{\n        top: 0px;\n        max-width: 750px;\n    }\n    .solution-tax-logo{\n        left: 250px;\n        max-width: 700px;\n    }\n    .solution-accounting {\n        max-width: 875px;\n    }\n    .solution-truck {\n        max-width: 650px;\n    }\n}\n@media only screen and (max-width: 1200px){\n    .about-main-img-right{\n        top: auto;\n        max-width: 550px;\n    }\n    .solution-truck{\n        max-width: 440px;\n        top: 40px;\n    }\n    .about-main-img-right-logo{\n        max-width: 450px;\n    }\n    .solution-accounting{\n        max-width: 530px;\n    }\n    .consulting-right-img{\n        max-width: 500px;\n        top: 0px;\n    }\n    .solution-tax-logo {\n        position: absolute;\n        top: 85px;\n        left: 55%;\n        width: 55%;\n        max-width: 520px;\n        -webkit-transform: translate(-50%, -50%);\n        transform: translate(-50%, -50%);\n        z-index: 1;\n        display: block !important;\n    }\n\n}\n@media only screen and (max-width: 991px){\n    .about-main-img-right,.solution-truck,.about-main-img-right-logo,.solution-accounting,.consulting-right-img,.solution-tax-logo{\n        display: none;\n    }\n    .solution-truck-mobile {\n        width: 100%;\n        left: 0;\n        right: 0;\n        position: absolute;\n        display: block;\n    }\n    .solutions-main-right-inner {\n        margin-top: 150px;\n    }\n    #tax-planning .about-main-img-right-logo {\n        width: 40%;\n        left: 50%;\n        right: 50%;\n        top: 100px;\n        position: absolute;\n        display: block;\n        -webkit-transform: translate(-50%, -50%);\n                transform: translate(-50%, -50%);\n    }\n    #consulting .about-main-left {\n        margin-top: 200px;\n    }\n    .consulting-right-img {\n        width: 75%;\n        right: 0;\n        top: 0;\n        position: absolute;\n        display: block;\n    }\n    .solutions-tax-logo {\n        width: 40%;\n        left: 50%;\n        right: 50%;\n        top: 100px;\n        position: absolute;\n        display: block;\n        -webkit-transform: translate(-50%, -50%);\n        transform: translate(-50%, -50%);\n    }\n    #irs-tax .about-main-left {\n        margin-top:100px;\n    }\n    .hero-title h2 {\n        font-size: 60px;\n    }\n    .hero-title h4 {\n        font-size: 30px;\n    }\n    .section-title {\n        font-size: 32px;\n    }\n    .plan-footer h4{\n        font-size: 30px;\n    }\n    .section-desc {\n        font-size: 20px;\n    }\n    .plan-main-title h4{\n        font-size: 30px;\n    }\n    .otm-plans-wrapper {\n        margin: 0 auto;\n        width: 100%;\n    }\n    .otm-plans-diamond {\n        position: relative;\n        top: 0;\n        left: 0;\n        -webkit-transform: none;\n        transform: none;\n        height: 100%;\n        margin-top: 0px;\n        z-index: 1;\n    }\n    .otm-plans-emerald {\n        position: relative;\n        top: 0;\n        left: 0;\n        -webkit-transform: none;\n        transform: none;\n        height: 100%;\n        margin-top: 0px;\n        z-index: 1;\n    }\n    .otm-plans-ruby {\n        position: relative;\n        top: 0;\n        left: 0;\n        -webkit-transform: none;\n        transform: none;\n        height: 100%;\n        margin-top: 0px;\n        z-index: 1;         \n    }\n    .solutions-truck-animation {\n        margin: 0 auto;\n        height: 400px;\n        border-bottom: 1px solid #ddd;\n    }\n    #accounting .about-main-left {\n        margin: 165px auto;\n        top: 200px;\n    }\n}\n@media screen and (min-width: 1024px) and (max-width: 1279px) {\n    .crop {\n        right: -200px;\n    }\n    .accounting-otm {\n        padding-top: 50px;\n        padding-bottom: 50px;\n    }\n    .solution-tax-logo {\n        position: absolute;\n        max-width: 620px;\n        top: 280px;\n        left: 130px;\n        width: 100%;\n        right: 0;\n        -webkit-transform: translate(-50%, -50%);\n        transform: translate(-50%, -50%);\n        z-index: 1;\n        display: block !important;\n    }\n\n}\n@media screen and (max-width: 900px) and (min-width: 600px) {\n    .crop {\n        left: 0px !important;\n        right: 0px !important;\n        top: 40px;\n        z-index: -1;\n        margin: 0 auto;\n    }\n    .solutions-main-right-inner {\n        margin-top: 400px;\n    }\n    #tax-planning .about-main-img-right-logo {\n        top:200px;\n    }\n    .consulting-right-img {\n        width: 48%;\n    }\n    .solution-tax-logo {\n        top: 70px;\n        left: 53%;\n        right: 50%;\n        width: 30%;\n        -webkit-transform: translate(-50%, -50%);\n        transform: translate(-50%, -50%);\n    }\n    .otm-plans-wrapper {\n        min-height: 1580px;\n    }\n    .otm-plans-diamond {\n        position: relative;\n        top: 250px !important;\n        left: 50% !important;\n        right: 50% !important;\n        -webkit-transform: translate(-50%, -50%) !important;\n                transform: translate(-50%, -50%) !important;\n        width: 100% !important;\n        max-width: 50% !important;\n        display: block !important;\n        margin-top: 0px !important;\n        z-index: 1 !important;\n    }\n    .otm-plans-emerald {\n        position: relative;\n        top: 800px !important;\n        -webkit-transform: translate(-50%, -50%) !important;\n                transform: translate(-50%, -50%) !important;\n        width: 100% !important;\n        max-width: 50% !important;\n        display: block !important;\n        margin-top: 0px !important;\n        z-index: 1 !important;\n    }\n    .otm-plans-ruby {\n        position: relative;\n        top: 520px !important;\n        left: 50% !important;\n        right: 50% !important;\n        -webkit-transform: translate(-50%, -50%) !important;\n                transform: translate(-50%, -50%) !important;\n        width: 100% !important;\n        max-width: 50% !important;\n        display: block !important;\n        margin-top: 0px !important;\n        z-index: 1 !important;\n    }\n}\n@media only screen and (max-width: 768px){\n    .hero-title h2 {\n        font-size: 40px;\n    }\n    .hero-title h4 {\n        font-size: 20px;\n    }\n    .section-title {\n        font-size: 28px;\n    }\n    .section-desc {\n        font-size: 18px;\n    }\n    .section-divider-top{\n        border-width: 70px 0 70px 50vw;\n    }\n    .section-divider-bottom{\n        border-width: 70px 50vw 70px 0;\n    }\n    .plan-inner{\n        margin-bottom: 20px;\n    }\n    .plan-footer h4{\n        font-size: 24px;\n        line-height: 1.4;\n    }\n    .plan-main-title h4{\n        font-size: 24px;\n        line-height: 1.4;\n        margin-bottom: 30px;\n    }\n    .solutions-main-left-inner {\n        margin-top: 380px;\n    }\n    .crop {\n        max-width: 420px;\n        overflow: hidden;\n        position: absolute;\n        right: -90px;\n        top: 40px;\n        z-index: -1;\n    }\n\n    .otm-plans-wrapper {\n        margin: 0 auto;\n        width: 100%;\n    }\n    .otm-plans-diamond {\n        position: relative;\n        top: 0;\n        left: 0;\n        -webkit-transform: none;\n        transform: none;\n        height: 100%;\n        margin-top: 0px;\n        z-index: 1;\n    }\n    .otm-plans-emerald {\n        position: relative;\n        top: 0;\n        left: 0;\n        -webkit-transform: none;\n        transform: none;\n        height: 100%;\n        margin-top: 0px;\n        z-index: 1;\n    }\n    .otm-plans-ruby {\n        position: relative;\n        top: 0;\n        left: 0;\n        -webkit-transform: none;\n        transform: none;\n        height: 100%;\n        margin-top: 0px;\n        z-index: 1;         \n    }\n}\n@media only screen and (max-width: 475px){\n    .plan-footer h4{\n        font-size: 1.1em;\n        font-weight: 600;\n    }\n    .plan-main-title h4{\n        font-size: 1.5em;\n    }\n}\n@media only screen and (max-width: 375px){\n    .section-title{\n        font-size: 24px;\n    }\n}", ""]);
+
+
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "b245268e774883ddfeb68ccad8fe739a.png";
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "fa793a1aa2bb32a79ccd0c8dc84d0e7d.svg";
+
+/***/ }),
+/* 92 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "44b01352bd30460effcb0513aeb3ba4d.svg";
 
 /***/ })
 /******/ ]);

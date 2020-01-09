@@ -7,14 +7,16 @@ export default () => {
   if (process.browser) {
     if (location.hash) {
       setTimeout(() => {
-        document.getElementById(location.hash.replace('#', '')).scrollIntoView(true);
+        document
+          .getElementById(location.hash.replace("#", ""))
+          .scrollIntoView(true);
       }, 150);
     } else {
       scrollTo(0, 0);
     }
-  }
 
-  document.getElementById("menuBackground").classList.remove("show");
+    document.getElementById("menuBackground").classList.remove("show");
+  }
 
   return (
     <div className="sticky-menu">
@@ -51,7 +53,11 @@ export default () => {
         style={{ paddingTop: "100px" }}
       >
         <h2 className="mb-5">Have more questions?</h2>
-        <a href="https://app.purechat.com/w/otmdispatch" target="_app" className="btn btn-primary btn-lg mb-5 questions-btn">
+        <a
+          href="https://app.purechat.com/w/otmdispatch"
+          target="_app"
+          className="btn btn-primary btn-lg mb-5 questions-btn"
+        >
           Get Help
         </a>
       </div>

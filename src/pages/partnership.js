@@ -188,7 +188,7 @@ const Partnership = () => {
           </div>
         </form>
       </div> */}
-       <div className="otm-breadcrumb">
+      <div className="otm-breadcrumb">
         <div className="container">
           <div className="otm-breadcrumb-inner">
             <nav aria-label="breadcrumb">
@@ -210,7 +210,12 @@ const Partnership = () => {
             <div className="col-12 col-lg-7 offset-lg-1 partner-form">
               <div className="partner-form-inner">
                 <h2 className="section-title">Partner With Us</h2>
-                <form id="contact-form" method="post" action="contact.php" role="form">
+                <form
+                  id="contact-form"
+                  method="post"
+                  action="contact.php"
+                  role="form"
+                >
                   <div className="form-group">
                     <label htmlFor className="form-label">
                       Package Of Interest?
@@ -381,9 +386,9 @@ const Partnership = () => {
                 <p className="form-footer">
                   OTM Dispatch reserves the right to not provide the services
                   mentioned above if Carrier does not furnish all the required
-                  information to complete such services and Carrier cannot hold OTM
-                  Dispatch accountable for doing so if those requirements are not
-                  met by Carrier.
+                  information to complete such services and Carrier cannot hold
+                  OTM Dispatch accountable for doing so if those requirements
+                  are not met by Carrier.
                 </p>
               </div>
             </div>
@@ -392,13 +397,19 @@ const Partnership = () => {
                 <div className="process-title">
                   <h4>Partnership Process Explained</h4>
                 </div>
-                <img src={ProcessImage} className="partnership-image" alt="Partnership Process" />
+                <img
+                  src={ProcessImage}
+                  className="partnership-image"
+                  alt="Partnership Process"
+                />
                 <ul className="steps-pills">
                   <li className="step-li step-one">
                     <div className="step-pill pill-green">Fill out form</div>
                   </li>
                   <li className="step-li step-two">
-                    <div className="step-pill pill-light">Wait for our call</div>
+                    <div className="step-pill pill-light">
+                      Wait for our call
+                    </div>
                   </li>
                   <li className="step-li step-three">
                     <div className="step-pill pill-blue">Get Approved</div>
@@ -412,9 +423,15 @@ const Partnership = () => {
                 </ul>
                 <div className="get-help-wrap">
                   <p>
-                    Press below to get assistance from one of our representatives.
+                    Press below to get assistance from one of our
+                    representatives.
                   </p>
-                  <a href="https://app.purechat.com/w/otmdispatch" target="_app"><img src={HelpImage} alt="help" /></a>
+                  <a
+                    href="https://app.purechat.com/w/otmdispatch"
+                    target="_app"
+                  >
+                    <img src={HelpImage} alt="help" />
+                  </a>
                 </div>
               </div>
             </div>
