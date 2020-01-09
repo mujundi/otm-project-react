@@ -298,7 +298,7 @@ body {
         text-align: right;
     }
     .sticky-menu {
-        padding-top: 90px;
+        padding-top: 90px !important;
     }
     .solutions-dropdown {
         -webkit-column-count: 1 !important;
@@ -433,6 +433,6 @@ body {
         width: 180px;
     }
     .sticky-menu {
-        padding-top: 90px;
+        padding-top: 90px !important;
     }
 }
