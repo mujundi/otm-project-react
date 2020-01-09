@@ -20,6 +20,8 @@ const Contact = (props) => {
   // const [needs, setNeeds] = useState([]);
   // const [imageURL, setImageURL] = useState([]);
 
+  const [sendingMail, setSendingMail] = useState(false);
+
   useEffect(() => {
     // axios.get(url).then((res) => {
     //   setData(res.data);
@@ -56,6 +58,32 @@ const Contact = (props) => {
         });
     }
   };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setSendingMail(true);
+    const data = $(event.target).serializeArray();
+    let body = 'Contact Form Details: <br /><br />';
+    data.map(field => body = body + field.name + ' : ' + field.value + '<br />');
+
+    Email.send({
+      Host: "smtp.office365.com",
+      Username: "leads@otmdispatch.com",
+      Password: "Kok49018",
+      To: 'leads@otmdispatch.com',
+      From: "leads@otmdispatch.com",
+      Subject: "New Contact Form",
+      Body: body
+    }).then((message) => {
+      setSendingMail(false);
+      if (message === 'OK') {
+        alert('We received your details. Thank you :)');
+        document.getElementById('contactForm').reset();
+      } else {
+        alert('Something went wrong. Try again later...');
+      }
+    });
+  }
 
   return (
     // <div>
@@ -214,7 +242,7 @@ const Contact = (props) => {
                 <h3>Contact Us</h3>
               </div>
               <div className="contact-form-wrapper">
-                <form>
+                <form id="contactForm" onSubmit={handleSubmit}>
                   <div className="form-row">
                     <div className="form-group custom-form-group col-12">
                       <label>Your Name</label>
@@ -222,6 +250,8 @@ const Contact = (props) => {
                         type="text"
                         className="form-control form-control-lg"
                         placeholder="Full Name"
+                        name="Name"
+                        required
                       />
                     </div>
                     <div className="form-group custom-form-group col-12">
@@ -230,6 +260,7 @@ const Contact = (props) => {
                         type="text"
                         className="form-control form-control-lg"
                         placeholder="Company Name"
+                        name="Company Name"
                       />
                     </div>
                     <div className="form-group custom-form-group col-12">
@@ -238,14 +269,18 @@ const Contact = (props) => {
                         type="text"
                         className="form-control form-control-lg"
                         placeholder="+1 (123) 555-5678"
+                        name="Phone Number"
+                        required
                       />
                     </div>
                     <div className="form-group custom-form-group col-12">
                       <label>Email</label>
                       <input
-                        type="text"
+                        type="email"
                         className="form-control form-control-lg"
                         placeholder="youremail@address.com"
+                        name="Email"
+                        required
                       />
                     </div>
                     <div className="form-group custom-form-group col-12">
@@ -254,6 +289,8 @@ const Contact = (props) => {
                         type="text"
                         className="form-control form-control-lg"
                         placeholder="100 Street Address"
+                        name="Street Address"
+                        required
                       />
                     </div>
                     <div className="form-group custom-form-group col-12">
@@ -262,6 +299,8 @@ const Contact = (props) => {
                         type="text"
                         className="form-control form-control-lg"
                         placeholder="Florida"
+                        name="State"
+                        required
                       />
                     </div>
                     <div className="form-group custom-form-group col-6">
@@ -270,6 +309,8 @@ const Contact = (props) => {
                         type="text"
                         className="form-control form-control-lg"
                         placeholder="Orlando"
+                        name="City"
+                        required
                       />
                     </div>
                     <div className="form-group custom-form-group col-6">
@@ -278,10 +319,12 @@ const Contact = (props) => {
                         type="text"
                         className="form-control form-control-lg"
                         placeholder={"12345"}
+                        name="Zip"
+                        required
                       />
                     </div>
                     <div className="form-group custom-form-group col-12 text-right">
-                      <button className="btn btn-lg otm-action-btn">
+                      <button className="btn btn-lg otm-action-btn" disabled={sendingMail}>
                         Submit
                       </button>
                     </div>
