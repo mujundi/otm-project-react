@@ -8,28 +8,28 @@ import NavBar from "components/NavBar";
 
 import OTMDispatchLogo from "../images/logo/otm-trademark.svg";
 import HelpImage from "../images/get-help.png";
+import loaderImage from "../images/loader.gif";
 
 const API_URL = "http://167.114.153.121:1337";
-
-// const url = `${API_URL}/pages/5dff3d19aecfad34d76ee5b6`;
+const url = `${API_URL}/pages/5dff3d19aecfad34d76ee5b6`;
 
 const Contact = (props) => {
-  // const [data, setData] = useState([]);
   // const [contactHeader, setContactHeader] = useState([]);
   // const [contactSubheader, setContactSubheader] = useState([]);
-  // const [needs, setNeeds] = useState([]);
   // const [imageURL, setImageURL] = useState([]);
+  const [data, setData] = useState([]);
+  const [needs, setNeeds] = useState([]);
 
   const [sendingMail, setSendingMail] = useState(false);
 
   useEffect(() => {
-    // axios.get(url).then((res) => {
-    //   setData(res.data);
+    axios.get(url).then((res) => {
+    setData(res.data);
     //   setContactHeader(res.data.fields[0].header);
     //   setContactSubheader(res.data.fields[0].subheader);
     //   setImageURL(`${API_URL + res.data.fields[0].background.url}`);
-    //   setNeeds(res.data.fields[1].option);
-    // });
+    setNeeds(res.data.fields[1].option);
+  });
     if (process.browser) scrollTo(0, 0);
   }, []);
 
@@ -40,6 +40,15 @@ const Contact = (props) => {
     const email = e.target.email.value;
     const reason = e.target.need.value;
     const message = e.target.message.value;
+    
+   // CheckColors(val){
+   //  var element=document.getElementById('need');
+   //  if (val=='pick a color'||val=='other')
+   //    element.style.display='block';
+   //  else  
+   //    element.style.display='none';
+   // }
+
     if (firstName) {
       axios
         .post(`${API_URL}/contact-requests`, {
@@ -61,9 +70,15 @@ const Contact = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const alert = document.getElementById("loader");
+    alert.style.display = "block";
+        setTimeout(() => {
+            alert.style.display = "none";
+        }, 4000);
+
     setSendingMail(true);
     const data = $(event.target).serializeArray();
-    let body = 'Contact Form Details: <br /><br />';
+    let body = 'Hi, You have received a new request for OTM Dispatch. Please see below for contact information:<br /><br />';
     data.map(field => body = body + field.name + ' : ' + field.value + '<br />');
 
     Email.send({
@@ -72,15 +87,25 @@ const Contact = (props) => {
       Password: "Kok49018",
       To: 'leads@otmdispatch.com',
       From: "leads@otmdispatch.com",
-      Subject: "New Contact Form",
+      Subject: "OTM Dispatch - Contact Request",
       Body: body
     }).then((message) => {
       setSendingMail(false);
       if (message === 'OK') {
-        alert('We received your details. Thank you :)');
+        const alert = document.getElementById("thank-you-alert");
+        //alert('We received your details. Thank you :)');
+        alert.style.display = "block";
+        setTimeout(() => {
+            alert.style.display = "none";
+        }, 4000);
         document.getElementById('contactForm').reset();
       } else {
-        alert('Something went wrong. Try again later...');
+        const alert = document.getElementById("error-alert");
+        //alert('We received your details. Thank you :)');
+        alert.style.display = "block";
+        setTimeout(() => {
+            alert.style.display = "none";
+        }, 4000);
       }
     });
   }
@@ -244,6 +269,19 @@ const Contact = (props) => {
               <div className="contact-form-wrapper">
                 <form id="contactForm" onSubmit={handleSubmit}>
                   <div className="form-row">
+                    <div className="col-12">
+                      <div className="form-group">
+                        <label htmlFor="form_need">Please select request type *</label>
+                        <select id="form_need" name="Need" className="form-control" required="required" data-error="Please select request type.">
+                          {needs.map((need, index) => (
+                            <option key={index} value={need.option}>
+                              {need.option}
+                            </option>
+                          ))}
+                        </select>
+                        
+                      </div>
+                    </div>
                     <div className="form-group custom-form-group col-12">
                       <label>Your Name</label>
                       <input
@@ -323,7 +361,16 @@ const Contact = (props) => {
                         required
                       />
                     </div>
+                    <div id="thank-you-alert" className="alert alert-success mb-5" role="alert"style={{ display: "none" }}>
+                      <h4 className="alert-heading">Thank you!</h4>
+                      <p>We will get back to you shortly.</p>
+                    </div>
+                    <div id="error-alert" className="alert alert-success mb-5" role="alert"style={{ display: "none" }}>
+                      <h4 className="alert-heading">Hmmm!</h4>
+                      <p>Something went wrong. <a href="https://app.purechat.com/w/otmdispatch">Contact Support</a></p>
+                    </div>
                     <div className="form-group custom-form-group col-12 text-right">
+                      <div id="loader" role="alert" style={{ display: "none" }}><img src={loaderImage} className="loaderImage" /></div>
                       <button className="btn btn-lg otm-action-btn" disabled={sendingMail}>
                         Submit
                       </button>

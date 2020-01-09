@@ -8,6 +8,7 @@ import NavBar from "../components/NavBar";
 
 import HelpImage from "../images/get-help.png";
 import ProcessImage from "../images/partnership-process.svg";
+import loaderImage from "../images/loader.gif";
 // const API_URL = "http://167.114.153.121:1337";
 
 // const url = `${API_URL}/pages/5dff3ba2aecfad34d76ee5a0`;
@@ -30,10 +31,17 @@ const Partnership = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const alert = document.getElementById("loader");
+    alert.style.display = "block";
+        setTimeout(() => {
+            alert.style.display = "none";
+        }, 4000);
+
     setSendingMail(true);
 
     const data = $(event.target).serializeArray();
-    let body = 'Partnership Form Details: <br /><br />';
+    let body = 'Hi, You have received a new partnership request for OTM Dispatch. Please see below for lead information: <br /><br />';
+    //let signature ='Thank you! <br />OTM Dispatch Lead Capture';
     data.map(field => body = body + field.name + ' : ' + field.value + '<br />');
 
     Email.send({
@@ -42,15 +50,25 @@ const Partnership = () => {
       Password: "Kok49018",
       To: 'leads@otmdispatch.com',
       From: "leads@otmdispatch.com",
-      Subject: "New Partnership Form",
+      Subject: "New Lead - OTM Dispatch",
       Body: body
     }).then((message) => {
       setSendingMail(false);
       if (message === 'OK') {
-        alert('We received your details. Thank you :)');
+        const alert = document.getElementById("thank-you-alert");
+        //alert('We received your details. Thank you :)');
+        alert.style.display = "block";
+        setTimeout(() => {
+            alert.style.display = "none";
+        }, 4000);
         document.getElementById('partnershipForm').reset();
       } else {
-        alert('Something went wrong. Try again later...');
+        const alert = document.getElementById("error-alert");
+        //alert('We received your details. Thank you :)');
+        alert.style.display = "block";
+        setTimeout(() => {
+            alert.style.display = "none";
+        }, 4000);
       }
     });
   }
@@ -396,7 +414,17 @@ const Partnership = () => {
                       </div>
                     </div>
                   </div>
+                    <div id="thank-you-alert" className="alert alert-success mb-5" role="alert"style={{ display: "none" }}>
+                      <h4 className="alert-heading">Thank you!</h4>
+                      <p>We will get back to you shortly.</p>
+                    </div>
+                    <div id="error-alert" className="alert alert-success mb-5" role="alert"style={{ display: "none" }}>
+                      <h4 className="alert-heading">Hmmm!</h4>
+                      <p>Something went wrong. <a href="https://app.purechat.com/w/otmdispatch">Contact Support</a></p>
+                    </div>
                   <div className="form-group text-center">
+                  <div id="loader" role="alert" style={{ display: "none" }}><img src={loaderImage} className="loaderImage" /></div>
+                      
                     <button
                       type="submit"
                       className="btn btn-success partner-btn-submit"
