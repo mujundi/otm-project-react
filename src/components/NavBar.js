@@ -198,7 +198,7 @@ const NavBar = (props) => {
                 About Us
               </Link>
               <Link to="/company#services" className="dropdown-item">
-                Service
+                Services
               </Link>
             </div>
           </li>

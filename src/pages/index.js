@@ -102,7 +102,7 @@ export default () => {
 
   return (
   <>
-    <section className="otm-hero">
+    <section className="otm-hero homepage">
       <div className="container">
         <NavBar light />
       </div>
@@ -590,7 +590,7 @@ export default () => {
                 OTM Dispatch provides affordable and competitively priced dispatch, tax, accounting, truck permits and consulting services to individuals as well as small and medium size businesses nationwide. OTM Dispatch is currently dispatching Reefers, Dry Vans, Flatbeds, Car Haulers and Hotshots.
               </p>
               <p>
-                Our agents are here to be the most transparent they can. We are here to work side by side with shippers and drivers to help minimize costs while maximizing profits.
+                Our agents are here to be the most transparent they can. We are here to work side by side with brokers, shippers and drivers to help minimize costs while maximizing profits.
               </p>
               <a className="btn btn-orange btn-shadow" href="/company">Learn More</a>
             </div>
