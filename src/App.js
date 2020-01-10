@@ -14,6 +14,7 @@ const App = () => {
           <Router>
             <Routes path="/contact" />
             <Routes path="/company" />
+            <Routes path="/services" />
             <Routes path="/solutions" />
             <Routes path="/help" />
             <Routes path="/legal" />

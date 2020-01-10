@@ -52,7 +52,7 @@ export default () => {
       >
         <h2 className="mb-5">Have more questions?</h2>
         <a href="https://app.purechat.com/w/otmdispatch" target="_app" className="btn btn-primary btn-lg mb-5 questions-btn">
-          Get Help
+          Online Chat Support
         </a>
       </div>
     </div>

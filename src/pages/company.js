@@ -167,7 +167,7 @@ const Company = () => {
                   importance. Individuals and/or companies who choose our firm rely
                   on our competent advice and quick accurate results.
                 </p>
-                <Link to="/solutions" className="btn btn-orange btn-shadow">Our Solutions</Link>
+                <Link to="/services" className="btn btn-orange btn-shadow">Our Services</Link>
               </div>
             </div>
             <div className="col-12 col-lg-4 about-main-right">
@@ -196,7 +196,8 @@ const Company = () => {
           </div>
         </div>
       </section>
-      <section className="about-service" id="services">
+
+      {/*<section className="about-service" id="services">
         <div className="container">
           <div className="row flex-row-reverse">
             <div className="col-12 col-lg-7 about-main-left">
@@ -217,13 +218,14 @@ const Company = () => {
                   <li><Link to="/solutions#consulting" className="solutionsLink">Business Consulting</Link></li>
                   <li><Link to="/solutions#irs-tax" className="solutionsLink">IRS Tax Debt Resolution</Link></li>
                 </ul>
-                <Link to="/solutions#otm-plans" className="btn btn-orange btn-shadow">Our Packages</Link>
+                <Link to="/solutions#otm-plans" className="btn btn-orange btn-shadow">Our Services</Link>
               </div>
             </div>
           </div>
         </div>
         <img src={ServiceImageLogo} alt="" className="service-img-logo" />
-      </section>
+      </section>*/}
+
     </div>
   );
 };

@@ -61,7 +61,7 @@ export default () => (
             </ul>
           </div>
           <div className="col-xs-12 col-md-6 col-lg-6 follow-menu">
-            <h4>Follow Us</h4>
+            {/*<h4>Follow Us</h4>
             <ul>
               <li>
                 <a href="#">
@@ -107,7 +107,7 @@ export default () => (
                   </svg>
                 </a>
               </li>
-            </ul>
+            </ul>*/}
           </div>
         </div>
         <div className="row">

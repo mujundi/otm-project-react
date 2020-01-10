@@ -7,6 +7,9 @@
 .about-hero h2 {
     text-align: center;
 }
+.about-hero h4 span {
+    text-transform: uppercase;
+}
 .about-hero .row{
     height: 500px;
     max-height: 100%;
