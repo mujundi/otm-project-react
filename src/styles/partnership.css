@@ -72,6 +72,9 @@
     margin-bottom: 40px;
 }
 
+.get-help-wrap img {
+    width:150px;
+}
 .step-pill {
     width: 155px;
     height: 40px;

@@ -7,7 +7,7 @@ import "../styles/contact.css";
 import NavBar from "components/NavBar";
 
 import OTMDispatchLogo from "../images/logo/otm-trademark.svg";
-import HelpImage from "../images/get-help.svg";
+import HelpImage from "../images/get-help2.png";
 import loaderImage from "../images/loader.gif";
 
 const API_URL = "http://167.114.153.121:1337";
