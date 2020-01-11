@@ -44,7 +44,7 @@ export default {
             crossOrigin="anonymous"
           />
           <title>Truck Dispatching Services | OTM Dispatch</title>
-
+          
         </Head>
         <Body>
           {children}

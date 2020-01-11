@@ -466,7 +466,7 @@ export default () => {
                   <div className="text-stack__cta text-stack__cta--offset js-cta">
                     <div className="button-wrapper" data-module="circle-button">
                       <a
-                        href="#"
+                        href="/contact"
                         className="button button--circle button--orange"
                       >
                         <span className="button__content js-button-content">
@@ -640,7 +640,7 @@ export default () => {
                     <h4>Platform Designed for your Supply Chain</h4>
                     <p>
                       Technology embedded with deep transportation expertise to
-                      meet the unique needs of shippers, LSPs and carriers
+                      meet the unique needs of shippers, LSPs (Logistics Service Provider) and carriers
                       worldwide.
                     </p>
                   </div>
