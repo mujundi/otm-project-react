@@ -432,7 +432,7 @@
     background-position: 0 0;
     background-size: auto 150%;
     -webkit-animation: run 10s linear infinite;
-    animation: run 10s linear infinite;
+    animation: run 100s linear infinite;
     z-index: 2;
     background-repeat-x: no-repeat;
 }
@@ -443,7 +443,7 @@
     }
     /*use negative width if you want it to flow right to left else and positive for left to right*/
     to {
-        background-position: left 0px bottom -1035px
+        background-position: left 0px bottom -10000px;
     }
 }
 
