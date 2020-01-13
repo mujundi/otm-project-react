@@ -94,7 +94,7 @@ export default () => {
   useEffect(() => {
     document.getElementById("menuBackground").style.top = "120px";
     scrollTo(0, 0);
-    $('.carousel').carousel();
+    $('.carousel').carousel({ interval:10000 });
     textAnimation();
 		return () => {
       document.getElementById("menuBackground").style.top = "98px";    

@@ -13,6 +13,7 @@ export default {
 'F:/Repositories/otm-project-react/src/pages/partnership.js': require('F:/Repositories/otm-project-react/src/pages/partnership.js').default,
 'F:/Repositories/otm-project-react/src/pages/privacy.js': require('F:/Repositories/otm-project-react/src/pages/privacy.js').default,
 'F:/Repositories/otm-project-react/src/pages/ruby.js': require('F:/Repositories/otm-project-react/src/pages/ruby.js').default,
+'F:/Repositories/otm-project-react/src/pages/services.js': require('F:/Repositories/otm-project-react/src/pages/services.js').default,
 'F:/Repositories/otm-project-react/src/pages/solutions.js': require('F:/Repositories/otm-project-react/src/pages/solutions.js').default
 }
 
