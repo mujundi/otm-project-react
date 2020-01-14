@@ -53,17 +53,12 @@ export default () => {
         style={{ paddingTop: "100px" }}
       >
         <h2 className="mb-5">Have more questions?</h2>
-<<<<<<< HEAD
         <a
           href="https://app.purechat.com/w/otmdispatch"
           target="_app"
           className="btn btn-primary btn-lg mb-5 questions-btn"
         >
-          Get Help
-=======
-        <a href="https://app.purechat.com/w/otmdispatch" target="_app" className="btn btn-primary btn-lg mb-5 questions-btn">
           Online Chat Support
->>>>>>> c4ff48b63ec02583f8320f75149620c68982db43
         </a>
       </div>
     </div>

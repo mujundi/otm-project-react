@@ -44,13 +44,15 @@ const t_8 = universal(import('/mnt/d/workspace/work/otm-dispatch/static-site/src
 const t_9 = universal(import('/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/ruby.js'), universalOptions)
       t_9.template = '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/ruby.js'
       
-const t_10 = universal(import('/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js'), universalOptions)
-      t_10.template = '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js'
+const t_10 = universal(import('/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/services.js'), universalOptions)
+      t_10.template = '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/services.js'
+      
+const t_11 = universal(import('/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js'), universalOptions)
+      t_11.template = '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js'
       
 
 // Template Map
 export default {
-<<<<<<< HEAD
   '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/404.js': t_0,
 '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/company.js': t_1,
 '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/contact.js': t_2,
@@ -61,21 +63,8 @@ export default {
 '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/partnership.js': t_7,
 '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/privacy.js': t_8,
 '/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/ruby.js': t_9,
-'/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js': t_10
-=======
-  'F:/Repositories/otm-project-react/src/pages/404.js': require('F:/Repositories/otm-project-react/src/pages/404.js').default,
-'F:/Repositories/otm-project-react/src/pages/company.js': require('F:/Repositories/otm-project-react/src/pages/company.js').default,
-'F:/Repositories/otm-project-react/src/pages/contact.js': require('F:/Repositories/otm-project-react/src/pages/contact.js').default,
-'F:/Repositories/otm-project-react/src/pages/diamond.js': require('F:/Repositories/otm-project-react/src/pages/diamond.js').default,
-'F:/Repositories/otm-project-react/src/pages/emerald.js': require('F:/Repositories/otm-project-react/src/pages/emerald.js').default,
-'F:/Repositories/otm-project-react/src/pages/help.js': require('F:/Repositories/otm-project-react/src/pages/help.js').default,
-'F:/Repositories/otm-project-react/src/pages/index.js': require('F:/Repositories/otm-project-react/src/pages/index.js').default,
-'F:/Repositories/otm-project-react/src/pages/partnership.js': require('F:/Repositories/otm-project-react/src/pages/partnership.js').default,
-'F:/Repositories/otm-project-react/src/pages/privacy.js': require('F:/Repositories/otm-project-react/src/pages/privacy.js').default,
-'F:/Repositories/otm-project-react/src/pages/ruby.js': require('F:/Repositories/otm-project-react/src/pages/ruby.js').default,
-'F:/Repositories/otm-project-react/src/pages/services.js': require('F:/Repositories/otm-project-react/src/pages/services.js').default,
-'F:/Repositories/otm-project-react/src/pages/solutions.js': require('F:/Repositories/otm-project-react/src/pages/solutions.js').default
->>>>>>> c4ff48b63ec02583f8320f75149620c68982db43
+'/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/services.js': t_10,
+'/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/solutions.js': t_11
 }
 // Not Found Template
 export const notFoundTemplate = "/mnt/d/workspace/work/otm-dispatch/static-site/src/pages/404.js"
