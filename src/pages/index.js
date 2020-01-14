@@ -649,7 +649,7 @@ export default () => {
                     <h4>Platform Designed for your Supply Chain</h4>
                     <p>
                       Technology embedded with deep transportation expertise to
-                      meet the unique needs of shippers, LSPs (Logistics Service Provider) and carriers
+                      meet the unique needs of shippers, LSPs (Logistics Service Providers) and carriers
                       worldwide.
                     </p>
                   </div>
