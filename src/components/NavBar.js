@@ -178,7 +178,11 @@ const NavBar = (props) => {
       </button>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ml-auto">
-
+          <li className="nav-item">
+            <Link to="/" className="nav-link">
+              Home <span className="sr-only">(current)</span>
+            </Link>
+          </li>
           <li className="nav-item dropdown" onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}>
             <a
@@ -194,11 +198,11 @@ const NavBar = (props) => {
               <Link to="/company" className="dropdown-item">
                 Company
                 </Link>
-              <Link to="/company#about" className="dropdown-item">
+              <Link to="/company" className="dropdown-item">
                 About Us
               </Link>
-              <Link to="/company#services" className="dropdown-item">
-                Service
+              <Link to="/services" className="dropdown-item">
+                Services
               </Link>
             </div>
           </li>
@@ -261,7 +265,7 @@ const NavBar = (props) => {
                 FAQs
               </Link>
               <Link to="/help#help" className="dropdown-item">
-                Get Help
+                Online Chat Support
               </Link>
             </div>
           </li>

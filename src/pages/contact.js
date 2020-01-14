@@ -7,7 +7,7 @@ import "../styles/contact.css";
 import NavBar from "components/NavBar";
 
 import OTMDispatchLogo from "../images/logo/otm-trademark.svg";
-import HelpImage from "../images/get-help.png";
+import HelpImage from "../images/get-help2.png";
 import loaderImage from "../images/loader.gif";
 
 const API_URL = "http://167.114.153.121:1337";
@@ -19,6 +19,7 @@ const Contact = (props) => {
   // const [imageURL, setImageURL] = useState([]);
   const [data, setData] = useState([]);
   const [needs, setNeeds] = useState([]);
+  const [states, setStates] = useState([]);
 
   const [sendingMail, setSendingMail] = useState(false);
 
@@ -29,6 +30,7 @@ const Contact = (props) => {
     //   setContactSubheader(res.data.fields[0].subheader);
     //   setImageURL(`${API_URL + res.data.fields[0].background.url}`);
     setNeeds(res.data.fields[1].option);
+    setStates(res.data.fields[2].option);
   });
     if (process.browser) scrollTo(0, 0);
   }, []);
@@ -331,27 +333,34 @@ const Contact = (props) => {
                         required
                       />
                     </div>
-                    <div className="form-group custom-form-group col-12">
-                      <label>State</label>
+                    <div className="form-group custom-form-group col-5">
+                      <label>City</label>
                       <input
+                        type="text"
+                        className="form-control form-control-lg"
+                        placeholder="Your City"
+                        name="City"
+                        required
+                      />
+                    </div>
+                    <div className="form-group custom-form-group col-3">
+                      <label>State</label>
+                       <select id="form_state" name="State" className="form-control" required="required" data-error="Please select your State.">
+                          {states.map((state, index) => (
+                            <option key={index} value={state.option}>
+                              {state.option}
+                            </option>
+                          ))}
+                        </select>
+                      {/*<input
                         type="text"
                         className="form-control form-control-lg"
                         placeholder="Florida"
                         name="State"
                         required
-                      />
+                      />*/}
                     </div>
-                    <div className="form-group custom-form-group col-6">
-                      <label>City</label>
-                      <input
-                        type="text"
-                        className="form-control form-control-lg"
-                        placeholder="Orlando"
-                        name="City"
-                        required
-                      />
-                    </div>
-                    <div className="form-group custom-form-group col-6">
+                    <div className="form-group custom-form-group col-4">
                       <label>Zip</label>
                       <input
                         type="text"
@@ -401,7 +410,7 @@ const Contact = (props) => {
                       info@otmdispatch.com
                     </a>
                   </p>
-                  <p>9500 Satellite Blvd Suite 170, Orlando, 32837</p>
+                  <p>9500 Satellite Blvd Suite 170, Orlando, FL 32837</p>
                   <img
                     src={OTMDispatchLogo}
                     alt="OTM Dispatch"
@@ -415,7 +424,7 @@ const Contact = (props) => {
       </section>
       <section className="gmap-wrapper">
         <div className="gmap-inner text-center">
-          <a href="https://www.google.com/maps/dir/?api=1&destination=9500%20SATELLITE%20BLVD%20SUITE%20170%2C%20ORLANDO%2C%2032837" className="btn btn-lg btn-otm-dark">Get Direction</a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=9500%20SATELLITE%20BLVD%20SUITE%20170%2C%20ORLANDO%2C%2032837" className="btn btn-lg btn-otm-dark">Locate Us</a>
         </div>
       </section>
     </div>

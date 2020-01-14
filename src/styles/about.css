@@ -4,8 +4,11 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-.about-hero .hero-text-wrapper h1, h2 {
-    text-align: center !important;
+.about-hero h2 {
+    text-align: center;
+}
+.about-hero h4 span {
+    text-transform: uppercase;
 }
 .about-hero .row{
     height: 500px;

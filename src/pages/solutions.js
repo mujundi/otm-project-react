@@ -7,7 +7,7 @@ import "../styles/solution.css";
 
 import NavBar from "../components/NavBar";
 
-import SolutionRightImage from "../images/globe2.png";
+import SolutionRightImage from "../images/globe3.svg";
 import DiamondPlanImage from "../images/logistics-icon.svg";
 import rightArrow from "../images/cta-right-arrow.svg";
 import EmeraldPlanImage from "../images/truck-icon.svg";

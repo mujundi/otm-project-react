@@ -4,6 +4,12 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.solution-hero h2 {
+    text-align: center;
+}
+.plan-price {
+    text-align: center;
+}
 .solution-hero .row{
     height: 500px;
     max-height: 100%;
@@ -268,6 +274,7 @@
     font-size: 1em;
     margin-bottom: 0px;
     text-transform: uppercase;
+    text-align: center;
 }
 .plan-footer h4{
     font-size: 34px;
@@ -425,7 +432,7 @@
     background-position: 0 0;
     background-size: auto 150%;
     -webkit-animation: run 10s linear infinite;
-    animation: run 10s linear infinite;
+    animation: run 100s linear infinite;
     z-index: 2;
     background-repeat-x: no-repeat;
 }
@@ -436,7 +443,7 @@
     }
     /*use negative width if you want it to flow right to left else and positive for left to right*/
     to {
-        background-position: left 0px bottom -1035px
+        background-position: left 0px bottom -10000px;
     }
 }
 

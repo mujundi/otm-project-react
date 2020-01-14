@@ -1,5 +1,6 @@
 import React,{useEffect} from "react";
 import "../styles/home.css";
+import Iframe from 'react-iframe';
 
 import NavBar from "components/NavBar";
 
@@ -93,7 +94,7 @@ export default () => {
   useEffect(() => {
     document.getElementById("menuBackground").style.top = "120px";
     scrollTo(0, 0);
-    $('.carousel').carousel();
+    $('.carousel').carousel({ interval:10000 });
     textAnimation();
 		return () => {
       document.getElementById("menuBackground").style.top = "98px";    
@@ -102,7 +103,7 @@ export default () => {
 
   return (
   <>
-    <section className="otm-hero">
+    <section className="otm-hero homepage">
       <div className="container">
         <NavBar light />
       </div>
@@ -128,7 +129,15 @@ export default () => {
           </div>
         </div>
       </div>
-      <img src={GlobeImage} alt="Globe" className="globe" />
+      <Iframe url="https://rdvine.com/otm/index.html"
+            position="absolute" 
+            width="100%"
+            id="myId"
+            className="myClassname"
+            height="100%"
+            scrolling="no"
+            styles={{height: "505px" }}/>
+      {/*<img src={GlobeImage} alt="Globe" className="globe" />*/}
     </section>
     <section className="smart-dispatch">
       {/* Carousel Background */}
@@ -466,7 +475,7 @@ export default () => {
                   <div className="text-stack__cta text-stack__cta--offset js-cta">
                     <div className="button-wrapper" data-module="circle-button">
                       <a
-                        href="#"
+                        href="/contact"
                         className="button button--circle button--orange"
                       >
                         <span className="button__content js-button-content">
@@ -590,7 +599,7 @@ export default () => {
                 OTM Dispatch provides affordable and competitively priced dispatch, tax, accounting, truck permits and consulting services to individuals as well as small and medium size businesses nationwide. OTM Dispatch is currently dispatching Reefers, Dry Vans, Flatbeds, Car Haulers and Hotshots.
               </p>
               <p>
-                Our agents are here to be the most transparent they can. We are here to work side by side with shippers and drivers to help minimize costs while maximizing profits.
+                Our agents are here to be the most transparent they can. We are here to work side by side with brokers, shippers and drivers to help minimize costs while maximizing profits.
               </p>
               <a className="btn btn-orange btn-shadow" href="/company">Learn More</a>
             </div>
@@ -640,7 +649,7 @@ export default () => {
                     <h4>Platform Designed for your Supply Chain</h4>
                     <p>
                       Technology embedded with deep transportation expertise to
-                      meet the unique needs of shippers, LSPs and carriers
+                      meet the unique needs of shippers, LSPs (Logistics Service Providers) and carriers
                       worldwide.
                     </p>
                   </div>

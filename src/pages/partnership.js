@@ -6,7 +6,7 @@ import "../styles/partnership.css";
 
 import NavBar from "../components/NavBar";
 
-import HelpImage from "../images/get-help.png";
+import HelpImage from "../images/get-help2.png";
 import ProcessImage from "../images/partnership-process.svg";
 import loaderImage from "../images/loader.gif";
 // const API_URL = "http://167.114.153.121:1337";
