@@ -15,6 +15,10 @@ export default {
       test: data;
     }
   },
+  devServer: {
+    disableHostCheck: true
+  },
+  siteRoot: "http://otmdispatch.com",
   plugins: [
     [
       require.resolve("react-static-plugin-source-filesystem"),

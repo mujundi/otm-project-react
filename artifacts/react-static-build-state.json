@@ -13,6 +13,12 @@
   "preloadPollInterval": 300,
   "productionSourceMaps": false,
   "entry": "index.js",
+  "devServer": {
+    "host": "localhost",
+    "port": 3000,
+    "disableHostCheck": true
+  },
+  "siteRoot": "http://otmdispatch.com",
   "plugins": [
     [
       "/mnt/d/workspace/work/otm-dispatch/static-site/node_modules/react-static-plugin-source-filesystem/node.api.js",
@@ -39,17 +45,12 @@
     "HTML_TEMPLATE": "/mnt/d/workspace/work/otm-dispatch/static-site/dist/index.html",
     "STATIC_DATA": "/mnt/d/workspace/work/otm-dispatch/static-site/dist/staticData"
   },
-  "siteRoot": "/",
   "basePath": "",
-  "publicPath": "/",
+  "publicPath": "http://otmdispatch.com/",
   "assetsPath": "",
   "extractCssChunks": false,
   "inlineCss": false,
   "babelExcludes": [],
-  "devServer": {
-    "host": "localhost",
-    "port": 3000
-  },
   "terser": {
     "terserOptions": {
       "mangle": {},
