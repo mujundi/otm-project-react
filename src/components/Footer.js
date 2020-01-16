@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
 
-import OTMDispatchLogo from '../images/logo/otm-trademark-white.svg';
+import OTMDispatchLogo from '../images/logo/otm-trademark-light.svg';
 
 export default () => (
   <>
