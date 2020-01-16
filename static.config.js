@@ -16,7 +16,9 @@ export default {
     }
   },
   devServer: {
-    disableHostCheck: true
+    disableHostCheck: true,
+    public: "otmdispatch.com",
+    allowedHosts: ["0.0.0.0", "localhost", "otmdispatch.com"]
   },
   siteRoot: "http://otmdispatch.com",
   plugins: [
