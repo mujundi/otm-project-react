@@ -12,7 +12,7 @@ import AboutUsImageRightMobile from "../images/about-img-right-mobile.jpg";
 import CTAWrapLogo from "../images/logo/otm-trademark-white.svg";
 import ServiceImageLogo from "../images/logo/otm-trademark.svg";
 
-const API_URL = "http://167.114.153.121:1337";
+const API_URL = "https://admin.otmdispatch.com";
 const url = `${API_URL}/pages/5dff3787aecfad34d76ee579`;
 
 const Company = () => {
@@ -113,10 +113,7 @@ const Company = () => {
           </div>
         </div>
       </div> */}
-      <section className="about-hero" style={{
-            backgroundImage: `url(${servicesBannerImage})`,
-            backgroundSize: `cover`
-          }}>
+      <section className="about-hero">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-12">
@@ -147,7 +144,7 @@ const Company = () => {
         </div>
       </div>
       
-      <section className="about-service" id="services">
+      <section className="about-service">
         <div className="container">
           <div className="row flex-row-reverse">
             <div className="col-12 col-lg-7 about-main-left">

@@ -10,7 +10,7 @@ import OTMDispatchLogo from "../images/logo/otm-trademark.svg";
 import HelpImage from "../images/get-help2.png";
 import loaderImage from "../images/loader.gif";
 
-const API_URL = "http://167.114.153.121:1337";
+const API_URL = "https://admin.otmdispatch.com";
 const url = `${API_URL}/pages/5dff3d19aecfad34d76ee5b6`;
 
 const Contact = (props) => {

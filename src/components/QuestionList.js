@@ -3,7 +3,7 @@ import Question from "./Question";
 import axios from "axios";
 import Async from "react-async";
 
-const API_URL = "http://167.114.153.121:1337";
+const API_URL = "https://admin.otmdispatch.com";
 
 const url = `${API_URL}/pages/5dff3bdaaecfad34d76ee5a5`;
 

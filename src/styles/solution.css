@@ -53,6 +53,7 @@
     color: #191919;
     margin-bottom: 15px;
 }
+
 .crop {
     max-width: 700px;
     overflow: hidden;
@@ -66,9 +67,27 @@
     width: 100%;
 }
 
+.crop2 {
+    max-width: 700px;
+    overflow: hidden;
+    position: absolute;
+    right: -90px;
+    top: 40px;
+    z-index: -1;
+}
+.crop2 img {
+   /*  max-width: initial;
+    width: 100%;  */
+}
+
 .clear{
     clear: both;
 }
+.about-main-img-right-logo-mobile {
+    display: none;
+}
+
+
 .solutions-main-left-inner .list {
     display:none; 
     height:auto;
@@ -118,7 +137,7 @@
 }*/
 
 .about-main-img-right-logo{
-    position: absolute;
+    /*position: absolute;*/
     right: 0px;
     top: 50px;
     bottom: 0px;
@@ -316,6 +335,16 @@
 .solution-truck-mobile {
     display: none;
 }
+.debt-relief{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 45px;
+    max-width: 530px;
+}
+.debt-relief-mobile {
+    display: none;
+}
 .section-divider{
     position: absolute;
     top: 0;
@@ -485,6 +514,9 @@
     .solution-truck{
         max-width: 600px;
     }
+    .debt-relief{
+        max-width: 600px;
+    }
 }
 @media only screen and (min-width: 1201px) and (max-width: 1350px) {
     .solution-main-left {
@@ -510,6 +542,9 @@
     .solution-truck {
         max-width: 650px;
     }
+    .debt-relief {
+        max-width: 650px;
+    }
 }
 @media only screen and (max-width: 1200px){
     .about-main-img-right{
@@ -517,6 +552,10 @@
         max-width: 550px;
     }
     .solution-truck{
+        max-width: 440px;
+        top: 40px;
+    }
+    .debt-relief{
         max-width: 440px;
         top: 40px;
     }
@@ -541,17 +580,39 @@
         z-index: 1;
         display: block !important;
     }
+    
+    #tax-planning .container {
+        margin-top: 40px;
+    }
+
 
 }
 @media only screen and (max-width: 991px){
-    .about-main-img-right,.solution-truck,.about-main-img-right-logo,.solution-accounting,.consulting-right-img,.solution-tax-logo{
-        display: none;
+    .about-main-img-right,.solution-truck,.debt-relief,.about-main-img-right-logo,.solution-accounting,.solution-tax-logo{
+        display: none !important;
     }
     .solution-truck-mobile {
         width: 100%;
         left: 0;
         right: 0;
         position: absolute;
+        display: block;
+    }
+    .debt-relief-mobile {
+        width: 100%;
+        left: 0;
+        right: 0;
+        /*position: absolute;*/
+        display: block;
+    }
+    #irs-tax .container {
+        margin-top:250px;
+    }
+    .crop2 {
+        max-width:100% !important;
+    }
+    .crop2 img {
+        width: 100%;
         display: block;
     }
     .solutions-main-right-inner {
@@ -681,6 +742,7 @@
         z-index: -1;
         margin: 0 auto;
     }
+
     .solutions-main-right-inner {
         margin-top: 400px;
     }
@@ -778,6 +840,14 @@
         top: 40px;
         z-index: -1;
     }
+    .crop2 {
+        max-width: 420px;
+        overflow: hidden;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        z-index: -1;
+    }
 
     .otm-plans-wrapper {
         margin: 0 auto;
@@ -814,7 +884,7 @@
         z-index: 1;         
     }
 }
-@media only screen and (max-width: 475px){
+@media only screen and (min-width: 376px) and (max-width: 475px){
     .plan-footer h4{
         font-size: 1.1em;
         font-weight: 600;
@@ -822,9 +892,16 @@
     .plan-main-title h4{
         font-size: 1.5em;
     }
+    #irs-tax .container {
+        margin-top: 35px;
+    }
+    
 }
 @media only screen and (max-width: 375px){
     .section-title{
         font-size: 24px;
+    }
+    #irs-tax .container {
+        margin-top: 10px;
     }
 }

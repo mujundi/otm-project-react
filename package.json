@@ -1,9 +1,10 @@
 {
   "name": "react-static",
   "private": true,
+  "homepage": "http://otmdispatch.com",
   "engines": {
     "npm": "6.12.1",
-    "node": "12.13.1"
+    "node": "^12.12.0"
   },
   "scripts": {
     "start": "react-static start",
@@ -26,7 +27,8 @@
     "react-static-plugin-reach-router": "^7.2.0",
     "react-static-plugin-sitemap": "^7.2.0",
     "react-static-plugin-source-filesystem": "^7.2.0",
-    "scroll-into-view-if-needed": "^2.2.20"
+    "scroll-into-view-if-needed": "^2.2.20",
+    "http-proxy-middleware": "^0.19.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.2",

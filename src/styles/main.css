@@ -273,7 +273,14 @@ body {
 .footer h4.company {
     font-size: 20px;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
+
+}
+
+.footer h2.company-number {
+    font-size:1em;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 
 .follow-menu h4 {

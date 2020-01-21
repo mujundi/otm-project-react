@@ -9,7 +9,7 @@ import NavBar from "../components/NavBar";
 
 import AboutUsImageRight from "../images/about-img-right.png";
 import AboutUsImageRightMobile from "../images/about-img-right-mobile.jpg";
-import CTAWrapLogo from "../images/logo/otm-trademark-white.svg";
+import CTAWrapLogo from "../images/logo/otm-trademark-light.svg";
 import ServiceImageLogo from "../images/logo/otm-trademark.svg";
 
 // const API_URL = "http://167.114.153.121:1337";
@@ -197,7 +197,7 @@ const Company = () => {
         </div>
       </section>
 
-      {/*<section className="about-service" id="services">
+      {/*<section className="about-service">
         <div className="container">
           <div className="row flex-row-reverse">
             <div className="col-12 col-lg-7 about-main-left">

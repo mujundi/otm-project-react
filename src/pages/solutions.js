@@ -13,10 +13,12 @@ import rightArrow from "../images/cta-right-arrow.svg";
 import EmeraldPlanImage from "../images/truck-icon.svg";
 import TruckImage from "../images/truck-left.png";
 import TruckImageMobile from "../images/truck-left-mobile.jpg";
-import LogoLinesRight from "../images/otm-logo-lines.svg";
+import LogoLinesRight from "../images/tax-planning.png";
+import LogoLinesRightMobile from "../images/tax-planning-mobile.jpg";
 // import SolutionTruck from "../images/solutions-trucks2.svg";
 import ConsultingRightImage from "../images/consulting-right.png";
-import OTMTrademark from "../images/logo/otm-trademark.svg";
+import OTMTrademark from "../images/debt-resolution.png";
+import OTMTrademarkMobile from "../images/debt-resolution-mobile.jpg";
 // import SolutionsPathBG from "../images/solutions-path-bg.png";
 
 // const API_URL = "http://167.114.153.121:1337";
@@ -354,7 +356,10 @@ const Solutions = () => {
             </div>
           </div>
         </div>
+        <div className="crop2">
         <img src={LogoLinesRight} alt="" className="about-main-img-right-logo" />
+        <img src={LogoLinesRightMobile} alt="" className="about-main-img-right-logo-mobile" />
+        </div>
       </section>
       <section className="accounting-otm" id="accounting">
         <div className="container">
@@ -468,11 +473,18 @@ const Solutions = () => {
             </div>
           </div>
         </div>
+        <div className="solution-main-left">
         <img
           src={OTMTrademark}
           alt=""
-          className="solution-tax-logo"
+          className="solution-truck"
         />
+        <img
+          src={OTMTrademarkMobile}
+          alt=""
+          className="debt-relief-mobile"
+        />
+        </div>
       </section>
     </div>
   );

@@ -8,7 +8,7 @@ const pureChatScript =
 
 export default {
   getSiteData: async () => {
-    const data = axios.get("http://167.114.153.121:1337/pages").then((res) => {
+    const data = axios.get("https://admin.otmdispatch.com/pages").then((res) => {
       return res.data;
     });
     {
@@ -18,7 +18,7 @@ export default {
   devServer: {
     disableHostCheck: true,
     public: "otmdispatch.com",
-    allowedHosts: ["0.0.0.0", "localhost", "otmdispatch.com"]
+    allowedHosts: ["0.0.0.0", "localhost", "otmdispatch.com", "www.otmdispatch.com"]
   },
   siteRoot: "http://otmdispatch.com",
   plugins: [

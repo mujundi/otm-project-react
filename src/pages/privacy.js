@@ -70,8 +70,10 @@ export default () => {
 					<strong>b-</strong>	Q2 (April, May, June) is due on July 31st <br />
 					<strong>c-</strong>	Q3 (July, August, September) is due on October 31<br />
 					<strong>d-</strong>	Q4 (October, November, December) is due on January 31st <br /><br />
-					Disclosure:
+					<strong>Disclosure:</strong><br />
 		OTM Dispatch reserves the right to not provide the services mentioned above if Carrier does not furnish all the required information to complete such services and Carrier cannot hold OTM Dispatch accountable for doing so if those requirements are not met by Carrier.<br /><br />
+		For New Clients, after March 31st, a prorated rate will be applied to prepare taxes, as stated in the “Diamond Plan”. 
+		For New Clients, after the 1st month of any quarter, a prorated rate will be applied to the quarterly reports. The Quarterly Reports consist of: IFTA, NY HUT, KY, and NM.
 				</p>
 			</div>
 		</div>
