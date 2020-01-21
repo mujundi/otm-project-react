@@ -22,18 +22,33 @@ const Contact = (props) => {
   const [states, setStates] = useState([]);
 
   const [sendingMail, setSendingMail] = useState(false);
+  const [grecaptchaError, setGrecaptchaError] = useState(-1);
 
   useEffect(() => {
     axios.get(url).then((res) => {
-    setData(res.data);
-    //   setContactHeader(res.data.fields[0].header);
-    //   setContactSubheader(res.data.fields[0].subheader);
-    //   setImageURL(`${API_URL + res.data.fields[0].background.url}`);
-    setNeeds(res.data.fields[1].option);
-    setStates(res.data.fields[2].option);
-  });
+      setData(res.data);
+      //   setContactHeader(res.data.fields[0].header);
+      //   setContactSubheader(res.data.fields[0].subheader);
+      //   setImageURL(`${API_URL + res.data.fields[0].background.url}`);
+      setNeeds(res.data.fields[1].option);
+      setStates(res.data.fields[2].option);
+    });
     if (process.browser) scrollTo(0, 0);
+    initiateGrecaptcha();
   }, []);
+
+  const initiateGrecaptcha = () => {
+    grecaptcha.render('grecaptcha', {
+      sitekey: '6Lc0fdEUAAAAACpOPkrKEAZeKaC0XefsQD6NGQSy',
+      callback: () => {
+        if (grecaptcha.getResponse().length === 0) {
+          setGrecaptchaError(1);
+        } else {
+          setGrecaptchaError(0)
+        }
+      }
+    });
+  }
 
   const handleEmail = (e) => {
     if (e) e.preventDefault();
@@ -42,14 +57,14 @@ const Contact = (props) => {
     const email = e.target.email.value;
     const reason = e.target.need.value;
     const message = e.target.message.value;
-    
-   // CheckColors(val){
-   //  var element=document.getElementById('need');
-   //  if (val=='pick a color'||val=='other')
-   //    element.style.display='block';
-   //  else  
-   //    element.style.display='none';
-   // }
+
+    // CheckColors(val){
+    //  var element=document.getElementById('need');
+    //  if (val=='pick a color'||val=='other')
+    //    element.style.display='block';
+    //  else  
+    //    element.style.display='none';
+    // }
 
     if (firstName) {
       axios
@@ -72,44 +87,49 @@ const Contact = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const alert = document.getElementById("loader");
-    alert.style.display = "block";
-        setTimeout(() => {
-            alert.style.display = "none";
-        }, 4000);
+    if (grecaptchaError === -1) {
+      setGrecaptchaError(1);
+      return;
+    } else if (grecaptchaError === 0) {
+      const alert = document.getElementById("loader");
+      alert.style.display = "block";
+      setTimeout(() => {
+        alert.style.display = "none";
+      }, 4000);
 
-    setSendingMail(true);
-    const data = $(event.target).serializeArray();
-    let body = 'Hi, You have received a new request for OTM Dispatch. Please see below for contact information:<br /><br />';
-    data.map(field => body = body + field.name + ' : ' + field.value + '<br />');
+      setSendingMail(true);
+      const data = $(event.target).serializeArray();
+      let body = 'Hi, You have received a new request for OTM Dispatch. Please see below for contact information:<br /><br />';
+      data.map(field => body = body + field.name + ' : ' + field.value + '<br />');
 
-    Email.send({
-      Host: "smtp.office365.com",
-      Username: "leads@otmdispatch.com",
-      Password: "Kok49018",
-      To: 'leads@otmdispatch.com',
-      From: "leads@otmdispatch.com",
-      Subject: "OTM Dispatch - Contact Request",
-      Body: body
-    }).then((message) => {
-      setSendingMail(false);
-      if (message === 'OK') {
-        const alert = document.getElementById("thank-you-alert");
-        //alert('We received your details. Thank you :)');
-        alert.style.display = "block";
-        setTimeout(() => {
+      Email.send({
+        Host: "smtp.office365.com",
+        Username: "leads@otmdispatch.com",
+        Password: "Kok49018",
+        To: 'leads@otmdispatch.com',
+        From: "leads@otmdispatch.com",
+        Subject: "OTM Dispatch - Contact Request",
+        Body: body
+      }).then((message) => {
+        setSendingMail(false);
+        if (message === 'OK') {
+          const alert = document.getElementById("thank-you-alert");
+          //alert('We received your details. Thank you :)');
+          alert.style.display = "block";
+          setTimeout(() => {
             alert.style.display = "none";
-        }, 4000);
-        document.getElementById('contactForm').reset();
-      } else {
-        const alert = document.getElementById("error-alert");
-        //alert('We received your details. Thank you :)');
-        alert.style.display = "block";
-        setTimeout(() => {
+          }, 4000);
+          document.getElementById('contactForm').reset();
+        } else {
+          const alert = document.getElementById("error-alert");
+          //alert('We received your details. Thank you :)');
+          alert.style.display = "block";
+          setTimeout(() => {
             alert.style.display = "none";
-        }, 4000);
-      }
-    });
+          }, 4000);
+        }
+      });
+    }
   }
 
   return (
@@ -274,14 +294,14 @@ const Contact = (props) => {
                     <div className="col-12">
                       <div className="form-group">
                         <label htmlFor="form_need">Please select request type *</label>
-                        <select id="form_need" name="Need" className="form-control" required="required" data-error="Please select request type.">
+                        <select id="form_need" name="Need" className="form-control form-control-lg" required="required" data-error="Please select request type.">
                           {needs.map((need, index) => (
                             <option key={index} value={need.option}>
                               {need.option}
                             </option>
                           ))}
                         </select>
-                        
+
                       </div>
                     </div>
                     <div className="form-group custom-form-group col-12">
@@ -345,13 +365,13 @@ const Contact = (props) => {
                     </div>
                     <div className="form-group custom-form-group col-3">
                       <label>State</label>
-                       <select id="form_state" name="State" className="form-control" required="required" data-error="Please select your State.">
-                          {states.map((state, index) => (
-                            <option key={index} value={state.option}>
-                              {state.option}
-                            </option>
-                          ))}
-                        </select>
+                      <select id="form_state" name="State" className="form-control form-control-lg" required="required" data-error="Please select your State.">
+                        {states.map((state, index) => (
+                          <option key={index} value={state.option}>
+                            {state.option}
+                          </option>
+                        ))}
+                      </select>
                       {/*<input
                         type="text"
                         className="form-control form-control-lg"
@@ -370,11 +390,19 @@ const Contact = (props) => {
                         required
                       />
                     </div>
-                    <div id="thank-you-alert" className="alert alert-success mb-5" role="alert"style={{ display: "none" }}>
+
+                    <div className="form-group custom-form-group col-12">
+                      <div id="grecaptcha"></div>
+                      {grecaptchaError === 1 && <div className="invalid-feedback d-block">
+                        Please Verify Captcha.
+                      </div>}
+                    </div>
+
+                    <div id="thank-you-alert" className="alert alert-success mb-5" role="alert" style={{ display: "none" }}>
                       <h4 className="alert-heading">Thank you!</h4>
                       <p>We will get back to you shortly.</p>
                     </div>
-                    <div id="error-alert" className="alert alert-success mb-5" role="alert"style={{ display: "none" }}>
+                    <div id="error-alert" className="alert alert-success mb-5" role="alert" style={{ display: "none" }}>
                       <h4 className="alert-heading">Hmmm!</h4>
                       <p>Something went wrong. <a href="https://app.purechat.com/w/otmdispatch">Contact Support</a></p>
                     </div>

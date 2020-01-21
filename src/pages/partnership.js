@@ -19,6 +19,7 @@ const Partnership = () => {
   // const [imageURL, setImageURL] = useState([]);
 
   const [sendingMail, setSendingMail] = useState(false);
+  const [grecaptchaError, setGrecaptchaError] = useState(-1);
 
   useEffect(() => {
     // axios.get(url).then((res) => {
@@ -27,53 +28,72 @@ const Partnership = () => {
     //   setImageURL(`${API_URL + res.data.fields[0].background.url}`);
     // });
     if (process.browser) scrollTo(0, 0);
+    initiateGrecaptcha();
   }, []);
+
+  const initiateGrecaptcha = () => {
+    grecaptcha.render('grecaptcha', {
+      sitekey: '6Lc0fdEUAAAAACpOPkrKEAZeKaC0XefsQD6NGQSy',
+      callback: () => {
+        if (grecaptcha.getResponse().length === 0) {
+          setGrecaptchaError(1);
+        } else {
+          setGrecaptchaError(0)
+        }
+      }
+    });
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const alert = document.getElementById("loader");
-    alert.style.display = "block";
-    setTimeout(() => {
-      alert.style.display = "none";
-    }, 4000);
+    if (grecaptchaError === -1) {
+      setGrecaptchaError(1);
+      return;
+    } else if (grecaptchaError === 0) {
+      const alert = document.getElementById("loader");
+      alert.style.display = "block";
+      setTimeout(() => {
+        alert.style.display = "none";
+      }, 4000);
 
-    setSendingMail(true);
+      setSendingMail(true);
 
-    const data = $(event.target).serializeArray();
-    let body =
-      "Hi, You have received a new partnership request for OTM Dispatch. Please see below for lead information: <br /><br />";
-    //let signature ='Thank you! <br />OTM Dispatch Lead Capture';
-    data.map(
-      (field) => (body = body + field.name + " : " + field.value + "<br />")
-    );
+      const data = $(event.target).serializeArray();
+      let body =
+        "Hi, You have received a new partnership request for OTM Dispatch. Please see below for lead information: <br /><br />";
+      //let signature ='Thank you! <br />OTM Dispatch Lead Capture';
+      data.map(
+        (field) => (body = body + field.name + " : " + field.value + "<br />")
+      );
 
-    Email.send({
-      Host: "smtp.office365.com",
-      Username: "leads@otmdispatch.com",
-      Password: "Kok49018",
-      To: "leads@otmdispatch.com",
-      From: "leads@otmdispatch.com",
-      Subject: "New Lead - OTM Dispatch",
-      Body: body
-    }).then((message) => {
-      setSendingMail(false);
-      if (message === "OK") {
-        const alert = document.getElementById("thank-you-alert");
-        //alert('We received your details. Thank you :)');
-        alert.style.display = "block";
-        setTimeout(() => {
-          alert.style.display = "none";
-        }, 4000);
-        document.getElementById("partnershipForm").reset();
-      } else {
-        const alert = document.getElementById("error-alert");
-        //alert('We received your details. Thank you :)');
-        alert.style.display = "block";
-        setTimeout(() => {
-          alert.style.display = "none";
-        }, 4000);
-      }
-    });
+      Email.send({
+        Host: "smtp.office365.com",
+        Username: "leads@otmdispatch.com",
+        Password: "Kok49018",
+        To: "leads@otmdispatch.com",
+        From: "leads@otmdispatch.com",
+        Subject: "New Lead - OTM Dispatch",
+        Body: body
+      }).then((message) => {
+        setSendingMail(false);
+        if (message === "OK") {
+          const alert = document.getElementById("thank-you-alert");
+          //alert('We received your details. Thank you :)');
+          alert.style.display = "block";
+          setTimeout(() => {
+            alert.style.display = "none";
+          }, 4000);
+          document.getElementById("partnershipForm").reset();
+        } else {
+          const alert = document.getElementById("error-alert");
+          //alert('We received your details. Thank you :)');
+          alert.style.display = "block";
+          setTimeout(() => {
+            alert.style.display = "none";
+          }, 4000);
+        }
+      });
+    }
   };
 
   return (
@@ -415,6 +435,14 @@ const Partnership = () => {
                       </div>
                     </div>
                   </div>
+
+                  <div className="form-group custom-form-group col-12">
+                    <div id="grecaptcha"></div>
+                    {grecaptchaError === 1 && <div className="invalid-feedback d-block">
+                      Please Verify Captcha.
+                    </div>}
+                  </div>
+                    
                   <div
                     id="thank-you-alert"
                     className="alert alert-success mb-5"
