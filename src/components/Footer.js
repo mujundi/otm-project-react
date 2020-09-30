@@ -25,7 +25,7 @@ export default () => (
         <div className="row">
           <div className="col-12">
             <h4 className="company">OTM Dispatch</h4>
-            <h2 className="company-number">Toll Free: (888) 842-9507</h2>
+            <h2 className="company-number">Main: (407) 284-1250</h2>
           </div>
         </div>
         <div className="row">
